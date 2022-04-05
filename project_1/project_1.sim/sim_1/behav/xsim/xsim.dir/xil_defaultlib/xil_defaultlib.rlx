@@ -1,0 +1,15 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+E:/University/gp/verilog/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sim_1/new/M_TB.v,1649022964,verilog,,,,M_TB,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sim_1/new/Testpool.v,1647109598,verilog,,,,Testpool,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sim_1/new/conv_TB.v,1649110147,verilog,,,,conv_TB,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/Convulution.v,1649109055,verilog,,E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/RAM.v,,Convolution,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/MaxComp.v,1647109603,verilog,,E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/MaxPoolUnit.v,,MaxComp,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/MaxPoolUnit.v,1647109602,verilog,,E:/University/gp/verilog/project_1/project_1.srcs/sim_1/new/Testpool.v,,MaxPoolUnit,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/Multiplier.v,1648899010,verilog,,E:/University/gp/verilog/project_1/project_1.srcs/sim_1/new/M_TB.v,,Multiplier,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/RAM.v,1649084663,verilog,,E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/emb_mux.v,,RAM,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/emb_mux.v,1649083772,verilog,,E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/top1.v,,mux_emb,,,,,,,,
+E:/University/gp/verilog/project_1/project_1.srcs/sources_1/new/top1.v,1649111870,verilog,,,,top1,,,,,,,,
