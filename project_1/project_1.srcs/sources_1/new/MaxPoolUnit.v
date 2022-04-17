@@ -21,35 +21,19 @@
 
 
 module MaxPoolUnit
-   #(parameter Vsize = 3)
+   #(parameter In_size = 3,n_inputs = 2)
     (
-    input [Vsize:0] INPUT1,
-    input [Vsize:0] INPUT2,
-    input [Vsize:0] INPUT3,
-    input [Vsize:0] INPUT4,
-    input [Vsize:0] INPUT5,
-    input [Vsize:0] INPUT6,
-    input [Vsize:0] INPUT7,
-    input [Vsize:0] INPUT8,
-    input [Vsize:0] INPUT9,
-    output [Vsize:0] Out
+    input [In_size*n_inputs - 1:0] in,
+    output reg signed [In_size -1 :0] Out
     );
-    
-   wire [Vsize:0] O1;
-   wire [Vsize:0] O2;
-   wire [Vsize:0] O3;
-   wire [Vsize:0] O4;
-   wire [Vsize:0] O5;
-   wire [Vsize:0] O6;
-   wire [Vsize:0] O7;
-   
-   MaxComp Comp1(INPUT1,INPUT2,O1);
-   MaxComp Comp2(INPUT3,O1,O2);
-   MaxComp Comp3(INPUT4,O2,O3);
-   MaxComp Comp4(INPUT5,O3,O4);
-   MaxComp Comp5(INPUT6,O4,O5);
-   MaxComp Comp6(INPUT7,O5,O6);
-   MaxComp Comp7(INPUT8,O6,O7);
-   MaxComp Comp8(INPUT9,O7,Out);
-   
+   integer i;
+   reg signed [In_size - 1:0] temp;
+   reg signed [In_size - 1:0] temp2;
+   always @(in) begin
+   temp = in[In_size - 1:0];
+   temp2 = in[2*In_size-1:In_size];
+        Out = temp > temp2 ? temp:temp2;
+   if(Out < 0)
+      Out = 0;
+   end
 endmodule
