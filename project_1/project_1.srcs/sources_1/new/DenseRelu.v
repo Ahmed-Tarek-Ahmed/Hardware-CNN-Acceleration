@@ -31,9 +31,9 @@ module DenseRelu #(parameter n_outputs = 128, n_inputs = 64, Input_size = 32)
     for(i=1; i<=n_outputs; i = i+1)begin : Convolution
        Convolution #(.size(Input_size),.n_inputs(n_inputs)) ui
        (
-        .data(INBUS[Input_size - 1:0]),
-        .weights(weights[i*Input_size - 1:(i-1)*Input_size]),
-        .out(OUTBUS[i*(2*Input_size+n_inputs-1)-1:(i-1)*(2*Input_size+n_inputs-1)])
+        .data(INBUS[Input_size*n_inputs - 1:0]),
+        .weights(weights[i*Input_size*n_inputs - 1:(i-1)*Input_size*n_inputs]),
+        .Out(OUTBUS[i*(2*Input_size+n_inputs-1)-1:(i-1)*(2*Input_size+n_inputs-1)])
        ); 
     end
     endgenerate

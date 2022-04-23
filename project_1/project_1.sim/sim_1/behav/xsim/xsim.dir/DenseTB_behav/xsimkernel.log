@@ -1,0 +1,4 @@
+Running: xsim.dir/DenseTB_behav/xsimk.exe -simmode gui -wdb DenseTB_behav.wdb -simrunnum 0 -socket 60320
+Design successfully loaded
+Design Loading Memory Usage: 5752 KB (Peak: 5752 KB)
+Design Loading CPU Usage: 30 ms
