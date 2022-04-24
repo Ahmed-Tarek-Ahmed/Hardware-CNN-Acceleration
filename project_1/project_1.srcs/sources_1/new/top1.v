@@ -1,43 +1,32 @@
 `timescale 1ns / 1ps
-module top1;
-    wire [255:0]Oemb0;
-    wire [255:0]Oemb1;
+module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16);
     wire [65535:0] WT;
-    wire [(16*32)-1:0] weights;
-    wire [(16*32)-1:0] data;
-    wire signed [2*32+16-2:0] Out;
-    mux_emb EMB(
-    .y1('h02783354FD0CA2A4FE8BFA340059E598FF47C1EA0116094EFFAB3AFFFDA44538),
-    .y2('h0192B3BEFE42E934FFFEB548008882C2FF3A98F3FF36E72901D6F04CFEF04904),
-    .y3('h013C74BC0220BB84004E47A0FE4A69B0006D7C6C0114C30E01BA8FBCFEFDB398),
-    .y4('h01ED2CD401051B460144611802030D64FFC2FCB2FFEEF7EAFEE3BB1CFFBD39D1),
-    .y5('hFFD3F5E00064892B00319942FFC695D001705DECFE44008CFFB6CB4DFFF58960),
-    .sel(3),
-    .x(Oemb0)
-    );
-    mux_emb EMB1(
-    .y1('h02783354FD0CA2A4FE8BFA340059E598FF47C1EA0116094EFFAB3AFFFDA44538),
-    .y2('h0192B3BEFE42E934FFFEB548008882C2FF3A98F3FF36E72901D6F04CFEF04904),
-    .y3('h013C74BC0220BB84004E47A0FE4A69B0006D7C6C0114C30E01BA8FBCFEFDB398),
-    .y4('h01ED2CD401051B460144611802030D64FFC2FCB2FFEEF7EAFEE3BB1CFFBD39D1),
-    .y5('hFFD3F5E00064892B00319942FFC695D001705DECFE44008CFFB6CB4DFFF58960),
-    .sel(1),
-    .x(Oemb1)
+    wire [C_size*C_n_inputs*C_filters-1:0] weights;
+    wire [C_size*C_n_inputs/2*(C_windows+1)-1:0] data;
+    wire   [(2*C_size+C_n_inputs-1)*C_windows*C_filters-1:0]  Out ;
+    wire  [512*79-1 : 0]OutM;
+    EMB_Layer #(.size(C_windows+1))EMB (
+    .INBUS('b100011001001100100100001011),
+    .OUTBUS(data)
     );
     
     RAM ram(.Outp(WT));
-    assign weights=WT[(16*32)-1:0];
-    assign data={Oemb1,Oemb0};
-    Convolution #(.size(32),.n_inputs(16)) C(
+    assign weights=WT[C_size*C_n_inputs*C_filters-1:0];
+    Conv_Layer#(.size(C_size),.n_inputs(C_n_inputs),.windows(C_windows),.filters(C_filters)) C(
     .weights(weights),
     .data  (data),
     .Out    (Out)
+    );
+    MaxPoolLayer#(.n_outputs(512), .Input_size(79)) M (
+    .INBUS(Out),
+    .OUTBUS(OutM)
     );
     initial begin
     #10
     $display("%h",weights);
     $display("%h",data);
-    $display("%b",Out);
+    $display("%b",Out[(2*C_size+C_n_inputs-1)*C_windows*C_filters-1-:C_windows*79]);
+    $display("%b",OutM[79*20-1:0]);
     end
     
 endmodule

@@ -1,7 +1,20 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9c695bf64364463da57055b55c983732 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RAM_behav xil_defaultlib.RAM xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9c695bf64364463da57055b55c983732 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot top1_behav xil_defaultlib.top1 xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_emb
+Compiling module xil_defaultlib.EMB_Layer(size=9)
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.Convolution(n_inputs=16,size=32)
+Compiling module xil_defaultlib.Conv_Windows(n_inputs=16,size=32...
+Compiling module xil_defaultlib.Conv_Layer(n_inputs=16,size=32,w...
+Compiling module xil_defaultlib.MaxPoolUnit(In_size=79)
+Compiling module xil_defaultlib.MaxPoolLayer(n_outputs=512,Input...
+Compiling module xil_defaultlib.top1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top1_behav
