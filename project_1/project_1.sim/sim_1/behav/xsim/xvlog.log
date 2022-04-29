@@ -1,7 +1,5 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Conv_Layer
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Windows.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Conv_Windows
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Convolution
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v" into library xil_defaultlib

@@ -4,7 +4,7 @@ Jun 14 2018
 20:41:02
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/conv_TB.v,1651244105,verilog,,,,conv_TB,,,,,,,,
-E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer.v,1651243069,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Windows.v,,Conv_Layer,,,,,,,,
+E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer.v,1651257697,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v,,Conv_Layer,,,,,,,,
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Windows.v,1651243041,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v,,Conv_Windows,,,,,,,,
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v,1651244862,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v,,Convolution,,,,,,,,
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v,1651245242,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolLayer.v,,EMB_Layer,,,,,,,,
@@ -13,4 +13,4 @@ E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RAM.v,1651202629,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Ram2.v,,RAM,,,,,,,,
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Ram2.v,1651202666,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/emb_mux.v,,Ram2,,,,,,,,
 E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/emb_mux.v,1649083772,verilog,,E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/top1.v,,mux_emb,,,,,,,,
-E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/top1.v,1651249283,verilog,,,,top1,,,,,,,,
+E:/University/gp/GIT verilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/top1.v,1651252004,verilog,,,,top1,,,,,,,,

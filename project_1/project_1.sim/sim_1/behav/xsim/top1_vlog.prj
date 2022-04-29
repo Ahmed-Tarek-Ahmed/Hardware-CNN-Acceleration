@@ -1,7 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/Conv_Layer.v" \
-"../../../../project_1.srcs/sources_1/new/Conv_Windows.v" \
 "../../../../project_1.srcs/sources_1/new/Convulution.v" \
 "../../../../project_1.srcs/sources_1/new/EMB_Layer.v" \
 "../../../../project_1.srcs/sources_1/new/MaxPoolLayer.v" \

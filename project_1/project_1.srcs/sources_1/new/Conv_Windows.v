@@ -5,6 +5,7 @@ module Conv_Windows#(parameter n_inputs = 2,parameter size = 2,parameter windows
         input [size*n_inputs/2*(windows+1)-1:0] data,
         output   [size*windows-1:0]  Out );
 genvar i;
+integer j;
 generate
 for(i=1; i<=windows; i = i+1)begin : Conv_units
             Convolution#(.size(size),.n_inputs(n_inputs),.DP(DP)) C(
