@@ -2,3 +2,8 @@
 project_1/project_1.cache/wt/gui_handlers.wdf
 project_1/project_1.cache/wt/project.wpc
 project_1/project_1.cache/wt/webtalk_pa.xml
+project_1/project_1.sim/sim_1/behav/xsim/simulate.log
+project_1/project_1.sim/sim_1/behav/xsim/top1_behav.wdb
+project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/top1_behav/webtalk/.xsim_webtallk.info
+project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/top1_behav/webtalk/xsim_webtalk.tcl
+project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/top1_behav/xsimkernel.log
