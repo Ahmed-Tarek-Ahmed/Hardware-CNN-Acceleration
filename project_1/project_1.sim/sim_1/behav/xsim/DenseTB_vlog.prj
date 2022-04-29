@@ -2,6 +2,7 @@
 verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/Convulution.v" \
 "../../../../project_1.srcs/sources_1/new/DenseRelu.v" \
+"../../../../project_1.srcs/sources_1/new/RamD.v" \
 "../../../../project_1.srcs/sources_1/new/DenseTB.v" \
 
 # compile glbl module
