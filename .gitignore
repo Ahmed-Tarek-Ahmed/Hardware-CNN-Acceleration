@@ -7,3 +7,16 @@ project_1/project_1.sim/sim_1/behav/xsim/top1_behav.wdb
 project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/top1_behav/webtalk/.xsim_webtallk.info
 project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/top1_behav/webtalk/xsim_webtalk.tcl
 project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/top1_behav/xsimkernel.log
+project_1/project_1.sim/sim_1/behav/xsim/compile.bat
+project_1/project_1.sim/sim_1/behav/xsim/elaborate.bat
+project_1/project_1.sim/sim_1/behav/xsim/elaborate.log
+project_1/project_1.sim/sim_1/behav/xsim/simulate.bat
+project_1/project_1.sim/sim_1/behav/xsim/simulate.log
+project_1/project_1.sim/sim_1/behav/xsim/webtalk.jou
+project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
+project_1/project_1.sim/sim_1/behav/xsim/webtalk_1880.backup.jou
+project_1/project_1.sim/sim_1/behav/xsim/webtalk_1880.backup.log
+project_1/project_1.sim/sim_1/behav/xsim/webtalk_8388.backup.jou
+project_1/project_1.sim/sim_1/behav/xsim/webtalk_8388.backup.log
+project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/xil_defaultlib/xil_defaultlib.rlx
+project_1/project_1.xpr
