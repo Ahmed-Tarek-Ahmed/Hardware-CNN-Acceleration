@@ -24,7 +24,7 @@ module DenseRelu #(parameter n_outputs = 128, n_inputs = 64, Input_size = 32)
     (
         input [n_inputs*Input_size - 1:0]INBUS,
         input [n_outputs*n_inputs*Input_size-1:0]weights,
-        output[n_outputs*(2*Input_size+n_inputs-1)-1:0]OUTBUS
+        output[n_outputs*Input_size-1:0]OUTBUS
     );
         genvar i;
     generate
@@ -33,7 +33,7 @@ module DenseRelu #(parameter n_outputs = 128, n_inputs = 64, Input_size = 32)
        (
         .data(INBUS[Input_size*n_inputs - 1:0]),
         .weights(weights[i*Input_size*n_inputs - 1:(i-1)*Input_size*n_inputs]),
-        .Out(OUTBUS[i*(2*Input_size+n_inputs-1)-1:(i-1)*(2*Input_size+n_inputs-1)])
+        .Out(OUTBUS[i*(Input_size)-1:(i-1)*(Input_size)])
        ); 
     end
     endgenerate

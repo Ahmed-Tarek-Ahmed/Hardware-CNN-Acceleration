@@ -7,22 +7,9 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-<<<<<<< Updated upstream
-Compiling module xil_defaultlib.mux_emb
-Compiling module xil_defaultlib.EMB_Layer(size=9)
-Compiling module xil_defaultlib.RAM
-Compiling module xil_defaultlib.Ram2
-Compiling module xil_defaultlib.Convolution(n_inputs=16)
-Compiling module xil_defaultlib.Conv_Windows(n_inputs=16,size=32...
-Compiling module xil_defaultlib.Conv_Layer(n_inputs=16,size=32,w...
-Compiling module xil_defaultlib.MaxPoolUnit(In_size=32)
-Compiling module xil_defaultlib.MaxPoolLayer(n_outputs=512)
-Compiling module xil_defaultlib.top1
-=======
 Compiling module xil_defaultlib.RAMD
-Compiling module xil_defaultlib.Convolution(n_inputs=64,size=32)
+Compiling module xil_defaultlib.Convolution(n_inputs=64)
 Compiling module xil_defaultlib.DenseRelu_default
 Compiling module xil_defaultlib.DenseTB
->>>>>>> Stashed changes
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot DenseTB_behav
