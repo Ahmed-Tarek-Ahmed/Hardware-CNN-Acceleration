@@ -10,6 +10,7 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.mux_emb
 Compiling module xil_defaultlib.EMB_Layer(size=9)
 Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.Ram2
 Compiling module xil_defaultlib.Convolution(n_inputs=16,size=32)
 Compiling module xil_defaultlib.Conv_Windows(n_inputs=16,size=32...
 Compiling module xil_defaultlib.Conv_Layer(n_inputs=16,size=32,w...

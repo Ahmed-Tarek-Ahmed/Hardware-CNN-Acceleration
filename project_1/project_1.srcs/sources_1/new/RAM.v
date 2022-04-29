@@ -10,7 +10,7 @@ integer i;
 
 initial
 begin
-$readmemb("Data.txt", ram);
+$readmemb("C1.txt", ram);
 for (i=0; i<2048; i=i+1) 
  Outp[i*32+:32] = ram[i];
 end

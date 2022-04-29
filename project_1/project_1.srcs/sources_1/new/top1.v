@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16);
     wire [65535:0] WT;
+    wire [524287:0] WT2;
     wire [C_size*C_n_inputs*C_filters-1:0] weights;
     wire [C_size*C_n_inputs/2*(C_windows+1)-1:0] data;
     wire   [(2*C_size+C_n_inputs-1)*C_windows*C_filters-1:0]  Out ;
@@ -11,6 +12,7 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
     );
     
     RAM ram(.Outp(WT));
+    Ram2 ram2(.Outp(WT2));
     assign weights=WT[C_size*C_n_inputs*C_filters-1:0];
     Conv_Layer#(.size(C_size),.n_inputs(C_n_inputs),.windows(C_windows),.filters(C_filters)) C(
     .weights(weights),
