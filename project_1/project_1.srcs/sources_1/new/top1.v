@@ -59,7 +59,7 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
                         .weights(weightsDense1),
                         .OUTBUS(OutDense1)
                     );
-    DenseRelu#(.n_outputs(5), .n_inputs(64), .Input_size(32))D2
+    DenseRelu#(.n_outputs(5), .n_inputs(64), .Input_size(32),.DP(4),.SL(2))D2
                     (
                         .INBUS(OutDense1),
                         .weights(weightsDense2),

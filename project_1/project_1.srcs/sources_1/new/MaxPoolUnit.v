@@ -15,7 +15,5 @@ module MaxPoolUnit
    temp = in[In_size - 1:0];
    temp2 = in[2*In_size-1:In_size];
         Out = temp > temp2 ? temp:temp2;
-   if(Out < 0)
-      Out = 0;
    end
 endmodule
