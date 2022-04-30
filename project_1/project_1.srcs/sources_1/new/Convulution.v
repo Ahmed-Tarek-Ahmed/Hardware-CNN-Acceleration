@@ -4,7 +4,7 @@ module Convolution
     (    
         input [size*n_inputs-1:0] weights,
         input [size*n_inputs-1:0] data,
-        output  signed [size-1:0]  Out,
+        output  reg signed [size-1:0]  Out,
         output reg signed [2*size+n_inputs-2:0]  Temp
     );
     integer i;
@@ -20,7 +20,9 @@ module Convolution
         b = data[i+:size];
         Temp = Temp+a*b;
              end
-    end
-        assign Out=Temp[size-DP+:size];         
+          Out = Temp[size-DP+:size];
+          if(Out[size-1] == 1)
+                 Out = 0; 
+    end     
 
 endmodule

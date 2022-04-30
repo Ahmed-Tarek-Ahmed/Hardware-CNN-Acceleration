@@ -44,22 +44,22 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
-extern void execute_261(char*, char *);
-extern void execute_394(char*, char *);
-extern void execute_395(char*, char *);
+extern void execute_133(char*, char *);
+extern void execute_202(char*, char *);
+extern void execute_203(char*, char *);
 extern void execute_3(char*, char *);
 extern void execute_6(char*, char *);
-extern void execute_266(char*, char *);
-extern void execute_263(char*, char *);
-extern void execute_264(char*, char *);
-extern void execute_265(char*, char *);
-extern void execute_396(char*, char *);
-extern void execute_397(char*, char *);
-extern void execute_398(char*, char *);
-extern void execute_399(char*, char *);
-extern void execute_400(char*, char *);
+extern void execute_138(char*, char *);
+extern void execute_135(char*, char *);
+extern void execute_136(char*, char *);
+extern void execute_137(char*, char *);
+extern void execute_204(char*, char *);
+extern void execute_205(char*, char *);
+extern void execute_206(char*, char *);
+extern void execute_207(char*, char *);
+extern void execute_208(char*, char *);
 extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[15] = {(funcp)execute_261, (funcp)execute_394, (funcp)execute_395, (funcp)execute_3, (funcp)execute_6, (funcp)execute_266, (funcp)execute_263, (funcp)execute_264, (funcp)execute_265, (funcp)execute_396, (funcp)execute_397, (funcp)execute_398, (funcp)execute_399, (funcp)execute_400, (funcp)vlog_transfunc_eventcallback};
+funcp funcTab[15] = {(funcp)execute_133, (funcp)execute_202, (funcp)execute_203, (funcp)execute_3, (funcp)execute_6, (funcp)execute_138, (funcp)execute_135, (funcp)execute_136, (funcp)execute_137, (funcp)execute_204, (funcp)execute_205, (funcp)execute_206, (funcp)execute_207, (funcp)execute_208, (funcp)vlog_transfunc_eventcallback};
 const int NumRelocateId= 15;
 
 void relocate(char *dp)
