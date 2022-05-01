@@ -14,6 +14,7 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
     wire [262143 : 0]weightsDense;
     wire [262143 : 0]weightsDense1;
     wire [10239 : 0]weightsDense2;
+    wire [2:0] Class;
     EMB_Layer #(.size(C_windows+1))EMB (
     .INBUS('b100011001001100100100001011),
     .OUTBUS(data)
@@ -65,7 +66,10 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
                         .weights(weightsDense2),
                         .OUTBUS(OutDense2)
                     );                                
-        
+    MaxComp# (.Input_size(32)) C1ass
+                    (   .INPUT(OutDense2),
+                        .Out(Class)
+                    );    
     
     initial begin
     #10
@@ -77,6 +81,7 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
        $display("%b",OutDense);
       $display("%b",OutDense1);
       $display("%b",OutDense2);
+      $display("%d",Class);
     end
     
 endmodule

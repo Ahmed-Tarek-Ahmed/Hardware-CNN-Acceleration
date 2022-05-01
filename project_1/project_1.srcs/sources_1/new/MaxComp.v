@@ -2,13 +2,50 @@
 
 
 module MaxComp
-    #(parameter size = 3)
+    #(parameter insize = 32,parameter outsize = 3)
     (
-    input [size:0] INPUT1,
-    input [size:0] INPUT2,
-    output [size:0] Out
+    input [insize*5-1:0] INPUT,
+    output reg [outsize-1:0] Out
     );
     
-assign Out = INPUT1>INPUT2?INPUT1:INPUT2;
-
+    reg [outsize-1:0] i1;
+    reg [outsize-1:0] i2;
+    reg [outsize-1:0] i3;
+            
+        
+    always@*
+    begin
+    if (INPUT[insize-1:0]>INPUT[2*insize-1:insize])
+        begin
+        i1='b000;
+     end
+     else begin
+        i1='b001;
+     end
+     
+     if (INPUT[insize*4-1:insize*3]>INPUT[5*insize-1:insize*4])
+     begin
+             i2='b011;
+      end
+      else begin
+             i2='b100;
+      end   
+      
+      if (i1 == 1)
+      begin
+          i3 = INPUT[insize-1:0]>INPUT[insize*2+:insize]?'b001:'b010;
+       end
+       else begin
+           i3 = INPUT[insize+:insize]>INPUT[insize*2+:insize]?'b000:'b010;
+       end
+       
+       if (i2 == 3)
+       begin
+                 Out = INPUT[insize*i3+:insize]>INPUT[insize*3+:insize]?i3:'b011;
+       end
+       else begin
+                 Out = INPUT[insize*i3+:insize]>INPUT[insize*4+:insize]?i3:'b100;
+       end
+       
+    end
 endmodule
