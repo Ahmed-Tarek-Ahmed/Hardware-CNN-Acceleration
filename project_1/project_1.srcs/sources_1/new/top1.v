@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
-module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16,DP=4,C2F=64,C2W=3,C2I=256);
+module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16,DP=4,C2F=64,C2W=3,C2I=256)
+    (input [27:0] In ,
+    output [2:0] A);
     wire [65535:0] WT;
     wire [524287:0] WT2;
     wire [C_size*C_n_inputs/2*(C_windows+1)-1:0] data;
@@ -16,7 +18,7 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
     wire [10239 : 0]weightsDense2;
     wire [2:0] Class;
     EMB_Layer #(.size(C_windows+1))EMB (
-    .INBUS('b100011001001100100100001011),
+    .INBUS(In),
     .OUTBUS(data)
     );
     
@@ -68,7 +70,7 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
                     );                                
     MaxComp# (.Input_size(32)) C1ass
                     (   .INPUT(OutDense2),
-                        .Out(Class)
+                        .Out(A)
                     );    
     
     initial begin
