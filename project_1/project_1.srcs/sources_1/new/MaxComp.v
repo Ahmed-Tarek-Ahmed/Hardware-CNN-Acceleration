@@ -31,12 +31,12 @@ module MaxComp
              i2='b100;
       end   
       
-      if (i1 == 1)
+      if (i1 == 0)
       begin
-          i3 = INPUT[insize-1:0]>INPUT[insize*2+:insize]?'b001:'b010;
+          i3 = INPUT[insize-1:0]>INPUT[insize*2+:insize]?'b000:'b010;
        end
        else begin
-           i3 = INPUT[insize+:insize]>INPUT[insize*2+:insize]?'b000:'b010;
+           i3 = INPUT[insize+:insize]>INPUT[insize*2+:insize]?'b001:'b010;
        end
        
        if (i2 == 3)

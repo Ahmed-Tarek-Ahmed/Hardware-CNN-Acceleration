@@ -2,24 +2,24 @@
 
  
 module RamBig (
-output reg [529037:0] IN,
-output reg [58781:0] Out
+output reg [466586:0] IN,
+output reg [51842:0] Out
 
 );
 
-reg [26:0] Inputtemp [19593:0];
-reg [2:0] Outputtemp [19593:0];
+reg [26:0] Inputtemp [17280:0];
+reg [2:0] Outputtemp [17280:0];
 integer i;
 
 initial
 begin
 
-$readmemb("TotalInput.txt", Inputtemp);
-for (i=0; i<19594; i=i+1)
+$readmemb("IN.txt", Inputtemp);
+for (i=0; i<17281; i=i+1)
     IN[i*27+:27] = Inputtemp[i];
 
 $readmemb("TotalOutput.txt", Outputtemp);
-for (i=0; i<19594; i=i+1)
+for (i=0; i<17281; i=i+1)
  Out[i*3+:3] = Outputtemp[i];
 
 

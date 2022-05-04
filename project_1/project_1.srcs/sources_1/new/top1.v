@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16,DP=4,C2F=64,C2W=3,C2I=256)
-    (input [27:0] In ,
+    (input [26:0] In ,
     output [2:0] A);
     wire [65535:0] WT;
     wire [524287:0] WT2;
