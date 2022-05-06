@@ -19,8 +19,7 @@ module top1#(parameter C_windows=30,parameter C_size=32,parameter C_filters=128,
     wire [10239 : 0]weightsDense2;
     wire [2:0] Class;
     EMB_Layer #(.size(C_windows+1))EMB (
-    //.INBUS('d3144411343114132443324142421244),
-    //.INBUS('b010100011100100011011011011001001001011001011011100010010001011011001001001001001010010010011),
+    .INBUS(In),
     .OUTBUS(data)
     );
     
