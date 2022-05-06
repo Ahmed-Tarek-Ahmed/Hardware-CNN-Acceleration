@@ -1,24 +1,26 @@
 `timescale 1ns / 1ps
-module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16,DP=4,C2F=64,C2W=3,C2I=256)
-    (input [26:0] In ,
+module top1#(parameter C_windows=30,parameter C_size=32,parameter C_filters=128,parameter C_n_inputs=16,DP=4,C2F=64,C2W=14,C2I=256)
+    (input [92:0] In ,
     output [2:0] A);
     wire [65535:0] WT;
     wire [524287:0] WT2;
     wire [C_size*C_n_inputs/2*(C_windows+1)-1:0] data;
     wire   [C_size*C_windows*C_filters-1:0]  Out ;
-    wire  [512*C_size-1 : 0]OutM;
+    wire  [1920*C_size-1 : 0]OutM;
     wire [C2W*C2F*C_size-1:0] OutC2;
-    wire [512*C_size-1 : 0]InC2;
-    wire  [64*C_size-1 : 0]OutM2;
+    wire [1920*C_size-1 : 0]InC2;
+    wire [448*C_size-1 : 0]OutM2;
+    wire [448*C_size-1 : 0] outTranspose;
     wire [128*C_size-1 : 0]OutDense;
     wire [64*C_size-1 : 0]OutDense1;
     wire [5*C_size-1 : 0]OutDense2;
-    wire [262143 : 0]weightsDense;
+    wire [1835007 : 0]weightsDense;
     wire [262143 : 0]weightsDense1;
     wire [10239 : 0]weightsDense2;
     wire [2:0] Class;
     EMB_Layer #(.size(C_windows+1))EMB (
-    .INBUS(In),
+    //.INBUS('d3144411343114132443324142421244),
+    //.INBUS('b010100011100100011011011011001001001011001011011100010010001011011001001001001001010010010011),
     .OUTBUS(data)
     );
     
@@ -28,14 +30,14 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
     Conv_Layer#(.size(C_size),.n_inputs(C_n_inputs),.windows(C_windows),.filters(C_filters),.DP(DP)) C(
     .weights(WT),
     .data  (data),
-    .Out    (Out)
+    .Out   (Out)
     );
-    MaxPoolLayer#(.n_outputs(512), .Input_size(C_size),.cs(8)) M (
+    MaxPoolLayer#(.n_outputs(1920), .Input_size(C_size),.cs(30)) M (
     .INBUS(Out),
     .OUTBUS(OutM)
     );
     
-    Transpose#(.N(512),.size(C_size),.GS(4))T(
+    Transpose#(.N(1920),.size(C_size),.GS(15))T(
             .in(OutM),
             .out(InC2)
     );
@@ -46,13 +48,17 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
         .Out    (OutC2)
         );
         
-    MaxPoolLayer#(.n_outputs(64), .Input_size(C_size),.cs(3)) M2 (
+    MaxPoolLayer#(.n_outputs(448), .Input_size(C_size),.cs(14)) M2 (
         .INBUS(OutC2),
         .OUTBUS(OutM2)
         );
-    DenseRelu#(.n_outputs(128), .n_inputs(64), .Input_size(32))D
+    Transpose#(.N(448),.size(C_size),.GS(7))T2(
+                .in(OutM2),
+                .out(outTranspose)
+        );
+    DenseRelu#(.n_outputs(128), .n_inputs(448), .Input_size(32))D
             (
-                .INBUS(OutM2),
+                .INBUS(outTranspose),
                 .weights(weightsDense),
                 .OUTBUS(OutDense)
             );
@@ -80,10 +86,10 @@ module top1#(parameter C_windows=8,parameter C_size=32,parameter C_filters=128,p
 //    $display("%b",InC2[C_size*135-1:0]);
 //    $display("%b",OutC2[C_size*20-1:0]);
 //    $display("%b",OutM2[C_size*20-1:0]);
-       $display("%b",OutDense);
-      $display("%b",OutDense1);
-      $display("%b",OutDense2);
-      $display("%d",Class);
+      //$display("%b",OutDense);
+      //$display("%b",OutDense1);
+      //$display("%b",OutDense2);
+      $display("%b",OutDense[0 +:32*7]);
     end
     
 endmodule

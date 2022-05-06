@@ -3,7 +3,7 @@
  
 module Ram2 (output reg [524287:0] Outp);
 
-reg [31:0] ram [16383:0];
+reg [31:0] ram [16384:0];
 integer i;
 
 
