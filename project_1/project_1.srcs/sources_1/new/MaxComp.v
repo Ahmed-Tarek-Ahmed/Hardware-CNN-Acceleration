@@ -8,11 +8,9 @@ module MaxComp
     output reg [outsize-1:0] Out
     );
     
-    reg [outsize-1:0] i1;
-    reg [outsize-1:0] i2;
-    reg [outsize-1:0] i3;
-            
-        
+    reg [outsize-1:0] i1,i2,i3;
+    reg signed [insize-1:0] t1,t2,t3,t4,t5;
+       
     always@*
     begin
     if (INPUT[insize-1:0]>INPUT[2*insize-1:insize])

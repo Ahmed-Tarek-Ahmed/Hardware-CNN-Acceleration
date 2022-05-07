@@ -66,7 +66,7 @@ module top1#(parameter samples=31, size=32,DP=5,paramD=57344,paramD1=8192,paramD
                         .weights(weightsDense1),
                         .OUTBUS(OutDense1)
                     );
-    DenseRelu#(.n_outputs(D2F), .n_inputs(D1F), .Input_size(size),.DP(DP),.SL(2))D2
+    DenseRelu#(.n_outputs(D2F), .n_inputs(D1F), .Input_size(size),.DP(DP),.SL(2),.Relu(0))D2
                     (
                         .INBUS(OutDense1),
                         .weights(weightsDense2),

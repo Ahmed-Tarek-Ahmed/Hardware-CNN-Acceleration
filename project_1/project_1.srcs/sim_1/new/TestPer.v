@@ -15,7 +15,7 @@ begin
 #0.1
 f = $fopen("Vout.txt","w");
 
-for (i=0;i<1000;i=i+1)
+for (i=0;i<100;i=i+1)
 begin
 Min = WIN[i*93+:93];
 #0.01;

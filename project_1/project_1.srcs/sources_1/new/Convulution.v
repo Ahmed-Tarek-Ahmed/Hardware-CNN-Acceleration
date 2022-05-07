@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module Convolution
-    #(parameter n_inputs = 2, size = 32,DP=4,SL=0)
+    #(parameter n_inputs = 2, size = 32,DP=4,SL=0,Relu=1)
     (    
         input [size*n_inputs-1:0] weights,
         input [size*n_inputs-1:0] data,
@@ -8,8 +8,7 @@ module Convolution
         output reg signed [2*size+n_inputs-2:0]  Temp
     );
     integer i;
-    reg signed [size-1:0] a;
-    reg signed [size-1:0] b;
+    reg signed [size-1:0] a,b;
   
         always @(weights,data)
         begin
@@ -22,7 +21,7 @@ module Convolution
                  end
             Out = Temp[size-DP+SL+:size];
     
-            if(Out[size-1] == 1)
+            if(Out[size-1] == 1 && Relu==1)
                    Out = 0; 
         end     
 
