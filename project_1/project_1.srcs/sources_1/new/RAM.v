@@ -13,6 +13,8 @@ begin
 $readmemb("C1.txt", ram);
 for (i=0; i<2048; i=i+1) 
  Outp[i*32+:32] = ram[i];
+ 
+  $display("%b",Outp[32*20-1:0]); 
 end
 
 

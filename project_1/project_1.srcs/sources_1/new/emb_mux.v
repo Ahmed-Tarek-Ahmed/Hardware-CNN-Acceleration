@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps 
-module mux_emb(
-input [255:0] y1,
-input [255:0] y2,
-input [255:0] y3,
-input [255:0] y4,
-input [255:0] y5,
+module mux_emb#(parameter size=32)(
+input [size*8-1:0] y1,
+input [size*8-1:0] y2,
+input [size*8-1:0] y3,
+input [size*8-1:0] y4,
+input [size*8-1:0] y5,
 input [2:0]sel,
-output reg [255:0] x
+output reg [size*8-1:0] x
  );
    
   always @(y1, y2, y3, y4, y5, sel)

@@ -2,9 +2,6 @@
 
  
 module RAMD (
-//output reg [2047:0] ind,
-//output reg [4095:0] ind1,
-//output reg [2047:0] ind2,
 output reg [1835007:0] weights,
 output reg [262143:0] weights1,
 output reg [10239:0] weights2
