@@ -9,11 +9,11 @@ module MaxComp
     );
     
     reg [outsize-1:0] i1,i2,i3;
-    reg signed [insize-1:0] t1,t2,t3,t4,t5;
+    
        
     always@*
     begin
-    if (INPUT[insize-1:0]>INPUT[2*insize-1:insize])
+    if ($signed(INPUT[insize-1:0])>$signed(INPUT[2*insize-1:insize]))
         begin
         i1='b000;
      end
@@ -21,7 +21,7 @@ module MaxComp
         i1='b001;
      end
      
-     if (INPUT[insize*4-1:insize*3]>INPUT[5*insize-1:insize*4])
+     if ($signed(INPUT[insize*4-1:insize*3])>$signed(INPUT[5*insize-1:insize*4]))
      begin
              i2='b011;
       end
@@ -31,18 +31,18 @@ module MaxComp
       
       if (i1 == 0)
       begin
-          i3 = INPUT[insize-1:0]>INPUT[insize*2+:insize]?'b000:'b010;
+          i3 = $signed(INPUT[insize-1:0])>$signed(INPUT[insize*2+:insize])?'b000:'b010;
        end
        else begin
-           i3 = INPUT[insize+:insize]>INPUT[insize*2+:insize]?'b001:'b010;
+           i3 = $signed(INPUT[insize+:insize])>$signed(INPUT[insize*2+:insize])?'b001:'b010;
        end
        
        if (i2 == 3)
        begin
-                 Out = INPUT[insize*i3+:insize]>INPUT[insize*3+:insize]?i3:'b011;
+                 Out = $signed(INPUT[insize*i3+:insize])>$signed(INPUT[insize*3+:insize])?i3:'b011;
        end
        else begin
-                 Out = INPUT[insize*i3+:insize]>INPUT[insize*4+:insize]?i3:'b100;
+                 Out = $signed(INPUT[insize*i3+:insize])>$signed(INPUT[insize*4+:insize])?i3:'b100;
        end
        
     end
