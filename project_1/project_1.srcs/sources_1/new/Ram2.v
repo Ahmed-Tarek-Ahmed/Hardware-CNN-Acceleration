@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
 
  
-module Ram2 (output reg [524287:0] Outp);
+module Ram2 #(parameter size=32) (output reg [16384*size-1:0] Outp);
 
-reg [31:0] ram [16384:0];
+reg [size-1:0] ram [16383:0];
 integer i;
 
 
@@ -11,8 +11,8 @@ integer i;
 initial
 begin
 $readmemb("C2.txt", ram);
-for (i=0; i<524288; i=i+1) 
- Outp[i*32+:32] = ram[i];
+for (i=0; i<16384*size; i=i+1) 
+ Outp[i*size+:size] = ram[i];
 end
 
 

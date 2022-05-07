@@ -30,7 +30,7 @@ Compiling module xil_defaultlib.DenseRelu(n_outputs=64,n_inputs=...
 Compiling module xil_defaultlib.Convolution(n_inputs=64,DP=5,SL=...
 Compiling module xil_defaultlib.DenseRelu(n_outputs=5,DP=5,SL=2)
 Compiling module xil_defaultlib.MaxComp
-Compiling module xil_defaultlib.top1
+Compiling module xil_defaultlib.top1_default
 Compiling module xil_defaultlib.TestPer
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot TestPer_behav
