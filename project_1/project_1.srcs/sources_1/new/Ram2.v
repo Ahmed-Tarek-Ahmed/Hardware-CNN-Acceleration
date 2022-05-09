@@ -11,7 +11,7 @@ integer i;
 initial
 begin
 $readmemb("C2.txt", ram);
-for (i=0; i<16384*size; i=i+1) 
+for (i=0; i<16384; i=i+1) 
  Outp[i*size+:size] = ram[i];
 end
 

@@ -9,7 +9,7 @@ integer i;
 initial
 begin
 $readmemb("Embedding.txt", ram);
-for (i=0; i<size*param; i=i+1) 
+for (i=0; i<param; i=i+1) 
  Outp[i*size+:size] = ram[i];
 end
 
