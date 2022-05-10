@@ -4,12 +4,11 @@ module Convolution
     (    
         input [size*n_inputs-1:0] weights,
         input [size*n_inputs-1:0] data,
-        output  reg signed [size-1:0]  Out,
-        output reg signed [2*size+n_inputs-2:0]  Temp
+        output  reg signed [size-1:0]  Out
     );
     integer i;
     reg signed [size-1:0] a,b;
-  
+    reg signed [2*size+n_inputs-2:0]  Temp;
         always @(weights,data)
         begin
         Temp=0;
