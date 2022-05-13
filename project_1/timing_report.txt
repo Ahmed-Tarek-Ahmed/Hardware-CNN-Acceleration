@@ -1,0 +1,2006 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri May 13 15:35:55 2022
+| Host         : Ahmed running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1 -file E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/timing_report.txt
+| Design       : Convolution
+| Device       : 7vx485t-ffg1157
+| Speed File   : -1  PRODUCTION 1.12 2014-09-11
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                   31          inf        0.000                      0                   31           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay            31 Endpoints
+Min Delay            31 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[29]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.958ns  (logic 10.968ns (68.733%)  route 4.990ns (31.267%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220    12.475 r  Out_OBUF[30]_inst_i_2/O[1]
+                         net (fo=1, unplaced)         0.452    12.927    p_0_in[29]
+                                                                      r  Out_OBUF[29]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.155    13.082 r  Out_OBUF[29]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.665    Out_OBUF[29]
+                                                                      r  Out_OBUF[29]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.958 r  Out_OBUF[29]_inst/O
+                         net (fo=0)                   0.000    15.958    Out[29]
+                                                                      r  Out[29] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[25]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.912ns  (logic 10.922ns (68.642%)  route 4.990ns (31.358%))
+  Logic Levels:           24  (CARRY4=12 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.411 r  Out_OBUF[23]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     7.942    Out_OBUF[23]_inst_i_119_n_5
+                                                                      r  Out_OBUF[19]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.107 r  Out_OBUF[19]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.495    Out_OBUF[19]_inst_i_87_n_0
+                                                                      r  Out_OBUF[19]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.660 r  Out_OBUF[19]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.660    Out_OBUF[19]_inst_i_91_n_0
+                                                                      r  Out_OBUF[19]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.893 r  Out_OBUF[19]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.893    Out_OBUF[19]_inst_i_57_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.113 r  Out_OBUF[23]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.576    Out_OBUF[23]_inst_i_57_n_6
+                                                                      r  Out_OBUF[19]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.747 r  Out_OBUF[19]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.046    Out_OBUF[19]_inst_i_36_n_0
+                                                                      r  Out_OBUF[19]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.401 r  Out_OBUF[19]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.401    Out_OBUF[19]_inst_i_15_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.588 r  Out_OBUF[23]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    10.964    Out_OBUF[23]_inst_i_15_n_4
+                                                                      r  Out_OBUF[23]_inst_i_17/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.106 r  Out_OBUF[23]_inst_i_17/O
+                         net (fo=2, unplaced)         0.351    11.457    Out_OBUF[23]_inst_i_17_n_0
+                                                                      r  Out_OBUF[23]_inst_i_6/I3
+                         LUT5 (Prop_lut5_I3_O)        0.053    11.510 r  Out_OBUF[23]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.831    Out_OBUF[23]_inst_i_6_n_0
+                                                                      r  Out_OBUF[23]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.884 r  Out_OBUF[23]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.884    Out_OBUF[23]_inst_i_10_n_0
+                                                                      r  Out_OBUF[23]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.197 r  Out_OBUF[23]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.197    Out_OBUF[23]_inst_i_2_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220    12.417 r  Out_OBUF[27]_inst_i_2/O[1]
+                         net (fo=1, unplaced)         0.452    12.869    p_0_in[25]
+                                                                      r  Out_OBUF[25]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.167    13.036 r  Out_OBUF[25]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.619    Out_OBUF[25]
+                                                                      r  Out_OBUF[25]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.912 r  Out_OBUF[25]_inst/O
+                         net (fo=0)                   0.000    15.912    Out[25]
+                                                                      r  Out[25] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[11]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[11]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[11]
+                                                                      r  Out_OBUF[11]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[11]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[11]
+                                                                      r  Out[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[13]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[13]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[13]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[13]
+                                                                      r  Out_OBUF[13]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[13]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[13]
+                                                                      r  Out[13] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[15]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[15]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[15]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[15]
+                                                                      r  Out_OBUF[15]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[15]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[15]
+                                                                      r  Out[15] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[17]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[17]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[17]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[17]
+                                                                      r  Out_OBUF[17]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[17]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[17]
+                                                                      r  Out[17] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[19]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[19]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[19]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[19]
+                                                                      r  Out_OBUF[19]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[19]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[19]
+                                                                      r  Out[19] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[1]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[1]
+                                                                      r  Out_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[1]
+                                                                      r  Out[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[21]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[21]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[21]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[21]
+                                                                      r  Out_OBUF[21]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[21]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[21]
+                                                                      r  Out[21] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 weights[368]
+                            (input port)
+  Destination:            Out[23]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.891ns  (logic 10.925ns (68.752%)  route 4.966ns (31.248%))
+  Logic Levels:           25  (CARRY4=13 DSP48E1=2 IBUF=1 LUT2=2 LUT3=3 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  weights[368] (IN)
+                         net (fo=0)                   0.000     0.000    weights[368]
+                                                                      r  weights_IBUF[368]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.726     0.726 r  weights_IBUF[368]_inst/O
+                         net (fo=1, unplaced)         0.584     1.309    weights_IBUF[368]
+                                                                      r  Out6__1/A[16]
+                         DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      3.421     4.730 r  Out6__1/PCOUT[47]
+                         net (fo=1, unplaced)         0.050     4.780    Out6__1_n_106
+                                                                      r  Out6__2/PCIN[47]
+                         DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.286     6.066 r  Out6__2/P[0]
+                         net (fo=2, unplaced)         0.584     6.650    Out6__2_n_105
+                                                                      r  Out_OBUF[3]_inst_i_428/I0
+                         LUT2 (Prop_lut2_I0_O)        0.053     6.703 r  Out_OBUF[3]_inst_i_428/O
+                         net (fo=1, unplaced)         0.000     6.703    Out_OBUF[3]_inst_i_428_n_0
+                                                                      r  Out_OBUF[3]_inst_i_353/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.324     7.027 r  Out_OBUF[3]_inst_i_353/CO[3]
+                         net (fo=1, unplaced)         0.008     7.035    Out_OBUF[3]_inst_i_353_n_0
+                                                                      r  Out_OBUF[7]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.093 r  Out_OBUF[7]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.093    Out_OBUF[7]_inst_i_119_n_0
+                                                                      r  Out_OBUF[11]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.151 r  Out_OBUF[11]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.151    Out_OBUF[11]_inst_i_119_n_0
+                                                                      r  Out_OBUF[15]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.209 r  Out_OBUF[15]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.209    Out_OBUF[15]_inst_i_119_n_0
+                                                                      r  Out_OBUF[19]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.267 r  Out_OBUF[19]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.267    Out_OBUF[19]_inst_i_119_n_0
+                                                                      r  Out_OBUF[23]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.058     7.325 r  Out_OBUF[23]_inst_i_119/CO[3]
+                         net (fo=1, unplaced)         0.000     7.325    Out_OBUF[23]_inst_i_119_n_0
+                                                                      r  Out_OBUF[27]_inst_i_119/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.144     7.469 r  Out_OBUF[27]_inst_i_119/O[2]
+                         net (fo=2, unplaced)         0.531     8.000    Out_OBUF[27]_inst_i_119_n_5
+                                                                      r  Out_OBUF[23]_inst_i_87/I0
+                         LUT3 (Prop_lut3_I0_O)        0.165     8.165 r  Out_OBUF[23]_inst_i_87/O
+                         net (fo=2, unplaced)         0.388     8.553    Out_OBUF[23]_inst_i_87_n_0
+                                                                      r  Out_OBUF[23]_inst_i_91/I3
+                         LUT4 (Prop_lut4_I3_O)        0.165     8.718 r  Out_OBUF[23]_inst_i_91/O
+                         net (fo=1, unplaced)         0.000     8.718    Out_OBUF[23]_inst_i_91_n_0
+                                                                      r  Out_OBUF[23]_inst_i_57/S[3]
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.233     8.951 r  Out_OBUF[23]_inst_i_57/CO[3]
+                         net (fo=1, unplaced)         0.000     8.951    Out_OBUF[23]_inst_i_57_n_0
+                                                                      r  Out_OBUF[27]_inst_i_57/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.220     9.171 r  Out_OBUF[27]_inst_i_57/O[1]
+                         net (fo=2, unplaced)         0.463     9.634    Out_OBUF[27]_inst_i_57_n_6
+                                                                      r  Out_OBUF[23]_inst_i_36/I0
+                         LUT3 (Prop_lut3_I0_O)        0.171     9.805 r  Out_OBUF[23]_inst_i_36/O
+                         net (fo=2, unplaced)         0.299    10.104    Out_OBUF[23]_inst_i_36_n_0
+                                                                      r  Out_OBUF[23]_inst_i_15/DI[2]
+                         CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.355    10.459 r  Out_OBUF[23]_inst_i_15/CO[3]
+                         net (fo=1, unplaced)         0.000    10.459    Out_OBUF[23]_inst_i_15_n_0
+                                                                      r  Out_OBUF[27]_inst_i_15/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    10.646 r  Out_OBUF[27]_inst_i_15/O[3]
+                         net (fo=3, unplaced)         0.376    11.022    Out_OBUF[27]_inst_i_15_n_4
+                                                                      r  Out_OBUF[27]_inst_i_18/I2
+                         LUT3 (Prop_lut3_I2_O)        0.142    11.164 r  Out_OBUF[27]_inst_i_18/O
+                         net (fo=2, unplaced)         0.351    11.515    Out_OBUF[27]_inst_i_18_n_0
+                                                                      r  Out_OBUF[27]_inst_i_6/I4
+                         LUT5 (Prop_lut5_I4_O)        0.053    11.568 r  Out_OBUF[27]_inst_i_6/O
+                         net (fo=2, unplaced)         0.321    11.889    Out_OBUF[27]_inst_i_6_n_0
+                                                                      r  Out_OBUF[27]_inst_i_10/I0
+                         LUT6 (Prop_lut6_I0_O)        0.053    11.942 r  Out_OBUF[27]_inst_i_10/O
+                         net (fo=1, unplaced)         0.000    11.942    Out_OBUF[27]_inst_i_10_n_0
+                                                                      r  Out_OBUF[27]_inst_i_2/S[0]
+                         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.313    12.255 r  Out_OBUF[27]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000    12.255    Out_OBUF[27]_inst_i_2_n_0
+                                                                      r  Out_OBUF[30]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.187    12.442 f  Out_OBUF[30]_inst_i_2/O[3]
+                         net (fo=31, unplaced)        0.428    12.870    p_0_in[31]
+                                                                      f  Out_OBUF[23]_inst_i_1/I1
+                         LUT2 (Prop_lut2_I1_O)        0.145    13.015 r  Out_OBUF[23]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584    13.598    Out_OBUF[23]
+                                                                      r  Out_OBUF[23]_inst/I
+                         OBUF (Prop_obuf_I_O)         2.293    15.891 r  Out_OBUF[23]_inst/O
+                         net (fo=0)                   0.000    15.891    Out[23]
+                                                                      r  Out[23] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.206ns  (logic 2.228ns (69.489%)  route 0.978ns (30.511%))
+  Logic Levels:           14  (CARRY4=9 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.052     1.632 r  Out_OBUF[3]_inst_i_2/O[2]
+                         net (fo=1, unplaced)         0.130     1.763    p_0_in[2]
+                                                                      r  Out_OBUF[2]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.071     1.834 r  Out_OBUF[2]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.080    Out_OBUF[2]
+                                                                      r  Out_OBUF[2]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.206 r  Out_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     3.206    Out[2]
+                                                                      r  Out[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.207ns  (logic 2.212ns (68.963%)  route 0.996ns (31.037%))
+  Logic Levels:           14  (CARRY4=9 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.041     1.621 r  Out_OBUF[3]_inst_i_2/O[0]
+                         net (fo=1, unplaced)         0.148     1.769    p_0_in[0]
+                                                                      r  Out_OBUF[0]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.066     1.835 r  Out_OBUF[0]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.081    Out_OBUF[0]
+                                                                      r  Out_OBUF[0]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.207 r  Out_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     3.207    Out[0]
+                                                                      r  Out[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.217ns  (logic 2.240ns (69.630%)  route 0.977ns (30.370%))
+  Logic Levels:           14  (CARRY4=9 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.065     1.645 r  Out_OBUF[3]_inst_i_2/O[3]
+                         net (fo=1, unplaced)         0.129     1.774    p_0_in[3]
+                                                                      r  Out_OBUF[3]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.070     1.844 r  Out_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.090    Out_OBUF[3]
+                                                                      r  Out_OBUF[3]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.217 r  Out_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     3.217    Out[3]
+                                                                      r  Out[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.231ns  (logic 2.253ns (69.725%)  route 0.978ns (30.275%))
+  Logic Levels:           15  (CARRY4=10 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.605 r  Out_OBUF[3]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.605    Out_OBUF[3]_inst_i_2_n_0
+                                                                      r  Out_OBUF[7]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.052     1.657 r  Out_OBUF[7]_inst_i_2/O[2]
+                         net (fo=1, unplaced)         0.130     1.788    p_0_in[6]
+                                                                      r  Out_OBUF[6]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.071     1.859 r  Out_OBUF[6]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.105    Out_OBUF[6]
+                                                                      r  Out_OBUF[6]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.231 r  Out_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     3.231    Out[6]
+                                                                      r  Out[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.232ns  (logic 2.237ns (69.203%)  route 0.996ns (30.797%))
+  Logic Levels:           15  (CARRY4=10 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.605 r  Out_OBUF[3]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.605    Out_OBUF[3]_inst_i_2_n_0
+                                                                      r  Out_OBUF[7]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.041     1.646 r  Out_OBUF[7]_inst_i_2/O[0]
+                         net (fo=1, unplaced)         0.148     1.794    p_0_in[4]
+                                                                      r  Out_OBUF[4]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.066     1.860 r  Out_OBUF[4]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.106    Out_OBUF[4]
+                                                                      r  Out_OBUF[4]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.232 r  Out_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     3.232    Out[4]
+                                                                      r  Out[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.242ns  (logic 2.265ns (69.865%)  route 0.977ns (30.135%))
+  Logic Levels:           15  (CARRY4=10 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.605 r  Out_OBUF[3]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.605    Out_OBUF[3]_inst_i_2_n_0
+                                                                      r  Out_OBUF[7]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.065     1.670 r  Out_OBUF[7]_inst_i_2/O[3]
+                         net (fo=1, unplaced)         0.129     1.799    p_0_in[7]
+                                                                      r  Out_OBUF[7]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.070     1.869 r  Out_OBUF[7]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.115    Out_OBUF[7]
+                                                                      r  Out_OBUF[7]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.242 r  Out_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     3.242    Out[7]
+                                                                      r  Out[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[10]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.256ns  (logic 2.278ns (69.958%)  route 0.978ns (30.042%))
+  Logic Levels:           16  (CARRY4=11 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.605 r  Out_OBUF[3]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.605    Out_OBUF[3]_inst_i_2_n_0
+                                                                      r  Out_OBUF[7]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.630 r  Out_OBUF[7]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.630    Out_OBUF[7]_inst_i_2_n_0
+                                                                      r  Out_OBUF[11]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.052     1.682 r  Out_OBUF[11]_inst_i_2/O[2]
+                         net (fo=1, unplaced)         0.130     1.813    p_0_in[10]
+                                                                      r  Out_OBUF[10]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.071     1.884 r  Out_OBUF[10]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.130    Out_OBUF[10]
+                                                                      r  Out_OBUF[10]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.256 r  Out_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     3.256    Out[10]
+                                                                      r  Out[10] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[8]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.257ns  (logic 2.262ns (69.439%)  route 0.996ns (30.561%))
+  Logic Levels:           16  (CARRY4=11 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.605 r  Out_OBUF[3]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.605    Out_OBUF[3]_inst_i_2_n_0
+                                                                      r  Out_OBUF[7]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.630 r  Out_OBUF[7]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.630    Out_OBUF[7]_inst_i_2_n_0
+                                                                      r  Out_OBUF[11]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.041     1.671 r  Out_OBUF[11]_inst_i_2/O[0]
+                         net (fo=1, unplaced)         0.148     1.819    p_0_in[8]
+                                                                      r  Out_OBUF[8]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.066     1.885 r  Out_OBUF[8]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.131    Out_OBUF[8]
+                                                                      r  Out_OBUF[8]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.257 r  Out_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     3.257    Out[8]
+                                                                      r  Out[8] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[11]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.267ns  (logic 2.290ns (70.095%)  route 0.977ns (29.905%))
+  Logic Levels:           16  (CARRY4=11 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.605 r  Out_OBUF[3]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.605    Out_OBUF[3]_inst_i_2_n_0
+                                                                      r  Out_OBUF[7]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.630 r  Out_OBUF[7]_inst_i_2/CO[3]
+                         net (fo=1, unplaced)         0.000     1.630    Out_OBUF[7]_inst_i_2_n_0
+                                                                      r  Out_OBUF[11]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.065     1.695 r  Out_OBUF[11]_inst_i_2/O[3]
+                         net (fo=1, unplaced)         0.129     1.824    p_0_in[11]
+                                                                      r  Out_OBUF[11]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.070     1.894 r  Out_OBUF[11]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.140    Out_OBUF[11]
+                                                                      r  Out_OBUF[11]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.267 r  Out_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     3.267    Out[11]
+                                                                      r  Out[11] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 data[304]
+                            (input port)
+  Destination:            Out[1]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.273ns  (logic 2.235ns (68.275%)  route 1.039ns (31.725%))
+  Logic Levels:           14  (CARRY4=9 DSP48E1=1 IBUF=1 LUT2=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  data[304] (IN)
+                         net (fo=0)                   0.000     0.000    data[304]
+                                                                      r  data_IBUF[304]_inst/I
+                         IBUF (Prop_ibuf_I_O)         0.126     0.126 r  data_IBUF[304]_inst/O
+                         net (fo=2, unplaced)         0.246     0.372    data_IBUF[304]
+                                                                      r  Out8__1/B[16]
+                         DSP48E1 (Prop_dsp48e1_B[16]_P[0])
+                                                      0.484     0.856 r  Out8__1/P[0]
+                         net (fo=2, unplaced)         0.246     1.102    Out8__1_n_105
+                                                                      r  Out_OBUF[3]_inst_i_516/I2
+                         LUT3 (Prop_lut3_I2_O)        0.028     1.130 r  Out_OBUF[3]_inst_i_516/O
+                         net (fo=1, unplaced)         0.000     1.130    Out_OBUF[3]_inst_i_516_n_0
+                                                                      r  Out_OBUF[3]_inst_i_447/S[0]
+                         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.055     1.185 r  Out_OBUF[3]_inst_i_447/O[0]
+                         net (fo=2, unplaced)         0.107     1.292    Out_OBUF[3]_inst_i_447_n_7
+                                                                      r  Out_OBUF[3]_inst_i_359/DI[0]
+                         CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.135     1.427 r  Out_OBUF[3]_inst_i_359/CO[3]
+                         net (fo=1, unplaced)         0.003     1.430    Out_OBUF[3]_inst_i_359_n_0
+                                                                      r  Out_OBUF[3]_inst_i_256/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.455 r  Out_OBUF[3]_inst_i_256/CO[3]
+                         net (fo=1, unplaced)         0.000     1.455    Out_OBUF[3]_inst_i_256_n_0
+                                                                      r  Out_OBUF[3]_inst_i_139/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.480 r  Out_OBUF[3]_inst_i_139/CO[3]
+                         net (fo=1, unplaced)         0.000     1.480    Out_OBUF[3]_inst_i_139_n_0
+                                                                      r  Out_OBUF[3]_inst_i_78/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.505 r  Out_OBUF[3]_inst_i_78/CO[3]
+                         net (fo=1, unplaced)         0.000     1.505    Out_OBUF[3]_inst_i_78_n_0
+                                                                      r  Out_OBUF[3]_inst_i_29/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.530 r  Out_OBUF[3]_inst_i_29/CO[3]
+                         net (fo=1, unplaced)         0.000     1.530    Out_OBUF[3]_inst_i_29_n_0
+                                                                      r  Out_OBUF[3]_inst_i_12/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.555 r  Out_OBUF[3]_inst_i_12/CO[3]
+                         net (fo=1, unplaced)         0.000     1.555    Out_OBUF[3]_inst_i_12_n_0
+                                                                      r  Out_OBUF[3]_inst_i_3/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.025     1.580 r  Out_OBUF[3]_inst_i_3/CO[3]
+                         net (fo=1, unplaced)         0.000     1.580    Out_OBUF[3]_inst_i_3_n_0
+                                                                      r  Out_OBUF[3]_inst_i_2/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.060     1.640 r  Out_OBUF[3]_inst_i_2/O[1]
+                         net (fo=1, unplaced)         0.191     1.831    p_0_in[1]
+                                                                      r  Out_OBUF[1]_inst_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.070     1.901 r  Out_OBUF[1]_inst_i_1/O
+                         net (fo=1, unplaced)         0.246     2.147    Out_OBUF[1]
+                                                                      r  Out_OBUF[1]_inst/I
+                         OBUF (Prop_obuf_I_O)         1.126     3.273 r  Out_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     3.273    Out[1]
+                                                                      r  Out[1] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

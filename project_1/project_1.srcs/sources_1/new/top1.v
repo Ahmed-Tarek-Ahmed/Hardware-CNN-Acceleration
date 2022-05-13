@@ -54,13 +54,13 @@ module top1#(parameter samples=31, size=32,DP=5,paramD=57344,paramD1=8192,paramD
                 .in(OutM2),
                 .out(InDense)
         );
-        DenseRelu#(.n_outputs(DF), .n_inputs(M2O), .Input_size(size),.DP(DP))D
+        DenseRelu#(.n_outputs(DF), .n_inputs(M2O), .Input_size(size),.DP(DP),.Relu(0))D
             (
                 .INBUS(InDense),
                 .weights(weightsDense),
                 .OUTBUS(OutDense)
             );
-    DenseRelu#(.n_outputs(D1F), .n_inputs(DF), .Input_size(size),.DP(DP))D1
+    DenseRelu#(.n_outputs(D1F), .n_inputs(DF), .Input_size(size),.DP(DP),.Relu(0))D1
                     (
                         .INBUS(OutDense),
                         .weights(weightsDense1),

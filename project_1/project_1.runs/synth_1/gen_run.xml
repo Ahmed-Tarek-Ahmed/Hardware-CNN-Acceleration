@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1652103482">
-  <File Type="PA-TCL" Name="RamE.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="RamE_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="RamE_reports.tcl"/>
-  <File Type="RDS-RDS" Name="RamE.vds"/>
-  <File Type="RDS-UTIL" Name="RamE_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="RamE_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="RamE.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RamE_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RamE_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1652448776">
+  <File Type="PA-TCL" Name="Convolution.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Convolution_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Convolution_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Convolution.vds"/>
+  <File Type="RDS-UTIL" Name="Convolution_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Convolution_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Convolution.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Convolution_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Convolution_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/Convulution.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/emb_mux.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/EMB_Layer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/RamE.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -26,23 +50,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Convulution.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/DenseRelu.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/EMB_Layer.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,14 +114,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/emb_mux.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/top1.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -154,9 +154,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/Embedding.txt"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RamE"/>
+      <Option Name="TopModule" Val="Convolution"/>
+      <Option Name="TopLib" Val="xil_defaultlib"/>
+      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/Convulution.v"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

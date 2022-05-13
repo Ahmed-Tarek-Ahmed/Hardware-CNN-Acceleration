@@ -1,12 +1,35 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9c695bf64364463da57055b55c983732 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RamE_behav xil_defaultlib.RamE xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 9c695bf64364463da57055b55c983732 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TestPer_behav xil_defaultlib.TestPer xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.RamE
+Compiling module xil_defaultlib.RamBig
+Compiling module xil_defaultlib.mux_emb
+Compiling module xil_defaultlib.EMB_Layer(samples=31)
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.Ram2
+Compiling module xil_defaultlib.RAMD
+Compiling module xil_defaultlib.Convolution(DP=5)
+Compiling module xil_defaultlib.Conv_Layer(n_inputs=16,windows=3...
+Compiling module xil_defaultlib.MaxPoolUnit(In_size=32)
+Compiling module xil_defaultlib.MaxPoolLayer(n_outputs=1920,cs=3...
+Compiling module xil_defaultlib.Transpose(N=1920,size=32,GS=15)
+Compiling module xil_defaultlib.Convolution(n_inputs=256,DP=5)
+Compiling module xil_defaultlib.Conv_Layer(n_inputs=256,windows=...
+Compiling module xil_defaultlib.MaxPoolLayer(n_outputs=448,cs=14...
+Compiling module xil_defaultlib.Transpose(N=448,size=32,GS=7)
+Compiling module xil_defaultlib.Convolution(n_inputs=448,DP=5,Re...
+Compiling module xil_defaultlib.DenseRelu(n_inputs=448,DP=5,Relu...
+Compiling module xil_defaultlib.Convolution(n_inputs=128,DP=5,Re...
+Compiling module xil_defaultlib.DenseRelu(n_outputs=64,n_inputs=...
+Compiling module xil_defaultlib.Convolution(n_inputs=64,DP=5,SL=...
+Compiling module xil_defaultlib.DenseRelu(n_outputs=5,DP=5,SL=2,...
+Compiling module xil_defaultlib.MaxComp
+Compiling module xil_defaultlib.top1_default
+Compiling module xil_defaultlib.TestPer
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot RamE_behav
+Built simulation snapshot TestPer_behav
