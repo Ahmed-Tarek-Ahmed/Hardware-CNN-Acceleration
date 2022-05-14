@@ -1,0 +1,2 @@
+C1W.v,verilog,xil_defaultlib,../../../../project_1.srcs/sources_1/ip/C1W/sim/C1W.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

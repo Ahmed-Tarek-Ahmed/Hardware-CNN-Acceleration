@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="C1W_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1652543920">
+  <File Type="PA-TCL" Name="C1W.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="C1W_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="C1W_reports.tcl"/>
+  <File Type="RDS-RDS" Name="C1W.vds"/>
+  <File Type="RDS-UTIL" Name="C1W_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="C1W_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="C1W.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="C1W_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="C1W_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/C1W">
+    <File Path="$PSRCDIR/sources_1/ip/C1W/C1W.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="C1W"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/C1W">
+    <File Path="$PSRCDIR/sources_1/ip/C1W/C1W.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="C1W"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

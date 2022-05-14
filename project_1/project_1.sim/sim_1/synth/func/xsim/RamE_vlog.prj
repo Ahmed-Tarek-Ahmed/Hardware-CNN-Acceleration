@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"RamE_func_synth.v" \
+"../../../../../project_1.srcs/sources_1/new/RamE.v" \
+
+# Do not sort compile order
+nosort
