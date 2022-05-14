@@ -1,2 +1,24 @@
 Vivado Simulator 2018.2
 Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module DenseTest.A.W0.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module DenseTest.A.W1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module DenseTest.A.W2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module DenseTest.A.W3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module DenseTest.A.W4.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_1 WARNING: Address 1c0 is outside range for A Read
+blk_mem_gen_v8_4_1 WARNING: Address 1c0 is outside range for A Read
+blk_mem_gen_v8_4_1 WARNING: Address 1c0 is outside range for A Read
+blk_mem_gen_v8_4_1 WARNING: Address 1c0 is outside range for A Read
+blk_mem_gen_v8_4_1 WARNING: Address 1c0 is outside range for A Read
+1000011011011110110011110111011010110000110101010000010101101101110011011100011001010001111000001010001100010011100111110011101000101011111001101000000100010011
+$finish called at time : 898 ns : File "E:/Youssef/GraduationProject/Github/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/DenseTest.v" Line 30

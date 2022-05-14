@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/ip/DenseW4/sim/DenseW4.v" \
+"../../../../project_1.srcs/sources_1/ip/DenseW3/sim/DenseW3.v" \
+"../../../../project_1.srcs/sources_1/ip/DenseW2/sim/DenseW2.v" \
+"../../../../project_1.srcs/sources_1/ip/DenseW1/sim/DenseW1.v" \
+"../../../../project_1.srcs/sources_1/ip/DenseW0/sim/DenseW0.v" \
+"../../../../project_1.srcs/sources_1/new/Dense_Seq.v" \
+"../../../../project_1.srcs/sim_1/new/DenseTest.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

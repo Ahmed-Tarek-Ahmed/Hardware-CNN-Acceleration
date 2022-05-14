@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1652103482">
   <File Type="PA-TCL" Name="RamE.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="RamE_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="RamE_reports.tcl"/>
   <File Type="RDS-RDS" Name="RamE.vds"/>
-  <File Type="RDS-UTIL" Name="RamE_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="RamE_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="RamE.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RamE_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RamE_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/RamE.v">
