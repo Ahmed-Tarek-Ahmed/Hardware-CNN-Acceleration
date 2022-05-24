@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1652103482">
-  <File Type="PA-TCL" Name="RamE.tcl"/>
-  <File Type="REPORTS-TCL" Name="RamE_reports.tcl"/>
-  <File Type="RDS-RDS" Name="RamE.vds"/>
-  <File Type="RDS-DCP" Name="RamE.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653410339">
+  <File Type="PA-TCL" Name="Class.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Class_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Class_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Class.vds"/>
+  <File Type="RDS-UTIL" Name="Class_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Class_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Class.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Class_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Class_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/RamE.v">
+    <File Path="$PSRCDIR/sources_1/new/Class.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -117,6 +122,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Dense_Seq.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/DenseTB.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -133,6 +146,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/RamBig.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/ReLu.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -141,7 +162,54 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/RamBig.v">
+    <File Path="$PSIMDIR/sim_1/behav/xsim/Embedding.txt"/>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/DW0.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/DW1.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/DW2.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/DW3.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/DW4.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Dense_Comb.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_test.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RAMD2.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -151,7 +219,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="RamE"/>
+      <Option Name="TopModule" Val="Class"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

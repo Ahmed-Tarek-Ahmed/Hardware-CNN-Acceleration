@@ -8,12 +8,12 @@ verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/MaxPoolLayer.v" \
 "../../../../project_1.srcs/sources_1/new/MaxPoolUnit.v" \
 "../../../../project_1.srcs/sources_1/new/RAM.v" \
+"../../../../project_1.srcs/sources_1/new/RAMD2.v" \
 "../../../../project_1.srcs/sources_1/new/Ram2.v" \
 "../../../../project_1.srcs/sources_1/new/RamBig.v" \
-"../../../../project_1.srcs/sources_1/new/RamD.v" \
 "../../../../project_1.srcs/sources_1/new/Transpose.v" \
 "../../../../project_1.srcs/sources_1/new/emb_mux.v" \
-"../../../../project_1.srcs/sources_1/new/top1.v" \
+"../../../../project_1.srcs/sources_1/new/top_test.v" \
 "../../../../project_1.srcs/sim_1/new/TestPer.v" \
 
 # compile glbl module

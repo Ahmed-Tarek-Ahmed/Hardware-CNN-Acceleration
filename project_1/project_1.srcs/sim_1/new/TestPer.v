@@ -30,7 +30,7 @@ end
 
 integer j = 0;
 
-top1 T (Min,Mout);
+top_test T (Min,Mout);
 
 //always@(Min)
 //begin
