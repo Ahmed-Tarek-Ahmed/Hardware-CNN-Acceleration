@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="E:/Youssef/GraduationProject/Github/Hardware-CNN-Acceleration-/project_1/project_1.xpr">
+<Project Version="7" Minor="38" Path="E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9c695bf64364463da57055b55c983732"/>
@@ -270,6 +270,14 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Conv_Layer_Seq.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/top_seq.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
