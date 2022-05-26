@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module Convolution
-    #(parameter n_inputs = 16, size = 32,DP=4,SL=0,Relu=1)
+    #(parameter n_inputs = 16, size = 16,DP=4,SL=0,Relu=1)
     (    
         input [size*n_inputs-1:0] weights,
         input [size*n_inputs-1:0] data,

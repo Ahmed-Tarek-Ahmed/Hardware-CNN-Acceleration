@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Conv_Layer#(parameter n_inputs = 2, size = 32, windows=2, filters=2,DP=4)(
+module Conv_Layer#(parameter n_inputs = 16, size = 16, windows=1, filters=16,DP=4)(
         input [size*n_inputs*filters-1:0] weights,
         input [size*n_inputs/2*(windows+1)-1:0] data,
         output   [size*windows*filters-1:0]  Out );
