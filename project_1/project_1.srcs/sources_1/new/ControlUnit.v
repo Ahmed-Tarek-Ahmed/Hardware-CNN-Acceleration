@@ -28,7 +28,8 @@ module ControlUnit #(
         output reg [r_MemBlkDepth - 1:0] r_MemBlk1_Address,
         output reg [r_MemBlkDepth - 1:0] r_MemBlk2_Address,
         output reg [r_MemBlkDepth - 1:0] r_MemBlk3_Address,
-        output reg [DeseMemDepth - 1:0] r_Dese_Adress
+        output reg [DeseMemDepth - 1:0] r_Dese_Adress,
+        output reg denseEnable
         );  
         
         integer Counter1 = 0;
@@ -56,15 +57,18 @@ module ControlUnit #(
         r_MemBlk2_Address = 0;
         r_MemBlk3_Address = 0;
         r_Dese_Adress = 0;
-        #1;
+        denseEnable = 0;
+        //#1;
         $finish;
         end
 always@(posedge clk)begin
             if(Counter1 > Conv1_Cycles)begin
                 Conv_mode = 1;
                 Counter2 = Counter2 + 1;
-                if(Counter2 >= 2)
+                if(Counter2 >= 2)begin
+                    denseEnable = 1;
                     r_Dese_Adress = r_Dese_Adress + 'b1;
+                    end
                 if(Counter2 > Conv2_Cycles)begin
                     Counter2 = 0;
                     Conv_mode = 0;
