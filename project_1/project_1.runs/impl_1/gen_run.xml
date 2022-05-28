@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653642234">
   <File Type="BITSTR-BMM" Name="ControlUnit_bd.bmm"/>
-  <File Type="ROUTE-PWR" Name="ControlUnit_power_routed.rpt"/>
   <File Type="PA-TCL" Name="ControlUnit.tcl"/>
   <File Type="OPT-DCP" Name="ControlUnit_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="ControlUnit_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="ControlUnit_reports.tcl"/>
-  <File Type="OPT-DRC" Name="ControlUnit_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="ControlUnit.hwdef"/>
+  <File Type="BG-BGN" Name="ControlUnit.bgn"/>
   <File Type="PWROPT-DCP" Name="ControlUnit_pwropt.dcp"/>
   <File Type="PLACE-DCP" Name="ControlUnit_placed.dcp"/>
-  <File Type="PLACE-IO" Name="ControlUnit_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="ControlUnit_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ControlUnit_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="ControlUnit_control_sets_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="ControlUnit_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="ControlUnit.bgn"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="ControlUnit_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="ControlUnit.bin"/>
   <File Type="PHYSOPT-DCP" Name="ControlUnit_physopt.dcp"/>
@@ -23,26 +16,11 @@
   <File Type="ROUTE-ERROR-DCP" Name="ControlUnit_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="ControlUnit_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="ControlUnit_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="ControlUnit_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="ControlUnit_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="ControlUnit.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="ControlUnit_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="ControlUnit.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ControlUnit_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ControlUnit_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="ControlUnit.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ControlUnit_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="ControlUnit_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="ControlUnit_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ControlUnit_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ControlUnit_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="ControlUnit_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ControlUnit_timing_summary_routed.rpx"/>
   <File Type="RDI-RDI" Name="ControlUnit.vdi"/>
-  <File Type="ROUTE-CLK" Name="ControlUnit_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ControlUnit_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ControlUnit_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ControlUnit_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="ControlUnit_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ControlUnit_postroute_physopt_bb.dcp"/>
   <File Type="BG-BIT" Name="ControlUnit.bit"/>

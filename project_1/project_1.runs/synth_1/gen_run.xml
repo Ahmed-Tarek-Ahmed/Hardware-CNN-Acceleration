@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="ControlUnit.tcl"/>
   <File Type="REPORTS-TCL" Name="ControlUnit_reports.tcl"/>
   <File Type="RDS-RDS" Name="ControlUnit.vds"/>
-  <File Type="RDS-UTIL" Name="ControlUnit_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ControlUnit_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="ControlUnit.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
