@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="Conv1_Weights_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653750517">
+  <File Type="PA-TCL" Name="Conv1_Weights.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Conv1_Weights_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Conv1_Weights_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Conv1_Weights.vds"/>
+  <File Type="RDS-UTIL" Name="Conv1_Weights_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Conv1_Weights_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Conv1_Weights.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Conv1_Weights_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Conv1_Weights_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Conv1_Weights">
+    <File Path="$PSRCDIR/sources_1/ip/Conv1_Weights/Conv1_Weights.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="Conv1_Weights"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Conv1_Weights">
+    <File Path="$PSRCDIR/sources_1/ip/Conv1_Weights/Conv1_Weights.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="Conv1_Weights"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
