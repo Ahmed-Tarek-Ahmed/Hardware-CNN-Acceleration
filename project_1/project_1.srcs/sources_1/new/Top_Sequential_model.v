@@ -7,6 +7,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     (
         input clk
     );
+    reg [3*3-1:0] samples;
     wire [MC1Depth-1:0] MC1; // Address MC1 out of Control Unit
     wire [MC2Depth-1:0] MC2; // Address MC2 out of Control Unit
     wire [Wr_MemBlkDepth-1:0] Wr_MemBlk1_Address; //Memory Block-1 Write address Address out of Control
@@ -34,13 +35,14 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     wire [memblkReadWidth-1 :0]Memblk3; // out of memblk-3
     wire [memblkReadWidth*3 -1 :0]MemArrayOUT ;
     assign MemArrayOUT = {Memblk1,Memblk2,Memblk3};
+    EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
     Conv_Layer_Seq C(
         .WC1(WC1),
         .WC2(WC2),
-        .DataC1(DataC2),
+        .DataC1(DataC1),
         .DataC2(DataC2),
-        .clk(clk),
-        .OutR(OutC)
+        .Out(OutC),
+        .mode(mode)
     );
     RegisterFile#(.ele_num(MaxPool_layerSize*2),.in_size(size)) R1(
         .enable(clk),
@@ -83,22 +85,30 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .r_Dese_Adress(0), // to be reviewed
         .denseEnable(denseEnable)   
     );
-    MemBlk_1(
+    MemBlk_1 M1(
       .addra(Wr_MemBlk1_Address),.ena(Enable[2]),.dina(MP_layerOut),.clka(clk),
       .addrb(r_MemBlk1_Address),.clkb(clk),.enb(mode),.doutb(Memblk1) 
     );
-    MemBlk_2(
+    MemBlk_2 M2(
         .addra(Wr_MemBlk2_Address),.ena(Enable[1]),.dina(MP_layerOut),.clka(clk),
           .addrb(r_MemBlk2_Address),.clkb(clk),.enb(mode),.doutb(Memblk2)
         );
-    MemBlk_3(
+    MemBlk_3 M3(
         .addra(Wr_MemBlk3_Address),.ena(Enable[0]),.dina(MP_layerOut),.clka(clk),
         .addrb(r_MemBlk3_Address),.clkb(clk),.enb(mode),.doutb(Memblk3)            
         );
-    Conv1_Weights(
+    Conv1_Weights Conv1(
         .addra(MC1),.ena(!mode),.douta(WC1),.clka(clk)
     );
-    Conv2_Weights(
+    Conv2_Weights Conv2(
         .addra(MC2),.ena(!mode),.douta(WC2),.clka(clk)
         );
+        initial 
+            begin
+            samples=9'b001001001;
+            #1
+            $display("%b",OC1);
+        
+            $finish;
+            end
 endmodule
