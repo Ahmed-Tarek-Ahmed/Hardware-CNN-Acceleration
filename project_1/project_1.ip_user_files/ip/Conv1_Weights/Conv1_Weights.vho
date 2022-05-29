@@ -55,6 +55,7 @@
 COMPONENT Conv1_Weights
   PORT (
     clka : IN STD_LOGIC;
+    ena : IN STD_LOGIC;
     addra : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(4095 DOWNTO 0)
   );
@@ -68,6 +69,7 @@ END COMPONENT;
 your_instance_name : Conv1_Weights
   PORT MAP (
     clka => clka,
+    ena => ena,
     addra => addra,
     douta => douta
   );

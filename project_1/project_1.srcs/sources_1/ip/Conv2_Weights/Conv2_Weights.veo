@@ -56,6 +56,7 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 Conv2_Weights your_instance_name (
   .clka(clka),    // input wire clka
+  .ena(ena),      // input wire ena
   .addra(addra),  // input wire [5 : 0] addra
   .douta(douta)  // output wire [4095 : 0] douta
 );

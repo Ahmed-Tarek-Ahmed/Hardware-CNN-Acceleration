@@ -12,13 +12,14 @@ module Conv_Layer_Seq#(parameter n_inputs = 16,size = 16,DP=4,FC1=16,FC2=1,RC1=3
         reg [n_units*size*n_inputs-1:0] data;
         always@(WC1,WC2,DataC1,DataC2,mode)begin
         if (mode==0)begin
-            for (j=0;j<n_units/2;j=j+1)
+            for (j=0;j<n_units;j=j+2)begin
                 data[j*size*n_inputs+:size*n_inputs]=DataC1[size*8*2-1:0];
-
-            for (j=n_units/2;j<n_units;j=j+1)
+                weights[j*size*n_inputs+:size*n_inputs] = WC1[(j/2)*size*n_inputs+:size*n_inputs];
+            end
+            for (j=1;j<n_units;j=j+2)begin
                 data[j*size*n_inputs+:size*n_inputs]=DataC1[size*8*RC1-1:size*8];
-                
-           weights={WC1,WC1};
+                weights[j*size*n_inputs+:size*n_inputs] = WC1[((j-1)/2)*size*n_inputs+:size*n_inputs];
+            end
            
         end
         else begin

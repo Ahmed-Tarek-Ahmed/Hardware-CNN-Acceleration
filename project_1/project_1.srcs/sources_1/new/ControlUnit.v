@@ -17,7 +17,7 @@ module ControlUnit #(
         DeseMemDepth = 9
         )
         (
-        input clk,
+        input clk,reset,
         output reg Conv_mode,
         output reg[MC1Depth - 1:0] MC1_Address,
         output reg[MC2Depth - 1:0] MC2_Address,
@@ -59,9 +59,27 @@ module ControlUnit #(
         r_Dese_Adress = 0;
         denseEnable = 0;
         //#1;
-        $finish;
         end
 always@(posedge clk)begin
+            if(reset == 1)begin
+            Conv_mode = 0;
+            MC1_Address = 0;
+            MC2_Address = 0;
+            EnableBus = 'b100;
+            Wr_MemBlk1_Address = 0;
+            Wr_MemBlk2_Address = 0;
+            Wr_MemBlk3_Address = 0;
+            r_MemBlk1_Address = 0;
+            r_MemBlk2_Address = 0;
+            r_MemBlk3_Address = 0;
+            r_Dese_Adress = 0;
+            denseEnable = 0;
+            Counter1 = 0;
+            Counter2 = 0;
+            BlkCounter = 0;
+            c = 0;
+            end
+            else begin
             if(Counter1 > Conv1_Cycles)begin
                 Conv_mode = 1;
                 Counter2 = Counter2 + 1;
@@ -143,5 +161,6 @@ always@(posedge clk)begin
                 end
                 end
              end
+      end
 end
 endmodule

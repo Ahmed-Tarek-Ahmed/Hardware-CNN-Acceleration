@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sat May 28 17:12:27 2022
+// Date        : Sun May 29 21:26:19 2022
 // Host        : DESKTOP-PCIMVFJ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv1_Weights/Conv1_Weights_sim_netlist.v
+//               D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv1_Weights/Conv1_Weights_sim_netlist.v
 // Design      : Conv1_Weights
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,15 +16,18 @@
 (* NotValidForBitStream *)
 module Conv1_Weights
    (clka,
+    ena,
     addra,
     douta);
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER" *) input clka;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *) input ena;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [2:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *) output [4095:0]douta;
 
   wire [2:0]addra;
   wire clka;
   wire [4095:0]douta;
+  wire ena;
   wire NLW_U0_dbiterr_UNCONNECTED;
   wire NLW_U0_rsta_busy_UNCONNECTED;
   wire NLW_U0_rstb_busy_UNCONNECTED;
@@ -72,7 +75,7 @@ module Conv1_Weights
   (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     378.882368 mW" *) 
   (* C_FAMILY = "virtex7" *) 
   (* C_HAS_AXI_ID = "0" *) 
-  (* C_HAS_ENA = "0" *) 
+  (* C_HAS_ENA = "1" *) 
   (* C_HAS_ENB = "0" *) 
   (* C_HAS_INJECTERR = "0" *) 
   (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
@@ -132,7 +135,7 @@ module Conv1_Weights
         .douta(douta),
         .doutb(NLW_U0_doutb_UNCONNECTED[4095:0]),
         .eccpipece(1'b0),
-        .ena(1'b0),
+        .ena(ena),
         .enb(1'b0),
         .injectdbiterr(1'b0),
         .injectsbiterr(1'b0),
@@ -190,1340 +193,1631 @@ endmodule
 module Conv1_Weights_blk_mem_gen_generic_cstr
    (douta,
     clka,
+    ena,
     addra);
   output [4095:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [4095:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_width \ramloop[0].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[71:0]));
+        .douta(douta[71:0]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized9 \ramloop[10].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[791:720]));
+        .douta(douta[791:720]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized10 \ramloop[11].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[863:792]));
+        .douta(douta[863:792]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized11 \ramloop[12].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[935:864]));
+        .douta(douta[935:864]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized12 \ramloop[13].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1007:936]));
+        .douta(douta[1007:936]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized13 \ramloop[14].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1079:1008]));
+        .douta(douta[1079:1008]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized14 \ramloop[15].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1151:1080]));
+        .douta(douta[1151:1080]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized15 \ramloop[16].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1223:1152]));
+        .douta(douta[1223:1152]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized16 \ramloop[17].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1295:1224]));
+        .douta(douta[1295:1224]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized17 \ramloop[18].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1367:1296]));
+        .douta(douta[1367:1296]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized18 \ramloop[19].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1439:1368]));
+        .douta(douta[1439:1368]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized0 \ramloop[1].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[143:72]));
+        .douta(douta[143:72]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized19 \ramloop[20].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1511:1440]));
+        .douta(douta[1511:1440]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized20 \ramloop[21].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1583:1512]));
+        .douta(douta[1583:1512]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized21 \ramloop[22].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1655:1584]));
+        .douta(douta[1655:1584]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized22 \ramloop[23].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1727:1656]));
+        .douta(douta[1727:1656]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized23 \ramloop[24].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1799:1728]));
+        .douta(douta[1799:1728]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized24 \ramloop[25].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1871:1800]));
+        .douta(douta[1871:1800]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized25 \ramloop[26].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[1943:1872]));
+        .douta(douta[1943:1872]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized26 \ramloop[27].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2015:1944]));
+        .douta(douta[2015:1944]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized27 \ramloop[28].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2087:2016]));
+        .douta(douta[2087:2016]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized28 \ramloop[29].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2159:2088]));
+        .douta(douta[2159:2088]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized1 \ramloop[2].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[215:144]));
+        .douta(douta[215:144]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized29 \ramloop[30].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2231:2160]));
+        .douta(douta[2231:2160]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized30 \ramloop[31].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2303:2232]));
+        .douta(douta[2303:2232]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized31 \ramloop[32].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2375:2304]));
+        .douta(douta[2375:2304]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized32 \ramloop[33].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2447:2376]));
+        .douta(douta[2447:2376]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized33 \ramloop[34].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2519:2448]));
+        .douta(douta[2519:2448]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized34 \ramloop[35].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2591:2520]));
+        .douta(douta[2591:2520]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized35 \ramloop[36].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2663:2592]));
+        .douta(douta[2663:2592]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized36 \ramloop[37].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2735:2664]));
+        .douta(douta[2735:2664]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized37 \ramloop[38].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2807:2736]));
+        .douta(douta[2807:2736]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized38 \ramloop[39].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2879:2808]));
+        .douta(douta[2879:2808]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized2 \ramloop[3].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[287:216]));
+        .douta(douta[287:216]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized39 \ramloop[40].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[2951:2880]));
+        .douta(douta[2951:2880]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized40 \ramloop[41].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3023:2952]));
+        .douta(douta[3023:2952]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized41 \ramloop[42].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3095:3024]));
+        .douta(douta[3095:3024]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized42 \ramloop[43].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3167:3096]));
+        .douta(douta[3167:3096]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized43 \ramloop[44].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3239:3168]));
+        .douta(douta[3239:3168]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized44 \ramloop[45].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3311:3240]));
+        .douta(douta[3311:3240]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized45 \ramloop[46].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3383:3312]));
+        .douta(douta[3383:3312]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized46 \ramloop[47].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3455:3384]));
+        .douta(douta[3455:3384]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized47 \ramloop[48].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3527:3456]));
+        .douta(douta[3527:3456]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized48 \ramloop[49].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3599:3528]));
+        .douta(douta[3599:3528]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized3 \ramloop[4].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[359:288]));
+        .douta(douta[359:288]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized49 \ramloop[50].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3671:3600]));
+        .douta(douta[3671:3600]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized50 \ramloop[51].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3743:3672]));
+        .douta(douta[3743:3672]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized51 \ramloop[52].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3815:3744]));
+        .douta(douta[3815:3744]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized52 \ramloop[53].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3887:3816]));
+        .douta(douta[3887:3816]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized53 \ramloop[54].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[3959:3888]));
+        .douta(douta[3959:3888]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized54 \ramloop[55].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[4031:3960]));
+        .douta(douta[4031:3960]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized55 \ramloop[56].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[4095:4032]));
+        .douta(douta[4095:4032]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized4 \ramloop[5].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[431:360]));
+        .douta(douta[431:360]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized5 \ramloop[6].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[503:432]));
+        .douta(douta[503:432]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized6 \ramloop[7].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[575:504]));
+        .douta(douta[575:504]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized7 \ramloop[8].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[647:576]));
+        .douta(douta[647:576]),
+        .ena(ena));
   Conv1_Weights_blk_mem_gen_prim_width__parameterized8 \ramloop[9].ram.r 
        (.addra(addra),
         .clka(clka),
-        .douta(douta[719:648]));
+        .douta(douta[719:648]),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized0
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized0 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized1
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized1 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized10
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized10 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized11
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized11 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized12
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized12 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized13
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized13 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized14
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized14 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized15
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized15 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized16
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized16 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized17
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized17 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized18
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized18 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized19
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized19 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized2
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized2 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized20
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized20 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized21
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized21 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized22
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized22 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized23
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized23 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized24
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized24 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized25
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized25 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized26
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized26 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized27
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized27 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized28
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized28 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized29
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized29 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized3
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized3 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized30
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized30 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized31
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized31 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized32
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized32 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized33
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized33 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized34
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized34 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized35
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized35 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized36
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized36 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized37
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized37 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized38
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized38 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized39
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized39 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized4
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized4 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized40
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized40 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized41
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized41 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized42
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized42 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized43
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized43 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized44
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized44 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized45
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized45 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized46
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized46 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized47
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized47 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized48
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized48 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized49
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized49 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized5
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized5 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized50
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized50 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized51
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized51 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized52
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized52 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized53
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized53 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized54
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized54 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized55
    (douta,
     clka,
+    ena,
     addra);
   output [63:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [63:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized55 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized6
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized6 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized7
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized7 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized8
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized8 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module Conv1_Weights_blk_mem_gen_prim_width__parameterized9
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized9 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -1537,7 +1831,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000758615833F1A04C0),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000008CFB465224727959),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -1553,8 +1847,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h54018FFB3FEFFFA2720187FE80070003F800D0079FEF805CB3FF9800E001803E),
-    .INIT_01(256'h3FFFDFFC9FEB7FF276012805BFF200010E0127FB1FF7FF90EA00B800800B7FCD),
+    .INIT_00(256'h640788029F647F12C7F89FE080110090D7F147D260A07E56BFF607E40021FED3),
+    .INIT_01(256'h540598136FDF40E789FE37F42009000AB9FB18061FF5FF1319FB4FC940C10158),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -1727,13 +2021,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -1747,14 +2041,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized0
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -1768,7 +2065,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized0
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000D50867F430CA780A),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000186B24FA7E9D9DB5),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -1784,8 +2081,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized0
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h00F7FE5000000200FFC4016FFEBFED00002FFE0FFC4003FF002403EFF33FFAFF),
-    .INIT_01(256'hFF9C00200C000700002C005FFC002EFF00A7FE20057FF700FFC7FF80014006FF),
+    .INIT_00(256'h0177EA1FD7BF0C02FEEC115FA840AF01FD0C02EFE3C17302FCABECA00F003E01),
+    .INIT_01(256'h030E0167BA7FF6800387F98F937F0F000103FB8021802502FED7F1CFFE001100),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -1958,13 +2255,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized0
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -1978,14 +2275,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized1
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -1999,7 +2299,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized1
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000E611629DDBD835A9),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000063210E3ECA1E761C),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2015,8 +2315,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized1
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h93FDBFFDA01D7FDDEBFED7FF000E00271400BFFD1FE77F8D3C0000022016FF86),
-    .INIT_01(256'hE3FFC807DFE980066E008FFF6013FFFCB9FF780040108011A801E7FB9FF0FFAE),
+    .INIT_00(256'h97FB4017A0140122FC04BFE75F3900C1E5F87FB4BFE5FFEC9C09DFFCDF75813F),
+    .INIT_01(256'hE6FED008307A3F0D4A07C015E014FF463E02180D1FCE01060804B7E7BF900036),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2189,13 +2489,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized1
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2209,14 +2509,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized10
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -2230,7 +2533,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized10
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000034B54D5EC32B31F0),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000005DA9114BBB931E87),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2246,8 +2549,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized10
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFB001C003FFD1FF0073FF9FFDFFF3000013FF200E0008FFFF6BFF2001000300),
-    .INIT_01(256'h00B7FDE002001EFFFFF7FCD004C00F000020016FF94009FF004401EFFAFFF5FF),
+    .INIT_00(256'hFB6FFD1FC6C00901FE580760747F7F0104E8091FDC7F6303FA580F806B7FCD00),
+    .INIT_01(256'hFFDA030FCAE0A27FFD7FF70FB8C0790104E4073012408B01000C0A6FE33F02FE),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2420,13 +2723,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized10
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2440,14 +2743,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized11
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -2461,7 +2767,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized11
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000001A4613F046E6D898),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000035B1C4AE96781222),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2477,8 +2783,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized11
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0FFF30061FFF000CA3FEF0033FED001817FF8FFEC0040015A400BFF7E0130021),
-    .INIT_01(256'h1200F7FCE00980331DFFE004BFF380722C00D7FF000FFFEBCBFE07FCA0118021),
+    .INIT_00(256'hC20B1FFB7F00805CC5FACFD3FFEE7F815805DFFEE0C17F186007080000637FDB),
+    .INIT_01(256'hD7024BF95FF4BF7352032FE23FDA7F9BFDFC20133FB17FBC080AE81BFFD60164),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2651,13 +2957,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized11
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2671,14 +2977,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized12
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -2692,7 +3001,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized12
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000A78C8C47E101EBF),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000007B0207DEE54D1111),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2708,8 +3017,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized12
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h001BFEEFF8FFEF0000D8018003C022FF0000003FFC3FF200FFF7FFFFF83FE2FF),
-    .INIT_01(256'h0084007FFC7FF2000033FBCFFD002700FF4C021FF4C00C00FF9C02100A8023FF),
+    .INIT_00(256'hFB07FB0080FF8EFC03D8138F997FB20301AC0AE007BF1C0002341DD0587FF9FC),
+    .INIT_01(256'hFF17FD57F33F560105A809500D7E0CFF0140097000BFF4FFFF980D6FEE3FCF00),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2882,13 +3191,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized12
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2902,14 +3211,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized13
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -2923,7 +3235,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized13
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000DDD7757CEFDA1834),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000009B680112C04BEE98),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2939,8 +3251,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized13
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h45FD50041FE67FFE8BFF1FFCE00600574601B7FDA011000158016FFF9FFB0017),
-    .INIT_01(256'h85FF57FCFFDFFFFBCDFF27FE7FE87FAF13FF17FCDFE77F90BBFF3FFB7FE38040),
+    .INIT_00(256'h1BF6C8094033019CF3F2903D40098027FBFAE0083F3D002D96029FDDC0F101F9),
+    .INIT_01(256'hD603DBF3A0237FA0E1FA901960287FC8FE01B002208F7F3C4E0F7FF02078FF12),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3113,13 +3425,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized13
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3133,14 +3445,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized14
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -3154,7 +3469,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized14
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000021E71805277D3DC9),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000DAE2EB36B3BBCE58),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3170,8 +3485,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized14
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0077FF700C3FF8FF00EFFEFFF8400FFF00BFFFEFFB800900FF58001FF1800F00),
-    .INIT_01(256'h0023FE500DC017FFFF47FEB00A7FBCFF009801EFFAC007000058020005C01900),
+    .INIT_00(256'hFA23F1E020809CFFFCE7E33FEE4054FFFAF404DF797FFA0103A80A7FFF3F6F00),
+    .INIT_01(256'h00800037E81FF77FFF73F060023F7701FF17F87FF0BFA3FF01F3F8F0043F10FF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3344,13 +3659,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized14
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3364,14 +3679,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized15
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -3385,7 +3703,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized15
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000951CA6A8B557B7A8),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000A57A16C34CEEBA97),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3401,8 +3719,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized15
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h680027FDBFF97F3C41FF3FF8DFF17FD0BC0007FE1FF57FB8AE005004000D8025),
-    .INIT_01(256'h5800CFFE1FF17F7E7001CFFF3FFF0016E800C8029FF4001F3A00C006C00A804E),
+    .INIT_00(256'h3DFB58283F9181773FF418215FFCFF675004D7C9E0C0FFE4A006EFCC401AFDAB),
+    .INIT_01(256'h3B0648087FEB3FB747FBF7E240A880C200064FF33FD9812E93F47806E077FFDF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3575,13 +3893,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized15
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3595,14 +3913,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized16
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -3616,7 +3937,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized16
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000003DE6C6EF29E0CC52),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000073DBEC474F47574B),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3632,8 +3953,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized16
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h001FFD3FFB000DFFFF67FFA006803600FF60008FFA000BFF000800900ABFD1FF),
-    .INIT_01(256'h004BFE9FF90031FFFFC7FF40053FB600FF4C0100057FE1FFFFDFFECFFC7FF3FF),
+    .INIT_00(256'h05DC092FBDFF1DFE026405A024C06BFF02F81180044010FF08F4072FE47F0603),
+    .INIT_01(256'h0293F5B8113F7200FC3C04EFF6401701FFAFF3BFC1406C00028408D05BC04901),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3806,13 +4127,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized16
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3826,14 +4147,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized17
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -3847,7 +4171,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized17
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000CB17EB4269F5536B),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000B0240E7C0AA8E1E0),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3863,8 +4187,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized17
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hABFFC804C00DFF9487FFDFFEFFFF7FD957FF17FB000B7FD805FED805000DFFB0),
-    .INIT_01(256'h99FFE006800E7FC7180057FEBFED7FA9F7FF3806E0147FCE59FFA80120110005),
+    .INIT_00(256'hBA0B90556018FF27A003D02380827E7855F9482DA0627F7AFFF5001400457E7F),
+    .INIT_01(256'hCD0243F85072FF8BA804B016BFB201000805D805BF4081910BFFEFF43F78012E),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4037,13 +4361,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized17
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4057,14 +4381,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized18
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -4078,7 +4405,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized18
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000E605313E0922C339),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000C99DB610880CFDC6),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4094,8 +4421,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized18
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h004C033FF84027FF009BFFC00CBFE0FFFF54022000BFFA00013BFD4FF5801900),
-    .INIT_01(256'hFF1FFF50077FECFF008002000E4007000027FC2000C027FF0043FE5FF93FF500),
+    .INIT_00(256'hFB040EBFC73F3CFC08D4022FF000A1FBFE1FF5BFFFFFC5FDFE1C10107600EAFE),
+    .INIT_01(256'h02860007F3C0CA7FFC941A8FCEBFAB00FC93F0B014FFC9FF009010A01D8073FF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4268,13 +4595,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized18
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4288,14 +4615,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized19
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -4309,7 +4639,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized19
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000B141E7305E01B997),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000A77FCF8D532F4890),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4325,8 +4655,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized19
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hCDFECFFB1FFB80A43A00500060127FCEAE011FF7800C7FE844025FFF1FF8FFE2),
-    .INIT_01(256'h76003FFB6006FFF39DFFD800C01AFFE5D5FF10031FFEFFD50A0057FCA007806A),
+    .INIT_00(256'h4DF3B7D8005202032C00C03FFF36FDDB25FD002AA05980EEDA06EFE3A0417F99),
+    .INIT_01(256'h6F05140E7FA9BF7519FD3FEA9FD37F2F8FFBF8097F2380B01203A01FBFEB8019),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4499,13 +4829,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized19
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4519,14 +4849,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized2
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -4540,7 +4873,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized2
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000FE3270FAD4EFFD8),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000008C01AA825957DF23),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4556,8 +4889,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized2
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFABFEFFFB403AFF005C011FF7FFF1FFFFBFFF4FFB7FFA00FF5001FFF9402EFF),
-    .INIT_01(256'h00E0008FF6FFE7FFFFA3FE00017FEA000037FD500ABFF80000EC03AFFFFFE1FF),
+    .INIT_00(256'h023C0DFFC6409601058004403A7FA200FB7C17CFBC404C03001FE90055C00403),
+    .INIT_01(256'h0126066FDD60888003181A00004050FEFF17F46FA0FF8BFFFB9423E047BFCCFF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4730,13 +5063,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized2
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4750,14 +5083,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized20
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -4771,7 +5107,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized20
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000EF63279D4EC04AF7),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000031646493C2DE3334),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4787,8 +5123,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized20
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h002400EFFF7FD800FF5800F0010005000014016FF77FEDFFFF43FC70007FD1FF),
-    .INIT_01(256'hFF9BFDDFFCFFFBFF003FFE0003FFDE0000A7FBE002BFD6FFFF34000FF6400500),
+    .INIT_00(256'hFF480DB03A3FE401FFD8014FB940E90200BFFFE06A3F1F0005DBEDA029C17F01),
+    .INIT_01(256'h030FFA804360B77F0503FBC00A0036FE0413F49057C03FFFFA5C0E30077FFBFE),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4961,13 +5297,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized20
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4981,14 +5317,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized21
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -5002,7 +5341,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized21
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000B438490A14B2432B),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000DBD3B440C573D79A),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5018,8 +5357,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized21
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h620107FA1FF700176E00A7FB8001004363FFA003000EFFD824006002A004FFFF),
-    .INIT_01(256'h800007FB5FE5801A340097FE60020056A1FFF001600A7FEA1400000680020000),
+    .INIT_00(256'hF5FCD01A3FD2FF0D8FFD8FD800A380788BFA1FFA5FB680871800FFEA20267F80),
+    .INIT_01(256'hB3FF17F2B01B7F9111F127CBC06BFF345800B7E7FFD1FF4379F5F83000367F28),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5192,13 +5531,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized21
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5212,14 +5551,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized22
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -5233,7 +5575,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized22
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000322B4FFE2CCF7DCF),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000063E337FE182C6023),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5249,8 +5591,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized22
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h004BFF3FF8401900FF68026FFDFFFDFF0063FFBFFC401E00FFE0004FF6FFF400),
-    .INIT_01(256'h005FFD20037FB3FF005BFD5FFAFFF000004C00FFFD3FCF00FFC3FEBFF73FD700),
+    .INIT_00(256'h04C8016FFB8069010477F37FE8FFABFF00FFDD005DBFDA02042BF7400CFF55FF),
+    .INIT_01(256'hFE09FAA83D7F1E00F9BBF34049FF85FF03DFF83015BF5A00F963F9CFFBFF9001),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5423,13 +5765,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized22
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5443,14 +5785,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized23
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -5464,7 +5809,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized23
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000006F680C90A75A7AB),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000AABAF2832BF472D1),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5480,8 +5825,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized23
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h74013001C00E000EC5FF6FFDBFECFF9986008805DFF87FB8B40000012008FFB1),
-    .INIT_01(256'hCC0020013FFA001ED3FF0FFE3FF480418401600200090013CDFEE000A0147FC4),
+    .INIT_00(256'h3406300BE02B7F3CA3F3C7DE3F8B7FD5CBFDF7EE400A81850BFACFE540528149),
+    .INIT_01(256'hF403B006D047400BFE02B7FE803BFF400FFF2FE3209F0192EC056825C0AB0050),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5654,13 +5999,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized23
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5674,14 +6019,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized24
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -5695,7 +6043,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized24
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000002DF67C9314121B86),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000007821F0CCC1DF03B),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5711,8 +6059,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized24
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h00B001800040280000440190097FF60000F401BFFB3FEFFFFF3000E0077FEEFF),
-    .INIT_01(256'h0117FECFEFC01A00FF3FFFA007BFFCFF0023FDEFF8C013FFFFBC014001BFE8FF),
+    .INIT_00(256'hFD8C030FC64044030968052F7300BCFEF95BFD6055FF57000213FA8FC18062FF),
+    .INIT_01(256'hFF0405C8175F9E81FFA8169009803D0103E404DFFD000CFC077C008FEDC0C701),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5885,13 +6233,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized24
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5905,14 +6253,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized25
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -5926,7 +6277,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized25
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000046A2A0A46F780EEA),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000027D6F12B47D79F88),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5942,8 +6293,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized25
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0DFF18027FFBFFB8C7FEB7FF00210002720000067FEF8020B5FF1802A000000D),
-    .INIT_01(256'hADFF8004BFFC803CCE00700100058045FE00A80140058047CA00A8039FEE0030),
+    .INIT_00(256'h3DF9C8213FBAFF7845EFB7C65F267ED71A01EFDF3FE1FECC0A13581D200E815C),
+    .INIT_01(256'hD003740B0FFD7FAAE1F12FF01FBE80B1F7F70FDBC025FEB362068807A0608166),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6116,13 +6467,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized25
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6136,14 +6487,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized26
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -6157,7 +6511,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized26
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000BB6B4CBD66813E8),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000CC76518400843FF8),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6173,8 +6527,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized26
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFB0032000BFF20000B7FEEFF4802D00006C0070067FEE00FFF3FDDFFA801DFF),
-    .INIT_01(256'h0104005FF9FFE600FFABFF40023FE8FFFFCFFFC00D0029FFFFBC007FFE7FF1FF),
+    .INIT_00(256'h00D81DE0193F94FFFE780B601F8021FF029FFB5FAA7FC000FD53FC3FC0806CFE),
+    .INIT_01(256'h03D002EFAF0004800053FCE045C05001051816E022FFD8FFFE54005043005EFD),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6347,13 +6701,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized26
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6367,14 +6721,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized27
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -6388,7 +6745,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized27
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000437340FA55F1019D),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000006943A8267E63E8FE),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6404,8 +6761,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized27
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0DFF37FE7FFA7FC0C9FE57F6C0057FFE480050072023FFC8B600E7FD3FFEFFE6),
-    .INIT_01(256'hFBFF3801C026FFAA15FEDFF7200F7FA3B1FEA00380038056C7FF07FA800A0004),
+    .INIT_00(256'hB9F7DFF3BFC5FF2CDFFF680A7FCB7E4CBFF8D046E0E38050C1FC6FFC1FB100E1),
+    .INIT_01(256'h09FA2426D0167F189BF4881F9FE0FED8260AB80640687E9EE40000159F56FFFE),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6578,13 +6935,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized27
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6598,14 +6955,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized28
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -6619,7 +6979,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized28
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000D163190E1C43BDB),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000F9A3D6B8271B65DD),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6635,8 +6995,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized28
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFF93FD5003403A00FFD4008003C016FF0047FF1FF5FFF700FF4400BFF87FF9FF),
-    .INIT_01(256'h0068002FEBC0090000F80240087FFA000003FD7004802D00FF9C007008C000FF),
+    .INIT_00(256'h00CFF9000600CBFF0668162FA1FF3603033BF75031805C00FD2C0E2FD17FB1FF),
+    .INIT_01(256'h026DF92FE5C00B82FEC7F40014FFCFFDFFC814706CFFEDFDFE93F82FF1001FFF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6809,13 +7169,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized28
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6829,14 +7189,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized29
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -6850,7 +7213,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized29
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000F8956722FBF5F402),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000003B29291971859321),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6866,8 +7229,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized29
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hBBFF7FFDC0107FCC27FEDFF99FE3FF7B37FED7FF3FF0000B40015800E00E8099),
-    .INIT_01(256'hC3FF5FFFC00B003BEC00B7FE1FF87F896FFEB8015FEDFFBDE601600300038036),
+    .INIT_00(256'hC3F6D7F7A057FF161200B842DFEFFEABD8041FDF40D6FFFDB6014801005AFF13),
+    .INIT_01(256'h2E039BFC6045FF3FE608700B202000748E08D00A202400ABE20607DB206980AB),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7040,13 +7403,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized29
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7060,14 +7423,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized3
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -7081,7 +7447,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized3
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000008DB55941EF13E8EB),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000009D536563838DDF9E),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7097,8 +7463,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized3
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h89FF9804DFFD7F71C80007FD4010FFF05FFF2803E001002CABFFB00060017FE2),
-    .INIT_01(256'hBE0138003FF4FFFAC2015FFDBFF4FFC309FFDFFEA00B7FB435FF6800A00AFFDD),
+    .INIT_00(256'hF60F8817A0157D441201800A5F527E251FF8EFE2BFA5000620000FFE9F5B00B4),
+    .INIT_01(256'hC2035FFEAFD8BF316BFC3FDA0045016663FB60133F8F802249F7200A004A7EF0),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7271,13 +7637,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized3
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7291,14 +7657,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized30
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -7312,7 +7681,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized30
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000075018D1D5CCC37DB),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000001AF69DA44130B8F1),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7328,8 +7697,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized30
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h008C001FF8C006FFFF6C01FFEE000B000033FC600A7FFBFFFFC4028FF8BFF500),
-    .INIT_01(256'h00FBFE0005C015FF00FC02F001402CFFFF44023FFF80090000F8011FFD800000),
+    .INIT_00(256'h035414400500E201064FFA904900E600FC4FF75FD740EC01FD27F6A03D403BFC),
+    .INIT_01(256'h036C067FBFDF9802FE1BFDC03E7FE6FEFC2C095FC6BFF502FEA7F4600A00D2FD),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7502,13 +7871,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized30
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7522,14 +7891,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized31
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -7543,7 +7915,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized31
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000082CE0FA26255052F),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000032958042A2D5F9CB),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7559,8 +7931,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized31
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h8DFF4001A005803487FFDFFCDFEFFF9F1E018000BFF7FFF0820148023FF2FFD4),
-    .INIT_01(256'hA2001004E006803D3DFF4001BFFF00166C019004FFF1FFFD36005005A0120029),
+    .INIT_00(256'h2201881DC03C013493F337D87FAA7F6589F6FFF040AD808E7DF6181100320001),
+    .INIT_01(256'hBA01CBFAE01140116E0857E9BFC0FF073C02E81280410160FDF8F828C01A7EDC),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7733,13 +8105,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized31
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7753,14 +8125,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized32
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -7774,7 +8149,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized32
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000033E3372E1CEB76F7),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000776D3D6F1FBF0B28),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7790,8 +8165,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized32
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h00FC00AFFF000300FFA7FDBFFD7FE6000063FD700B7FBA00FFCBFE60013FEE00),
-    .INIT_01(256'h00DBFC000FBFE9FFFFC7FF20097FE6FF0057FE70027FF100009FFF4FFF3FF4FF),
+    .INIT_00(256'h033C0C4FC47F8A00FBDBFE6FEEC019FE03240FEFE4BFEA020153FA6FB68013FF),
+    .INIT_01(256'hFDFBEC680C9F63800157F83FD2FF90000517E74FEBC03D020053EBEFBB3F6AFF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7964,13 +8339,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized32
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7984,14 +8359,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized33
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -8005,7 +8383,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized33
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000006D675EC9F9A53D46),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000B625406134874869),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8021,8 +8399,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized33
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hF7FF17FE400D7FE4FE0078053FEC7FEF0A0087FD9FFDFFD1ADFF80017FF50003),
-    .INIT_01(256'hC1FF28017FF37FF1B1FF3803BFE5FF8991FF4FFE3FF3800647FF280160187FAC),
+    .INIT_00(256'h9A02CFEE1F3E81015408D8037F6780A65DFB001DC061FF9CF3FF9809005A8063),
+    .INIT_01(256'h2E015BE53FB18082FA0AB8047FD4809791FD481420367FECC7FFC80560D87FFC),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8195,13 +8573,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized33
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8215,14 +8593,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized34
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -8236,7 +8617,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized34
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000D6C2C6F431582012),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000FA61E3183954ACB5),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8252,8 +8633,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized34
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0093FF9007801AFF000803AFF78003FF000BFE800D80000000F404F0057FDC00),
-    .INIT_01(256'hFFB802B010BFEB00FF0800D001BFF700FFE400F00AFFE900FF4BFFF000C01DFF),
+    .INIT_00(256'h06C7EBBFFC403A0201B0023008803CFEFDDFF6BFB8809902FA3BE870057F58FE),
+    .INIT_01(256'hFDA3FEBFF3FF59FF04C7EF501B3FFE02FE3FEB4016BEB60100A002BFB44040FC),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8426,13 +8807,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized34
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8446,14 +8827,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized35
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -8467,7 +8851,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized35
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000058FFB332ADFA89C6),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000004468718DB660E156),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8483,8 +8867,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized35
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h620200023FEC7F9B0DFDE7F9801F8007D200E8028015FFE8D3FFA0021FF18033),
-    .INIT_01(256'hB1FFF7FA400E00588BFF37FE5FF57FED8A00B7F94004FFDC08001FFFC00F801A),
+    .INIT_00(256'h3A1407F73F6E7EC867F97024C00600574BFCD8181FF78119E1FC4FF1BFDE825D),
+    .INIT_01(256'h37FF4C068FB2809E01FC2034600CFFD797FA1FFD40607F0A060DA00E5F898055),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8657,13 +9041,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized35
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8677,14 +9061,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized36
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -8698,7 +9085,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized36
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000CC2DF6D5ADC8B2D4),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000003757D16A9AB26218),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8714,8 +9101,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized36
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFF33FCFFF8C01CFFFEE8018FFE400400FFDBFD20003FECFFFF8003A00E8020FF),
-    .INIT_01(256'hFFE8035FFCC00000002BFDBFF9C035FFFF87FF30023FE2FFFF8400C003402100),
+    .INIT_00(256'hF59813EFC0808E00FC5FEFA062FFB0010267FD10028009FE005C0CCFA9BFCE04),
+    .INIT_01(256'hFEB7FAD81E9FC97F008003F075800101FF4C13A0033F46000297FA9FCBBF5300),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8888,13 +9275,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized36
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8908,14 +9295,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized37
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -8929,7 +9319,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized37
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000006498921E4A4263C1),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000004BDCE3A24BD5E66B),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8945,8 +9335,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized37
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hBDFF2800802A805A57FE78042011801F5FFF800320167FCE1FFE8002400A7FAC),
-    .INIT_01(256'hB3FE18075FF8802A940107FD200B0026FC0197FA2002802B58012FFB9FFA0000),
+    .INIT_00(256'h7BF2D81AE09CFFC88FFB1FFE1FCE7FD77DFAC8173F5EFF102DF5F01B60B0FED7),
+    .INIT_01(256'h95FCCC0E106CBF6F09F527DA7FCA00562FF9682940DF7F326E006023A0237FA4),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9119,13 +9509,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized37
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9139,14 +9529,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized38
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -9160,7 +9553,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized38
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000330D1A11ECD5C56C),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000E72B4FA9907DCB4),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9176,8 +9569,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized38
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFF13FE8FF7801200FFD002A004000A00FFD402400000230000EBFE2FFC400E00),
-    .INIT_01(256'h009FFDA004BFD7000090025FFEC009FF000000BFF8BFE7FF00E402200BC01000),
+    .INIT_00(256'hFB6C069FD77F8800020C1B00323FA7FEFDAC052FD34020FEFDD3E80052806702),
+    .INIT_01(256'hFDB40CCFE57FB1800313DAE02CFF90FFFF73F0002D8080FEF9A3F93FE4BF2EFF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9350,13 +9743,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized38
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9370,14 +9763,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized39
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -9391,7 +9787,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized39
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000078879E6999DBC46C),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000007EB43BA9D7FC7FA9),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9407,8 +9803,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized39
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h420177FC2014FFDA91FF6FFFE010FFA561FFE8061FE500277BFDB008BFE68033),
-    .INIT_01(256'h31FF77FE6008006AF800C0059FF17FE0F2012FFEBFF980312FFFE00360037FA2),
+    .INIT_00(256'hD7E7CFF21FA88023B5F9CFE23F0C7F34F5F6EFEAFFBE80055E04701A00908055),
+    .INIT_01(256'h47F7BBF0EFDF40670E0297FE1FF201CC6803C7E8C04880CB6C09B014A0DD80C4),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9581,13 +9977,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized39
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9601,14 +9997,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized4
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -9622,7 +10021,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized4
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000F15C413125252035),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000A75D8E5DBB4547A2),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9638,8 +10037,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized4
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0047FE70028038FF00EBFDD00580130000EBFEF004003FFF00BBFF300A4032FF),
-    .INIT_01(256'hFFC3FD40018023FF00A000FFFD0008FF001C014007C003000177FE9003002D00),
+    .INIT_00(256'hFE0FF78FD3BFFEFF032407308B40D6FD02F40610527FC200FC2FFAB031FF8A00),
+    .INIT_01(256'hFE19FDE8051FEEFE01E0066FAEC0D7FEFD400CDFFE3F17FE033409AFD4009D02),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9812,13 +10211,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized4
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9832,14 +10231,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized40
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -9853,7 +10255,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized40
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000F833EBE6C2DF393C),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000016A75D56A79F1A5D),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9869,8 +10271,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized40
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFC80370043FE4FFFFC0025FFDFFC7FF00FFFFFFEF8008FF0067FCCFFFC01500),
-    .INIT_01(256'hFFEFFFCFFA00020000BBFEE000BFE0FFFFC3FF9FFE7FF0FFFF97FE40003FF200),
+    .INIT_00(256'hFA2FFC70643F9900FC9C07AFC4FF7A03026804CFDE3FF8010290078F894006FE),
+    .INIT_01(256'hFE1205D835BF8A00FEC3DE80557F2AFE0020037FD2C0FA0105A80CB02F400000),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10043,13 +10445,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized40
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10063,14 +10465,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized41
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -10084,7 +10489,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized41
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000E44360CC8B23190C),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000F57EFF1779A604BD),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10100,8 +10505,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized41
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h7201980120047FB47C002000801EFF932A002FF9E004FFD84201F8071FEF0012),
-    .INIT_01(256'hE5FF40027FF40036ABFFC801800CFFD725FF4004E001000AFBFF18039FF88079),
+    .INIT_00(256'h6FFF57CC8091FD4E6A0AD00D5F9DFF1702006822FFB981B1C602EFF55FE7016D),
+    .INIT_01(256'h0CFF4FDF4FCF3F25C9F5A7D07FC5FF1D23F1FFCD9F8BFF0D680837C69F75FF31),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10274,13 +10679,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized41
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10294,14 +10699,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized42
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -10315,7 +10723,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized42
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000006EE4303CA26925B1),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000A85B0E932E8178AE),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10331,8 +10739,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized42
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFF77FD40103FF6FF00B3FDDFF38026000017FC8000C01500FF1BFDF00B003B00),
-    .INIT_01(256'h006BFDCFFCFFF7FFFFDBFA30014012000003FFE0000012000043FF4FFDC01BFF),
+    .INIT_00(256'h00E3F7DFC6FF7502FD0811201B00E201086FF8BFE4004D00FD3BF14FC33FFCFD),
+    .INIT_01(256'h0091FCE7F0C00F8000C4137FE77EED0201C8066FA2C004FEFE9C1100560007FF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10505,13 +10913,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized42
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10525,14 +10933,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized43
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -10546,7 +10957,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized43
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000D4FC5B1A96D544C0),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000008E924C8D389B2682),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10562,8 +10973,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized43
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h68005FF83FFD8058C7FF8FF7FFEA7FD88FFF18061FFF802B47FFE0032000003C),
-    .INIT_01(256'hFDFFEFFFBFF9802AA9FFA7F6BFF1801C8FFFC7FD20097FE1100167FE800D8057),
+    .INIT_00(256'hB6012FFE60C07F29C00327DAC062FEEA4E024008DFDB7F87920468265FFC00B8),
+    .INIT_01(256'h6D0370099FCE807AC40E9FE7808BFFD983FD901FFFDF00D6140460223F88FE00),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10736,13 +11147,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized43
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10756,14 +11167,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized44
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -10777,7 +11191,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized44
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000DC1A00E80F247C31),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000131098E9B03B8313),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10793,8 +11207,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized44
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0080022FF8FFFBFF00E7FF000E000FFF00D7FE9FFB4013000033FF400DC01EFF),
-    .INIT_01(256'hFF74021FF2800EFF00B400EFF77FEEFF00FC012002800F00FF57FE1FFCC01400),
+    .INIT_00(256'hFDFFE8201B00B1FF0187F98FEAFFA200FFD004A0703FC60003C0012008BFC7FE),
+    .INIT_01(256'hFD6207080ABF7B0001FC07B027BF71FDF9E804AFCCC09802FF17FAEFD700FA02),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10967,13 +11381,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized44
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10987,14 +11401,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized45
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -11008,7 +11425,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized45
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000F93FB42667DB733A),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000AF75636198CE346D),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11024,8 +11441,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized45
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hB7FEE0009FD87FA68DFEF7FB60047FF48FFE3FFF0014FFE91200F7FC8014801E),
-    .INIT_01(256'h0FFF6FFEE0037FC4A00067FBBFFD7F899400CFFDDFF880575C012000FFFB001F),
+    .INIT_00(256'hF20457F1E027FFA5BFFBA0313FE87ECECA04F7EDDFF801F67FFA380E5FAD8129),
+    .INIT_01(256'h5901A8016FBFFFFD37FCDFF89FEE01897BF9F018E006807419F2880C20DA7EED),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11198,13 +11615,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized45
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11218,14 +11635,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized46
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -11239,7 +11659,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized46
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000F874640885241509),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000F0AC246851663D3E),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11255,8 +11675,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized46
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFF0017002801D000107FF4003C029FF0098011002C02600003003AFFE800200),
-    .INIT_01(256'hFF97FF4FFC0001FF0073FEE0038000000047FF90044000FF00A0029FF5801300),
+    .INIT_00(256'h002C0270554089FC0617EB10688041FE0297ED8FD0C0D5FD01C7F3EFEB003B00),
+    .INIT_01(256'h009BFED83680DB7FFD6BFE5FE6C09501024BF4208A4060FD082BFEAFF9FF3402),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11429,13 +11849,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized46
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11449,14 +11869,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized47
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -11470,7 +11893,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized47
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000002DAFB2F6073AE46D),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000ECB35DFC238B975B),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11486,8 +11909,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized47
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h4C0240051FF27FB19001FFFFA0020047B7FFE007DFF180699DFFB0001FFCFFAF),
-    .INIT_01(256'h9201F8005FEF7FA8740010019FEFFFF99000C7FF8005003A71FF7FFEFFF40042),
+    .INIT_00(256'h6E06E805A0588185D610E823805180EDA6032FDB9FD28056BDF8C7E8200C7F2F),
+    .INIT_01(256'h2EF87C0A3FB0406C000497F40004FF8CC7FCD7CB9FFBFEFCB3F9DFA18097FFDB),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11660,13 +12083,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized47
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11680,14 +12103,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized48
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -11701,7 +12127,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized48
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000031C4C2C1F7C3725C),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000066BCDCD9AEBA7F97),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11717,8 +12143,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized48
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFE3FED018FFC500FF9000C00A7FD800004BFDC00D7FF2FF0014008FF8C02200),
-    .INIT_01(256'h00BFFF7001002000FEE40140084000FFFF8800E00E3FF3FFFF5C00A008000AFF),
+    .INIT_00(256'hF8A7F74FC77F6DFFFF3BEB9FB03F7A0001C3F9AFF2FFDD00FD1016F0513FBC02),
+    .INIT_01(256'hFE69FEE01AFFFD80FADFF1EFE1C035FEFE30117FEE000E03FB8C08DFA8C0BA04),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11891,13 +12317,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized48
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11911,14 +12337,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized49
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -11932,7 +12361,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized49
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000E709DA65D85C32A6),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000A75757D48D8FB516),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11948,8 +12377,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized49
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hC3FE2FFB401D801C73FF97FDBFFF003A5E0037FC60090013840070041FF7000B),
-    .INIT_01(256'h85FF40019FF9FFF63E00180620057FBBA5FE5FFD400D001473FDA0017FF27FF8),
+    .INIT_00(256'h1011981F3F9600A7A001F005FFC7FF4EA2090FED5F8F00BBE80457C8BFD281E8),
+    .INIT_01(256'h7A0644028FE2C0D489FF07E45FE47FDE7DFFC7E79F9EFF13DDFA97DF5FB60031),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12122,13 +12551,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized49
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12142,14 +12571,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized5
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -12163,7 +12595,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized5
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000B0F5F79FBAF23E9C),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000DBC224F9AE1C8719),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12179,8 +12611,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized5
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0C00A7FC600F808AE5FF57FE8002800B3C00BFFC1FF6804CA201EFFE5FE48021),
-    .INIT_01(256'hAE01AFFE6002806A4FFFE7FF7FF2FFF8D5FF1FFD1FF3FFFB7A0037FD7FEFFFD3),
+    .INIT_00(256'h7A03083A3F73FE23380797FD9FBA7F8D2202D0133F8400315401F7EE80808074),
+    .INIT_01(256'h78FFBBF920147F9F89F7880A40D3001C1E02301BBFB47E5263FECFE36026FD99),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12353,13 +12785,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized5
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12373,14 +12805,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized50
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -12394,7 +12829,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized50
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000B2DCED4D0F903022),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000D38D14538710D686),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12410,8 +12845,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized50
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000FFA3FEFFFFFC8015011C00E000047FF100A800C00004BFF30067FF5FF),
-    .INIT_01(256'hFFE7FF8001FFF6FFFF1C015FF5C00D00FF1FFE6FFFC018FF0010017FFA401300),
+    .INIT_00(256'hFC641CC016FF1A00069409F02EBFB101FAE01F3020BF3901FD94199055FFC901),
+    .INIT_01(256'hFEE808E8055F67FFFE04043FEB807D03008801E03B409202014416A0187F6004),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12584,13 +13019,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized50
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12604,14 +13039,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized51
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -12625,7 +13063,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized51
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000005C25BBE16A78B71E),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000F35544EA5BED21C3),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12641,8 +13079,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized51
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h53FD4800400B007AB9FE2FFA2005800A780007FD7FF17FC40000B7FADFFF0000),
-    .INIT_01(256'h45FF6FFD3FFF0032600160025FED7FE1E20027FC00097FDE6BFEF002A0057FBD),
+    .INIT_00(256'h93EE0FFAE09CFF9179FDF0219FA47FFBE6050002E07EFF2339FC68030016FFAC),
+    .INIT_01(256'hC7FF2FF46009401E7BF89FE8BFAA015CD7F6F016DFD97FD4BDFB2014200BFF65),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12815,13 +13253,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized51
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12835,14 +13273,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized52
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -12856,7 +13297,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized52
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000DD0EBF50D205D46),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000F92065BFCEA86FCD),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12872,8 +13313,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized52
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h00E4015FF8C01B00003FFF900780090000B8023FF7402FFF00A402100A7FD200),
-    .INIT_01(256'h0070024FF7001800FF14004000003400FF93FF3FF47FE8FFFF87FF3008C046FF),
+    .INIT_00(256'hFC201DCFDCBF3BFDFF9BF89FBEC08702005BFD6FDC3FCFFFF9BC171FC8C0FFFE),
+    .INIT_01(256'hFF11F9C7DBC0118003E7F570097FFDFF059FFC7056FF9000FD73F02FFE80A901),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13046,13 +13487,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized52
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13066,14 +13507,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized53
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -13087,7 +13531,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized53
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000496A1A9C0B9CD59E),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000994E0BF4E4A47F69),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13103,8 +13547,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized53
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h36012000400BFFD9D000C7F9BFF40022A3FFF7FF7FDAFFC68C013FFB7FFE004B),
-    .INIT_01(256'hC1FF200740087FEF79FF4800400A003F200107FE00068010DE0037FC3FF40026),
+    .INIT_00(256'hD7FB083BFFB97DB80A04F01CFFEEFECDBDF127CD5F9F80B89DF0602CA0520002),
+    .INIT_01(256'h3600CFE93076BFE2B1FFF0263FE4008F940278214005FF7603F567E03F7801E0),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13277,13 +13721,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized53
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13297,14 +13741,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized54
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -13318,7 +13765,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized54
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000003D2F430E6B085D06),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000050C933864669DAFB),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13334,8 +13781,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized54
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h001BFE3FFB3FD50000B001BFF54023FF003404CFFC0005FF00AC00F001FFDAFF),
-    .INIT_01(256'h00ABFBCFEE4006000063FE4FF23FF200002C0090047FF6000004024FFFBFE4FF),
+    .INIT_00(256'h025C015000FF54010337F69FF1809AFFF76C017FE0BF4002FD0BFCFF9800B800),
+    .INIT_01(256'h00F801E03280257FFB5C173FE000150000E3FB602DBF0703FFA003600D7FDEFF),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13508,13 +13955,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized54
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13528,9 +13975,11 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized55
    (douta,
     clka,
+    ena,
     addra);
   output [63:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_68 ;
@@ -13544,6 +13993,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized55
   wire [2:0]addra;
   wire clka;
   wire [63:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -13573,8 +14023,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized55
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFFC3FFB20004003E00120008FFC1FFC7FFAB0050FFA6FF8DFFBB0010FFC9FFB0),
-    .INIT_01(256'h0039FFE0004E005400210004FFEAFFF5FFC3FFFB000CFFD9004B0060FF93FFDA),
+    .INIT_00(256'hFD0BFDF2FDC80389001B00F2FF5B028702E0FDE403A000D201F5002D0039FE95),
+    .INIT_01(256'h7FC87EAE7F0F7FEB000EFE4D02AC0229FC7EFEE7FD7D0221FE650174002700BD),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13747,13 +14197,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized55
         .DOPADOP({\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_68 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_69 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_70 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_71 }),
         .DOPBDOP({\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_72 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_73 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_74 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_75 }),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13767,14 +14217,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized6
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -13788,7 +14241,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized6
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000036CA4C09FB3A3A71),
+    .INITP_00(256'h00000000000000000000000000000000000000000000000003F4A0C43661F448),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13804,8 +14257,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized6
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFF9FFECFF93FEEFF0077FEFFF63FD8FF006BFF8FFEFFF400002FFF000A402DFF),
-    .INIT_01(256'h0097FFF0067FFAFFFF4000DFFCBFE4FF00B0003FFDC023FF016C01EFF54011FF),
+    .INIT_00(256'h02D3E280C77F74FF040FEC30510033FFFD57F8E0693FF00204C8112FC6C06202),
+    .INIT_01(256'h0292086004FFEC00FB3BFFA045C092FBFCE7F9C070003AFFFB00059040C028FE),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13978,13 +14431,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized6
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13998,14 +14451,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized7
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -14019,7 +14475,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized7
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h00000000000000000000000000000000000000000000000013E45DCD2A2A3E67),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000DBD3851DDA271171),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14035,8 +14491,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized7
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h1201800280020037D000E80200118083480057FE5FED80182DFF3000DFF47FC3),
-    .INIT_01(256'h3200DFFB200A7F8CA9FF90005FFA002645FF07FFDFE67FE413FFE00C7FD17FD0),
+    .INIT_00(256'hB7F627E4E0A102421A08E0055FF901FF640D5FE2A0ECFFDBC1F5C7F84010FFAF),
+    .INIT_01(256'h23FAFBEEF00A00FCCDFF3FDF803980161207A00B5FE700C68C0897E8DFCDFF78),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14209,13 +14665,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized7
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14229,14 +14685,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized8
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -14250,7 +14709,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized8
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h000000000000000000000000000000000000000000000000C60F936A84D39B0E),
+    .INITP_00(256'h0000000000000000000000000000000000000000000000000F06F25A5092014B),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14266,8 +14725,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized8
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hFF8001200A400500FF7002000D3FD600FFB4015FFA7FDB00001C02EFFD3FE800),
-    .INIT_01(256'hFFB003D00D3FFC00008C015FFCFFFCFFFFA0008011BFE8000007FCDFFFBFFD00),
+    .INIT_00(256'h05740EA016C09FFDFCBC14501F3F8E0404F813C01740C401003401AFF140AA00),
+    .INIT_01(256'hFC6A0087EFDFE7FF050000301E3F7802FC43FFB025BFA10202D4091FA9402501),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14440,13 +14899,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized8
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14460,14 +14919,17 @@ endmodule
 module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized9
    (douta,
     clka,
+    ena,
     addra);
   output [71:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [71:0]douta;
+  wire ena;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTA_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_CASCADEOUTB_UNCONNECTED ;
   wire \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_DBITERR_UNCONNECTED ;
@@ -14481,7 +14943,7 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized9
     .DOB_REG(1),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000009235A1E9C4539E31),
+    .INITP_00(256'h000000000000000000000000000000000000000000000000475DB7B979C4CF2D),
     .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14497,8 +14959,8 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized9
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'hB1FFA8017FF9002129FED7FFA018FFDBEE01F7FF9FF680276C012FFDE007FFD5),
-    .INIT_01(256'h4E0007FC0001001D2E018FFFFFFCFFE830007000600C7FD0F3FEF006A0067F97),
+    .INIT_00(256'h01F487B06008FED99DFEF8099F757EE95DFD30295FDE7E34CE0388291F9680F7),
+    .INIT_01(256'hE5FC80034FEEBFB3D1F11FFADF7A0067FA0AF7F03FAB00CE4E03F7F6A00F0126),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14671,13 +15133,13 @@ module Conv1_Weights_blk_mem_gen_prim_wrapper_init__parameterized9
         .DOPADOP({douta[35],douta[26],douta[17],douta[8]}),
         .DOPBDOP({douta[71],douta[62],douta[53],douta[44]}),
         .ECCPARITY(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED [7:0]),
-        .ENARDEN(1'b1),
-        .ENBWREN(1'b1),
+        .ENARDEN(ena),
+        .ENBWREN(ena),
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(1'b1),
-        .REGCEB(1'b1),
+        .REGCEAREGCE(ena),
+        .REGCEB(ena),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14691,19 +15153,23 @@ endmodule
 module Conv1_Weights_blk_mem_gen_top
    (douta,
     clka,
+    ena,
     addra);
   output [4095:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [4095:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_generic_cstr \valid.cstr 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* C_ADDRA_WIDTH = "3" *) (* C_ADDRB_WIDTH = "3" *) (* C_ALGORITHM = "1" *) 
@@ -14714,7 +15180,7 @@ endmodule
 (* C_ENABLE_32BIT_ADDRESS = "0" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
 (* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SAFETY_CKT = "0" *) 
 (* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     378.882368 mW" *) 
-(* C_FAMILY = "virtex7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
+(* C_FAMILY = "virtex7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "1" *) 
 (* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
 (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
@@ -14863,6 +15329,7 @@ module Conv1_Weights_blk_mem_gen_v8_4_1
   wire [2:0]addra;
   wire clka;
   wire [4095:0]douta;
+  wire ena;
 
   assign dbiterr = \<const0> ;
   assign doutb[4095] = \<const0> ;
@@ -23091,26 +23558,31 @@ module Conv1_Weights_blk_mem_gen_v8_4_1
   Conv1_Weights_blk_mem_gen_v8_4_1_synth inst_blk_mem_gen
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 
 (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module Conv1_Weights_blk_mem_gen_v8_4_1_synth
    (douta,
     clka,
+    ena,
     addra);
   output [4095:0]douta;
   input clka;
+  input ena;
   input [2:0]addra;
 
   wire [2:0]addra;
   wire clka;
   wire [4095:0]douta;
+  wire ena;
 
   Conv1_Weights_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
        (.addra(addra),
         .clka(clka),
-        .douta(douta));
+        .douta(douta),
+        .ena(ena));
 endmodule
 `ifndef GLBL
 `define GLBL

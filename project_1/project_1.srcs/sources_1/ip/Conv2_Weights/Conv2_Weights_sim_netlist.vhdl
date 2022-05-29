@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat May 28 17:16:05 2022
+-- Date        : Sun May 29 18:29:42 2022
 -- Host        : DESKTOP-PCIMVFJ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv2_Weights/Conv2_Weights_sim_netlist.vhdl
+--               D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv2_Weights/Conv2_Weights_sim_netlist.vhdl
 -- Design      : Conv2_Weights
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,6 +18,7 @@ entity Conv2_Weights_blk_mem_gen_prim_wrapper is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -247,13 +248,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -271,6 +272,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -500,13 +502,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -524,6 +526,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -753,13 +756,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -777,6 +780,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1006,13 +1010,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -1030,6 +1034,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1259,13 +1264,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -1283,6 +1288,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1512,13 +1518,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -1536,6 +1542,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1765,13 +1772,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -1789,6 +1796,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -2018,13 +2026,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2042,6 +2050,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -2271,13 +2280,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2295,6 +2304,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -2524,13 +2534,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2548,6 +2558,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -2777,13 +2788,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2801,6 +2812,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -3030,13 +3042,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3054,6 +3066,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -3283,13 +3296,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3307,6 +3320,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -3536,13 +3550,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3560,6 +3574,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -3789,13 +3804,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3813,6 +3828,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -4042,13 +4058,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4066,6 +4082,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -4295,13 +4312,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4319,6 +4336,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -4548,13 +4566,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4572,6 +4590,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -4801,13 +4820,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4825,6 +4844,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -5054,13 +5074,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5078,6 +5098,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -5307,13 +5328,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5331,6 +5352,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -5560,13 +5582,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5584,6 +5606,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -5813,13 +5836,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5837,6 +5860,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -6066,13 +6090,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6090,6 +6114,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -6319,13 +6344,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6343,6 +6368,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -6572,13 +6598,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6596,6 +6622,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -6825,13 +6852,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6849,6 +6876,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -7078,13 +7106,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7102,6 +7130,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -7331,13 +7360,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7355,6 +7384,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -7584,13 +7614,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7608,6 +7638,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -7837,13 +7868,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7861,6 +7892,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8090,13 +8122,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8114,6 +8146,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8343,13 +8376,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8367,6 +8400,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8596,13 +8630,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8620,6 +8654,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8849,13 +8884,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8873,6 +8908,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -9102,13 +9138,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9126,6 +9162,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -9355,13 +9392,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9379,6 +9416,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -9608,13 +9646,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9632,6 +9670,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -9861,13 +9900,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9885,6 +9924,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -10114,13 +10154,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10138,6 +10178,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -10367,13 +10408,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10391,6 +10432,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -10620,13 +10662,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10644,6 +10686,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -10873,13 +10916,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10897,6 +10940,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -11126,13 +11170,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11150,6 +11194,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -11379,13 +11424,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11403,6 +11448,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -11632,13 +11678,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11656,6 +11702,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -11885,13 +11932,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11909,6 +11956,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -12138,13 +12186,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12162,6 +12210,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -12391,13 +12440,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12415,6 +12464,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -12644,13 +12694,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12668,6 +12718,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -12897,13 +12948,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12921,6 +12972,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -13150,13 +13202,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13174,6 +13226,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 63 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -13405,13 +13458,13 @@ begin
       DOPBDOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_74\,
       DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_n_75\,
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13429,6 +13482,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -13658,13 +13712,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13682,6 +13736,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -13911,13 +13966,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13935,6 +13990,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14164,13 +14220,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -14188,6 +14244,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized9\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14417,13 +14474,13 @@ begin
       DOPBDOP(1) => douta(53),
       DOPBDOP(0) => douta(44),
       ECCPARITY(7 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_ECCPARITY_UNCONNECTED\(7 downto 0),
-      ENARDEN => '1',
-      ENBWREN => '1',
+      ENARDEN => ena,
+      ENBWREN => ena,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => ena,
+      REGCEB => ena,
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -14441,6 +14498,7 @@ entity Conv2_Weights_blk_mem_gen_prim_width is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14453,7 +14511,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14464,6 +14523,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized0\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14476,7 +14536,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14487,6 +14548,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized1\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14499,7 +14561,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14510,6 +14573,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized10\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14522,7 +14586,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14533,6 +14598,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized11\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14545,7 +14611,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14556,6 +14623,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized12\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14568,7 +14636,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14579,6 +14648,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized13\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14591,7 +14661,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14602,6 +14673,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized14\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14614,7 +14686,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14625,6 +14698,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized15\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14637,7 +14711,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14648,6 +14723,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized16\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14660,7 +14736,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14671,6 +14748,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized17\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14683,7 +14761,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14694,6 +14773,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized18\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14706,7 +14786,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14717,6 +14798,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized19\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14729,7 +14811,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14740,6 +14823,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized2\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14752,7 +14836,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14763,6 +14848,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized20\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14775,7 +14861,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14786,6 +14873,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized21\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14798,7 +14886,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14809,6 +14898,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized22\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14821,7 +14911,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14832,6 +14923,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized23\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14844,7 +14936,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14855,6 +14948,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized24\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14867,7 +14961,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14878,6 +14973,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized25\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14890,7 +14986,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14901,6 +14998,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized26\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14913,7 +15011,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14924,6 +15023,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized27\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14936,7 +15036,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14947,6 +15048,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized28\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14959,7 +15061,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14970,6 +15073,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized29\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -14982,7 +15086,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -14993,6 +15098,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized3\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15005,7 +15111,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15016,6 +15123,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized30\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15028,7 +15136,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15039,6 +15148,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized31\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15051,7 +15161,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15062,6 +15173,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized32\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15074,7 +15186,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15085,6 +15198,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized33\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15097,7 +15211,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15108,6 +15223,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized34\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15120,7 +15236,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15131,6 +15248,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized35\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15143,7 +15261,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15154,6 +15273,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized36\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15166,7 +15286,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15177,6 +15298,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized37\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15189,7 +15311,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15200,6 +15323,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized38\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15212,7 +15336,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15223,6 +15348,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized39\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15235,7 +15361,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15246,6 +15373,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized4\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15258,7 +15386,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15269,6 +15398,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized40\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15281,7 +15411,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15292,6 +15423,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized41\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15304,7 +15436,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15315,6 +15448,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized42\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15327,7 +15461,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15338,6 +15473,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized43\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15350,7 +15486,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15361,6 +15498,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized44\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15373,7 +15511,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15384,6 +15523,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized45\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15396,7 +15536,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15407,6 +15548,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized46\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15419,7 +15561,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15430,6 +15573,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized47\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15442,7 +15586,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15453,6 +15598,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized48\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15465,7 +15611,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15476,6 +15623,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized49\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15488,7 +15636,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15499,6 +15648,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized5\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15511,7 +15661,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15522,6 +15673,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized50\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15534,7 +15686,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15545,6 +15698,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized51\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15557,7 +15711,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15568,6 +15723,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized52\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15580,7 +15736,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15591,6 +15748,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized53\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15603,7 +15761,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15614,6 +15773,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized54\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15626,7 +15786,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15637,6 +15798,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized55\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 63 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15649,7 +15811,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(63 downto 0) => douta(63 downto 0)
+      douta(63 downto 0) => douta(63 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15660,6 +15823,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized6\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15672,7 +15836,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15683,6 +15848,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized7\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15695,7 +15861,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15706,6 +15873,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized8\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15718,7 +15886,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15729,6 +15898,7 @@ entity \Conv2_Weights_blk_mem_gen_prim_width__parameterized9\ is
   port (
     douta : out STD_LOGIC_VECTOR ( 71 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15741,7 +15911,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -15752,6 +15923,7 @@ entity Conv2_Weights_blk_mem_gen_generic_cstr is
   port (
     douta : out STD_LOGIC_VECTOR ( 4095 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -15764,343 +15936,400 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(71 downto 0)
+      douta(71 downto 0) => douta(71 downto 0),
+      ena => ena
     );
 \ramloop[10].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized9\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(791 downto 720)
+      douta(71 downto 0) => douta(791 downto 720),
+      ena => ena
     );
 \ramloop[11].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized10\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(863 downto 792)
+      douta(71 downto 0) => douta(863 downto 792),
+      ena => ena
     );
 \ramloop[12].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized11\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(935 downto 864)
+      douta(71 downto 0) => douta(935 downto 864),
+      ena => ena
     );
 \ramloop[13].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized12\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1007 downto 936)
+      douta(71 downto 0) => douta(1007 downto 936),
+      ena => ena
     );
 \ramloop[14].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized13\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1079 downto 1008)
+      douta(71 downto 0) => douta(1079 downto 1008),
+      ena => ena
     );
 \ramloop[15].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized14\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1151 downto 1080)
+      douta(71 downto 0) => douta(1151 downto 1080),
+      ena => ena
     );
 \ramloop[16].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized15\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1223 downto 1152)
+      douta(71 downto 0) => douta(1223 downto 1152),
+      ena => ena
     );
 \ramloop[17].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized16\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1295 downto 1224)
+      douta(71 downto 0) => douta(1295 downto 1224),
+      ena => ena
     );
 \ramloop[18].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized17\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1367 downto 1296)
+      douta(71 downto 0) => douta(1367 downto 1296),
+      ena => ena
     );
 \ramloop[19].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized18\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1439 downto 1368)
+      douta(71 downto 0) => douta(1439 downto 1368),
+      ena => ena
     );
 \ramloop[1].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized0\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(143 downto 72)
+      douta(71 downto 0) => douta(143 downto 72),
+      ena => ena
     );
 \ramloop[20].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized19\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1511 downto 1440)
+      douta(71 downto 0) => douta(1511 downto 1440),
+      ena => ena
     );
 \ramloop[21].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized20\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1583 downto 1512)
+      douta(71 downto 0) => douta(1583 downto 1512),
+      ena => ena
     );
 \ramloop[22].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized21\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1655 downto 1584)
+      douta(71 downto 0) => douta(1655 downto 1584),
+      ena => ena
     );
 \ramloop[23].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized22\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1727 downto 1656)
+      douta(71 downto 0) => douta(1727 downto 1656),
+      ena => ena
     );
 \ramloop[24].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized23\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1799 downto 1728)
+      douta(71 downto 0) => douta(1799 downto 1728),
+      ena => ena
     );
 \ramloop[25].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized24\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1871 downto 1800)
+      douta(71 downto 0) => douta(1871 downto 1800),
+      ena => ena
     );
 \ramloop[26].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized25\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(1943 downto 1872)
+      douta(71 downto 0) => douta(1943 downto 1872),
+      ena => ena
     );
 \ramloop[27].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized26\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2015 downto 1944)
+      douta(71 downto 0) => douta(2015 downto 1944),
+      ena => ena
     );
 \ramloop[28].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized27\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2087 downto 2016)
+      douta(71 downto 0) => douta(2087 downto 2016),
+      ena => ena
     );
 \ramloop[29].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized28\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2159 downto 2088)
+      douta(71 downto 0) => douta(2159 downto 2088),
+      ena => ena
     );
 \ramloop[2].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized1\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(215 downto 144)
+      douta(71 downto 0) => douta(215 downto 144),
+      ena => ena
     );
 \ramloop[30].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized29\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2231 downto 2160)
+      douta(71 downto 0) => douta(2231 downto 2160),
+      ena => ena
     );
 \ramloop[31].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized30\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2303 downto 2232)
+      douta(71 downto 0) => douta(2303 downto 2232),
+      ena => ena
     );
 \ramloop[32].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized31\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2375 downto 2304)
+      douta(71 downto 0) => douta(2375 downto 2304),
+      ena => ena
     );
 \ramloop[33].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized32\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2447 downto 2376)
+      douta(71 downto 0) => douta(2447 downto 2376),
+      ena => ena
     );
 \ramloop[34].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized33\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2519 downto 2448)
+      douta(71 downto 0) => douta(2519 downto 2448),
+      ena => ena
     );
 \ramloop[35].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized34\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2591 downto 2520)
+      douta(71 downto 0) => douta(2591 downto 2520),
+      ena => ena
     );
 \ramloop[36].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized35\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2663 downto 2592)
+      douta(71 downto 0) => douta(2663 downto 2592),
+      ena => ena
     );
 \ramloop[37].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized36\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2735 downto 2664)
+      douta(71 downto 0) => douta(2735 downto 2664),
+      ena => ena
     );
 \ramloop[38].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized37\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2807 downto 2736)
+      douta(71 downto 0) => douta(2807 downto 2736),
+      ena => ena
     );
 \ramloop[39].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized38\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2879 downto 2808)
+      douta(71 downto 0) => douta(2879 downto 2808),
+      ena => ena
     );
 \ramloop[3].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized2\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(287 downto 216)
+      douta(71 downto 0) => douta(287 downto 216),
+      ena => ena
     );
 \ramloop[40].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized39\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(2951 downto 2880)
+      douta(71 downto 0) => douta(2951 downto 2880),
+      ena => ena
     );
 \ramloop[41].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized40\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3023 downto 2952)
+      douta(71 downto 0) => douta(3023 downto 2952),
+      ena => ena
     );
 \ramloop[42].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized41\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3095 downto 3024)
+      douta(71 downto 0) => douta(3095 downto 3024),
+      ena => ena
     );
 \ramloop[43].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized42\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3167 downto 3096)
+      douta(71 downto 0) => douta(3167 downto 3096),
+      ena => ena
     );
 \ramloop[44].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized43\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3239 downto 3168)
+      douta(71 downto 0) => douta(3239 downto 3168),
+      ena => ena
     );
 \ramloop[45].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized44\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3311 downto 3240)
+      douta(71 downto 0) => douta(3311 downto 3240),
+      ena => ena
     );
 \ramloop[46].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized45\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3383 downto 3312)
+      douta(71 downto 0) => douta(3383 downto 3312),
+      ena => ena
     );
 \ramloop[47].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized46\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3455 downto 3384)
+      douta(71 downto 0) => douta(3455 downto 3384),
+      ena => ena
     );
 \ramloop[48].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized47\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3527 downto 3456)
+      douta(71 downto 0) => douta(3527 downto 3456),
+      ena => ena
     );
 \ramloop[49].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized48\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3599 downto 3528)
+      douta(71 downto 0) => douta(3599 downto 3528),
+      ena => ena
     );
 \ramloop[4].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized3\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(359 downto 288)
+      douta(71 downto 0) => douta(359 downto 288),
+      ena => ena
     );
 \ramloop[50].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized49\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3671 downto 3600)
+      douta(71 downto 0) => douta(3671 downto 3600),
+      ena => ena
     );
 \ramloop[51].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized50\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3743 downto 3672)
+      douta(71 downto 0) => douta(3743 downto 3672),
+      ena => ena
     );
 \ramloop[52].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized51\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3815 downto 3744)
+      douta(71 downto 0) => douta(3815 downto 3744),
+      ena => ena
     );
 \ramloop[53].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized52\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3887 downto 3816)
+      douta(71 downto 0) => douta(3887 downto 3816),
+      ena => ena
     );
 \ramloop[54].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized53\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(3959 downto 3888)
+      douta(71 downto 0) => douta(3959 downto 3888),
+      ena => ena
     );
 \ramloop[55].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized54\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(4031 downto 3960)
+      douta(71 downto 0) => douta(4031 downto 3960),
+      ena => ena
     );
 \ramloop[56].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized55\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(63 downto 0) => douta(4095 downto 4032)
+      douta(63 downto 0) => douta(4095 downto 4032),
+      ena => ena
     );
 \ramloop[5].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized4\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(431 downto 360)
+      douta(71 downto 0) => douta(431 downto 360),
+      ena => ena
     );
 \ramloop[6].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized5\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(503 downto 432)
+      douta(71 downto 0) => douta(503 downto 432),
+      ena => ena
     );
 \ramloop[7].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized6\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(575 downto 504)
+      douta(71 downto 0) => douta(575 downto 504),
+      ena => ena
     );
 \ramloop[8].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized7\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(647 downto 576)
+      douta(71 downto 0) => douta(647 downto 576),
+      ena => ena
     );
 \ramloop[9].ram.r\: entity work.\Conv2_Weights_blk_mem_gen_prim_width__parameterized8\
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(71 downto 0) => douta(719 downto 648)
+      douta(71 downto 0) => douta(719 downto 648),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -16111,6 +16340,7 @@ entity Conv2_Weights_blk_mem_gen_top is
   port (
     douta : out STD_LOGIC_VECTOR ( 4095 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -16123,7 +16353,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(4095 downto 0) => douta(4095 downto 0)
+      douta(4095 downto 0) => douta(4095 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -16134,6 +16365,7 @@ entity Conv2_Weights_blk_mem_gen_v8_4_1_synth is
   port (
     douta : out STD_LOGIC_VECTOR ( 4095 downto 0 );
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -16146,7 +16378,8 @@ begin
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(4095 downto 0) => douta(4095 downto 0)
+      douta(4095 downto 0) => douta(4095 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -16272,7 +16505,7 @@ entity Conv2_Weights_blk_mem_gen_v8_4_1 is
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is 0;
+  attribute C_HAS_ENA of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is 1;
   attribute C_HAS_ENB : integer;
   attribute C_HAS_ENB of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_INJECTERR : integer;
@@ -24610,7 +24843,8 @@ inst_blk_mem_gen: entity work.Conv2_Weights_blk_mem_gen_v8_4_1_synth
      port map (
       addra(5 downto 0) => addra(5 downto 0),
       clka => clka,
-      douta(4095 downto 0) => douta(4095 downto 0)
+      douta(4095 downto 0) => douta(4095 downto 0),
+      ena => ena
     );
 end STRUCTURE;
 library IEEE;
@@ -24620,6 +24854,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity Conv2_Weights is
   port (
     clka : in STD_LOGIC;
+    ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 );
     douta : out STD_LOGIC_VECTOR ( 4095 downto 0 )
   );
@@ -24707,7 +24942,7 @@ architecture STRUCTURE of Conv2_Weights is
   attribute C_HAS_AXI_ID : integer;
   attribute C_HAS_AXI_ID of U0 : label is 0;
   attribute C_HAS_ENA : integer;
-  attribute C_HAS_ENA of U0 : label is 0;
+  attribute C_HAS_ENA of U0 : label is 1;
   attribute C_HAS_ENB : integer;
   attribute C_HAS_ENB of U0 : label is 0;
   attribute C_HAS_INJECTERR : integer;
@@ -24805,6 +25040,7 @@ architecture STRUCTURE of Conv2_Weights is
   attribute x_interface_info of clka : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clka : signal is "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER";
+  attribute x_interface_info of ena : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA EN";
   attribute x_interface_info of addra : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR";
   attribute x_interface_info of douta : signal is "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT";
 begin
@@ -24821,7 +25057,7 @@ U0: entity work.Conv2_Weights_blk_mem_gen_v8_4_1
       douta(4095 downto 0) => douta(4095 downto 0),
       doutb(4095 downto 0) => NLW_U0_doutb_UNCONNECTED(4095 downto 0),
       eccpipece => '0',
-      ena => '0',
+      ena => ena,
       enb => '0',
       injectdbiterr => '0',
       injectsbiterr => '0',

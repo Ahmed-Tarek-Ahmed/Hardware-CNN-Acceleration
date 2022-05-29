@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Conv1_Weights_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653750517">
+<GenRun Id="Conv1_Weights_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653852106">
   <File Type="PA-TCL" Name="Conv1_Weights.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Conv1_Weights_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Conv1_Weights_reports.tcl"/>

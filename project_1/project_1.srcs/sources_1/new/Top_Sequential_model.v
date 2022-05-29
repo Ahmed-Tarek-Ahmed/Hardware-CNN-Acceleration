@@ -5,7 +5,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
                                        memblkReadWidth = 2048
                             )
     (
-        input clk
+        input clk,reset
     );
     reg [3*3-1:0] samples;
     wire [MC1Depth-1:0] MC1; // Address MC1 out of Control Unit
@@ -54,11 +54,11 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .INBUS(OutR)
     );
     AdderTree#(.n(MaxPool_layerSize),.size(size)) AT1( // may add enable to stop in conv-1 mode
-        .in(OutR[size*n_unitsC-1:(size*n_unitsC-1)/2]),
+        .in(OutR[size*n_unitsC-1:size*n_unitsC/2]),
         .out(Out_AT1)
      );
     AdderTree#(.n(MaxPool_layerSize),.size(size)) AT2(  // may add enable to stop in conv-1 mode
-         .in(OutR[(size*n_unitsC)/2-1:0]),
+         .in(OutR[(size*n_unitsC/2) -1:0]),
          .out(Out_AT2)
     );
     MaxPoolUnit#(.In_size(size)) MPU(
@@ -70,7 +70,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .inbus(Out_MPU),
         .outbus(OutR2)
     );
-    ControlUnit(
+    ControlUnit CU(
         .clk(clk),
         .Conv_mode(mode),
         .MC1_Address(MC1),
@@ -82,8 +82,9 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .r_MemBlk1_Address(r_MemBlk1_Address),
         .r_MemBlk2_Address(r_MemBlk2_Address),
         .r_MemBlk3_Address(r_MemBlk3_Address),
-        .r_Dese_Adress(0), // to be reviewed
-        .denseEnable(denseEnable)   
+        //.r_Dese_Adress(0), // to be reviewed
+        .denseEnable(denseEnable),
+        .reset(reset)
     );
     MemBlk_1 M1(
       .addra(Wr_MemBlk1_Address),.ena(Enable[2]),.dina(MP_layerOut),.clka(clk),
@@ -98,17 +99,57 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .addrb(r_MemBlk3_Address),.clkb(clk),.enb(mode),.doutb(Memblk3)            
         );
     Conv1_Weights Conv1(
-        .addra(MC1),.ena(!mode),.douta(WC1),.clka(clk)
+        .addra(MC1),.ena(~mode),.douta(WC1),.clka(clk)
     );
     Conv2_Weights Conv2(
-        .addra(MC2),.ena(!mode),.douta(WC2),.clka(clk)
+        .addra(MC2),.ena(mode),.douta(WC2),.clka(clk)
         );
+        integer i;
         initial 
             begin
             samples=9'b001001001;
+            force reset = 1;
+            force clk = 0;
             #1
-            $display("%b",OC1);
-        
+            force clk = 1;
+            #1
+            force reset = 0;
+            #1
+            force clk = 0;
+            #1
+            force clk = 1;
+            #1
+            force clk = 0;
+            #1
+            force clk = 1;
+            #1
+            force clk = 0;
+            #1
+            force clk = 1;
+            #1
+                       force clk = 0;
+             #1
+             force clk = 1;
+             #1
+             force clk = 0;
+             #1
+             force clk = 1;
+             #1
+             force clk = 0;
+             #1
+             force clk = 1;
+             #1
+             force clk = 0;
+             #1
+             force clk = 1;
+             #1
+             force clk = 0;
+             #1
+            force clk = 1;
+            #1
+            $display("WC1:%b",WC1);
+            $display("Conv:%b",OutC);
+            $display("Data:%b",DataC1);
             $finish;
             end
 endmodule
