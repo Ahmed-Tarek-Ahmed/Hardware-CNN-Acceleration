@@ -3,7 +3,7 @@
 
 module RegisterFile#(parameter ele_num = 2,parameter in_size = 32)(
     input [ele_num*in_size-1:0] inbus,
-    input enable,
+    input enable,reset,
     output [ele_num*in_size-1:0] outbus
     );
     
@@ -13,7 +13,9 @@ generate
     for(i=1; i<=ele_num ; i = i+1)begin
     Register#(.in_size(in_size)) R (.in(inbus[i*in_size-1:(i-1)*in_size]),
                                     .enable(enable),
-                                    .out(outbus[i*in_size-1:(i-1)*in_size]));
+                                    .out(outbus[i*in_size-1:(i-1)*in_size]),
+                                    .reset(reset)
+                                    );
     
     end
 endgenerate

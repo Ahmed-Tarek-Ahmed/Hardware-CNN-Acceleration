@@ -106,7 +106,7 @@ always@(posedge clk)begin
             r_MemBlk3_Address = 0;
             end 
              if(Conv_mode == 0)begin // Convolution-1 Mode
-                //#1; //Possible Delay ??
+                //#0.1; //Possible Delay ??
                 MC1_Address = MC1_Address + 'b1;
                 if(MC1_Address == MC1_Depth)
                     MC1_Address = 0;

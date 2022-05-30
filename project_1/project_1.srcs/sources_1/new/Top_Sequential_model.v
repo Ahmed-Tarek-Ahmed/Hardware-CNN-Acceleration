@@ -47,7 +47,8 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     RegisterFile#(.ele_num(MaxPool_layerSize*2),.in_size(size)) R1(
         .enable(clk),
         .inbus(OutC),
-        .outbus(OutR)
+        .outbus(OutR),
+        .reset(reset)
     );
     MaxPoolLayer#(.n_outputs(MaxPool_layerSize),.Input_size(size),.cs(32)) MPL(
         .OUTBUS(MP_layerOut),
@@ -99,10 +100,10 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .addrb(r_MemBlk3_Address),.clkb(clk),.enb(mode),.doutb(Memblk3)            
         );
     Conv1_Weights Conv1(
-        .addra(MC1),.ena(~mode),.douta(WC1),.clka(clk)
+        .addra(MC1),.ena(~mode),.douta(WC1),.clka(~clk)
     );
     Conv2_Weights Conv2(
-        .addra(MC2),.ena(mode),.douta(WC2),.clka(clk)
+        .addra(MC2),.ena(mode),.douta(WC2),.clka(~clk)
         );
         integer i;
         initial 
@@ -119,37 +120,16 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
             #1
             force clk = 1;
             #1
+            for( i =0; i <= 7; i = i+1)begin  
             force clk = 0;
-            #1
+            #1;
+            $display("MPL:%b",MP_layerOut);
             force clk = 1;
-            #1
-            force clk = 0;
-            #1
-            force clk = 1;
-            #1
-                       force clk = 0;
-             #1
-             force clk = 1;
-             #1
-             force clk = 0;
-             #1
-             force clk = 1;
-             #1
-             force clk = 0;
-             #1
-             force clk = 1;
-             #1
-             force clk = 0;
-             #1
-             force clk = 1;
-             #1
-             force clk = 0;
-             #1
-            force clk = 1;
-            #1
+            #1;
+            end
+            
             $display("WC1:%b",WC1);
-            $display("Conv:%b",OutC);
-            $display("Data:%b",DataC1);
+            //$display("Data:%b",DataC1);
             $finish;
             end
 endmodule
