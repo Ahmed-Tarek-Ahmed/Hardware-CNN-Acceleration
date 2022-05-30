@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Sun May 29 18:29:42 2022
+// Date        : Mon May 30 22:52:57 2022
 // Host        : DESKTOP-PCIMVFJ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv2_Weights/Conv2_Weights_sim_netlist.v
@@ -78,7 +78,7 @@ module Conv2_Weights
   (* C_HAS_ENA = "1" *) 
   (* C_HAS_ENB = "0" *) 
   (* C_HAS_INJECTERR = "0" *) 
-  (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
+  (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
   (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) 
   (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
@@ -91,9 +91,9 @@ module Conv2_Weights
   (* C_INITA_VAL = "0" *) 
   (* C_INITB_VAL = "0" *) 
   (* C_INIT_FILE = "Conv2_Weights.mem" *) 
-  (* C_INIT_FILE_NAME = "no_coe_file_loaded" *) 
+  (* C_INIT_FILE_NAME = "Conv2_Weights.mif" *) 
   (* C_INTERFACE_TYPE = "0" *) 
-  (* C_LOAD_INIT_FILE = "0" *) 
+  (* C_LOAD_INIT_FILE = "1" *) 
   (* C_MEM_TYPE = "3" *) 
   (* C_MUX_PIPELINE_STAGES = "0" *) 
   (* C_PRIM_TYPE = "1" *) 
@@ -508,7 +508,7 @@ module Conv2_Weights_blk_mem_gen_prim_width
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -531,7 +531,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized0
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized0 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -554,7 +554,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized1
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized1 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -577,7 +577,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized10
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized10 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -600,7 +600,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized11
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized11 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -623,7 +623,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized12
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized12 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -646,7 +646,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized13
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized13 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -669,7 +669,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized14
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized14 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -692,7 +692,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized15
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized15 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -715,7 +715,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized16
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized16 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -738,7 +738,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized17
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized17 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -761,7 +761,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized18
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized18 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -784,7 +784,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized19
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized19 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -807,7 +807,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized2
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized2 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -830,7 +830,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized20
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized20 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -853,7 +853,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized21
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized21 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -876,7 +876,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized22
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized22 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -899,7 +899,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized23
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized23 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -922,7 +922,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized24
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized24 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -945,7 +945,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized25
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized25 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -968,7 +968,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized26
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized26 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -991,7 +991,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized27
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized27 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1014,7 +1014,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized28
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized28 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1037,7 +1037,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized29
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized29 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1060,7 +1060,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized3
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized3 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1083,7 +1083,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized30
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized30 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1106,7 +1106,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized31
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized31 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1129,7 +1129,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized32
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized32 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1152,7 +1152,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized33
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized33 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1175,7 +1175,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized34
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized34 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1198,7 +1198,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized35
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized35 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1221,7 +1221,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized36
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized36 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1244,7 +1244,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized37
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized37 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1267,7 +1267,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized38
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized38 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1290,7 +1290,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized39
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized39 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1313,7 +1313,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized4
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized4 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1336,7 +1336,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized40
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized40 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1359,7 +1359,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized41
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized41 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1382,7 +1382,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized42
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized42 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1405,7 +1405,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized43
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized43 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1428,7 +1428,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized44
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized44 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1451,7 +1451,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized45
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized45 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1474,7 +1474,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized46
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized46 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1497,7 +1497,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized47
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized47 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1520,7 +1520,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized48
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized48 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1543,7 +1543,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized49
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized49 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1566,7 +1566,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized5
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized5 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1589,7 +1589,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized50
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized50 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1612,7 +1612,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized51
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized51 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1635,7 +1635,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized52
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized52 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1658,7 +1658,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized53
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized53 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1681,7 +1681,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized54
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized54 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1704,7 +1704,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized55
   wire [63:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized55 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1727,7 +1727,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized6
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized6 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1750,7 +1750,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized7
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized7 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1773,7 +1773,7 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized8
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized8 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
@@ -1796,15 +1796,15 @@ module Conv2_Weights_blk_mem_gen_prim_width__parameterized9
   wire [71:0]douta;
   wire ena;
 
-  Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized9 \prim_noinit.ram 
+  Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized9 \prim_init.ram 
        (.addra(addra),
         .clka(clka),
         .douta(douta),
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
     ena,
@@ -1827,12 +1827,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h44557471C8024AE2644CD5C34F0517098652A08483D0177ABF3030D3719692A5),
+    .INITP_01(256'h4887F501DE5DBC3C165400957AB239C5EE8083A25C5554F400EF63EBFBFC8CE1),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -1847,22 +1847,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h5DFBAFF5A01CFE86C40147EA5F288024D60617D4A0427FDD7A05A0217F607FF1),
+    .INIT_01(256'h7202DFEDFFEE801BBA0527FBA07CFFE6D40017F3E01601B5C1FC3F99201E7FA8),
+    .INIT_02(256'h2C02982000187F8A3BFCB7C2A075FFA9AA0337D81FF6FE981DF817EFDFE1FE74),
+    .INIT_03(256'h6803E007FF847F4303F06FF5802F80406603681A20497F7E7C01880C3FC3FFA7),
+    .INIT_04(256'hD9FEA0063FC900537603200A9FD400D054098FF65FF97F2EE403300BC028004A),
+    .INIT_05(256'hFFFE3005FFDE7F3075F92817BFDD8033C7F22FDBDFF900723FFAA829A08A8082),
+    .INIT_06(256'hB3FF402520217F339203F819008A81AA79F9780D607C00CA8DFDD81F40967FCB),
+    .INIT_07(256'h65FC98045F7C00B5BDFE07F4BFEF7FB18BF1CFE8DFFC7F4AC5F5A7BE8062FE7A),
+    .INIT_08(256'hC7F327D4009F00092DFE87E73F61001762026026FF76017A25FF580300007F20),
+    .INIT_09(256'hBC04181BE05B801505F3D823FFFF7F1A99F8B02880217F434BF6E800A06A81F3),
+    .INIT_0A(256'hA7FF4FF8FF9E813755FA77FC5FA7FF223DFD7FCF1FCF7F6A1BFE4FEC5FD5FF7E),
+    .INIT_0B(256'hFBFDA00D7F8C80524206C024806C0054AC0B2022005E808BFA00383B805A8076),
+    .INIT_0C(256'h99FAAFC180C17FF9E60AD7C7E0778007860787F820727F7067FC48039FF67F84),
+    .INIT_0D(256'h0804E7F67FB40105F7E787CABF1C7F89CA0B2831E018011E2E0037D7DF48805D),
+    .INIT_0E(256'h1FFFD7F37FDB7FB8F9F1CFAD9FC37E498A0057FDBF5E8190180957F67F248093),
+    .INIT_0F(256'hAFF84801805D81F6F60C681C3F9A7E1F75F937BA9FBD803796037830408280F2),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2026,8 +2026,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2037,8 +2037,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized0
    (douta,
     clka,
     ena,
@@ -2061,12 +2061,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hC76C9986D215D0524D88AF6418218DBA54990E2C00D217916E0C69CC5211D00F),
+    .INITP_01(256'hF9E1504C526D5EE6ABC2455A2B1C3068C7BD14750F5038DED21713A84EEDBFF9),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2081,22 +2081,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h01DC142009BF4701024C025062FFA500FE980F802E40640001B4110FE0FF83FC),
+    .INIT_01(256'h022BF7FFDC3FF6FD02C00C5FEBC017FF050FF48FD6C05300FF9C0B3F1AFFC1FC),
+    .INIT_02(256'h019403F005002C00FF88049054BF22FD0594110007BF2A00F8F80A3033BFFE02),
+    .INIT_03(256'h02D416F03DBFF900FFC820DFEB405C00003013DFD6BF4C000443FE8FDD406C01),
+    .INIT_04(256'h02940C2F8D0034000007F0A007FF86FDFD94085FE9C0FCFFFF67FCCFF8FF4800),
+    .INIT_05(256'h0154064FCB4064FCFCA80E9FF03FB401FA7BEFCF6E00390003ABE3C0210028FD),
+    .INIT_06(256'hFFDC0A4018FF3AFD036C06B02E00EBFDF9FC0B900D3F8DFE059009D04E7F58FD),
+    .INIT_07(256'hFC940260213EC90200DBF94FDEFF48FCFFE00B8FE9BFED00FDC0108016BF9602),
+    .INIT_08(256'h016803EFCA3F9000FC3BF39F98BF90FFFE73EFAFDC3F3AFEF6BFE6DFEFBFCEFD),
+    .INIT_09(256'hF8A80000377FC6FF04D40B801FFF24FC02001DB080BE8102FBF7E6BFEA80CB00),
+    .INIT_0A(256'h00E00A4FCE3F9A00043C0A40417FEBFE064BFD7FC580FA01FC88125FFA3F00FE),
+    .INIT_0B(256'hFB300BF02CBFD100FE13EF9FC5801201028C11E06840180205C7EE804040BDFD),
+    .INIT_0C(256'h033BE25FD2BFB6FD0018089FB2FFDAFE037BE6800D80ACFE00F7F8AFF740A900),
+    .INIT_0D(256'hFE7FE87FE2FFC0FEFD5808403A7F6FFE049C02602240860101B0042FCAFF6301),
+    .INIT_0E(256'h002805700ABF350002E7EECFBB00A201044002AFCAFFAAFEFD83EDC01B407401),
+    .INIT_0F(256'hFB8FE55FFE000803F9DFF0A02D002FFE01240710314014010310057FBA3F48FC),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2260,8 +2260,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2271,8 +2271,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized0
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized1
    (douta,
     clka,
     ena,
@@ -2295,12 +2295,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h77670F91579B5628F0BC1483CE55FC190B6D1680EAC5D2795D114F5F8DF27C6E),
+    .INITP_01(256'h3CF09EA895D3C5CE0D97DCACBE821016D0E524EA6446DB7578378F1CACF3FD80),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2315,22 +2315,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h2C05C0119FF9FFB813F6CFE6408A7F5F85F87FFDFFB5FF79F1F8780ABF9CFFF7),
+    .INIT_01(256'hA3F957DE3FF2FFB938037FAEC089FE3E45F5681E1F917EB9EDF91FF6BF438016),
+    .INIT_02(256'hF3FAC83E403BFF58E7FDE00C3F9180D1C9FE1FF42011007DFBEC67E3200CFE24),
+    .INIT_03(256'hEE056815E07D80D11BF888015FF500482206F7BE1FCA81DA3001B80780407F01),
+    .INIT_04(256'h67FA580ADFC1801107F697EA9FB5819D05F9FFDC3F6801128C078FF0C09F0073),
+    .INIT_05(256'h3FFFBFFC8046FFC67203FFF9DF7E7F0CFA0057F83F38006896001828E0547FF3),
+    .INIT_06(256'h73F5B7F59FEC7F3FE6036FD6400000B6F7FC2FE5FFCF7F14F804401180AB7FA4),
+    .INIT_07(256'hEDF07FED5FEA7EA17DEE100F3FD8000A1204F8211F4FFE1F6802DF99C02F808B),
+    .INIT_08(256'h940670065F987FC4EDF8DFF18008805D33F7A7FEFFDD7C0CCC02E81800007F8A),
+    .INIT_09(256'hA5FF2FD140368152F8049FFEBFD27F65B603200D9FCD7E45C8004FFDDFFA008E),
+    .INIT_0A(256'h6FF868321F480065A1F96815DF777FD235FBB7F2E09F80E12BFC2FF49F527FA3),
+    .INIT_0B(256'h69F6A7E26068010F21FD4805BFDEFFD7F80B80109FED00A13DFF680BA0040024),
+    .INIT_0C(256'hF004FFF63F9C811E60036813A03201705E027FDE2013802C1607BFE21FF78114),
+    .INIT_0D(256'h9803181ADF3E7D00E206DFED3FC77F13DBFF17EA1FD500F70000E8179FC87F89),
+    .INIT_0E(256'h2C0767E4BFEB0081E1FCA7EB00687F88DDF100161FC57FA419F2201A5FCD7FEE),
+    .INIT_0F(256'h0A0227BA1FAE00836FF687D88008FF3C7608C7C75F74804FC601D820806181AA),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2494,8 +2494,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2505,8 +2505,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized1
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized10
    (douta,
     clka,
     ena,
@@ -2529,12 +2529,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h15C9DF44168790A40899BB6A04BB9EA2CE15DAB312F5AF0B2BD5FA0B0C445E04),
+    .INITP_01(256'hA42634E01D89BDBEE67217273AF59B93E9E4C49180827BDB0BA31ED70AB1740A),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2549,22 +2549,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0020154FC77F2D0203300E80253F3B0001B8160FC480750003DC013045C158FF),
+    .INIT_01(256'h04EFFECFEDBF6901FD841D7013FF6902FEF7FE6FF87EB20000D0152F853FAD02),
+    .INIT_02(256'h03E8110017802200F77BFA003480C1FFFC47FAAFEB7F8F01036C20EFA03F39FF),
+    .INIT_03(256'hFB10072FEEBFDAFF01200DD025FF2AFFF8740A2FD93F9EFDF8AFF2401FBF8501),
+    .INIT_04(256'h05EC03E019405901FBC3EE0FF83F45FEFC5C12DFC93F4F00FEFFFBA059BF6DFE),
+    .INIT_05(256'h0028045FFCC076FEFBD4187FFDC0D301FE8BEF8FDCFFD00202EFE2FFEEBF74FE),
+    .INIT_06(256'h01380A9044807CFDFA0C0CC032FF5F01FD840D3036C0E1FEFAF7EE1049C080FC),
+    .INIT_07(256'h017410700D0023FEFFC80B7FDB7FF600FC0017DFA2FFF302018004A0088036FA),
+    .INIT_08(256'h03A8078FF14047FDFFFBF4802300E9FE0223D3301F40830200B0056FECFFD2FF),
+    .INIT_09(256'h02E80C7FF37F58FCFB63F9F047FFC8FE000C08CFD2FF57FFFE440B706AFFC802),
+    .INIT_0A(256'hF8B402501A40D100FBC007A0493E5D00036FEFFFDEBEBAFFFE38172FC13F5601),
+    .INIT_0B(256'hFE8FFE9FD58075FFFC7BEFF04B405B00FB580A70853FD102FA0C06707840F1FF),
+    .INIT_0C(256'h026BE9BFBABF28FEF99FECE01AC01A03FC0004CF917F8701FEB400B010BFDE01),
+    .INIT_0D(256'hFFC3E4A0097E42FF069BE6F036000DFD0018068041FFCA020207F2400A7F61FE),
+    .INIT_0E(256'h07440C7FFB4021FFFE6C01DF81BF9A00FCBFFE8FB53F6402FC8FEB0F89BFF400),
+    .INIT_0F(256'hFD9FE2603F80120104EFF7201DBFF2FA010FF81010BFA701F8D3F2206F004BFE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2728,8 +2728,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2739,8 +2739,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized10
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized11
    (douta,
     clka,
     ena,
@@ -2763,12 +2763,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h99E795C1BA3A5477154F36614FD5D967237C87A0083FDC042C13D25925E219AC),
+    .INITP_01(256'hF886F0782587DA193E62A0805EFDAE62F2188AA4D946A9A9EAECFB74A866E648),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2783,22 +2783,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hAE082005BFB87F5BB5F3F808E04A00D8DE08C7CEA02280338A07D8217F9A7FAD),
+    .INIT_01(256'hF80A60171F977F83EA0507EDE034FE6199FFCFD8E076FF76C9F57FF32006FFFB),
+    .INIT_02(256'h7C05C00D00A181D06C01EFE37F757FE1A3F9BFF33FC07E99940670017FB67F62),
+    .INIT_03(256'h620AA8178036FECCE1F7EFE29F5880211003E0077F8AFF072605400B205CFEA5),
+    .INIT_04(256'h47FA880B9FE2013181FB2FCD1FCA00E719FDA7FFC061FF6377F8D01A5F867FB5),
+    .INIT_05(256'hF60767D2BF387FB0FDFE400F7FD6FFD0AE0727DF5FCE0106C7FAE00E8014809B),
+    .INIT_06(256'h980667EEA06F8107EA021FD97FE300A961F8E7E4BF5180E947FF17F19F4B0035),
+    .INIT_07(256'h8E080FCAA0950181DBF348005FB17F705E0117FF9FEC7F03A9FBA80C207D0087),
+    .INIT_08(256'h44099000203F80B2BFF70801FFF07E9249F26801BFFA813FEBF3780AA0247FC7),
+    .INIT_09(256'h65FC7805E008019E49F5280A9F2880818DF59FEEA0820010CFFBAFED9F608007),
+    .INIT_0A(256'h2BFE7FC8C05B009CC1F1F003DFA2FE27AA0B20060092FFA5B808A807C00F00C9),
+    .INIT_0B(256'h6FFCEFDBE033FF2A620297FF80527FF6FE035007C079FE8AF20210153F81003C),
+    .INIT_0C(256'h6FFF1FDAFF86FF988DF73FFB9FF800181E066803BFBA0039C5FD7001603E7FE6),
+    .INIT_0D(256'h98037FF1DFAB7F8F01F59821C04180E3A2079004405FFFACA600D806A074001A),
+    .INIT_0E(256'h7008B80B3FE2006A0E007008FFE1FF58E3FE1FF6000F80F202074FC260CF7F78),
+    .INIT_0F(256'h31FAA7EE007A7F0FC605201CFFC87FFFA5FE1FFB803181A50FF54FE3E01C80E7),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -2962,8 +2962,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -2973,8 +2973,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized11
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized12
    (douta,
     clka,
     ena,
@@ -2997,12 +2997,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h05650BC7C5785A10406C89905A541BDEC62A007F36C2AAE39E1FA31F923A2D39),
+    .INITP_01(256'hCFECF5F4E8FF3B64E8F4EC44C8CACACA8CC5DF1098F4DE43C50F378006D8204B),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3017,22 +3017,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFF2004600740C300011BDD7FB2FFCFFD02B7FA2FFD808EFD056BF65FA97F5BFD),
+    .INIT_01(256'hF85810BFF47F24FE047C079FBDC032FDFB9FF0D03DFF6802068013FFF93F9900),
+    .INIT_02(256'h043FF6A08D7F6803FD70197016FF9EFFFF3BF57F8A4052FDFEB3F9C0113FA6FE),
+    .INIT_03(256'hFEC400D0308021FF04C7FBFFDB7FCC0002E410502A4010FA0313FE7FF73FF400),
+    .INIT_04(256'h02C00E0FE8BF6C0200A009D0310075010630020FED4002FDFDA4058FCCBFB301),
+    .INIT_05(256'h02D80C8000FF9AFE004BF73FBD80C601FD1C020FE98027FEFC5011A02F409402),
+    .INIT_06(256'hFD140E70463F600000E7FA6FDC3FC801041C0B1FECBF3D00020811005BBFF300),
+    .INIT_07(256'h066C09D0663FC6FE005FF5B00EFFB2FF00DC013FBC7F7101FE481D001FFFA6FB),
+    .INIT_08(256'h01D411C0003F5C01FD4812EFC4C052FD0417E39003BF970100A8089FD5FFDCFF),
+    .INIT_09(256'hFEB80AA063BFF9FC03C406EFFA3F5A01034FF3C018FF2D02F62416102E8010FF),
+    .INIT_0A(256'hFFF41D7FC8406E02FC37F2100D0056FFFF1001FFA7FFBBFD048C06405E7F73FE),
+    .INIT_0B(256'hFD9814FFEBC07C00FC9419A043C07D02FC04083F897F4000053408C05BBFDEFF),
+    .INIT_0C(256'hFDF814CFB4C070FDFBE4046FF8C00102F1B005FF88001101FF500F1FC8BF4800),
+    .INIT_0D(256'hFA53D31FBBFECC02FCD3FA4030BF4C00FABFFC7FDE80470001380970383EFB00),
+    .INIT_0E(256'hFE8BF9EFDBC04FFEFCEFFF5FB57F95FE0387FF6FC93F64020113EB0045FFC902),
+    .INIT_0F(256'hF924113FDDFFA8FCFE0BDBCF6FC038FDFF1FFC801CBFF8FCFD73FC303E80F2FE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3196,8 +3196,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3207,8 +3207,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized12
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized13
    (douta,
     clka,
     ena,
@@ -3231,12 +3231,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h06C8706DE1056E237437CA933D968A543870D26A13094F462FA783C1E0BF43F9),
+    .INITP_01(256'hE2BD4CDE17CFB3481864AB20D2F7F2223E93C11F805BE6A1951809038C5F39F8),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3251,22 +3251,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h7DF8B80C60A380F5640197E73FAF7F2AEBFB880F60337F6F39FD2FE3207AFEFE),
+    .INIT_01(256'hAC01A8341F4181BEB803F01F7F887EF72A09A01A00DC7FDA83FB500840E100B6),
+    .INIT_02(256'h6607B7F540097FCE9605C823001B80B155FA60113FD87EDC2BF830123F9B8183),
+    .INIT_03(256'hEE0507E8A0A4009A89FF37F6A05180DB07FB8FD07FB47FC563F7F81440278084),
+    .INIT_04(256'hD403CFCCFFF8FE7C16097FF3FFC0810714078030A0117F092DFC57FA3FFE80C8),
+    .INIT_05(256'h75F3B7F51FDE00D3A402D7DF3FB8001549F6600E80577FD34C053FF2C0150042),
+    .INIT_06(256'h7DFB980D40AB00212C0480189FF37FB707FB3028DF61FF617400981820818063),
+    .INIT_07(256'hD803A007FFE7FFDEF3FBB80740A87FA00DF4DFF3E066FF053BEFC800DF38FD88),
+    .INIT_08(256'h3601680BBFFC81119BFC3FCD9FA07E13A00407CCC04680955BFB37DAE01D01FD),
+    .INIT_09(256'h820487ED1F4280A786098FAB2047000D1201401DE01CFEACD407D83060D480B6),
+    .INIT_0A(256'h0003B80DA0B8FE4747FCB7E340867F0FE7F848001FC07F733C052002E04E008A),
+    .INIT_0B(256'hD806DFE85FFB8113DE03EFEA2050814005FC902920797EBFEA097FF35F6380F9),
+    .INIT_0C(256'hABF927F8001E804C0DFA37D4C0427E5019F6D7E4602EFED7380698044023812E),
+    .INIT_0D(256'h74009FE840717F7DFFF7B8127F20FF8B12065801C042FE8578032812208680B3),
+    .INIT_0E(256'h8C0C5FFC7FBDFF397FEC280E7F467F3CC00457E2A081FEBD51FBA02DC0C4FF90),
+    .INIT_0F(256'hA9FD402020167EF3A2045FE09FCDFFBCF1F7D827DFB1FF2119FF1FB6DF967FA5),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3430,8 +3430,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3441,8 +3441,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized13
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized14
    (douta,
     clka,
     ena,
@@ -3465,12 +3465,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h42103B285C0566055C19BC55B35A69B62A523ED85FDAAD32E0CD9143DDE68C99),
+    .INITP_01(256'hFEBB969ABF2D2E87A1A19560A79E8D3D5318CB1F94CCD04076C9DBA43DFC1E77),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3485,22 +3485,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hF86002FFD0C08A00FBE7F5F031FFCF01FEC8039FF0407502FFDC06BFF1C07201),
+    .INIT_01(256'hFBF3E2001F00B0FFFDD004AFC04004FFFFE01B3029C08EFF078C11E04CBF3700),
+    .INIT_02(256'h05EC0BCFF5BF1601FBB001EFD8BFF701FB0BFF3FB240E503027FFA5068FFC2FD),
+    .INIT_03(256'h00CFFCCFD8BFA4010410062026BF02FF0277EBEFD2406D00FE90022FAFFF9501),
+    .INIT_04(256'hFFEFFDD0363F57FF02D0072FFE3F6BFD06A7F5CFEFC06C01FB27FE80004042FF),
+    .INIT_05(256'h016004AFFCC0B200016419BFC4C09EFFFFBBFCEFE90066FE079400301E402702),
+    .INIT_06(256'h05B013BFE0406CFE0240067019FF9CFF034BF3600400300000300E5053007F02),
+    .INIT_07(256'h05880050357FF1FD02640C9053C0BCFF01FFFF4FDF3FD000051BD24FF93F62FD),
+    .INIT_08(256'h060FEB8FF4C05D00FFDFDFCFF83F280203C0069FFDFE2BFF02CBDF8032BF3301),
+    .INIT_09(256'h018FDBA014FF6FFEFEAC089FF10060FFFE20079FD4BF3903FAF3F1D008401101),
+    .INIT_0A(256'hFC240860017FAC01FA0C027FCCBF13FFFF1004400480170006FC02A023FFE6FF),
+    .INIT_0B(256'h0024100007BF4CFE000C053FFA7F02FEFB94151FDE7F9C03052C02FFD3805E01),
+    .INIT_0C(256'hFB2BF1503C800D02FF94162FF3FFA1FFF46C1ABFA4403DFF01F7F69FE8008C00),
+    .INIT_0D(256'hF7CBF340383F67FEFFD7F6B008BFE800F91014204F80DAFF062BFEC07F402600),
+    .INIT_0E(256'hFF1FEDDFEE7FD6FF003FF0BFAA806800017BF9BFF83FC0FDFC180F000D4056FD),
+    .INIT_0F(256'hFDD7E53FA93F8700F8CFDF3FFDFF4EFEFF0005204440BA00FEC802FFF4FF4DFF),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3664,8 +3664,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3675,8 +3675,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized14
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized15
    (douta,
     clka,
     ena,
@@ -3699,12 +3699,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h6C78F4FE9E7CD48BBD6667EEB79B7C68806D60D33C5D401128CE3782A2C75225),
+    .INITP_01(256'h68B2C4606D40D2FEB6746DDE6768427323BDE2AFEE3946E6BDC6691FA32E1EB6),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3719,22 +3719,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h3605800B20967FA0C3F7301EDFE3FF5ED9F707F3A05E01CE240528049FB8FF9B),
+    .INIT_01(256'h70060001802481C3E1F9F8039FC801F1C20507F79F687F3496000824801F006B),
+    .INIT_02(256'hDC110FF0DFED802FA7FD57EE7F94FFF9EBFC181920E28167380117E9A058000E),
+    .INIT_03(256'h6801F01340720014EBF5F822FFCB01CD7BFB901F80287E56C3FC47E7A02F0124),
+    .INIT_04(256'h1A03479A1F907E3C42018FF40074FE46FFF007D23F4B80815FF2F024E05100EE),
+    .INIT_05(256'hAA025FE37FFA8025F9FC18099FFEFFAE87FAC8039FB600C073FFA020DFB0003A),
+    .INIT_06(256'h9C0D8FCB5F518111E9F907E77F1E80A27FF1FFEC7F958168E80980040009FF6B),
+    .INIT_07(256'hC9F848071F69810277FF17FBA03980D969F0AFE9FFEF01813BF28FD65F927EAF),
+    .INIT_08(256'h620B4810E038FFB3D201E024FF827F2EC807F7CA7FFB8119D20A6FFA3FBC7F17),
+    .INIT_09(256'h720257E6FFD17E9E9DF5C80EBFBFFFD539F910024017007D8C02F7E5BFC88154),
+    .INIT_0A(256'h7DF9480F3FF400AAEA06A7FC20267FF5D3EC482C9FBE7F7F3BFDE0119F96FF7C),
+    .INIT_0B(256'h7200D808607A7F130C0BF7EB1FEE8037F9F2F8208016002F4606F822DFE28024),
+    .INIT_0C(256'h27FC20017FCF7E8B89F9D001E075FF6BBFFAB01DE019FFCF27FDCFDFA037FF4E),
+    .INIT_0D(256'h5A01D7E31F447F2929FFF7D57F85FE80E5FB282A1F8E7FA371F7BFE81F3B0023),
+    .INIT_0E(256'hC3F2E8017FCD018E5BFAB0432090FF48A7FDD7EFC00D0017D3FDF7D0BF5B7F67),
+    .INIT_0F(256'hF1F71802601E000820091FD3802A7F9283F2D8021FC180E4EFFF5025607CFFD9),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3898,8 +3898,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -3909,8 +3909,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized15
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized16
    (douta,
     clka,
     ena,
@@ -3933,12 +3933,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hDCD39153768421F04127D4145571E504F7B2A22B5557F3F57FE6F4F47D975318),
+    .INITP_01(256'hF5D3B0BA1ADDC7B5EF98C361CBF48E6B3A742756603AA8DB11E4ED420C84046E),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -3953,22 +3953,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h017FE0FFD8805CFEFF4005B00FBFDD0103AC01F03680C6FF0414077F80FF4E00),
+    .INIT_01(256'h03BFEFEFB2FFF5FDF5C7F93002C024FEF6F7F3C04C0011FFFACFEDD048406EFF),
+    .INIT_02(256'h03C4100011C0570005BC0710397F6AFEFE1BF530053FB9FEFE9FF5B00EC09FFE),
+    .INIT_03(256'hFE23E4104C7FFBFFFBF7F8406F7F22FFFFAFFA101A3FD0FE0527F17FA7FF56FE),
+    .INIT_04(256'h018C0BF03B808D000513EEE03E0066FFFCA3EA5032005EFF016007B05C80BEFF),
+    .INIT_05(256'h00381740513FCC0102EFEDB01D401301FC5412501440490100641280527FD402),
+    .INIT_06(256'h0513FDB05EFFE501FB5400F035BF85FE019FFFD03E0009FFFED7E6C041BFA8FD),
+    .INIT_07(256'hFE280FDFF8003B02FE500E1067FF8601FAF003D03C8085FE000011103E7F5A01),
+    .INIT_08(256'h031410FFD6BF06FFFEA015501EFF840000581150130060FF045BFF6F85BEC802),
+    .INIT_09(256'h03E006E00F801800FB43F430357F90FFFA6FF23FDBC041FE043C05C062FF4901),
+    .INIT_0A(256'h0403F5406A4040FF026BF50FCFBFB8FFF763EA7FD6003AFEFE28085FEDFF36FD),
+    .INIT_0B(256'h01DFF87FBBBF9C00026BF96006404F000113F7F011FFF2FD03880EA03AFE5BFD),
+    .INIT_0C(256'hF8F000AFB5BF4BFEF5D3EBB02840C8FEF65404DFBBBFC90203B7F01FFF7F8FFD),
+    .INIT_0D(256'hF487F59FE6BF1E01FDE0168FECFF6F01FC5805106700CDFE0063F9A0118071FE),
+    .INIT_0E(256'h05A4158FCE3F3100F968102FAAC0C201FE8C01A0547FB3FEFDF7F6C05AC00DFE),
+    .INIT_0F(256'hFFC3F7B005C08E00FDBC064FFDFFDB01F78BFE705480C0FFFEDFE6CFFABED5FF),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4132,8 +4132,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4143,8 +4143,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized16
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized17
    (douta,
     clka,
     ena,
@@ -4167,12 +4167,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h73DB0830E6C96C007BFE2CFE02BFA996E84327115618738F657B9F39849023E6),
+    .INITP_01(256'h8F66A2488EE62B5D45411409A6AF25865EAC9AF5435A589084F071C75718DE7F),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4187,22 +4187,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hF80360265FD17FC3500287DA80178145BE03280000F57F8207FE80137F997FC9),
+    .INIT_01(256'hADFF9003BFA380F317F357D1C067007DA60357E6BFD17FAB4004B7E640CA80C2),
+    .INIT_02(256'h65FB8FF29FE400643209EFF4609E00F06BFD07F5C03300C2B00050079FFC7F0A),
+    .INIT_03(256'h13FE682FA06980E93BFD881340E57F33F002681C3FF200EE680107EAC0437EB5),
+    .INIT_04(256'h5A0A681EA00A7FA39603D7EB9FFBFFC66A03F011C062FF4B460157EFBFE0008F),
+    .INIT_05(256'h87FDDFF360B47F3A09F717F47FB680A4900E38125F42FFCD63FC4FE97F7A0073),
+    .INIT_06(256'h07FF88201FFC7FCB7DF8F80340B2FFE9D5FCD00BBFCA004C3403A803400A01B7),
+    .INIT_07(256'h95FDC7F840907F0CA7F98FF980817FACB605E01840AA80FDEA04C7F9402EFE73),
+    .INIT_08(256'hB5FE67FCDFCE00D45E0287EDA085809077EE77BD1FB000FB13FEEFFF3FB40089),
+    .INIT_09(256'h2C01F022FFF4006A61FA57FD40717F2857FEA7EBA044816765FE781AFF7A0097),
+    .INIT_0A(256'hA7FDC018203CFFCC29FDA7DAA011809E3DFD97F4C057810154086FFE407CFE27),
+    .INIT_0B(256'h1BF6EFE65F7B7F776A07B820FFDD7F7D8803FFFA6019FF22EBF49FD1FF8EFF72),
+    .INIT_0C(256'hD00808083FBC00AF920090151FC1FE18F202B801BFEE802BBA06B0155FB38017),
+    .INIT_0D(256'hEBFC88121F667DD295FCF8156006807F58019FE79FDF007E5C0B78088003FF3C),
+    .INIT_0E(256'h3208A010BFC97F6139F928191F7381AD3205E017C0167E7957F707DA7FB67EC6),
+    .INIT_0F(256'hEC0FA8065FAB80E1B9F9A00CFF4F7FA20609F836C07580E56FFF980500538114),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4366,8 +4366,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4377,8 +4377,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized17
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized18
    (douta,
     clka,
     ena,
@@ -4401,12 +4401,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h1FFF03DA0290B993C45E6EB75EB758342CD68BD5163F89C90805F75278BD7AA6),
+    .INITP_01(256'hBB6C4AC373ED2296ED78F43F3CA46BDEFFE1E693F1DFFBCA1F599F7C0DF4C32B),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4421,22 +4421,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h060FF77FE63F8E02FB77FBAFFAC0A9FE00CBFA0FFCBFB203FEFFF76073FF85FE),
+    .INIT_01(256'h0044017FDEC0AE0102800AF029408B03FD4FF040513FEDFF01600E90047E5700),
+    .INIT_02(256'h01701B5046FFBE010057F5BFB7FF7702FF08089F9DC0C702F9CC13AF6DC0C501),
+    .INIT_03(256'h03B7F25FC180AE01FFD80DE01F3F1401FE68013FD0FF7300FF9807104E00F702),
+    .INIT_04(256'h0354160FE37FB7FDFE93FE300BBFC3FC009804AFC640CF0001ABEE3035C02001),
+    .INIT_05(256'hFC201140407F3F0003B00E3F9DBF86010043E85FDB3F0BFFFABFF8204BFF77FF),
+    .INIT_06(256'h02D80750023F20FFFD9817900340DA00FDBBF6DFFD80E701FE6009F04A801DFF),
+    .INIT_07(256'h00B4043FAA807C00FDA3F72FE27EEF0103380CD0043EE100FDC0070FDB3F69FC),
+    .INIT_08(256'h007C09AFA5808C01FD9BF170133FDCFFFEBC0C90413F8C010123FADFE53F9C00),
+    .INIT_09(256'h0314060FBB3FB2FD01940D4FEB80A1FDFFE801EFC7807D0101D7D76FD580DFFE),
+    .INIT_0A(256'hFC37F3E01E00DDFEFC540A2FECC03701FC47EE3FC57FACFDFC04057FFFFF14FD),
+    .INIT_0B(256'hFD53F36FDCFFDB00FE8BF9C068403D00FD93ED804A40D900FED012F02D004201),
+    .INIT_0C(256'h0177E1DF9CBF51FDFF97F8B0037FEF0000ABF5BF9AFF6601F9740ACFFCFFE601),
+    .INIT_0D(256'hFD53DB3FF17FF4FC022FF7BFDCFFB7FDFCDFF1502C0059020093F82FD97F57FD),
+    .INIT_0E(256'h0133FCB014FF8EFEFBB3F11F123F38FD0247F0D004BF1D02F9C802F0404006FE),
+    .INIT_0F(256'hF93FDCEFD5BF47FF0373FAAFFBC047FE02C4062FD43F2BFEFDBC0CF00FFF0900),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4600,8 +4600,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4611,8 +4611,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized18
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized19
    (douta,
     clka,
     ena,
@@ -4635,12 +4635,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hF09F0A5036BA4914B103E8AA2AAF8900273B42DEB102451570D2B810E574BC90),
+    .INITP_01(256'h565886838F4AB69D46D1397A67A64E6E9434A7E2FEDA409B620D1B9E325317F0),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4655,22 +4655,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hA3F8C000DF4CFE5631FD0FD17FCD009B32004FFC9FE100D5A803A7E4807581B9),
+    .INIT_01(256'h3BF7F7F960437FC46BF6FFEF4054006A7612B7F540208038340A4FE440D87FAF),
+    .INIT_02(256'h4209E7E6C0B17EFF5406B019C047FE728DFFA8021FAC004F24026FE87FEA803E),
+    .INIT_03(256'hC60918139F66FFD33E06EFE3806EFF2269EE0006A013FFC70BFA5FEBDFE17FB8),
+    .INIT_04(256'hF20C480AC0960046300200087FB280198A033813C000FE75DC0C701340200084),
+    .INIT_05(256'h9E03EFEA408A00AD3400C81340577FC7F7FCF8278014FF3B38060806E00A8085),
+    .INIT_06(256'hFC0C0FE51FF4012A0C034FE7C00A807A5DF6A8108005814410026FED7F9D8085),
+    .INIT_07(256'h9DFABFDE8012FF2700030FF7FFCA0068B80A88180075007127F83FFAC0657F59),
+    .INIT_08(256'hEA046FE500687FD579F517DFA0C37F866E0AE7AE7F7E80C65DF97FDC807C80F6),
+    .INIT_09(256'h89FC401D4044FF16BE0748189F790024940AD7E4A06E7F979C05A7ECBFAD7F4A),
+    .INIT_0A(256'hC9FFDFE7FFC58084ADF97FE37FF980B5EBFBE012006E7F8C6803AFF680ADFF99),
+    .INIT_0B(256'h6E0187EBFFB680DBBA046FFB5F7A7FEC1A03E834BF8180F96BFE681200268183),
+    .INIT_0C(256'hCDF9300BBFA47DB28E006814BF758058F3FBD0321F8F7F0641FDE02A5FF4FF0D),
+    .INIT_0D(256'h79FBD8005FD780519BFFF7DD807800C5060087CF20477F49D3FD7FF54002FFCD),
+    .INIT_0E(256'hA606580AFFBDFF5D79F43816E06E7E498209FFD9DF6C805A380817DA1FB6FF16),
+    .INIT_0F(256'h1DF8FFE65F6A80EDC1F2AFEDA0737F778A0250071FFB7D50E8003814C0298008),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4834,8 +4834,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -4845,8 +4845,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized19
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized2
    (douta,
     clka,
     ena,
@@ -4869,12 +4869,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h96F5F6231021A9CEB2976E3B16D03C3F4791B54FE61C76E12CC64203D6DF30E5),
+    .INITP_01(256'hBA2527C79ACD858E7BBD43917F045514CB03CDB9168A1F162181D82A61BBA6FA),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -4889,22 +4889,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFCEC1570453F4A01FF7009DFC4FF78000377FDC0210025FDFDF7F5302EBF75FF),
+    .INIT_01(256'h00CBE87FCDBF94FFFE8C12B06A8001FD00300B303FBF0002005015500D80B302),
+    .INIT_02(256'hFFD3F7C008C03AFE0064029FDEC0F60000FBF75003BFDEFCF913F3805D4079FD),
+    .INIT_03(256'h009C126009FFED00FE6001805940F8FFFE87F0200B80E70101140EEFD9BF6200),
+    .INIT_04(256'h03240D2069C0B102F484098011C0DD01016FE56FE400C901032BF99FBA3FC000),
+    .INIT_05(256'hFD1BED200240D301FC7013E04C3FC0FD0133F7FFA7001001003BFDCFAEBF4800),
+    .INIT_06(256'h010001804D407C0200C7FAD038008900FBDBE53FEFC029FFFCA005CFD8BF36FE),
+    .INIT_07(256'hFAEC0F400A803FFFFA6BF2C02D0017FEFBA7F8901280B4FF01B7E80057003D01),
+    .INIT_08(256'h04E7E6B008C083FEFB6FE3DFEEC044FFF5A3F4301AFF4401FE5BF78FAF7EE700),
+    .INIT_09(256'h042FF4903D80FAFEFE4811604880D0FFFEE806FFEB409AFD0403E57FBC404501),
+    .INIT_0A(256'h01740CB0427FF401FCDC02BFF2BFDFFF01B401EFAD00760001D00AD0200081FE),
+    .INIT_0B(256'hFB6810BFF7BF550100B804F0183F4402FE8C155FF780A2FEFEDBFDCFB1BFC6FE),
+    .INIT_0C(256'h0437E87F73FFDCFC028823101040E802060815500000E9FF016401903A40B6FE),
+    .INIT_0D(256'h032FF66FEEFF63FFFFEFEEEF8BFFB3FF027415E0347FB400FFFC06604E406701),
+    .INIT_0E(256'hFFA0080FD37F47FFFD80168FE04042FDFC08094022008C01FA340B4FEEBFE602),
+    .INIT_0F(256'hFDAFED6F323FBC0101A3E5B0027F5B000427F98035FFD201FD941130187F6401),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5068,8 +5068,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5079,8 +5079,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized2
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized20
    (douta,
     clka,
     ena,
@@ -5103,12 +5103,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h04CC611C8B6130F648AD748321EF430E39526BC31B4D0F5EDA9D870D10909BF1),
+    .INITP_01(256'h888085FEAA95EE57FE24C20CC42AEA5C353C5EEE0BA62A2B3376104D3765A032),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5123,22 +5123,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h030C04F03FFF17FDFF5813200B80E400FDF00FCFC8402100FFEFF79042FF15FD),
+    .INIT_01(256'hFDD814FFD6002900FD00193FAE808702FF280A602D3F9700051C083FF3801A01),
+    .INIT_02(256'h0348051FBC405D010024185FD700520000200B4FDB4088FF0048024FD440B402),
+    .INIT_03(256'h02FBEDDFDCFFF3FE014002E00CBF700004EBF14F81FF2C01FFE80B9013C01F01),
+    .INIT_04(256'h0297E310340031FEFC43F7FFA13FFBFE05C809502BBF020103FC006F977F41FD),
+    .INIT_05(256'h023401FFC10032FFFCD7FF9FD40037FE0347F590310011FDF8F4079002406B02),
+    .INIT_06(256'hFEDC025FD6C02BFE0143F000147F62FE02F3FCD05E3F4AFFFEC7F8F00AFFC401),
+    .INIT_07(256'h01241530120113FEFC70017FF800BEFF040BFFF027FF4BFE066816BFE880E600),
+    .INIT_08(256'h0047FE4024C0110200CFFB502D4036FDFACFE98022C06C010037E94010BF8700),
+    .INIT_09(256'h0487E4102FBFF502043FD3F048BF36FD04AC14100980B4FF00A4164FE2FFCC01),
+    .INIT_0A(256'h042C0BBFE8C090FCFA67F7C0108069FF00ABF8DFAAFED5FF0337F43FF27FF9FF),
+    .INIT_0B(256'h038BF870290067FE01CFF32FC200930201E8094FAB7F88FFFF97F27FB7FF70FD),
+    .INIT_0C(256'hFED801C061BF9DFD0307DB7FFAFE5401FF13F11FE13EF9FE05DC03FFEC3FB500),
+    .INIT_0D(256'hF73BE7DFD0FFC5FD009BFB500D007B02FC640F70373F19FE0228012FCC00C6FE),
+    .INIT_0E(256'hFD3BFFCFD0FE8DFCFE140C7008C01000FFBBF59FE2BED9FD00F816700ABF9E00),
+    .INIT_0F(256'hFF54022FFE00C600FE0403A025FFEBFDFE101E803B009300FDDBDBDFFA4032FF),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5302,8 +5302,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5313,8 +5313,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized20
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized21
    (douta,
     clka,
     ena,
@@ -5337,12 +5337,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h82DE0FF6C7B4029497E774269104893824CD03412B3DF679BA27B064C80C592E),
+    .INITP_01(256'hBA88E5981D1F46627F7C1A289CEF1BF4C1348F25DFDE78E8E275032C1F5F0139),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5357,22 +5357,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h67F13005A0047E0A500A380B1FBC02A483FC57F0801BFF963800F8051FD480E8),
+    .INIT_01(256'hC40117CBE09800C9EE0E700CDFD480A78400A7DEE0520005F5F95011FF547EDD),
+    .INIT_02(256'h5C0438240067FF531E00AFE8FFBB7E8FA7F9E7F05FB2801DEBFCDFF2A030FFCF),
+    .INIT_03(256'h9E056020DFFCFF7B47FAD8013F88FFD9720CB01FE01500855BFDF81820487FD4),
+    .INIT_04(256'h9E06B7E5C062FF90A202480C3F8300FDAA06101B003D0045CA0D3FFFE089802E),
+    .INIT_05(256'h5E0247FCFFB47FEF31F9580E5FFE7F2A7BFE9FEBBFCFFE954A06801D5FFE00B0),
+    .INIT_06(256'hE3FEC000DF98801B1C021FF8BF777F7B8C0C08126034803522016FE41FEB80B9),
+    .INIT_07(256'hD0028808202D800173FC9FF2FFE27F21C0016815FF6F7FBEF5F25FE3FF46FFCD),
+    .INIT_08(256'h1C05DFD3FF537F32D3F467DF9FA8FF6DEA012822006D81393607D7FA00087F2B),
+    .INIT_09(256'h3BFF1010E00081E6E5FD2FDF3F7501065E02800100537F42120048031F6D80A5),
+    .INIT_0A(256'h2FFE3FD81FA980C969FEE7DC9FBFFFC3B5FCC7CD000E005BBFF53822A007805D),
+    .INIT_0B(256'h2DFF7802C00E00CB9C018FFD5FB6FF3F7207A823FFD77F3A0E0D78059FCE00C8),
+    .INIT_0C(256'h88057FE07F60FE575FF6680ADFD7FF7DAA09CFBE2048FEEEEDFD87E2BFD17F32),
+    .INIT_0D(256'h8FF957FE1FA5FEEC27FEAFCF1F3F01B0840377E2407781278E015005E0B07F28),
+    .INIT_0E(256'h2006EFE3DFC9FF917806FFBA1FA9812263FA68127FFD80C315FE0018409F7FB2),
+    .INIT_0F(256'hD0051FFF6031015FD805C82BA01A0093BDFB50065FFCFDE0C4007FF4A0540094),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5536,8 +5536,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5547,8 +5547,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized21
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized22
    (douta,
     clka,
     ena,
@@ -5571,12 +5571,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h5B8E09DFDA7D5BD7D28E2550E1C3CB9B8549E125D43CEC0F2214E85E3E5B7B13),
+    .INITP_01(256'h60F4C9A46A3AA5FDB3CAA2C68C1166594C77B12F9E359F99DB9181687E25115C),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5591,22 +5591,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h07BBF7DFDEC042FE046405FFCF3FF002060BF2DFF33FF5FF03A808305FFFFF01),
+    .INIT_01(256'h03C7F5D00440910001C4114058400CFFFE17FADFEFC0F70001EC1C9FF2C044FD),
+    .INIT_02(256'hFFF80C800D7F9BFE0507EEAFEB40B3FFFDBFE94FCC40DFFF0220049FE0405100),
+    .INIT_03(256'hFBDC06303D00E0FC0594147FB8813CFEFC03FA202980C5FF03A7EFC02A800C00),
+    .INIT_04(256'hF5DFF40036FD55FDFF6404700C3F0CFFFA841B4FFD7F6300FD1C03FFDD7F6FFF),
+    .INIT_05(256'hFB7413A048BFB2FFFDF4015FCC7F190002ABF2100B804701006C0E101AC00702),
+    .INIT_06(256'hFAB0120FC9FF770003C7F77FE080A3FD0244093FFF804AFFF8BC08B0347F29FD),
+    .INIT_07(256'h038404FFD33F1703FF5C016FD0402BFE05D80FBFDEC06701F91C0FDFAAFEFC02),
+    .INIT_08(256'h0357F82F8F8036FE00EBF9C010402D0202F004700F7FB9FE063C047FB4C0BEFE),
+    .INIT_09(256'hFA5810AFE7BEE7FFF98C01A02A7F36FDFE7C10000C806703043BF08F70410B02),
+    .INIT_0A(256'hFD5C0C7FD68084010507E9103B00DBFEFF980CCFCDC013FFF89819FFEB808DFE),
+    .INIT_0B(256'h02B8072FB340F001015FF5B035BF00FFFE07FC7048C0CEFD0243F83FD3804D02),
+    .INIT_0C(256'hFA0C09EFE540FFFE031C02100BFFCBF800A3E260478006FE02000EDFCF00E100),
+    .INIT_0D(256'hF127F7B024FE2401FA100B4FC2FF5902FE03F0702C7F7E01F7140F0048FF7400),
+    .INIT_0E(256'h068BF1FFF8BFA5020083EF9F967FBC00FF0BFA104EBFB3FDFB63F83FDF4074FF),
+    .INIT_0F(256'h03C3DA9022C0EAFEFC63F3E06EFF77FEFA7814BFAD404700FE43F75049804EFE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5770,8 +5770,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -5781,8 +5781,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized22
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized23
    (douta,
     clka,
     ena,
@@ -5805,12 +5805,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h1038C8C7920F393406FA20FBEF441C2A956B255AA4E63AD234C807901C946048),
+    .INITP_01(256'hF35B1BAB9DA5D2F37BF595CD2CF6032F6EEDB16A518FAB0E6DE0BEA8B2E3D1D5),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -5825,22 +5825,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h5202FFF53FA8819A0206C7DDDFEA80B1C5FDA008008680956BFDF806A0DA80D5),
+    .INIT_01(256'h42089FF23F2AFEE601FFF821A02280DEB20928147FB28057700287FC3F5901A1),
+    .INIT_02(256'hC4003827FFF580D69FFDA8085FB980F274011FFF800B7FC36BFE4FFEC015FF17),
+    .INIT_03(256'h00038FEFDF70FF2EAFFB280DC03AFF5DA206D0181FA5FE5F0DFE27E880677FCE),
+    .INIT_04(256'hCBE9F0055FE481DF49FB00011FFC00A3AE07F7EFBF86FFAEA408401BE09F8025),
+    .INIT_05(256'h1809F0157FD3FFF275FF87F8404A00985203900880238151FDFE5FE3C0958038),
+    .INIT_06(256'h3406E7E8C03F0068DE0060103F8F7FCA5805AFCD80CE7FE7160C3FEA3FCFFFF9),
+    .INIT_07(256'h940127E7A0790039200B47EA60080143F9FC600DE036FFED7BF5680B3F89FE2C),
+    .INIT_08(256'hA80277DFE0347FE7F3F4980AE05E7F00DBECA7C6C094FF1793F74FDF7FD4FEE6),
+    .INIT_09(256'h5DFEF01EDFEC7D5EB9FC800DA05D00947608B7F5DFECFF29C80B18050011001E),
+    .INIT_0A(256'h87FDBFDCA06E014B0607B00C7F53008A1407E810DFD97EC5B4028008BF8280DA),
+    .INIT_0B(256'h53F6A0083FE980D421FD381F7FD97FA7A204FFE5E0538015B5FD7002009F7EE4),
+    .INIT_0C(256'h02094022DFB9FFAA6DF8BFFEFF2882809C07C00C5FE17F6F820268069F887FC0),
+    .INIT_0D(256'hC9EBFFC3001480AEE7EF9FCA3F8B7DC3200B3FEB3FD400B2F1F880025FA2FF4A),
+    .INIT_0E(256'hDA0A9FDF9FBD7EFE100068351F4EFF214BF377F4E02D815839FFB7DBDFC0007F),
+    .INIT_0F(256'hB3F9EFFE607C8018E3F7AFC4E0A5FF06AC0757E65FCF00A93A06D81A20210030),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6004,8 +6004,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6015,8 +6015,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized23
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized24
    (douta,
     clka,
     ena,
@@ -6039,12 +6039,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h38213A7AE3CBA486A7B12F5769D4B89348F8C6648A2D1C325DC019AECA18FA72),
+    .INITP_01(256'h45356D1BDC0EBEFAE9219F2A58DBCD9B32B58E811ACBDEBF9C177685460EA0FE),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6059,22 +6059,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFDF4003FF7BFE5FE07B0085FBD407400FB8FFB6FF4FFC5000177E3703F3F1701),
+    .INIT_01(256'h0274037F9A7FEF01F9C00FB033405CFE00F80DDFB340D401FCB3F62F6E409CFD),
+    .INIT_02(256'hFF5C094FC600A6000143F51F8F40C8FF002C1AFFEDC060FD0337F740143F6600),
+    .INIT_03(256'h019C0C2FA98062FDFE8FFA7FD5805E00FEE40A805D7F53FD03BBF7401FC0A8FD),
+    .INIT_04(256'h0407DC6FCAC08100FD20051008C08100FA47E5CFD1BFE7FCF6880C2047402300),
+    .INIT_05(256'hFF83FCE03BBF9200FE63F7D00C8050FE025BF9BFBF7F4901004C13F035400601),
+    .INIT_06(256'hFB93EBD0167FFA00F58C01EFAFBFD1FDF97FF43067C00EFFFC1813C007001AFE),
+    .INIT_07(256'h0257F45FD8406D0100C3FF7002C05A02025FFDEFE08093000553F1AF647F5A00),
+    .INIT_08(256'h02000780017F780102E811FFEAFFEFFFFF23D29014C0F7FFFCEBEB6FF73E8401),
+    .INIT_09(256'hFD64132FE73FA5FF00C402302FC043FE039FFDE000BFD3FFFDA409800E0035FF),
+    .INIT_0A(256'h04880B0FE6403D01FCF40A3FD97F83FCFCA8133F49FFCC00FBC3E19F9DFF8DFE),
+    .INIT_0B(256'h03DBF690093FA5FEFEDBFAC00B40AF01FEDC073FDF801BFEFE900C20024001FE),
+    .INIT_0C(256'h01D0060FE9BF3EFFFCC802BF7A8043FAFC281E5FC480ED00FC600BCF8F3F59FF),
+    .INIT_0D(256'hFD77BE0FE5C0FEFF000BF21013401902FFE00EFFE2FFF5FD044FE79FA8C020FF),
+    .INIT_0E(256'hFDF00F0F98002E0104E00FCFD8BEE202F90FEFDFE2C08CFEFB17EC7F66C05FFF),
+    .INIT_0F(256'h05DC04A00EBFBEFF008FDC10233EA1FE029BF39FBF4063FE00700A5FFEFF50FE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6238,8 +6238,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6249,8 +6249,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized24
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized25
    (douta,
     clka,
     ena,
@@ -6273,12 +6273,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h99FEFFDA48E4E868E4FC2255BC5E622A127DC8B56080F4194CCF737FA15FEEDC),
+    .INITP_01(256'h45328CC5A70DF55895B44ABB44F718CAE5C96663FC7C8F68DC9DD42BE5D65C96),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6293,22 +6293,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h5A088814201DFF506BFB9FD69FB0FF9BEFF870001FAC012871FFDFF11F818024),
+    .INIT_01(256'hFDFA581BBFF3009FC7FC001FDFEF00D1EFF757EC007E7F9019FCE7E59F4D7E34),
+    .INIT_02(256'h49F6C805206680043A06E012A018802FE9FDE7E83FFB816DFC010FF6C056FE0D),
+    .INIT_03(256'hFE0677F44057FF9EC5FA67F7FFEA7FBD19FFC006401081ACCA02B7E67FFE0009),
+    .INIT_04(256'h060427E41FC87F6C79F057F95F107F5F9DFF200DA08D80A72804A02860B180DF),
+    .INIT_05(256'h87FCA831FF997F4983F8E7F2DF5D013DAC0510188024FEA297F81FE7DFFEFF2B),
+    .INIT_06(256'h9BFF982FA01CFFCA53FD98161FDB01875DFB783C602900A64BFDA831406E814F),
+    .INIT_07(256'hA80247ED807D807229F50FE29F7E7E3DEDF5A7EF5FDD7EE7D5FC77E2A0100093),
+    .INIT_08(256'h35F82002BFCE8049BBF3AFCC3FC27EBDBBF8D7F3BFC48025CC0817D4BF507EFE),
+    .INIT_09(256'hD1FCE7F83F617FD81E00C7D51F4B80D459F15FF8FFC8FFE850018002E0CD7F38),
+    .INIT_0A(256'h3BF95FFF7FFF7F18CFF88FE89F4B80A8BE02D004DFCA7FB2EDFFB805403E0090),
+    .INIT_0B(256'hBFFFE810DFE47FFB43FF780CC01880885FFFA8133FF1016E4FF5D00B202180E0),
+    .INIT_0C(256'h01F9081E1FD1807485FEAFC07F657F19E0098FF06031802A95F72832005780D7),
+    .INIT_0D(256'hFC078FE13FB7FE68BA0447C65F3880D231FB802D4013808DFC0077F22074FFE4),
+    .INIT_0E(256'h100670203FFF8102D805D828BFB4806F53F6FFE65FFAFEE6D3FA67FF40460090),
+    .INIT_0F(256'h8FFF30013F95FE2D1E0047F9C01C804E660B90279FED7FC8BBFC08089F740005),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6472,8 +6472,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6483,8 +6483,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized25
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized26
    (douta,
     clka,
     ena,
@@ -6507,12 +6507,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h19383CF1C81FAFEAC735B3CDFDF32962226C1550389811C2DA554348634021AA),
+    .INITP_01(256'hD48ACA8E0D07253FBA79551DF062126F6D7AA009137597B68D9A2AA0CF247ADD),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6527,22 +6527,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h011FFA7066BF2BFA029413701C0084FE0877FC7032403BFFFDF3FD0FE3400C00),
+    .INIT_01(256'hF850130FB4BFF7FD025004A026C09E0002300F100CBFCFFF01A410EFE77F4EFC),
+    .INIT_02(256'h01EFF59FCD80C900FFCC020FF0003CFB02A009102840E9FDFF0C1370233EA301),
+    .INIT_03(256'h0603F4D0103F5BFE0633F9DF9AC0A9FF008C0EC037401902062007700FC06C01),
+    .INIT_04(256'hFF53E88FC6007C01FD8BFD100BBFEE00023BFE1FE3C043FD02C7FF5048404504),
+    .INIT_05(256'hFD4C0C10033F8B000663F80022808701F98BE72012BF69FDFBE80BDFC0007900),
+    .INIT_06(256'hFB0407DFA800E001023403DFB07F84FFFA97FF8FC7006F00FFEFFB7FE6800B00),
+    .INIT_07(256'h0368058FC50037FD001BF01FA87FC700040BF2AFD60060FDFD2FFAE010BF08FD),
+    .INIT_08(256'hFBB008EFDE008CFD00AFF9802BC00102008BFA3F93C03602FFE8001FBE40A0FF),
+    .INIT_09(256'hFDB80C5FDE80ACFEFE58043FA0C09DFF02E7FACFFC7F9501FECBFE003980DC00),
+    .INIT_0A(256'h00CC0FC0007FEBFF0297FD401800D301FFE807802C3F31FCFD27E7E035FF2600),
+    .INIT_0B(256'h02D3F43FF8805EFD0087FF5FF83FAA01FF83F4A037011DFF02F00AAFA0007701),
+    .INIT_0C(256'hF7EBF8302B80D0FD038FEEB023FF4BFC0320119004FF0E000377F48FF73F66FE),
+    .INIT_0D(256'hFD5FFDBFAF0023000203F8AFB9FFD7FE040C07E02DC09502010405CF76C07300),
+    .INIT_0E(256'h03D8020FE1008BFF064000C04F3E17F904CBFD0015BFD50004BBF77FD87FDAFF),
+    .INIT_0F(256'hF9800BD01280FB02FBE001CFB3BF6702FCB802DFD9FF07FAFE40032FEEC03401),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6706,8 +6706,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6717,8 +6717,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized26
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized27
    (douta,
     clka,
     ena,
@@ -6741,12 +6741,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h53B6062530FD3967451B4369D90B02D04AF25E73BC8903CC46FF162042947119),
+    .INITP_01(256'h30DB619A4C1ED9A095C551A4F9384B0722D44359D66CFA19ABA1A0977A474C27),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6761,22 +6761,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h05FC081B6050818D16036FA45F8400897BFF77F90099009ACC02F7C720908055),
+    .INIT_01(256'hE7FA00161F3DFE3DEBFB0F595FF78143321107DC3F718044260AC80540840151),
+    .INIT_02(256'hEA00BFE1DFA8009E04061826801BFFE95E01A8294071FF0BFDF4B8287FC98132),
+    .INIT_03(256'hF1F7401D601E017419F9DFC7800B01D0C7F7DFEFBFDF8033C9FCFFC56082FF60),
+    .INIT_04(256'h57F35FED805AFFC5CC02B817203C7F8F6601602DE0400126B7F88FFB40610035),
+    .INIT_05(256'hB5F89003FFA87F12BE053FC7E025014963FB5822804AFFE637F79815200CFF0F),
+    .INIT_06(256'hC60117ED605701C767F777EC7F277FB8300D0FA860C37F5247FA9820FF9AFE71),
+    .INIT_07(256'hD7F617DA204180A5AE01A7F01FB90104100A68185FE78000D605D0203F417F30),
+    .INIT_08(256'hF1F527FBE034006D53F848037F8F7E5293FF90129F8B7E4D1A0448031FC27FB4),
+    .INIT_09(256'h7A05F837603080D64A00000D201580048C01801BC04D803FF00807AB9FF1FEF8),
+    .INIT_0A(256'h5FFFAFE61FC97F77EBFD902A9FB27FE04FFB0FC2DFF80055E8034FF8606F80E7),
+    .INIT_0B(256'h1A06F822806DFFC329FCBFFCFF7E002E53F58810C0A0FFEAFBFCB79D40167EA3),
+    .INIT_0C(256'hFDF04FA06018FF7A6606B7DF2023FF7A4DFA804520297EC708024814FFE37F61),
+    .INIT_0D(256'hCE080FFFFF4F7E43EFFE58257FDDFF81BBFADFC7005F7FDDBA0268017F947F88),
+    .INIT_0E(256'h7BFC8003DF7CFF67E003BFCBFF61FF6DADF8EFE6802FFF07E8000804FFFC7FD0),
+    .INIT_0F(256'h9A0567E920057DC4B7F587BC20B2FFE0B9FD0024E02BFFD55E0047D840227F1D),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6940,8 +6940,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -6951,8 +6951,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized27
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized28
    (douta,
     clka,
     ena,
@@ -6975,12 +6975,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hDD6D74D2F145AA1EFA710CF6B8C90429EF7A89F855543BBE6C968E4D73DCDC27),
+    .INITP_01(256'h85BED6C74A3A368CB41CD63D87CC53F43B67CA4724243EEF309924CEDAEDB8DB),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -6995,22 +6995,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h005BEBE006C02802F92808BFC57F70FEFFFC027FBC404C0204FFE790677FD401),
+    .INIT_01(256'h05DBEC7FFA80A701FA4006A020002CFFEC6811DFA73FC7FA02CC0BDFEA004DFD),
+    .INIT_02(256'h00540680247F91FF05C80E401340820102C7F10FD17FF501FDFBE29FDD7FE500),
+    .INIT_03(256'hFE9BF5DFA2C022FE0123E7CFE0BE95FEFCD80D3FCEC092FFFD73F9AFD3BF06FD),
+    .INIT_04(256'hFFCBFB2FE5BFC5FEFF080BEFA740700103D409A03A8032FD02B7F25FC1FFF0FC),
+    .INIT_05(256'hFFCBF29FD3C04B010203EE201780F1FD02B0042FB9808F00FE7BF62016BF85FF),
+    .INIT_06(256'hFF4FFD602240F301005C05C0193FE601FEBBFC6FCC7F2BFE026C073FF9C04301),
+    .INIT_07(256'hFA8C0D0FA8C07701002FFB3F9240920103DFF2B000405AFEFFD804D01EC0BFFF),
+    .INIT_08(256'hFDA80BBFCE7F7302FE3BDF7FEA402302FFA3F4AFF44044FFFFE812FFFFC029FF),
+    .INIT_09(256'h0457F380254063FDFDD407CFD080C80206AFEF1011C084FDFAD8029FF17EDEFE),
+    .INIT_0A(256'h07CBDB50003FC7FD048FF7A00C7F98FF02A7F7CFFF7F40FFFBDFFF0FB2002B02),
+    .INIT_0B(256'h00ABF44FCA3FF8020487EF8040BE8700F944017FF17FC9FE00F4035060FE7DFE),
+    .INIT_0C(256'hFE300E60450017FEFA44113FF100CBFD014C02B00D801B01FB7FF38009C021FD),
+    .INIT_0D(256'hFE6FF670154064020394021FE8FF33FFF9180B9010BF54FE0233F04FEF7FC002),
+    .INIT_0E(256'h0140067FF34003000223E9CFF43F2D00019BF0B02CFFC900FED00F5FE740A5FF),
+    .INIT_0F(256'hFE4409D00180A4FEF957FABFE27F95FCFF3803A02940BAFFFB5C1750437F6EFB),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7174,8 +7174,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7185,8 +7185,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized28
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized29
    (douta,
     clka,
     ena,
@@ -7209,12 +7209,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hEC18B9F7B676661F1E055670B263DDEB604638469E6730626B4140514AE17D64),
+    .INITP_01(256'hF2C5F7F374552643E51B473F9E64505F641CCF564FC15F5BB3134FE3F723D9E9),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7229,22 +7229,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hCBFDC007603CFE4DCFFF1836E062006D11F8B7ED1FE3FEB709FD700ADFC97F7A),
+    .INIT_01(256'hD3F9B80CC0067F622DFDD82660C27E89C1F6E81E0048FF63B3FB9FFC00128068),
+    .INIT_02(256'hD4009FDCBFFEFFCD97FB4016DF2FFE0A580277BBA01301F3ABFC9003004F8179),
+    .INIT_03(256'h15F42808C01B7FDDC5F960129F7F802DFA0B37E260C580BBF7FC70117F5E8060),
+    .INIT_04(256'hA20A2FB800807F2B17F76814805AFFC1ABFF37F3DFC1805EABF8A01440517FCE),
+    .INIT_05(256'h4C00B7EFDF93809D4C01500C3F73FFBA93FBEFEC1FC67F01C1FA7FEC205F7F27),
+    .INIT_06(256'h020DE7F25FDC7FDAD9F1E7EF1FC400A779F9B823DF277F64FA0937DE1F9A7F41),
+    .INIT_07(256'hCDF7700E3F68FF0E9205D7FF003380352205B7EB003E00DE53FF8FE03FB1800E),
+    .INIT_08(256'h99FCAFDEFF817F7BBC04D822407100A365F44FE4E06C7F2505FB5017406500CF),
+    .INIT_09(256'hC604E7EF20347F1728069FE4C003804F61F6E01DFF97FF2693F4D825E03A80AB),
+    .INIT_0A(256'h39FF90013F927FF275F87003208C002E15FECFFABFDA81AA7DFF87D260900120),
+    .INIT_0B(256'hEFFC1006DFE1FFBCFC0217F11F948026B1E6E81ADF72FE0FB9F197F4FFB00062),
+    .INIT_0C(256'hCE0427FC1F6C014763F598145F468026A3FD17E9401980E62FF247EE7F9FFEF5),
+    .INIT_0D(256'h8FF9181F5F7180D3A80307FD409DFF80E1EFE0183FDEFE5F2607FFF33F65FF64),
+    .INIT_0E(256'h47F47FED5FD7FF6915EF17EE9FA67F5FE20220101F92011869FF9003E01D007B),
+    .INIT_0F(256'hDBFB47FA8054007223F36014FFF8FEACF3FF37F45F6BFE5B0BFEDFF9007DFE5E),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7408,8 +7408,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7419,8 +7419,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized29
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized3
    (douta,
     clka,
     ena,
@@ -7443,12 +7443,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h990A10BAD423E6659AD0959C57E57566F7FB4D6533D1D0555D1563F9D2D89A35),
+    .INITP_01(256'h454D31DD56BCFA1C96360A28B4D4FB987A1F8987ABF17363B148B89C150C2D62),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7463,22 +7463,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hDDF477ED60DA8005F1FEC7EAC0067F188E02CFE680377F0E3809F7F45FA37FBF),
+    .INIT_01(256'h71FC8FF83F37FE3B880277EFBFD3FEF4C3FB0819C06A8012A1F0B7CC40D600A6),
+    .INIT_02(256'h7A0057FB004500C79DF927BE60747F960BFD2FDE00A5FE43B5FFFFFE9FCC00F5),
+    .INIT_03(256'h97F92FF5BFFB7F3E4BFC47F5C0317F1643F538143F590079B3FCA8089FE3FE1E),
+    .INIT_04(256'h7FF9FFEB1FD380226BF9200FBFBA7ED815F927F5DFB8809531F8A8013FC1005B),
+    .INIT_05(256'hAC019FE56048814B69F6BFD46078FF55140687CD9F9CFF3F7A023FFF7F5C0159),
+    .INIT_06(256'hB5FDB7F4FFDA8094E401181AC020FF4F4FFBA016BF1C00395FF968211FE60006),
+    .INIT_07(256'hBE065FF720487F714C056012602CFF0268055FE1E09A810D40056FADBF7481BE),
+    .INIT_08(256'hD806C7C83F907F621809581F3F6800F1780010275FF0001D0DF1D814A026801A),
+    .INIT_09(256'h6001C7F6BFCF7F5231F818010021006508033FFC004B8075620217EC3F9C7FA7),
+    .INIT_0A(256'hBC01E00000477FF799F377E140B2FDE143FC6FCB603E7F76D7FE880100358071),
+    .INIT_0B(256'h77FEC7FEE0107F05AC005FFEDFC57F3A7A022024C03C7E927000700E3F98FF37),
+    .INIT_0C(256'h9804EFDCDFDD800AFDF46FFEC033000051F95FCCA0A500B050009FD360447FC7),
+    .INIT_0D(256'hD402A7F8FF7AFFF0EE08A7BEBF9BFF7D9C06E8242048805BB2028809806B00B3),
+    .INIT_0E(256'h83FD4FE0BFFA8101FE053FA75FBC00A031F3FFFB80A70076E20A6FF33FD77F8C),
+    .INIT_0F(256'h7DFAB0047F197F11D7FCA019DF447E33C0077FBE000D7FB32DF2CFFF9FCC800C),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7642,8 +7642,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7653,8 +7653,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized3
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized30
    (douta,
     clka,
     ena,
@@ -7677,12 +7677,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h93D32804BFCA98B4F8EA1EEA241210B830ECAF0B5DFD853402198804F77DB04C),
+    .INITP_01(256'hD178A3F8217B5FED8CB9EE99F1EA7BC5F07968AC001A0B20E03C13286C50538D),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7697,22 +7697,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFFD3FD404F7FDF0001C7EEEFA980EBFFF61BFDB03C008AFF031C127FD9801FFC),
+    .INIT_01(256'h0010079011FFB5FF000807AFF900D2FCFC70187FE10054010510000050004700),
+    .INIT_02(256'h0080013FB48002FFFA53F03FE53FB401FEC8007047C0E5FF02EFFE4036FF84FF),
+    .INIT_03(256'h0393F2005280A601F8FBF26F86800801FA23EF4F7CBFA2FB05E4063F1EFF71FD),
+    .INIT_04(256'h060BFB200C8018FF02880180073FCA00034805304D40A3FDFA9FFF9FD27FDC00),
+    .INIT_05(256'hFC07F56FDF0031FEFE1FF24FBC7FDC0200E40F7FE3FFDB02FE5FF67FFB7FFF02),
+    .INIT_06(256'hFD1BF09FFFFF87FFFADC06FFB5BF8F00F9E40C1F71C0C4FEFD6BEE200D402AFF),
+    .INIT_07(256'hFD701170087F97FBFF801190003F9D0005AFFC9FFAC00FFD06080F70647FF900),
+    .INIT_08(256'h0067F46FD8C05400024C1230313F810100E80B305DBF8A02FECC0A9FCC0055FF),
+    .INIT_09(256'hFCFBFC603FFFE1FF03C7F8AFE3404EFF010C07C04DFF4F0101C7EC3F8500D2FB),
+    .INIT_0A(256'h0240066025BF810002D008BFC13FB60005EC0F5F9A3FE3FB06F7FB200B4014FD),
+    .INIT_0B(256'hFFABFD7019803D0000BFF0AFBD3F9900014BFDEFCCBF7900FDD3F76F86402CFF),
+    .INIT_0C(256'hFA7FE6B01D7FCE00FC17FE3FDB7FB4FC012FFACFE77FB100FB0013903040F1FF),
+    .INIT_0D(256'hFE440B0FBF8017FEFD53E39FBDC086FFFADBF52FE4BF07FEFE3C058FBF408801),
+    .INIT_0E(256'h046BE87054BF3F010123E95FB23FF60001280ABFDE7E39FFFF4FFD9FD980CF01),
+    .INIT_0F(256'hFB3010504300910202BBFE4FB9FF2A03F743F3F047FFEDF9F91BF43FC04027FF),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7876,8 +7876,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -7887,8 +7887,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized30
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized31
    (douta,
     clka,
     ena,
@@ -7911,12 +7911,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hFD06E12551E72915F1E89D9CC410679613575BD6365AB79A4D87619AFF97FB4F),
+    .INITP_01(256'h936CC25231ECE4221F17D8E7FA4A7D6BFC16AC3412D640AF7B46C87AE96D2F44),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -7931,22 +7931,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h51FD57EF1FA0FF23BC0A37ECFFE9009F3FFAC7F7403DFF0733FD0015DFA800A6),
+    .INIT_01(256'h19FA5810BF4F7F4C5C01901A9FE4802F11FAD80020308150340C97EF801E002A),
+    .INIT_02(256'h1E0ADFDD5F7080F0C7F68FD8C0218099FE073FB6BF497F68AC0DEFF1400B7F57),
+    .INIT_03(256'h5C089FFE400100E15DFF87E91F5F7E28C9FC27E84039FF2F49FD0FF03F3AFF4F),
+    .INIT_04(256'hA9FF480C7FADFF4DE002CFEFA006FF8A19FA88087FD6FF6B4A0667E07F1C01A8),
+    .INIT_05(256'hA5FDDFFABFCEFE69AFF7100A8092FE8B720277CCDFBF807EA60007F85FC67FCC),
+    .INIT_06(256'h7FF79FE50065FDB299F7401C1FCB7EE3E807A02BC058FFFA6E0647DBFFA90014),
+    .INIT_07(256'h6BFB17EFFFE080449A06F0389F25FF75F1F5B80F60607F9E920320227F887F14),
+    .INIT_08(256'h89FAF81940017FBC71FB202D3F57FF3F8003100E7FD3FFEC95FF602E9FF0FF4D),
+    .INIT_09(256'hD7F86FC1E0038018F5F9F81CDF9F00FCF7FDD808A0217F245BFCE7E6E03E7F5D),
+    .INIT_0A(256'h2A068FB51FCB003C2BFB7FE05FF3FF36EDF57829C0217F19220898077F4CFE80),
+    .INIT_0B(256'hCBF26FFADFB3FFAEF20A67EE1F31FFEEC004B016FF90FF038A01BFEDFFAFFFE2),
+    .INIT_0C(256'hC5FE37EC2037FEB0ABF2401E605DFF57EFFE47F6DF81803F89FCC80F20777ED3),
+    .INIT_0D(256'h7807E7F51FFAFDA97E0487ABBF6C80B513F50FDFE07C8004AFF7981F1FDDFEFA),
+    .INIT_0E(256'h5C05EFF1C05F80EE8FFDA8067FEFFCC795FD980B7F777F917003E009E044FF68),
+    .INIT_0F(256'h3A0137F5E086FF45F5FE5807BF96FF6BD3EE30168043FCCDC9F42FF3001D7ED4),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8110,8 +8110,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8121,8 +8121,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized31
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized32
    (douta,
     clka,
     ena,
@@ -8145,12 +8145,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hEDB9B7A62824F60F54D2B3A32A3D2D7521344CDB2C7312DDF14FBE65FF385B64),
+    .INITP_01(256'h7E73195230F8A749670526694BB0C03DC9343137EA230A94F5CFA0367C372F30),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8165,22 +8165,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hF60FEF9FB3BF76010117FDAFAA403BFC0100035FC53F86FF066BF8500A805000),
+    .INIT_01(256'hF83FFF803C802201003C0BDFBD7F2BFEFD4FFA2FFE3F30FF0623F9E0310068FF),
+    .INIT_02(256'h041FE9BFE7C087FE0593FF500A7FA700033401D007BEDCFFF84C099FD94048FF),
+    .INIT_03(256'h046FF79036FFD5FE03DFF6B01BC030FF0184141FFD7FB000FFF4019FBB7F6D00),
+    .INIT_04(256'h02B7EE1FC88035FF0013EE6FC0BF4FFE05B3F8EFCB8033FF00B3D77022C0D8FD),
+    .INIT_05(256'h01E8069017C0F6FFFC000700737F4FFEFF27FEE02C7FB5FFF48BF5501E7F7AFF),
+    .INIT_06(256'h035BFBFFC5C04DFF061FF1403B80BCFDFB27F2A0243F6E0005F00ACFDA7F8D01),
+    .INIT_07(256'hFD9BFADFAC0000FFFD13F7DFFC3F3C01FD23EDE040C02C01FCC3F61046BF3001),
+    .INIT_08(256'h06EBFB2FA400000100B7F6A005FFBC00040FEE8FD27F7501024FF0B004C09EFD),
+    .INIT_09(256'hFC6BE8B0190074FEF8A0088FDF7EE902FDB3EE10350061FC023FFC40083F4A00),
+    .INIT_0A(256'hFF0FF7FFB2001FFE0717F5B01B7F36FE015405AFBEBF98FDFA18038022802A01),
+    .INIT_0B(256'hFE180EBFF080BDFE041BF9F01B7FBA00042FFB40194019FD0123E3203BC055FE),
+    .INIT_0C(256'h00F4069FE83F9C01FE63F8003B0051FDFEDC01B06980E4FF0043F55FEA807900),
+    .INIT_0D(256'h069BFC804CFFF8FF02BC14600F80CAFF03A3FC20123FB0000027F39FDF8015FF),
+    .INIT_0E(256'h0083F9E05E801FFFFF4BEACFDC805700FB87EA901A3F4CFD06540A0FD4FFD9FF),
+    .INIT_0F(256'h0137F40FEEBFE5000297FB80357F75FC079C03BFF3003EFE072406B01A3F96FB),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8344,8 +8344,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8355,8 +8355,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized32
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized33
    (douta,
     clka,
     ena,
@@ -8379,12 +8379,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h51BD06F6BA3DE49645EA3496269CBED8177FF9743F48BE8FE2D15200B4F3D340),
+    .INITP_01(256'hB2BC7FCD9885724ABCA2FA6EB7C32D07458D9F5FB218F1288DE3B7FB256B13C5),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8399,22 +8399,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h60059FFE9FB67E7235F34FF7A025FE4B95FC97E66049FF9EBDF02008A06F8045),
+    .INIT_01(256'hF5FB7804A094FFE481E3C7EFC0497FC675F7BFFEE0787F4FC2021800A0068053),
+    .INIT_02(256'h9408EFE47FC67FC703FF6006E0027D73E003DFF0BFC900718800E0111F9E8192),
+    .INIT_03(256'h6C08CFF95F5E7EA431FF57F3BFF4FFFCF1F8FFDAA07B00BB21EDF7FE1FB48036),
+    .INIT_04(256'hD40CB8001FAB80621A024FD43F3A81311C0767F89F6C00B469F8A7D8E02FFF77),
+    .INIT_05(256'h9DFB5820BFD6FFE877FE9014405E811A60031FFA1F247F4404026FE85F73FF7F),
+    .INIT_06(256'h1E050FF1804A81B3E400E7D91FEC7F3A65DEC0209FD6FEDA1E01CFEE9F5B8065),
+    .INIT_07(256'hCFED0FE0406A7E872E07EFE99FD6800AC610302E1FAC80CC1DF74FF07F4B0163),
+    .INIT_08(256'h8E08C00ABF77809D31FF08035FFA000AF80877C58049FE875FF3500C7FB700E5),
+    .INIT_09(256'hB0035022FFC4FF8927F94815E09401A12E055FF33F42FDB937F03FF8809A7E22),
+    .INIT_0A(256'h8201E7DB605D81877A08A7F1402600674DFBAFD2406980D7BA00180C20220105),
+    .INIT_0B(256'h5DFDC8189FC37F6932027823DF7C0019540367EFDF7E7E9289E7D7D59F3900B7),
+    .INIT_0C(256'h680287C9BF907EDE51F04003207B009DDE06F025BFFB7F43A00A68247FEC7FFF),
+    .INIT_0D(256'h920307EE3FC40031540CE81740207F4FF9EEB7DE8036FF98CBFBE0017F3D00F5),
+    .INIT_0E(256'h000907E05FE97FBE580280289F887F5311FAE7DB604F80686BFC0007C03E00A5),
+    .INIT_0F(256'h9200A7FA8086FE18B2006FD09FE0800B61FB67FABF23FF98B3F0C00B3F90FF70),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8578,8 +8578,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8589,8 +8589,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized33
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized34
    (douta,
     clka,
     ena,
@@ -8613,12 +8613,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hE4186916F6CB1B746CEE11D59A5F3A3B00D8732BD2D8616552A5503CE16EB778),
+    .INITP_01(256'h7396FA0117B9E77BEA32BF78E06CD25B2E7A4AB4612966654567D56EBE2BBB62),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8633,22 +8633,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hF5F3F970384062000163E91F93FFE501FC97FCA0397EC1FD02FFFC2FD780FCFF),
+    .INIT_01(256'h01400C603A3F9100FFA7FFC00FFFCCFE020403F0087FAC010387FB3FB10098FF),
+    .INIT_02(256'hFE440D4001BF4901FB94022FC2802B0007EBEFC00600690001A3F2A029804EFE),
+    .INIT_03(256'h023811501DC0EB01F960151FFE80E900026BEFF02C3FF7FE048FDF0FC5C04700),
+    .INIT_04(256'hF64C05AFBFFF99FE0668070FEC3FA2FE07F3EBFFA87F5EFD0057EE9FB5BFAEFE),
+    .INIT_05(256'h0057FCEFB6C01602FE8FE50FF97FD801006409302580D901FE301A70174092FF),
+    .INIT_06(256'hF7AFF44001FFB100FE34051F8C401CFE0070010FD4FE5F03000FFBE00A4037FF),
+    .INIT_07(256'hFDBFF5B02AC0D30000940B7FE9C00CFE066FED7FA540D2FF01E007300E40C7FA),
+    .INIT_08(256'hFFDBFEBFF0BF32FF04EBFCFFBB006300FD77FFDFE9001000035BF6F03480DBFD),
+    .INIT_09(256'h00B0109007BFA0FE0483E67025FF69FFFAA810201880E0010083FFCFDDFE94FF),
+    .INIT_0A(256'h06CFF4101E3FA30003EBE95FE6C0CC02066FDBD03240FF00065FF95032C08D00),
+    .INIT_0B(256'h02CFEFEFCB3F520103EBF76FC37F0500018C0CFFE0C03EFDFD6FFAA0397FA2FD),
+    .INIT_0C(256'hFE4FF8802E000EFC0077EA2FE940DDFDFF000F6021C02301004806DF83FF31FF),
+    .INIT_0D(256'hFFB3F13FA5FF1AFC00CBF1D0293FD201F943FCDFE7BF73FF01E3F71FDA80C600),
+    .INIT_0E(256'h0054180028C05CFFFA6FDA5FCCFF4BFDFF2FFB600800A0FF0227FC6FB9FF47FE),
+    .INIT_0F(256'h014BF9A011BFB2FDFE700C803F802700F69BEC3FEB3EBCFB00D801800B80AF00),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8812,8 +8812,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -8823,8 +8823,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized34
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized35
    (douta,
     clka,
     ena,
@@ -8847,12 +8847,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hE57D5D9C3EAC42053334FDDCCF940EC7EE58B6F3656541A5A4BF479CECD93271),
+    .INITP_01(256'h667B91D73278CBDE1950E16917158C87D914DD686467E08ED62743D34E27AE7E),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -8867,22 +8867,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h19F8E82AFFF4FFF95FEACFDB000E80C0460B3FE4C05EFEB239FDC7E3405B7F7C),
+    .INIT_01(256'h840EA812DF930082FC013FE77FBDFFA40BF0900C1F9BFF686A0927FFFF66000E),
+    .INIT_02(256'hFDFE28075FB9FECDAFF9D00F9FB97F096DFFE031E0A67EC5920138245F9D00AE),
+    .INIT_03(256'h3FF578163F6BFF94BFFFBFF8A0387FFBDA013FF37F9F81FF39F9B7CD00817FD5),
+    .INIT_04(256'h83F78002BFF280EFE8036FE07F3D018C460958057FE5001A01E4900B5FD97E11),
+    .INIT_05(256'hD809E7F0A065FE94FA0887899F378026D3FE0FEFBF59FE320FFD57F3DF850004),
+    .INIT_06(256'hA80527DCFFFC8014FC02701C9FE1009DDDF4F0184040FEE5F007C0075F8A800F),
+    .INIT_07(256'hFFFE701E7FDB005069FD77F01FC280E0E3FDDFF19F8F8094FC0B2FF3BF4880F8),
+    .INIT_08(256'hC5FF181B9FB5801B060370095F7800CFE209D8059F61FEEC71FB57E9FFDC802E),
+    .INIT_09(256'h37F697FADFBF7F35900490171FC800ED1BFC7805C04FFD1071E517E6208C7F07),
+    .INIT_0A(256'hD1FAD82D5FFFFFDAD3FCB00A1FCB01026DF8B800407C01686800E00E3FC28020),
+    .INIT_0B(256'h89FC47D360717F3A7A04DFFFDF8B8092ABF16FC3FF9C7F59C9F4E818C06C7F64),
+    .INIT_0C(256'h5209F7A91FB180FBA80787A83F6180123C0000209FEF7F84D602481F7FD2810A),
+    .INIT_0D(256'h78041FD5A05D0043D7FE8FF880DCFF8FE5FCA0174072803B83FE7810A050009C),
+    .INIT_0E(256'h720727E21FA90119BBF9279E205B005BA5F9000520037F8341FE3FEE7FDC8171),
+    .INIT_0F(256'hE1FBC8267F938010BBFECFFBC0C6817D9C086FE0400C7F84F3F8FFB5DF747F44),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9046,8 +9046,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9057,8 +9057,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized35
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized36
    (douta,
     clka,
     ena,
@@ -9081,12 +9081,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hFB57086F94BBCD1AED552B7D8821DA9D5B03A71DCE41853F9DFEE7A78D06A479),
+    .INITP_01(256'hEC1EB38448680DD13F9A8A1B792CDE9D92F54DEBAADD2F2FAA4857A18E79E0A7),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9101,22 +9101,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFAF4080FC7004FFE062000300EFF78FEFFBBE7F03D0087020183FA3FAC3FFE00),
+    .INIT_01(256'hFEA8031FE44066FEF877D0DFC9FE88FBFF27E7401ABEB2F7FCD3F420213E7FFD),
+    .INIT_02(256'hFD6C04FFF23FE50000B00E1028FFBA01FD180360147FEEFE0343F61F9DFF30FC),
+    .INIT_03(256'h03A0053FFCFEDAF902C80C6015402301FE83EE802EFF300004E80D4FB77FABFF),
+    .INIT_04(256'hFEC81B1F8B40CF010347F78052C0CBFFFDD4057FF37E79FFFF4401CFEB805EFF),
+    .INIT_05(256'hFFAFF4CFAA40C2FF075805E051806AFF00D7E60FF480A10103AFFC9FC9C0B502),
+    .INIT_06(256'hFFA01AA010FFCAFFFC07E81FDC000500FE44023FE2FFF7000254065FBE404602),
+    .INIT_07(256'hFB77EE4FEFFF610003E807201A7F960202B408CFB3FFA7FF0277F80FEF3FCD00),
+    .INIT_08(256'hF9C40C4F8FBF6CFE0443EB2FE2409901FD3FF3E00D405F01FEE3F2200A4094FF),
+    .INIT_09(256'hFCAFFB0FB5FFAE020788063FD940120000901C90343F5200FE7FF9103EC06C00),
+    .INIT_0A(256'hFF7FFEFFF0BF0502FF800F4FFC80C5020343FF4FDFFF58FF0037E29FC63FF3FE),
+    .INIT_0B(256'hFF700B700B3FCEFFFF93FEF071004BFF03040C4FD8805BFFFFFFEDBFE7BF68FE),
+    .INIT_0C(256'h033BF8CFFABF80FF0107CB4F943F36FEFD501AEFFF3FECFEFFCC04DFD63F5EFE),
+    .INIT_0D(256'h01A3F4EFB1FF95FFFFD4176FFF7F8EFFFE5C0BAF97005C0003700C4FBDFF5401),
+    .INIT_0E(256'h005C1D0FB1BFB9FC0127F48FED8018020718128FEBC0B1FFFE0401402E3FDAF9),
+    .INIT_0F(256'hFC33F05FECFF23FD02FC007FC8BF58FEF76BE11017BFE200FE5808901640C402),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9280,8 +9280,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9291,8 +9291,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized36
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized37
    (douta,
     clka,
     ena,
@@ -9315,12 +9315,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h1A2F12CD19AFC7511F60180E4286B2D22CCABFA9709A5DCE0F909A98590B59FB),
+    .INITP_01(256'hBD8297DCD4110287F819830A3B620A52E668EF7EFF51C092FB6CFB3896188624),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9335,22 +9335,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h33F8F7FA405C7E379A08C014002CFFF8D7F58FEA20377F7E41F9C7E4E025009A),
+    .INIT_01(256'hAA05500DBF63FE48D801A7D0BF960156EC047FF05FE302399E06DFE9808E00B0),
+    .INIT_02(256'hFFF8BFC80016FFACA603CFCA402900434FFA3FE15FBB7FB473FE982CDFF9FFF1),
+    .INIT_03(256'hD20128105F8980AD77F6482EA01CFF5F4E00BFDA7FF800304C06C81E00527FB4),
+    .INIT_04(256'h3DFBE80660317FF586004016BF118015220DE7EA60F3FF39F1F5DFC7E059FF7A),
+    .INIT_05(256'h9C01EFF87F8D804DCBF8680C200A0127FC009FF94037FF728205D0031FDB8086),
+    .INIT_06(256'h200637F0A0717EA7E80C580D1F827E89ABF8F801FF850077DFFD27E120727E0E),
+    .INIT_07(256'hD8087FD4E061011A860AA81B5FD47EB08A0517EEC0C3003737FB4802DF68FED2),
+    .INIT_08(256'h0A0267FADFBA80F1500157ECE05280356A0448013F89FF692408D00B3FE20144),
+    .INIT_09(256'h49FCFFE0E03AFE4A35FB30119F17808739FDCFE94056FFA0B4023FD280278097),
+    .INIT_0A(256'hE5FBB7CCBFEDFE59C1FC5FFEE07DFFBC1DFEB833E0630061D004DFD9007CFEDF),
+    .INIT_0B(256'h29F8481C9FA90085EFF7A807E086FF66EFF9E0099FFF00C2D1FCA7D9DFEA00D2),
+    .INIT_0C(256'hD40BE7D6405580027DFFF81E804581F7CC05E81A4087FFEDB5FFE7D98029809D),
+    .INIT_0D(256'hE7F77FDD006B01931C0167CD404E7FD880070812E0347F874A00D01A808900A8),
+    .INIT_0E(256'h83F8DFEC5F2E00D2D8021FF9A0A68009E403E815A0807FC8680960073F108097),
+    .INIT_0F(256'hB00437CFBFD780B0FA05E039E0A4FF56300317CFDFDEFF7A5FFDF7FEBFD80022),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9514,8 +9514,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9525,8 +9525,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized37
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized38
    (douta,
     clka,
     ena,
@@ -9549,12 +9549,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hFF543FF20ECEEC18459AC60265703B85F50BFCDCC6A4F03BDCE9AB3369DE8967),
+    .INITP_01(256'hE7A56CF8B38BAA6DAF22982DEDBD2C786B5BE6CA64E7B0612033F5A0AB38DD8B),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9569,22 +9569,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h035FFAEFCD809EFFF8C8139FA2FFAA02FE50161FA340A0FD01DBFDE0173F1400),
+    .INIT_01(256'hFDBC0D2FF7C0AB01F053F79F9DBE7700F5E3F08FEA3ED1030453DAD0017E4D02),
+    .INIT_02(256'hFD2002D014BF2300FD4BE1002D00D8FEFFB7FCC01580E4FD0473FBCFEF3F7C01),
+    .INIT_03(256'hFE77DAE02E7FDBFE0114037FBEBF4200FE5BF34FAB7FC1FBFC7804EFC3C054FF),
+    .INIT_04(256'h027FF8101BC033FD0483FA6010006CFF041FD97FBEFFB802FFB412A03E4045FC),
+    .INIT_05(256'h043C0380308006FCFC28228F0F7FEAFFFE5C1350408018FE03F40F4009800BFD),
+    .INIT_06(256'h048807BF98801AFDF8880EBFB400EDFDFC6BF3EFE0804C0306140F5FDE0032FD),
+    .INIT_07(256'hFD6FF81FD23F780001E80EE00FC080000827F43FA8FF3901FFE7F06031BFBF00),
+    .INIT_08(256'hFF73F7AFEC3FC2FF0313FFBFBE80A9FFFC2014BFD98000FEFF8022DFB67F2002),
+    .INIT_09(256'h0257F930358002000403FE602CBFE800FC47F0A027001300FF2FEB0025C08DFF),
+    .INIT_0A(256'h02BBEC70680039FDFCC3FD30070015FEFC03F2F008C0ECFF07A3DD302580CCFD),
+    .INIT_0B(256'h0077F74FBC7F7FFE033407CFEABF05FEF937FBC027FFC800F4AC056FE5C03E00),
+    .INIT_0C(256'hFA43F70FCD0059FFF893DBDFAEBE980103FBF6EFE900ACFF0017D7FFA3BF6700),
+    .INIT_0D(256'hFC43F86FE23FEE000387E7903D404500F9F0144FE6C057FD0A2BFC5FD400F5FF),
+    .INIT_0E(256'hF77BF5D047FFE3FEF98C043FF700C1FFF8C7F9FFC080AA0005B7EBFFD0BF15FF),
+    .INIT_0F(256'hF717D690633FA2FFF247FDC0097F72FF0347FEBF9FC00000FD73FC3FC4804300),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9748,8 +9748,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9759,8 +9759,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized38
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized39
    (douta,
     clka,
     ena,
@@ -9783,12 +9783,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h73C412E4EA3726B7378ECD99E94E73DDBE3E5B403539E6EE77BC45A4D1F134DB),
+    .INITP_01(256'h953A8AA38D52A9E228FF595B1886B03AB5246A0FF4F96B24B845F57ACD61E78E),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9803,22 +9803,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hC9FEA7EDBFDDFD4793F107F2206E80B4EC004FD65F4EFDC085FDCFDD20207FC2),
+    .INIT_01(256'h4BFE1FF55F8E7FCC9002C7DBFF89000B21F3302CDF707E4BCE06380AFFB7000E),
+    .INIT_02(256'h9804AFE85FF37ED97A0537DFC09E7F4DF3F6200A1FB1817F35F890127F9A00AD),
+    .INIT_03(256'h580617F85FE700A4300947F17FDD8131F3FDAFD8C05AFEE3CDF9282B60760105),
+    .INIT_04(256'hF5F7F81D40A2FEA721FCD8159FC000DDD1FAEFDF200C8140E3FCBFCD3F4F7EF5),
+    .INIT_05(256'h8A04D7EE3FEE7F376A0B1800BF930158E7FE1808DF917FBD7E07EFE17FEE7DFE),
+    .INIT_06(256'h3FFB400FC05DFDA15C048FF5FFD5FF821A02A8133FB5811386028FF5BF5E0023),
+    .INIT_07(256'h95E75FFBC0787FBDCBFEB81FFFDB00011805F7E2C04780AF95FDB015FFE7812C),
+    .INIT_08(256'hDDF5C010DF987E8BDBFB3012A02DFFA335FD00181F7AFF40A405900E7F798021),
+    .INIT_09(256'hFE0C4FF0205B7F4A37FF90167F22FFE6DDFAAFF41FBF7F8189FBC7D4806CFFFD),
+    .INIT_0A(256'h4FFF7FD89F96000D7DFC5FF1005C8160D1FCA0190038815B8C00080A3FBD01C6),
+    .INIT_0B(256'hE6022FEBFFB4FED72E00E00CDFC0006C93F8A800600FFFBABE0B40067FE880EE),
+    .INIT_0C(256'h0E02C7FEC0ACFFD23E08102CDFD67FEA580BF7FEC061FF34BC01AFD8A02B00E4),
+    .INIT_0D(256'hA8045805E09E8156D5FB2FEBDFF4006C0FF3F7F46068FFF91FFB8FE500707F36),
+    .INIT_0E(256'h52014021BF7B7F39DBF927C2803C81FF84093006606A00F28FFBE80E40D07F40),
+    .INIT_0F(256'hEA058FDF7FC900EC9E0577EDC04A0047AC01B007001CFF364A044807A02F7F50),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -9982,8 +9982,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -9993,8 +9993,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized39
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized4
    (douta,
     clka,
     ena,
@@ -10017,12 +10017,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h80AEC9FC9E4D4C5E4C4D23DEEFBED9A81DCF798284B9029CAD0D6600C9324DF9),
+    .INITP_01(256'hE5F3825E9265FB33EFD6538AAB1902CC5D437A18D15632CFE3220527DE5ED7F6),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10037,22 +10037,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFF1C09BFEC00790000FBFD202AFFFAFF01F4137FED005002FADBFC4FD9FFAB00),
+    .INIT_01(256'hFD17E77FFC0075FF0160082FE580B50100A3F8903DFF840202A4169004C070FF),
+    .INIT_02(256'hFF080F7040800702FD8FFA4FD5FF9AFE008414101CBF79FEFF8C0C9FCB003F00),
+    .INIT_03(256'h03C80FAFDC801000FC70152FFFFFB5FD015BF85F73402000FCCC0A301E3F2101),
+    .INIT_04(256'hF833F63FFF3F2EFEFBC7E4DF047FC2FDFBA404DFF8C082FFFDEBEB1F8E803FFF),
+    .INIT_05(256'h00DC067FFE4030FC005C0F0FE93FFC000093EBD010BFA7FEFF50007FE67F2300),
+    .INIT_06(256'hFF340C6FB63FB70000E008FFFA8050FE01D0021FD6C037FD04F807AFDA400DFD),
+    .INIT_07(256'hFF201700413FAD02FFF7F36FE93F5BFDFEA812FFE7FF4D00FA6FF42FFDC01202),
+    .INIT_08(256'hFFD8042FEA3FABFE01A40B5FF5FF1501F40C0CF02A401300FCF3EC9026FFC5FD),
+    .INIT_09(256'hFCFFF8E00E7F96FD0443FB6014FF2CFC015818C014BFAE0003AFE72041FF97FD),
+    .INIT_0A(256'hFE80091050BFD70103381AB026FFCCFD0287EE7026FFCF01F840145FF5FFAC01),
+    .INIT_0B(256'h01C4065FB440D70102B80D50497FC6FD0423FDBFD37FE3FF018404CF4CC0AFFC),
+    .INIT_0C(256'hFE4BEC3FF5FF6AFF02E8005FBD00B60001B003D042C0BCFDFCD408BF9D8030FE),
+    .INIT_0D(256'hF43BE07FE1FF75FFFA900B40387F89FF03340700143F8102FC4C166FFA3F7FFE),
+    .INIT_0E(256'hFC500620127F7CFF0383FE0029807600F8EFF6BFCBFF830001C3F80002BF1900),
+    .INIT_0F(256'hFDC3DAF02C40C202FAF3E700503FAA02FF700AF03640750000D00D0F9E3FA3FE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10216,8 +10216,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10227,8 +10227,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized4
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized40
    (douta,
     clka,
     ena,
@@ -10251,12 +10251,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h9F29EAF161DACBA9E065A1F137AFA999B144BD18EC7F073ADBDCDDEB7C0FFD0A),
+    .INITP_01(256'h8607ED68338D54B916893A74BC2C31B67A3F71ED4E680BABFDFF4689412B4EF9),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10271,22 +10271,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h020BFAEFDD807BFD02680C0FD27F7E00FADBEA4F7C8060FF0070066F55BFEDFE),
+    .INIT_01(256'hFF5C07FFFF8007FEF6500A9F4F807700F7240F3FBD40A303FC77E3EFD93FA002),
+    .INIT_02(256'hFC23F69FD4C08F0100B7F1AFFDBFC0FF001C0BF0497F3FFE03C3FCDFD47F37FF),
+    .INIT_03(256'hFC83E8503B0096000238011009004EFDFE63F23FFFC065FF0648000FDA4026FE),
+    .INIT_04(256'h058FEC404E7F4800FD1FFC0FEDFFC2FFFFF7EAAFA67FF800FFB40ACFF10056FC),
+    .INIT_05(256'hFF5BF860003F08FF04B3FF800B0129FFF8CBE7C04140B6FFFE3FF2402FFFACFF),
+    .INIT_06(256'h014BC9B029C09EFFFF640BBFDBFFF601FEE0087F9C7F45FFFA33F92FB3C025FF),
+    .INIT_07(256'hFCDC091F6B3F9500014FF41FFAC072FFFE77FD7FF7FF0800FEFFEA300500A000),
+    .INIT_08(256'h02E403900DBFFE0001E7F3FFEDFFC5010294030FFD4098FEFBCFF3FFF3C0FBFE),
+    .INIT_09(256'hFD07FC0FEABFB7FDFEA7F28FD10099010054029015C024FBFF400C9F593F6200),
+    .INIT_0A(256'h006C0E3FB1BFA1000017F7EFB48026000358004F993FEBFDFE53EE0FEB3FFDFF),
+    .INIT_0B(256'h0137EE5FF0FF3AFE04CBED5FB3FF60FF0263EA20003F5601FFA3F84FBD80AD00),
+    .INIT_0C(256'hFC8BEE6FD8C06E000473FDEF8980CE010197FCD03600A7FDFCC3FC10313FB2FF),
+    .INIT_0D(256'h0000074004BF9B03FE9C0EEFFD7FBCFE00ABF34FE63FB000045BEFD0353F51FF),
+    .INIT_0E(256'h02ABF470788070FEFB2000FFB4C09400028004202280AFFCFF0FFABFFFBFAFFF),
+    .INIT_0F(256'hFD8C0390427F6B000A7C0C100C804AFFF723E76F5DC08A01021BFA9FACC03C00),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10450,8 +10450,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10461,8 +10461,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized40
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized41
    (douta,
     clka,
     ena,
@@ -10485,12 +10485,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h2C9E986365FEE3FA3061B48BFC10964F1240F3426E077F3091F9943C4DC7BD46),
+    .INITP_01(256'hBBA1574D207CCB17DACD4522F0D5213D61460150DD09DBB88F502EC6ECB33494),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10505,22 +10505,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hC1FCC831FFDAFF44A3FC70015FAF80648E0027E69FF5FF3BF3F798001FFF8062),
+    .INIT_01(256'hF0042FF0404800E9A1F5C7C61FDF00FA7E03EFD03FE3822546048FC69F2480D5),
+    .INIT_02(256'h99FE1826BF29FF55B40DB01A3F3A7F29A3F8BFD61F77FD6C4802B7F7401E016B),
+    .INIT_03(256'hCE0D2FD6204F7F9CF9F7E02AE0357F652FF537F100267D58AFF16026C044803C),
+    .INIT_04(256'h13FCEFEB9FAAFDF3A40377DB803881D2FC07A7B2FFF6FEB97FFBB0093F62FFB3),
+    .INIT_05(256'hAA07B7F4402700695BE9C02880A87FAD9A0BEFBAFFA6FF8B1810D81E00157FE4),
+    .INIT_06(256'h1DF9A0121F5F7F316DFCFFFFBFFFFFDD6DFE680B9FF101C3F5F627E540267FC1),
+    .INIT_07(256'h3A0B00103F7100821808CFFAFFEF8171BA0907BFC0CBFF7DADFE800C40CFFFD3),
+    .INIT_08(256'h77FE68225FEBFFBF9E0857FB2004801F7C0867DC9FBD7F204A04F7E73FF7822F),
+    .INIT_09(256'h660118095F657E90B3F60FEB607C007A500148131F3201CA7BF7D81F7FD97FD1),
+    .INIT_0A(256'h91F9AFF97F80FF1D5600181800827F7D41E80FF6205081F7680A17B6C012FF7A),
+    .INIT_0B(256'h4BFBD80CE038007C6DFA08333FFA7F8D60015816C00D004417F95FF1603DFF6A),
+    .INIT_0C(256'h03F8BFF7C0957EB28BEC9F957FDD00E09A078800A01A80017E0E2FD6DF4DFF55),
+    .INIT_0D(256'h67F99FDD80C4FFCA4BF450135FD5FDA545F4D01F7FF5FF03E605700920237FCC),
+    .INIT_0E(256'hBA08500DE02000749DECEFFC60247E1FE3F85818A03080AD220337CF7F880028),
+    .INIT_0F(256'h7007C7FC1FED00EF7800C0294029FF8E89FA87BDFF0E7DB609FAB0011F7DFF05),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10684,8 +10684,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10695,8 +10695,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized41
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized42
    (douta,
     clka,
     ena,
@@ -10719,12 +10719,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hC809D58D4537E766E4ABE82E7C1064B46EC945168F3DE44A8ED99E163D318E5D),
+    .INITP_01(256'hE90C9C3D9CE0A1467F062DB51F9E6C753090662D70624692B8C287DF7C3D587F),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10739,22 +10739,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h004BEE7FB5403A010313F1700A3F60FFFA300C0FFBFF22FE0200189FDD3F7E00),
+    .INIT_01(256'hFD9C0B4FDF0006FDFF700A8FC37F00FAFD74058FE2BE7EFD00EC02C025BF7301),
+    .INIT_02(256'hFB1801FFEBC036FF03ABE63FB5009C00FEB3E9104F80CE0001D80D4FF3FF0E01),
+    .INIT_03(256'h01F7EC2FE2BF7AFEFC240D7FF7C07E0003EC14800B8039FD0360006005BF5701),
+    .INIT_04(256'h036BF21FFD80AAFD04A40A702DFFF5FE03BBF9D006BFE401FA93EA100E3FC7FE),
+    .INIT_05(256'hFA4BFEA01CFFE402FF67FABFF1404802FC47E01FF7400F0001FFE9BFF48062FD),
+    .INIT_06(256'h02B807406FC00001010FFD5003BFBA00F9A3F6D036BF2BFD02FBFB10183FB300),
+    .INIT_07(256'hFF50099FB7FFE6FE0884015FE9400DFCFE3C05702CC049FFFF24088FD8009801),
+    .INIT_08(256'h03ABF3EFEE8045FC0487EF4FD0C07DFF04E40C6FF640F2FD04A7F67FD5FF5200),
+    .INIT_09(256'hFCEFFB5FC600F201FCA012307D3F3402FAD80CB005FFCF00FA08071FC3FEF9FF),
+    .INIT_0A(256'h0207F90021809A010047FC802F800EFF063414800A3F5703FEB007C001FFFBFF),
+    .INIT_0B(256'h02BBFC001C8017FFFF700EB0508006010293FA4016BF73FF006BF18FD37FFC03),
+    .INIT_0C(256'h05F80A1FA13F5D01FF1C10DFEC7F37010073FFAFF0C039000267DF901A809DFE),
+    .INIT_0D(256'h011FFEAFD3BF9EFE00F807C058C09401027FF2EFBEBFDE00FDD3E1604F40C2FF),
+    .INIT_0E(256'hFFFC000FEC002DFEFC7BFCF01B3FBBFFFDAFF7F001C002FF0640033006FF35FF),
+    .INIT_0F(256'hFDC3EABFB0408EFF04A00C8FDBBFDD02FF48025FA9C0C30003CFFC5FCBFF4E03),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10918,8 +10918,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -10929,8 +10929,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized42
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized43
    (douta,
     clka,
     ena,
@@ -10953,12 +10953,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hB4A98C72C9727F705A390D6AF940DE14C730F1D23DE4C6C85A3C34C5B3B5390B),
+    .INITP_01(256'h95E57D5E7AB4930F05340B2AD0524A944241750AF9CBD1E2F7EB04FFC8C24878),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -10973,22 +10973,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hC40087E9C02100BD6C05CFD31FE87E978A07A7EDC040FE6A2C07B813A0438093),
+    .INIT_01(256'h5BFCFFE780840044AA0297C67F38FFE800019FDBDFE7005763F5C02F5FB2015C),
+    .INIT_02(256'h9C0707E25F7680D3F9FCD8211F6600A635FFA823FF92009A79F9681380A3814C),
+    .INIT_03(256'hA1FCD006DFEF80503A066FCCC0C400C7CDFB2FDBA0207EAA29FDD7D6E09EFE07),
+    .INIT_04(256'h53FCAFE30018816973F95001C05C80C969F59FF79F7F7F7B400947F1BFC4816F),
+    .INIT_05(256'hE9FD47F300000152540847E660F0FD7B9C03B030BFC57F517BF7B012E0568200),
+    .INIT_06(256'h2FE6D0152029FEABC1FB5FF8C0B080C5D9FE5FEA3FE37FC6D9F477E100227F57),
+    .INIT_07(256'h620307E43FE57EFABC0050068037807ADC02501A1FBE000BA5F75FEEC0657F66),
+    .INIT_08(256'h6BF6D81CE00781AA8FFA001940A0009565FCC80760017F8251FE8FF5E0A07ECF),
+    .INIT_09(256'h0FFB57F79F5B7F7F19F35023E096FF756803E0161FDC005B61FC17EC5F22FE93),
+    .INIT_0A(256'h2DFB4FEEFFF07FF34FF3F80260137F0AC3FA6FF4A01A7E7257EDA004A04381A3),
+    .INIT_0B(256'h3DF7F806E0A3801A97F9E81740238053B3EF1FE77FB680271C04F82340298167),
+    .INIT_0C(256'h01F9C7F6A00A7F876DFE37F1E0737D3F05F550120009013ED407C7B59F90FFD6),
+    .INIT_0D(256'h120960135FA9002BE0077FE89F1CFF3F0003980300877FF1D4029815A0BA7FE7),
+    .INIT_0E(256'h77EC17FEA0778143F8005FF89F69FF6ACE02E7E340DA7ECF3207F8037FC6FF78),
+    .INIT_0F(256'h6E02EFFD3F6900C599FC400E401C7E715DFE47F11FBF7D1C7FFC77E89FA9FE7D),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11152,8 +11152,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11163,8 +11163,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized43
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized44
    (douta,
     clka,
     ena,
@@ -11187,12 +11187,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hF678894DFF3677C92DCF692D453D299754B5E0BCACEC48AD48832123BFBDEC86),
+    .INITP_01(256'h94ECF7C7CDB3CCAD32F7A7E084DA503DFCBA2AF3FDB8553371FD68A1EF3D2777),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11207,22 +11207,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFBE3F49F8CC0BE00FCAFF89FE7004F01FF0FF14FFE002301FA400D2056BFA600),
+    .INIT_01(256'h0198055FE900AC00F8640A801F7F3900001BF3502FBFC7000083F66045BDFAFD),
+    .INIT_02(256'hFFD3FDBFF800F3FFFF3FEE5FE5C012FE00F4030FC83FD2FFFE53DACF6ABFD500),
+    .INIT_03(256'h051C080032C035FFFE6BFC2017405E01FE2BE7602E3FC001FD0FED2FCD8094FF),
+    .INIT_04(256'h04EC059035C02CFC03F7FF0F828041FC01CBFD7FE1BF1AFFFD60047028FF06FF),
+    .INIT_05(256'h00A7EB6FE2005401FBCC0B2FD9809BFD01BFFA6FEE3FC1FE004FF7EFB5407E01),
+    .INIT_06(256'hFFC3E6CFE03FC9FF01E3FA4032FF8A00000FF4A0067FA6FEFA680F9FEA804FFE),
+    .INIT_07(256'hFCBBEC602CC00B01009BF89FB7000D01FFD000FFFA3F29FF013002FFDFC04BFF),
+    .INIT_08(256'hFD7BEEAFF3409DFF0567F0BFFF00A8FE0477F4000C3FE70100D3F55013C017FC),
+    .INIT_09(256'h000BF4500CC039FEFD1BF57F3B4017FF03FFFE9FE6016500F983E0705B007E01),
+    .INIT_0A(256'hFCA3EDBFB9C0F5FFFD77FDAFEEC00700016801D025BF1E00001FE99009BF4A01),
+    .INIT_0B(256'hFA9FE99FC10052FFFCD3E8FF9880D1010287F1FFD27F7AFAFA37FC101AFFFE00),
+    .INIT_0C(256'hFC4C18E03E7FC5FDFD580A6FCEBDC6FD01200F200540A50001BBF7EFF93F01FA),
+    .INIT_0D(256'h0203FE504CBF84FBFE83E4A03B7F7AFFF91FF4C010BFE1FFFE5BE7C02CC021FD),
+    .INIT_0E(256'hFFBC165F5FC0FEFBFF43EEA06ABF48FDFD1401CFC9009D01FF17F3DFE93FDE00),
+    .INIT_0F(256'hFF780F203EFFB5FFFBFBF6BFFBC11000FD13F660273EFEFCFD3002904B8042FE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11386,8 +11386,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11397,8 +11397,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized44
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized45
    (douta,
     clka,
     ena,
@@ -11421,12 +11421,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h001E16B769E319C15250923381E025D7DC68ABFB7C71352210DDFB387778F12B),
+    .INITP_01(256'h6D4C54543CDE99145FE963DFF6B360FA3C13FADC3BC49FAEB3A975E377E09C33),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11441,22 +11441,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h6BF48FEF7FDD803579FC07EDA052FF4B11F6FFFDC09000534C0C5026E08C7F75),
+    .INIT_01(256'hFC02E7F6000F7FAB4FFB9FFFFF56FE7A87FE5FE21F64FEA2620437FF7FABFF88),
+    .INIT_02(256'h51FA0FFF1FD0FF3793F48FE0602000907A085FF8FFD9FE3E780D580AC00EFE6A),
+    .INIT_03(256'h09F96FD01F8D7FA2DFFB101920BF80C38A032039606CFF1D87FB07DEA0B2001F),
+    .INIT_04(256'h2602600FC01A80B4C7FEE80260927FB59007C00A9F537FF9F5FE7FE4FFD6FEE0),
+    .INIT_05(256'h8BFD1FF320170026E3F6EFE7A0267F6E1A0A57F36065001F0C034FCF4030FED7),
+    .INIT_06(256'hCBF8E02DE068FF555FF6582B802B006BC6010FDE2085FF3A6DFE5006E08A8005),
+    .INIT_07(256'h7C01B000A028819D08036FED5F747FB0120E2FF21FD780372C033FDCDF8BFE4D),
+    .INIT_08(256'h51FB87FB5FE8FF40FDFD3815E08700ED1E02B7F07FFF7FE310000FE50028FF41),
+    .INIT_09(256'h4C0B2FD980C98080CC0958018012FE5CF3FFEFE9805B010697F9701BC05D7FD4),
+    .INIT_0A(256'h1601F7E780567F48F5FF98123FDC801B180BCFFB5FA6FF299008B81C1F647F74),
+    .INIT_0B(256'h920417E81FD27F7AD40587EC8043FFE13FFB7FCA60300062C9FF17F59FCCFFA8),
+    .INIT_0C(256'h27EEF7DCBFC17FF66802BFFB3FAA7FCA31FDC0168011007D3BFAE7D8BF60FFC5),
+    .INIT_0D(256'hE9FF4FFBDF5100E247F4100E80000025D1F22804C0AD80E141FC57F97FFE80DA),
+    .INIT_0E(256'h0607379DFFEC7F9A8FF77FC99FB801B95C006FFF607CFF9AA2040FFCDF207FE3),
+    .INIT_0F(256'hC9FF7021BFB400565DFED02F9F7F00DA3BF277D29F7EFFCA01FC4FFD3FFF7FA7),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11620,8 +11620,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11631,8 +11631,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized45
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized46
    (douta,
     clka,
     ena,
@@ -11655,12 +11655,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hBC0D48575AFBA8FF21C9122D7BEABD35A488498B90CE5371D6FDAB1D35FE1D94),
+    .INITP_01(256'hCDED48AC146BE6EE9A8CB764D9EB213ADAC2FBFCC68B9B5D0A4583F1A9743629),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11675,22 +11675,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0493FF5006FFA2FDFAB7FA6FC300050200980D1FE08020FEFCE8047001803002),
+    .INIT_01(256'hFE60061021BF9EFDEFF7E32FD200CD00FB1BD14FD3C0FD02011815FFB7408703),
+    .INIT_02(256'hFAC40500013FDCFEFD2806EFCF000BFF027C04C02BFF8FFF050BFAE025008C00),
+    .INIT_03(256'hFF2FF3F00C409EFEFA200E8FD0BF87FC00480C6FF0C0B701F6CC072FBB7F4FFF),
+    .INIT_04(256'h0543FFEFE17FDD01FB8FF59F8EBFC301FEBBFD8FE47FECFF03DBE4E0064009FE),
+    .INIT_05(256'h057FEDA01A4063FDF9B0194F8680B0FF04780A50133FDB0002EFEF0FC8001DFD),
+    .INIT_06(256'h04A416AFE93FD000FA6FF6CFB8FF8CFFF6C3F04FF900DEFEFF87FE0FC37F7B01),
+    .INIT_07(256'hFE83F74FF300F301015800DFDE40350203FC00FFB9006E010298062012BEFEFE),
+    .INIT_08(256'hFF13ED6FC10050FF0413FF702440BE010447FF101F3F8DFC021FFE3F6F405303),
+    .INIT_09(256'h027C0A9FCAFF32000294166016BFDFFFFF8C002047BFF4FFFA2BF6801BBFF101),
+    .INIT_0A(256'hFD9408D049FFD3FEFA741B2FAF3F4400FC90086FBBFF3E0107E40E1FDF7FE500),
+    .INIT_0B(256'hFFB80BFFBCBF0100FED01C9020FF52FEFC67D71FA0C006FFFC07F60FC3C020FE),
+    .INIT_0C(256'hF8E809DFF500C902FA4FF61F81003E0107C7FD200380020102B3F6CFB5BFFC01),
+    .INIT_0D(256'hF7B8052F64FF2C01FE080BCFF5801DFDFD17EA40317FAA00011FFF80027FE0FF),
+    .INIT_0E(256'h045C0AF02CC0F002009FEECF943FE700F997FBA0187F48FCFE63F2DFFFBF2A02),
+    .INIT_0F(256'hFE740BAFFC00D002F8ABEC0FF4BFFFFF00640CCF8900CF01FE57FBFFC5008F02),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11854,8 +11854,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -11865,8 +11865,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized46
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized47
    (douta,
     clka,
     ena,
@@ -11889,12 +11889,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hDA0BBBBC04350787AA1ACC23DDB17F65CADDB89CFDFADF3092DC5AD3E418AED9),
+    .INITP_01(256'hD9954431FB20B5C3F07C908B5BB366D260B497967C1964BF8E30FD533ECF6E91),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -11909,22 +11909,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h0FF408229FCAFF20B604E7F9C0E88093E407D007FF4AFFE151FE3FF2200B7F97),
+    .INIT_01(256'h9206CFEDA02E7F1745F63FD77FC17FB9EFF6EFBA0073FEF56DF9A7F0C0C57F5A),
+    .INIT_02(256'hFFFD07D07F87FF2ED3F2BFF8E04FFFB22DFF7FF95FDD00059E06F7FE60078204),
+    .INIT_03(256'h27F1D80A600D7F48F3FB67EA1F50FFA574042FE4601401B93E07E7DF5F778022),
+    .INIT_04(256'h15FCBFFCDF8EFFE01C04EFE8A0A07F1ECBFBA7E83FD98009FDF628251F267F85),
+    .INIT_05(256'hE207F806BFFFFFAB120297E220AD805EF7F2C826BFDA804D7803680EC0357F74),
+    .INIT_06(256'h3C0A4017FFD2FFB5CA09AFE37FAF7F61640780079FFBFE763003880D9FF080A7),
+    .INIT_07(256'h27FBBFF3C08F7F318206D814804F80EDA008A7EA40E400DAA00437C97FB8012B),
+    .INIT_08(256'h7C0787EF9FBDFF25A3F8682DBFA40072A7FE1007BF9E8021740F27FF20A8804E),
+    .INIT_09(256'h820200003F507E988003EFEF400201030DF5CFE25FAA7D663BFDC7DE60337F63),
+    .INIT_0A(256'h3BF697FE5F4C8082480797ECC0C0805DDDFDC80EBFC581BD8C07DFFDFF7F80F9),
+    .INIT_0B(256'h79FCC813C08D806E280A0FF2DFA580C4E20827C01FEC7FFEA0082FE65FD77FBB),
+    .INIT_0C(256'hEDFEBFADA06C00FA7A00078F002EFFD48BFFF82A7F6B8075BFFCEFD2404C0003),
+    .INIT_0D(256'h23F6FFC9804880B95FFA17FFFFBBFF0DDA0777F5A0210096640AB019C026FF43),
+    .INIT_0E(256'hB1FBEFB380767F72EE0A400340D081C3AE0D97E65F4180029FF840040032FFEB),
+    .INIT_0F(256'hD3FB37E880BCFD85B20F0FF5DF6A00F067F900213FF8FF2CEC012FBD60A87F79),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12088,8 +12088,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12099,8 +12099,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized47
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized48
    (douta,
     clka,
     ena,
@@ -12123,12 +12123,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h62116A2D80098464C31E2A122B0048BE7E9F2906DF5FBBE7C765E5BC88156AD3),
+    .INITP_01(256'h2981780DAD3547EC39EC8B143BA1D4ED94D0890B9143F5F300810C04E5D589F1),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12143,22 +12143,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hF7B008EFD80078FE033800F02CFFC602030FF00FD77EB0FEFEA01880063E7902),
+    .INIT_01(256'hFB4C14A03D3F54FF0037E9A01CBEB801FB87C8804A806D00FF5BE3EF9F80EA00),
+    .INIT_02(256'hFDFC128FDA7F500001B4079FB20050FEFCABE86FB80033FCFE4BF4B00CBF3BFE),
+    .INIT_03(256'h012BFC4FB8C074FFFDAC08FFFEFF69FD022FFCBFD57F0E0002440D2043BFCBFF),
+    .INIT_04(256'h0233F7AFCE80D6FD03F4053003C04E00040C0E1FF87FE3FFFF9FFF0FC57FA9FD),
+    .INIT_05(256'hFF30023034BF27FD042807FFC8FFB1000023F7DF990004FD022403201D004CFD),
+    .INIT_06(256'hF93C09C00AC043FD05EC1DDFF2BFFE00FFD8071042FFC403019FFA500BBF5800),
+    .INIT_07(256'h0447F8C00C7E63FE0174046006C08AFE0657F24FE3BFF300020BEB8FCFC01C00),
+    .INIT_08(256'hFD9FFC203B0095FDFC880A102500A200FDE0062FEFC0D0FDFC0BFA5003BFED01),
+    .INIT_09(256'h01001E005F0046FEFCC805E00FC02BFE012C1D6FFD40C6FF0030076025FEF4FF),
+    .INIT_0A(256'hFF0C02B00F7FE5FE032810A01EBFDA01FD27F700173F9202FD6FEA00287F00FF),
+    .INIT_0B(256'hFEFC0BC04FC0B201FF1401B04F7FE9FFFBF402BF9C40C8FF032806AFF5BF88FE),
+    .INIT_0C(256'h036BF2BF9CBFE700FDE7EF6012BF2101FAF414F015C040FEFC73FE5FFB0044FF),
+    .INIT_0D(256'h02EBF51FF9FFF3FEFEE3FA9FBE80F801FEE4107FD87F43FD040C04F02700C3FD),
+    .INIT_0E(256'hFCC3F89FB040CD0005A3F49021804B02015026D074FF85FEFEE7F82FE4C060FD),
+    .INIT_0F(256'h02B7EBFFD5807D02FE60185025400E00010BEFCFBA7F73FD0320096FE0803700),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12322,8 +12322,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12333,8 +12333,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized48
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized49
    (douta,
     clka,
     ena,
@@ -12357,12 +12357,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h6CA15BB2686CD37C841988E34F1066DE7258E4D43675D0A9C141D8CEC8EA1511),
+    .INITP_01(256'h9F9F37DE16B601EC1F667B66BE1BE8FC2756F1506770003DDCAC0ED2FFE10138),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12377,22 +12377,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hE3FC60000024FF8903F62802007C7EDD6A0D9FED7F2DFF401A04C7EE008C81AD),
+    .INIT_01(256'hEFFE6012E01C007AB7FDC813C0B5FE70ABF777EC4023FF0345FB70115FBAFF39),
+    .INIT_02(256'h78023FD4DF71807481FADFE7FF68FFB597FC27ED60267FB94E04780740BE002A),
+    .INIT_03(256'h5FFAC7F2E0767FE5A9FE27E3A02380911DFE303A9FF4FF0499EC9FD79FE18117),
+    .INIT_04(256'h9DF7602ADF77807C120377F180D4FE42EFF1283ABFA1801EFDF8B7E39F9000F3),
+    .INIT_05(256'h8A09A8267F96804D1E0D9FC0C09D80569202481FC05FFFC3D1FB900000327F8C),
+    .INIT_06(256'h81FE781EBFF680BE71F7B81DFFEF00EF9FF78FCE407C000DC7FDFFFC9FF500E4),
+    .INIT_07(256'h8BFA780E7FA7FF82DA03081840C67DDFBDF88FF9001380C0080907BFC07B7F62),
+    .INIT_08(256'hC7FC17F9FF987E31DFFFA028206E80ED400A6807E055FE99B4071FFCE08A0104),
+    .INIT_09(256'hF7FD77F61F4801182208680B7FEAFE9BF000F0031F8F01648DEF4FCAC0097FDB),
+    .INIT_0A(256'h41FE4815BFAA804983F79FE4601E01A66600781120E4805FE80697FA5FD10072),
+    .INIT_0B(256'hE4025814BF96FF267DF59FED5F467F4E5FF68F98C05EFEF523F577F58038807C),
+    .INIT_0C(256'h640CAFB59F6A007BD0099FC260B780E47DFB9002807E80CAF9FD57D57FF5000E),
+    .INIT_0D(256'h4C08EFDFDFCB7F9097F280145FFA016143F5F7FBA0617F4EA5F46038BF8E7F90),
+    .INIT_0E(256'hB60097A8FFAE013A9207A7A47F8700DC6601700C807801FAFDFD18175FC67D97),
+    .INIT_0F(256'hDC0607E2FFDBFF9078005FE05FDE01A524003FF8DF94FFD5EFFF5FB99FC601FA),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12556,8 +12556,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12567,8 +12567,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized49
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized5
    (douta,
     clka,
     ena,
@@ -12591,12 +12591,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h1DC3F195968A39C8379D430811AAA3211202A0DCAE454F01E4F209FDCD7B6C76),
+    .INITP_01(256'hECD7A8A663195C32F42F1AA6C65FCE686798CB8BA88B9C3D8D6378600DAA31D7),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12611,22 +12611,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h2FF6F815DF79FF9E19FFA7FAC022FF46BFFBB01C3F81800A4DF99FF09FE8807E),
+    .INIT_01(256'h9FF6F02D7FAB7F0773FAE7DF804500ADAA077801E014FFBC2BFF9FE59FC70058),
+    .INIT_02(256'h700F2817DFBD005B19F4F83ABFB7003B53EFF00ABFDB00589804A003201A7BCE),
+    .INIT_03(256'hFC082FDF2002FF60340B200C808200357604801B8010FFD641F6F7F51FF48027),
+    .INIT_04(256'h6C0C8FF300897F2242058027003600907A09F8068037FF5C4C05C833403A806A),
+    .INIT_05(256'h220DF7F23FD3FF421C0167FE5FF07FC047FC8012404080FE460B4833E02E80D6),
+    .INIT_06(256'h300DBFFD1FDFFFE71E08500FE0C0810B1A03CFF5002F8074AFFE7838C045016F),
+    .INIT_07(256'h3007C7F35FEEFE46D5FB001D20237E4119FFB7D4E08380F44006AFED1F31FF94),
+    .INIT_08(256'h3604182E7FF48137F602880A00027F73360157DA606B00716DEFF7F33F310005),
+    .INIT_09(256'h8209681F3F8D80B205FA0015A07B81C807FC07E6008E00863DF9C01E80A38062),
+    .INIT_0A(256'hD40A600780798005B40088122032804802056FED3FAF002E5E0B2FD0DF937E4C),
+    .INIT_0B(256'hA1FAE020DFA1FFE1B607B7FEC09100E235F5E038C03280440603201CE0138121),
+    .INIT_0C(256'h87F0D0153F7A804089FD37F35FF47F7605E998129FD4002591F7282CE0288121),
+    .INIT_0D(256'hBFF52FC43FD67ECFCE05080FBF837F879C002FCA80AE802A000AB0049FCBFF93),
+    .INIT_0E(256'h83FA980AC0357F30960407F81FF07F4969FEE7F05FB07FA22C0BEFF3A06DFE4E),
+    .INIT_0F(256'hC1F3401CFFD90047DDFB2FD79FAEFEBDCE04C01E2032800B9005600A9FC10119),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12790,8 +12790,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -12801,8 +12801,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized5
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized50
    (douta,
     clka,
     ena,
@@ -12825,12 +12825,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hDC39B173CEE68B345127F76CB6B1F4837D93C9F9D2B80D1C227A5A1FC49C61C6),
+    .INITP_01(256'h46D76B5CEA52960F20D0AB38D85B1AA664F7B4A754DAD1171459D18349973B77),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -12845,22 +12845,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFF6802A02C40A6FFFE6C0A0FC83F4DFE05FBF9104700ABFEFF1005D013801F01),
+    .INIT_01(256'h04BFE1A033C0A40004B3F92FD2FFF0FB00080D8F5C7F47FD014C04EFD83FD3FD),
+    .INIT_02(256'hFD800560457F18FDFFD7FDAFF97F610102A0097FB8C010FF058012FFFA40E402),
+    .INIT_03(256'h02F7EF4F85000302F958017007FF51FFFAD012BFA5009400F31BF3AFE1C08001),
+    .INIT_04(256'hFD83DFE02B3F1B01FF3BE7E005C04901F69BF8C041BFD6FEFCF8023005BE86FD),
+    .INIT_05(256'h03D402D013001AFF03A3E4604DFFE700FF3FF8C0087F8B000323F29FD3008D00),
+    .INIT_06(256'hFCE80E2FE1801B01FBD7FBD03C3FE4FEFF48051FE33F45FE01B3F1C03C00B6FF),
+    .INIT_07(256'hFBD8039FA7405AFE0193F57F9C007900FE1BE7203A3FB30205DFEF70117FE302),
+    .INIT_08(256'h032819FFC9402400FF0007F02ABFC20102DBF0BFEFBFEEFF0197F1C0287F57FD),
+    .INIT_09(256'h00240FE05FFFCBFC037C180FD6C00800FBF40B60724062FEF6A81B001EFF07FE),
+    .INIT_0A(256'h043C16000E7FEC01FCD4091FFE800900FDD816C022C06500036410703C4008FE),
+    .INIT_0B(256'h027BF4F04A40EB01FA5BFE7009FF77FCFEDFF140003F3901FB6BFF0004FF9F02),
+    .INIT_0C(256'hFF1805DFFFC0040100F4091FD2FF97FE013003EFEA804400FCABEFD0203E8CFC),
+    .INIT_0D(256'h02FFE460183FA402F8440DE02DC0C602F987FA7FE04002FF01FFEEBFF8002401),
+    .INIT_0E(256'hFE33EFBFAD7F9D00035C0F9053BF3601F9141640343FE0020138051F5ABF40FE),
+    .INIT_0F(256'h0220096029FFF3FEFD4C03404240D7000247E95FF0BF70FE01A8108FE38007FF),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13024,8 +13024,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13035,8 +13035,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized50
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized51
    (douta,
     clka,
     ena,
@@ -13059,12 +13059,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hACC73ED8B635F1B62C98AA6F22E76C6A61301AD02764E2A4967974669DB7CA1C),
+    .INITP_01(256'h4813887240937EFF5C963E341657E7E1F75063775332399E8971CE38878D8296),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13079,22 +13079,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h54022FF71FE67F0B1A02B7EABF537F97F5FCB004802B7E78F40337F71FE18120),
+    .INIT_01(256'hF2058FE21F74808FE5E69FC51FE77ED639DCF7FD1F8080691BF4B0185F11FF8C),
+    .INIT_02(256'h3604800F1F977DD3B3F9D015BF630064B1FCA00C80D47F5F6401D8261F978221),
+    .INIT_03(256'h15EC3030401900C1DA0807D9C06681AA7C03C7AFA08FFF6A55F8F7AD400B80F9),
+    .INIT_04(256'h5C07A018FFF480D677FDE8005FE7007ADDFD881A5F798163D1FD581AC018FF12),
+    .INIT_05(256'h5403E0085FB7FF6550059FAE204701D30A0D282F80668060CBFCA0179FD47E72),
+    .INIT_06(256'hFC08CFD83F87003706099FF4DFB3FF2C75FFDFE4C03AFE7AE00137FC5FE90067),
+    .INIT_07(256'h30033806DFE27F58BFF860167FB8FF62C802DFDF5F27806B19FCD7F6E05000C6),
+    .INIT_08(256'h8E0428075FECFECA200AE824BFFD80EE5604C018C08F7F40E6025FD2FF878047),
+    .INIT_09(256'h40032016E029FDEBABFCDFFC4082807FA5FAE0051FE57FD3AE0027FAC01A003C),
+    .INIT_0A(256'h27FA27F1A0A0FE5D3A061FF2E03C00D3D403F79D204201E03C0427FEFF967F7A),
+    .INIT_0B(256'h6DFA27E55FFF80EB75F987EA00AB004CE3F9D00D9FADFFE291FA87D1BFD3801C),
+    .INIT_0C(256'hD202EFE01F5A011E65F757F11F6900CB09FFD0195FE600C0E9FD7026FFDCFF88),
+    .INIT_0D(256'h63F9E7F19F9B81C7400AF7CEDFFEFF886404C7D8BFC400A08407E7F25F320025),
+    .INIT_0E(256'h5BFDB0173FF800D9B40277A9806A7FE1A1FC2FD39FCB006537F60FFD3FD080F1),
+    .INIT_0F(256'h19FCE02620247EC1B2021FC5803900B6F6049800FF9C7E00FDFBEFE40047FFF1),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13258,8 +13258,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13269,8 +13269,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized51
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized52
    (douta,
     clka,
     ena,
@@ -13293,12 +13293,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h624819EA04E032EB793E4C1C45CD8302C7583B04F21229AD3DAFDCFE50A4A7C6),
+    .INITP_01(256'h2C7176ED9F7B76D42038640767B57DA9763E9162995D60D2A31D8874A89A0BC5),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13313,22 +13313,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h05EC0A5006800FFFFE4FE92030000200FCFBFC901C800AFDFED007D033803202),
+    .INIT_01(256'h046BFEFFA140C501F3B7F61FD8BF4803F62C05DFDE40E302FC53F76FD47F86FD),
+    .INIT_02(256'hFF2FEC70003F81010254092041BF0C01013FF52FD8C05801FB3FFCCFEC00C202),
+    .INIT_03(256'hFD0C179006FEEDFE03700A8FC5801B020207F63FCA40AF0103300070383F7B00),
+    .INIT_04(256'h004817305A7F36FAFDC40C3F8BFFF7FFFBE417C02BBFBCFD00E80580023F2AFE),
+    .INIT_05(256'h04CBFD4FF5C056FF0143DD6FFE3F55010120134FF5BFCDFD02D8144F76FFBEFD),
+    .INIT_06(256'h03F805A02C0041FAFF23FEC01F40280000AFEBB004FF6AFFFCCFE66FFAFF51FE),
+    .INIT_07(256'h0183E93037FFFBFF0030119FD2002BFF024406DFF3BFC7FDFBD7FE6F963F4200),
+    .INIT_08(256'hFF67FFDFD9C005FEFE100F9FF6FFA1FE02E0080FEDBF9EFFFA7816F028803901),
+    .INIT_09(256'hFD27F710263FEBFE0148013F8B400300FC100B7FF4800AFF0257E4601CC06401),
+    .INIT_0A(256'hFE240ABFE2C00701015805CFDC4062FD0023E9800BC13B02FFE817103B7FD0FE),
+    .INIT_0B(256'h03BFEE100DFFDA00008BF4AFFD7FE6FDFF380810673F43FE03DBF5D04D3F78FD),
+    .INIT_0C(256'h0057D870083F8CFCF9CBEC6012002F00029FFECFD5BFE500FE17EFFFEC3FB7FF),
+    .INIT_0D(256'h06C3F5C05EFFCBFF02A3EF0FF70021FE031BF3804900080007D40A005E3F05FD),
+    .INIT_0E(256'hFC4C12DF8D3F79FD065FD9EFF73F4EFD043FF5A006BFC7FFFBB010E00E8071FF),
+    .INIT_0F(256'h022FF5BFD80000FF0013F3502D81030200C3D7B060BF18FAFE7FEDEFDD0099FE),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13492,8 +13492,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13503,8 +13503,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized52
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized53
    (douta,
     clka,
     ena,
@@ -13527,12 +13527,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hEEB7E2366169D497F4A7D1D504076051068D8CADE5497CDE48C47222F7750BF7),
+    .INITP_01(256'h5B931BF19E6012CB936B9351209EE890B202F058D733960690A199F6DB4864B4),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13547,22 +13547,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h2FFC67FE5FC8807337EE3FC8FFD080E42C0230166040FF71F7FE8FDDBFEC01F5),
+    .INIT_01(256'h6FFBE01EE01C01AE13F2800B3FDA01D687FA0FDFC0507FBE2C05000500650009),
+    .INIT_02(256'hADFCE005FFCF7F5CEDFDC004A09C7F5245FC97FB9F0F7F2821FA97FEDF880048),
+    .INIT_03(256'h1001C00F1FBE7FD0740B48033F968060D003F0247FBC821BFE00280AFF8A7F65),
+    .INIT_04(256'h5601B0009FC37FF01605C8065FA27D1689F6B00CE002FF43B3F077C76030FF48),
+    .INIT_05(256'hADF8B7E1BFF8FFC0840E40293FE28033AFFF9FF64047FF56F7F7EFF65F93FF47),
+    .INIT_06(256'hFBFF901C201680DA47FA8007008E7FBEDFF497F0BFE60062A40187E8BFC7FF13),
+    .INIT_07(256'h8DFB3804FF8201F2C00207E07F6B800365FD5814C0027F06B0089FEDDF677E70),
+    .INIT_08(256'h03F54FC6402BFF050FFBE801A05BFED9AFFD8816DFB3815EB004A7D27FE5FEDC),
+    .INIT_09(256'hDE0107D9A0047F82220820049FCBFEB8CE04B7D900837F370DFCD7ADBFA2FFBF),
+    .INIT_0A(256'hC7FADFE3DFD680C0FE0847F6202D7FADDC0CEFEC3F7400B7FA04A8221F5E7FCA),
+    .INIT_0B(256'h3808AFF3E01D00DCF0058032400300F429F9AFC26082FFE04BFE8FCD20847F73),
+    .INIT_0C(256'h0C049008008FFFA5A80277F4FFD180761BFBD81C2047004AFC00AFDD40537F62),
+    .INIT_0D(256'hC401BFE6A0247D7CE9FFF801C00E8034AA004FEFA0277F40B3F3C7EBE092FEA5),
+    .INIT_0E(256'h5202DFF85F0F7EE8F5FC9811E0017EDF1C0517C5A063012575FE4002600B80C8),
+    .INIT_0F(256'hD7FEFFE6A049FFB55802B7F0802D008B3E023FF2005D7E472DF837D64038805F),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13726,8 +13726,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13737,8 +13737,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized53
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized54
    (douta,
     clka,
     ena,
@@ -13761,12 +13761,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hA084CAA4C21225FEC6C3808293C78A22EB499F3C4D57F499416D7D88976F824C),
+    .INITP_01(256'h9BFBD3ACEE2EBA914B012CC2F8AE11BA8E9EF96A0105A9D68F91256E9380E4B0),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13781,22 +13781,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFBD808D066FF52FF0493E3BFD3C0A7FDFBF80FB019FF9602037C029FD7008B00),
+    .INIT_01(256'h037C01E0017FE50200DFC11F7C403EFE0147DB1F4300F4FEFB0C0E0FDF807A00),
+    .INIT_02(256'h0214034FB340A5FE02C80910473FB9FEFB8BFA4032FFB6FEFEA4122FF3FFBC01),
+    .INIT_03(256'hFEEBFA4FF93F5AFD0354101FD9BF9700FEB8078FEDBFB2FF014BF12F8F0003FC),
+    .INIT_04(256'hFDEC062010BF3AFDFB24034003BF5701F824193FB27FE0FD042FF9D0353F17FB),
+    .INIT_05(256'hFB9411D0123F1900FF7802101A7FEE02FFDC0DB04FC091FFF7101010413F3EFF),
+    .INIT_06(256'hF53C1B90087F92FF025804A048BF42FE040BD3E01E4046FFFDBBF6EFEA7F66FF),
+    .INIT_07(256'hFE2FF6500440F0FEFA0C0B0023408BFEFD001EFFF30039FDFF7FFB8015401601),
+    .INIT_08(256'hFB5C006039C029FEFB800290767FD4FEFEDBF9B037C00700FE8FFA3047809400),
+    .INIT_09(256'hFC38134FDA7FFE00F7840070347F8C00006FEFE01EFFFF01013FD4AFF6BF4601),
+    .INIT_0A(256'h00BC0B8010BF47FF0040108005C03C00FD3FE6FFCFBF6601F8001C20303FC001),
+    .INIT_0B(256'hFEB40F5FD97F6DFFFD7819BF9CBFE900FC47EF9F7C4052FC0347CA8FDFFFB7FF),
+    .INIT_0C(256'hFB6FE65FA7406402FD1FD09FE040030101B81C8064FF89FDFE1BF4EF94FF02FB),
+    .INIT_0D(256'h02F8026FB2407BFF027810D0257FAD0201BBD88FF3802B01FBB00090557F63FE),
+    .INIT_0E(256'hFF53F5BFB1BF2D01036BEBBFE57FA300FDBBFA8FA23F0B01FE4C04C003405800),
+    .INIT_0F(256'hFFCC04BFE2FFB2FCFD13E54FE4FF4800FED006702AC00DFEFC6FEE3F6940D501),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -13960,8 +13960,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -13971,8 +13971,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized54
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized55
    (douta,
     clka,
     ena,
@@ -14003,8 +14003,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
     .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14023,22 +14023,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFE59FCC8004301EC00CB01F30272FF0DFE7EFB57FFAEFECBFFAE016E01A50083),
+    .INIT_01(256'hFD4B00E2015E0249FC6B002A00F101580019008001E4FDC702FF021C016EFE76),
+    .INIT_02(256'hFE88FE3502770000015F001AFE02FCFE01D9005D0276FE6A015D009801E9026D),
+    .INIT_03(256'h00F0FF6000A2FFC1020DFFB8004AFF310081006101E102E1FF9B0258FE79FE72),
+    .INIT_04(256'hFF41FEFDFD81012800E0021BFDB3FE82004A00A901CE01840027FFAE016FFDC9),
+    .INIT_05(256'h01ABFDEA01A9FE36009D01FCFAA5FFDCFE88FF1801140029FF54FDDDFE89FE04),
+    .INIT_06(256'hFD8CFCF6FCD2029FFF41FEDD016F0280010001000051FE4CFE460063FD9CFF4F),
+    .INIT_07(256'hFDB3FEDBFF22FFC30153006AFEBE0097FFDE038FFE77008F01ECFFF0FE3F0074),
+    .INIT_08(256'hFDA7FF7B007501DAFFCA00D2FF83FFFF0116FF470092000EFD6CFDD5FB9CFFE1),
+    .INIT_09(256'hFED5FE2C016BFDA2007802D5014DFF1CFF2AFFC2FE1C01010311FF4B00F9FFED),
+    .INIT_0A(256'hFEAD01C200300091FF88021EFE1B01C8FF9A0238010702B1FFDAFF69017E02C3),
+    .INIT_0B(256'hFF6F0018FE62FEC5FCFF0105FF30013E0005FE43FCEFFD02010200E7018FFCE5),
+    .INIT_0C(256'h0100027FFC6001A3006F00C9FEBB007EFE20FEC400A7021DFE04FDB4FEFEFC34),
+    .INIT_0D(256'h017B01FCFE8AFB0DFE57FFF3FED9024C01C1005EFD9800C2FF73014200A20148),
+    .INIT_0E(256'hFF19004EFFF2FD70036600FEF550FEC2FE9C0084012E00B6FEFAFE7902650117),
+    .INIT_0F(256'h01C4FF9C0072FDA2FF660024FE99020CFE5EFF9FFC7FFECA007E00A4FD1E0142),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14202,8 +14202,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14213,8 +14213,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized55
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized6
    (douta,
     clka,
     ena,
@@ -14237,12 +14237,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'hD00840F3063001E5A4180BEAD77FC60C83616631C32774146CE52863F14730A7),
+    .INITP_01(256'h6DDC2E52B3ED26B2CC9AF391E9F6F6C7E06364EC82E0A09786B7002BDBA06B3F),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14257,22 +14257,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFF67FFA01A8012FE03B808701D3FC8FF009BF1103980E7FEFB97F4D03BBF3CFF),
+    .INIT_01(256'h030FFECF823FBB03FD9FF7908CBFD702056BFABFD440D20001B3FED024400200),
+    .INIT_02(256'hFE4800C054C081FF0247DD800BBFAE0201FFFFF04B009AFE03900AB03C00AD01),
+    .INIT_03(256'hFAD011C07300A0FE049FFCF0528014FD059BF35007BF3C0202CBF8E0344026FF),
+    .INIT_04(256'hF7B818A001405A00024FF87FB4FF9500F6601530447F3E010140041FA0C060FF),
+    .INIT_05(256'hFBCFFCA03E00E100034018DFFA00BDFD0144018FC1BFBB00FD03FDAFA6FF98FD),
+    .INIT_06(256'h02A0171006406300024BFCD08F001DFF01D014F04D808E01FE03FEB01280CAFF),
+    .INIT_07(256'hFE1C047041406501053001FFFDC00800024C07C06C40D4FDF8C3FF1034FEF7FA),
+    .INIT_08(256'hFD0C048FC1BFC1FFFCEFEB0015BF7CFB034BF63F6A8076FF01EFF63FCCBF5BFE),
+    .INIT_09(256'hFBF4149027FF15FFFB5FF7802900510005CC1A304D0025000467EA6FFC7F6702),
+    .INIT_0A(256'hF82403B051805AFDFE57E5E0760010FEFA67FEC011803A00F9E819C00B003000),
+    .INIT_0B(256'hFD57EF603600E100016BF30055402DFD0053E4906E0095FFFD1BECEFC1BFFB00),
+    .INIT_0C(256'hF9BFFA6FEE7F4301FD8BF8B039403CFFFE1FFB104A3FE902FD3409B03E7FB602),
+    .INIT_0D(256'hFA60075F5D00D4FEFFD8148FD37F29FBFE4BF24011003402F32C1BC0274085FE),
+    .INIT_0E(256'hFCA7FA802EFFAC01FE53F57FEAC03B000027FEB02EC06C00FB2FF370124008FE),
+    .INIT_0F(256'h076FC89F70FF3200FBC0133FC5BF3E0101E7F5FFDB3FC10102F407A0247F8E00),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14436,8 +14436,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14447,8 +14447,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized6
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized7
    (douta,
     clka,
     ena,
@@ -14471,12 +14471,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h8C714D075D57A974BDF6852997A1716B72DC180A8704690CFED8595478D68C02),
+    .INITP_01(256'h8CE05B123A65B1DE5DD47145F6583044C571702864D7DE32F9B675543502138F),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14491,22 +14491,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hDDF5EFFCC06B0071B5F9AFD01FA481E37C05F8095F9D82C59412F0200086FF6F),
+    .INIT_01(256'h17FD27C71F8A8042AFFA57E9E07100489BF25FC3C0240194D3F57FEEBF937FF1),
+    .INIT_02(256'h740C801C7FBC0055BC03980DDFB480F767F9B81960637F853C0A9812FF5D80B1),
+    .INIT_03(256'hE1F49FC7201100A6D5F397FF5F5681BC54049FE960787FB67A098803606D01E0),
+    .INIT_04(256'hB600EFFA9F29801A9E04482CE0427F63A5F287CF2096FD81E1FF7008600500BB),
+    .INIT_05(256'h2C0B6FEDBFA77F2BB9FEDFF41FE700BB1C03C0111F20FFCCAA04382B4040FF0E),
+    .INIT_06(256'h55FBEFFFDF8F7EF379F70FEAFFD87F60F20CB017E04F7F42DFFF17E5FFC27D7B),
+    .INIT_07(256'h00027823BFE901231DFA77F0FFEC0037BBFEF8135F29FF28EC0628259F9FFC79),
+    .INIT_08(256'h9A051FEC7FFA7E110A09E02EE0357FA8240317F4A07CFE8D1802B01AFFDDFFC8),
+    .INIT_09(256'h97EFF7E4A0098024CA044FFF9FC67F14A5F6EFF45FEE0116DBF0EFE55F4CFFA1),
+    .INIT_0A(256'hCDFFB80BDFE38094EDF61FF1DFB28002D9EC5FA6FFC97F25F4013FF4E02AFFB8),
+    .INIT_0B(256'h19FC80079FC4FFD177FB47F3A06800A2F5F45FF0C0A78046C40CD826007E008B),
+    .INIT_0C(256'h9DF08FEF5F1FFE0D3BFC0FAA403600F832037FC8002D80C58FFFC00BDFD980E4),
+    .INIT_0D(256'h15F567E3FFFC7E6603FD07F51FA0802351FEBFE420F280002BFC480EBF8DFE20),
+    .INIT_0E(256'h560C8FFE605F80CF7FF7701BFF27FF253802C7F90017FFE383F6DFB09FB08116),
+    .INIT_0F(256'h4E08E0167FBB00A1B3F9D8096067FED7D9F167EC4008FF5EB400BFF68069812D),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14670,8 +14670,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14681,8 +14681,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized7
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized8
    (douta,
     clka,
     ena,
@@ -14705,12 +14705,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h72347145A4E175C561350C380E21F49CD9259454FE16FCA7FC746BC5833751B2),
+    .INITP_01(256'h389023B70EB977E5CE4DBC6292E3CD37FEBF2824FEBDAE31D54FA06DD97FAB53),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14725,22 +14725,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'hFF241B0015FF1D00000FE6A0387F90FE03F804D023001700FDE7FE30247FD100),
+    .INIT_01(256'hFD8BFEBFEFC051FE0043FD803EBF90FF0083F00F7380DDFFFD3C05A0443FE7FC),
+    .INIT_02(256'hFDA7F20FF84044FE01F000C003405EFFFBDBF56FA43FA502FF8BE6A050FFDAFD),
+    .INIT_03(256'hF6E40B9FE200B4FF04B7F9E0414010FEFFC80B401A3FCD0201A006600780DAFE),
+    .INIT_04(256'h00C418FFE97F05FE014FF5F021402DFFF78FF63042FF8DFEFC900E4FD8404B02),
+    .INIT_05(256'h04E3E6D00C004C00038BF3F03100F1FE03A40F7FD6FFB700017BEC8FEF4050FE),
+    .INIT_06(256'hFEA7F4E02400C300F9F7EFB04F800800046FF150534012FFFDE400602C004CFF),
+    .INIT_07(256'h052BEC6049FF99000567FDF046005E0002D7FA20437F9EFC01A404001F3F5901),
+    .INIT_08(256'hFD9400DFDF00BF000283F12FDE7F1900FD7BFAAFE0001BFB011017103E7FF4FD),
+    .INIT_09(256'hFA2C09E015405602017C024FFE804B00FFA3EDE04C40790106FBF91FBE00AD03),
+    .INIT_0A(256'hFE6FD59FCAFF9AFFFD53E34F8C3FF3FDFBB3F5FFC33F8EFF009BEAE02C801FFD),
+    .INIT_0B(256'hFC7FF23FC1FF48FEFA2BEFEF8E40BBFF011FF51FFDC0FD0100D7EE601300EE01),
+    .INIT_0C(256'hFF28092032BF3702F6A7FBF02CFFBA00F9780BEF7CFF900303F3FBC067BFCD01),
+    .INIT_0D(256'hFB840DCF8DBFD0FC06840B4FDAC059FEFE7BEBCFD28041FE045BED800EFF60FF),
+    .INIT_0E(256'h05840C0FE6FFA500FFDFEDDFF6BFE702008BFAE04DC033FEFBC3E3800BC0B300),
+    .INIT_0F(256'h04CBF5BFAA3F59FFFE5003C0573F45FC040BFDE01D7F08FFFA5FF300217F6800),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14904,8 +14904,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -14915,8 +14915,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized8
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper" *) 
-module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized9
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
+module Conv2_Weights_blk_mem_gen_prim_wrapper_init__parameterized9
    (douta,
     clka,
     ena,
@@ -14939,12 +14939,12 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized9
 
   (* box_type = "PRIMITIVE" *) 
   RAMB36E1 #(
-    .DOA_REG(1),
-    .DOB_REG(1),
+    .DOA_REG(0),
+    .DOB_REG(0),
     .EN_ECC_READ("FALSE"),
     .EN_ECC_WRITE("FALSE"),
-    .INITP_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INITP_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INITP_00(256'h364A6544A4D38DA33A32499553A14A0678726695D8603E197186F940C055CD78),
+    .INITP_01(256'hAA17E3246C46FA567D53B7C8494344CCB3A32403A2D74AF901B0176CB8A93D24),
     .INITP_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -14959,22 +14959,22 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized9
     .INITP_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_04(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_08(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_09(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0A(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0B(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0C(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0D(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0E(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_0F(256'h0000000000000000000000000000000000000000000000000000000000000000),
+    .INIT_00(256'h21F6B00BC0047E78CBF6FFEC7F878006EDFE3806BFAC8016A3FD6FE1A02880E0),
+    .INIT_01(256'hADF9EFF9A05B7F8D3C03E821DF6180C073FD2FD9E0A1FF58F9E65821208D00EC),
+    .INIT_02(256'hF3FC2FE220420243C1EBE80A8014FF17D8026FE61FBE7EDE2604EFFCC0378180),
+    .INIT_03(256'h91F0E7E6607880AE39FC87F3A036004377FC18115FEC01209604F7EB5F9C7F42),
+    .INIT_04(256'h17FA17ED602300CF0E03B8036000005727F8882680AC00ECD808B008FFAD7F38),
+    .INIT_05(256'h96027FF2A03081962C01C7E5606F00B8C7FC001AE016009022087FEFFF76007F),
+    .INIT_06(256'hC000E8145FEF818F6DF4A7F160647FF4741050229F9700EBAC00A821405D00BD),
+    .INIT_07(256'hA00117F61F7500D163FC3809A03C80E68FFE0014FF697F27C3F8B00CBFBB0138),
+    .INIT_08(256'hA2007FF3A03802165A0778072009FF9D780687D43FF6004C8609B8099F96FFC2),
+    .INIT_09(256'h86015027203700A6A4072FF62021808C7E063FD4FFC8806417F85820FFA3FE2B),
+    .INIT_0A(256'hF800A00FC090FF3C29FC57D5BF9B7E0B61F1E805E08B00CD2BF59FFA2082019D),
+    .INIT_0B(256'hB00247EC2050006D4E073822C01D0057C0067806FF847EDD2C05D0123FED81F6),
+    .INIT_0C(256'hCFFDA031E067FEDDE1F210260029FE2809F0502CBFDAFDC685EBC840BF4D00FA),
+    .INIT_0D(256'h73F75FD59FD2FD1D0DF59FFD401E005B5807FFD3400BFEE031F3E01460CC80D9),
+    .INIT_0E(256'hD7F28007BFE9817E21EB401C3FE37F6E43FED7F6C081FF5D07F247CABFE0FFEF),
+    .INIT_0F(256'h6C04300F00287FBD4006FFDB9FB17EDD53F6581F4075FE6CEE00F8005F3700A1),
     .INIT_10(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_11(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_12(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -15138,8 +15138,8 @@ module Conv2_Weights_blk_mem_gen_prim_wrapper__parameterized9
         .INJECTDBITERR(1'b0),
         .INJECTSBITERR(1'b0),
         .RDADDRECC(\NLW_DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM36.ram_RDADDRECC_UNCONNECTED [8:0]),
-        .REGCEAREGCE(ena),
-        .REGCEB(ena),
+        .REGCEAREGCE(1'b0),
+        .REGCEB(1'b0),
         .RSTRAMARSTRAM(1'b0),
         .RSTRAMB(1'b0),
         .RSTREGARSTREG(1'b0),
@@ -15181,12 +15181,12 @@ endmodule
 (* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SAFETY_CKT = "0" *) 
 (* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     378.882368 mW" *) 
 (* C_FAMILY = "virtex7" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "1" *) 
-(* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "1" *) 
+(* C_HAS_ENB = "0" *) (* C_HAS_INJECTERR = "0" *) (* C_HAS_MEM_OUTPUT_REGS_A = "0" *) 
 (* C_HAS_MEM_OUTPUT_REGS_B = "0" *) (* C_HAS_MUX_OUTPUT_REGS_A = "0" *) (* C_HAS_MUX_OUTPUT_REGS_B = "0" *) 
 (* C_HAS_REGCEA = "0" *) (* C_HAS_REGCEB = "0" *) (* C_HAS_RSTA = "0" *) 
 (* C_HAS_RSTB = "0" *) (* C_HAS_SOFTECC_INPUT_REGS_A = "0" *) (* C_HAS_SOFTECC_OUTPUT_REGS_B = "0" *) 
 (* C_INITA_VAL = "0" *) (* C_INITB_VAL = "0" *) (* C_INIT_FILE = "Conv2_Weights.mem" *) 
-(* C_INIT_FILE_NAME = "no_coe_file_loaded" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "0" *) 
+(* C_INIT_FILE_NAME = "Conv2_Weights.mif" *) (* C_INTERFACE_TYPE = "0" *) (* C_LOAD_INIT_FILE = "1" *) 
 (* C_MEM_TYPE = "3" *) (* C_MUX_PIPELINE_STAGES = "0" *) (* C_PRIM_TYPE = "1" *) 
 (* C_READ_DEPTH_A = "64" *) (* C_READ_DEPTH_B = "64" *) (* C_READ_WIDTH_A = "4096" *) 
 (* C_READ_WIDTH_B = "4096" *) (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) 

@@ -7,8 +7,8 @@ module ControlUnit #(
         FilterConv1 = 16,
         MC1Depth = 3,   // 128/16
         MC2Depth = 6,  // Column in C2 log2(64)
-        Conv1_Cycles = 120,
-        Conv2_Cycles = 448,
+        Conv1_Cycles = 119,
+        Conv2_Cycles = 447,
         MemBlockCellNo = 8,
         MemBlockCellSize = 16, //bits
         Wr_MemBlkDepth = 6, // log2(56) 56==> no of memory cells
@@ -18,7 +18,7 @@ module ControlUnit #(
         )
         (
         input clk,reset,
-        output reg Conv_mode,
+        output reg ExtMode,
         output reg[MC1Depth - 1:0] MC1_Address,
         output reg[MC2Depth - 1:0] MC2_Address,
         output reg [2:0] EnableBus, 
@@ -29,14 +29,16 @@ module ControlUnit #(
         output reg [r_MemBlkDepth - 1:0] r_MemBlk2_Address,
         output reg [r_MemBlkDepth - 1:0] r_MemBlk3_Address,
         output reg [DeseMemDepth - 1:0] r_Dese_Adress,
-        output reg denseEnable
+        output reg denseEnable,
+        output [31:0]  Counter1Debug
         );  
         
-        integer Counter1 = 0;
+        reg [31:0] Counter1 = 0;
+        assign Counter1Debug = Counter1;
         integer Counter2 = 0;
         integer BlkCounter = 0;
         integer c = 0;
-        reg [MC1Depth - 1:0]MC1_Depth = 'b1000;
+        reg [MC1Depth - 1:0]MC1_Depth = 'b1000;//--------//
         reg [MC2Depth - 1:0]MC2_Depth = 'b1000000;
         reg [Wr_MemBlkDepth - 1:0]MemBlk1_Depth = 'b111111;
         reg [Wr_MemBlkDepth - 1:0]MemBlk2_Depth = 'b111111;
@@ -44,7 +46,7 @@ module ControlUnit #(
         reg [r_MemBlkDepth - 1:0]r_MemBlk1_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk2_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk3_Depth = 'b111;
-        
+        reg Conv_mode;
         initial begin
         Conv_mode = 0;
         MC1_Address = 0;
@@ -65,7 +67,7 @@ always@(posedge clk)begin
             Conv_mode = 0;
             MC1_Address = 0;
             MC2_Address = 0;
-            EnableBus = 'b100;
+            EnableBus = 'b000; ////////
             Wr_MemBlk1_Address = 0;
             Wr_MemBlk2_Address = 0;
             Wr_MemBlk3_Address = 0;
@@ -80,14 +82,20 @@ always@(posedge clk)begin
             c = 0;
             end
             else begin
-            if(Counter1 > Conv1_Cycles)begin
+            if(Counter1 >= Conv1_Cycles)begin
                 Conv_mode = 1;
-                Counter2 = Counter2 + 1;
+                Counter2 <= Counter2 + 1;
+                if(Counter2 == 0)begin
+                    Wr_MemBlk3_Address = Wr_MemBlk3_Address + 'b1;
+                    EnableBus = 'b001;
+                end
+                if(Counter2 == 1)
+                    EnableBus = 'b000;
                 if(Counter2 >= 2)begin
                     denseEnable = 1;
                     r_Dese_Adress = r_Dese_Adress + 'b1;
                     end
-                if(Counter2 > Conv2_Cycles)begin
+                if(Counter2 >= Conv2_Cycles)begin
                     Counter2 = 0;
                     Conv_mode = 0;
                     Counter1 = 0;
@@ -95,7 +103,7 @@ always@(posedge clk)begin
                     Wr_MemBlk2_Address = 0;
                     Wr_MemBlk3_Address = 0;
                     r_Dese_Adress = 0;
-                    EnableBus = 'b100;
+                    EnableBus = 'b000; ///////
                 end     
             end
             else begin
@@ -105,8 +113,10 @@ always@(posedge clk)begin
             r_MemBlk2_Address = 0;
             r_MemBlk3_Address = 0;
             end 
-             if(Conv_mode == 0)begin // Convolution-1 Mode
+             if(Conv_mode == 0)begin // Convolution-1 Mode ----------->
                 //#0.1; //Possible Delay ??
+                if(EnableBus == 'b000)///
+                    EnableBus = 'b100;////
                 MC1_Address = MC1_Address + 'b1;
                 if(MC1_Address == MC1_Depth)
                     MC1_Address = 0;
@@ -162,5 +172,8 @@ always@(posedge clk)begin
                 end
              end
       end
+end
+always@(negedge clk)begin
+    ExtMode = Conv_mode;
 end
 endmodule

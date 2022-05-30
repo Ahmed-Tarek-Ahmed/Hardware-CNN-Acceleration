@@ -6,10 +6,13 @@ module Conv_Layer_Seq#(parameter n_inputs = 16,size = 16,DP=4,FC1=16,FC2=1,RC1=3
         input [size*8*RC1-1:0] DataC1,
         input [size*128*RC2-1:0] DataC2,
         input mode,
-        output  [size*n_units-1:0]  Out );
+        output  [size*n_units-1:0]  Out, 
+        output reg [n_units*size*n_inputs-1:0] weights,
+        output reg [n_units*size*n_inputs-1:0] data
+        );
         genvar i;integer j;
-        reg [n_units*size*n_inputs-1:0] weights;
-        reg [n_units*size*n_inputs-1:0] data;
+        //output reg [n_units*size*n_inputs-1:0] weights;
+        //output reg [n_units*size*n_inputs-1:0] data;
         always@(WC1,WC2,DataC1,DataC2,mode)begin
         if (mode==0)begin
             for (j=0;j<n_units;j=j+2)begin

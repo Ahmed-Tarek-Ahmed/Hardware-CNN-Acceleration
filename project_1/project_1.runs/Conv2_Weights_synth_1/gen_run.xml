@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Conv2_Weights_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653841534">
+<GenRun Id="Conv2_Weights_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653943726">
   <File Type="PA-TCL" Name="Conv2_Weights.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Conv2_Weights_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Conv2_Weights_reports.tcl"/>
@@ -36,9 +36,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
