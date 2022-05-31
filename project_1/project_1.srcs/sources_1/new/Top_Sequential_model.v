@@ -7,6 +7,8 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     (
         input clk,reset
     );
+    reg [9:0] counter=0;
+    wire [8:0] counterD;
     reg [3*3-1:0] samples;
     reg [15*9-1:0] SamplesAll;
     wire [MC1Depth-1:0] MC1; // Address MC1 out of Control Unit
@@ -36,7 +38,10 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     wire [memblkReadWidth-1 :0]Memblk3; // out of memblk-3
     wire [n_unitsC*size*16-1:0]DebData,Debweights;
     wire [31:0] countD;
-    wire WC2EN;
+    wire WC2EN,EnR2;
+    wire  [size*5-1:0]Output;
+    wire signed [size-1:0] t1;
+    wire  signed [size*2-1:0] temp1;
     
     assign DataC2 = {Memblk3,Memblk2,Memblk1};
     EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
@@ -73,7 +78,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .Out(Out_MPU)
     );
     RegisterFile#(.ele_num(1),.in_size(size)) R2(
-        .enable(clk && mode),
+        .enable(~clk && EnR2),
         .inbus(Out_MPU),
         .outbus(OutR2)
     );
@@ -90,10 +95,11 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .r_MemBlk2_Address(r_MemBlk2_Address),
         .r_MemBlk3_Address(r_MemBlk3_Address),
         //.r_Dese_Adress(0), // to be reviewed
-        .denseEnable(denseEnable),
+        .DenEnO(denseEnable),
         .reset(reset),
         .Counter1Debug(countD),
-        .WC2EN(WC2EN)
+        .WC2EN(WC2EN),
+        .EnR2(EnR2)
     );
     MemBlk_1 M1(
       .addra(Wr_MemBlk1_Address),.ena(Enable[2]),.dina(MP_layerOut),.clka(~clk),
@@ -113,6 +119,16 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     Conv2_Weights Conv2(
         .addra(MC2),.ena(WC2EN),.douta(WC2),.clka(~clk)
         );
+    Dense_Seq Dense(
+    .In(OutR2),.enable(denseEnable),.clk(~clk),.Out(Output),.t3(t1),.temp3(temp1),.counter(counterD)
+    );    
+        
+     always@(negedge clk)begin
+        if(reset)
+        counter=0;
+        else
+           counter=counter+'b1;
+     end
         integer i;
         integer j;
         initial 
@@ -144,20 +160,20 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
             #1
             force clk = 1;
             #1
-            $display("Data:%b",DebData[16*16*16-1 -:16*16]);
-            $display("weights:%b",Debweights[16*16*16-1-:16*16]);
             $display("OutM:%b",MP_layerOut);
-            for(i=0;i<446;i=i+1)begin
+            for(i=0;i<451;i=i+1)begin
+
+                $display("OUTR2:%b",OutR2);
+                $display("t1:%b",t1);    
+                $display("output:%b",Output); 
+                $display("dE:%b",denseEnable);
+                $display("cycle%d\n",counter);   
                 force clk = 0;
                 #1;
                 force clk = 1;
                 #1; 
-                $display("at1:%b",Out_AT1);
-                $display("at2:%b\n",Out_AT2);
             end
-            $display("OUTR:%b",OutR);
-            $display("at1:%b",Out_AT1);
-            $display("at2:%b",Out_AT2);
+
             $finish;
             end
 endmodule

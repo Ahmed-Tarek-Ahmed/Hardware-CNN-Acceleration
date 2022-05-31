@@ -8,7 +8,7 @@ module ControlUnit #(
         MC1Depth = 3,   // 128/16
         MC2Depth = 6,  // Column in C2 log2(64)
         Conv1_Cycles = 119,
-        Conv2_Cycles = 447,
+        Conv2_Cycles = 448,
         MemBlockCellNo = 8,
         MemBlockCellSize = 16, //bits
         Wr_MemBlkDepth = 6, // log2(56) 56==> no of memory cells
@@ -18,7 +18,7 @@ module ControlUnit #(
         )
         (
         input clk,reset,
-        output reg ExtMode,
+        output reg ExtMode,DenEnO,EnR2,
         output reg[MC1Depth - 1:0] MC1_Address,
         output reg[MC2Depth - 1:0] MC2_Address,
         output reg [2:0] EnableBus, 
@@ -29,7 +29,6 @@ module ControlUnit #(
         output reg [r_MemBlkDepth - 1:0] r_MemBlk2_Address,
         output reg [r_MemBlkDepth - 1:0] r_MemBlk3_Address,
         output reg [DeseMemDepth - 1:0] r_Dese_Adress,
-        output reg denseEnable,
         output [31:0]  Counter1Debug,
         output WC2EN
         );  
@@ -48,7 +47,7 @@ module ControlUnit #(
         reg [r_MemBlkDepth - 1:0]r_MemBlk1_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk2_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk3_Depth = 'b111;
-        reg Conv_mode;
+        reg Conv_mode,denseEnable;
         
         assign Counter1Debug = Counter1;
         assign WC2EN = Counter1 >= Conv1_Cycles-1 ? 'b1:'b0;
@@ -96,6 +95,8 @@ always@(posedge clk)begin
                     Wr_MemBlk3_Address = Wr_MemBlk3_Address + 'b1;
                     EnableBus = 'b001;
                 end
+                if(Counter2 ==1)
+                    EnR2='b1;
                 if(Counter2 == 2)
                     EnableBus = 'b000;
                 if(Counter2 >= 2)begin
@@ -127,6 +128,10 @@ always@(posedge clk)begin
                 MC1_Address = MC1_Address + 'b1;
                 if(MC1_Address == MC1_Depth)
                     MC1_Address = 0;
+                if(Counter1==2)begin
+                    denseEnable='b0;
+                    EnR2='b0;
+                    end
                 if(Counter1 >= 2)begin // Assuming the right Cycle
                     BlkCounter <= BlkCounter + 1;
                     if(EnableBus == 'b100 || EnableBus == 'b101)
@@ -182,6 +187,7 @@ always@(posedge clk)begin
       end
 end
 always@(negedge clk)begin
-    ExtMode = Conv_mode;
+    ExtMode <= Conv_mode;
+    DenEnO  <= denseEnable;
 end
 endmodule

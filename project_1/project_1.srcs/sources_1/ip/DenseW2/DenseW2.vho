@@ -56,7 +56,7 @@ COMPONENT DenseW2
   PORT (
     clka : IN STD_LOGIC;
     addra : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
-    douta : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    douta : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------

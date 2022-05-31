@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat May 14 16:18:42 2022
--- Host        : DESKTOP-UR3JV5S running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top DenseW3 -prefix
---               DenseW3_ DenseW3_sim_netlist.vhdl
+-- Date        : Tue May 31 15:35:45 2022
+-- Host        : Ahmed running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/DenseW3/DenseW3_sim_netlist.vhdl
 -- Design      : DenseW3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,24 +16,42 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity DenseW3_blk_mem_gen_prim_wrapper_init is
   port (
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of DenseW3_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end DenseW3_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of DenseW3_blk_mem_gen_prim_wrapper_init is
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_0\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_1\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_10\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_11\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_16\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_17\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_18\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_19\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_2\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_24\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_25\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_26\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_27\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_3\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_32\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_33\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_34\ : STD_LOGIC;
   signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_8\ : STD_LOGIC;
+  signal \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_9\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram\ : label is "PRIMITIVE";
 begin
 \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -42,62 +60,62 @@ begin
       INITP_05 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_06 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
-      INIT_00 => X"BB24CE2A1BA4BE2529E9721903D9332DC0264209C9920821F7146D81F4CC6055",
-      INIT_01 => X"F8B54DA6D65314B1012AFB9FD4D874E9062A6FBFE5C24265FDDEFDA13BCE01BB",
-      INIT_02 => X"C185BB750D54551F06F4A9B2C612EE27DD64A0C28C8A016C0C96629D319982CC",
-      INIT_03 => X"18C1E62CFE022CB5233C5CC544E08DEBE323BC340EED3DEA2CBEA2E4AAFAA612",
-      INIT_04 => X"FD590DC5EE81BA0A032607BA2FE7E62DA7EB04880C2F5FEE9AC2191911A5663E",
-      INIT_05 => X"08EE0794D6D15156E01BF85415963042FDBFE20ABDD559840A154E18394CF1CC",
-      INIT_06 => X"FA709F63F114557513FF75DCFB0E58DF14CFA9A103D6956017F580EEF2AC7FDA",
-      INIT_07 => X"2918EABC06BBCCC10327F183F4E8863C351F9B7BFB8A2568012E1F601543ACC0",
-      INIT_08 => X"0463382720DE235D018D82F6CAAEED64FC3B969013C364A1F79B4C2EFC2BBDE9",
-      INIT_09 => X"EA1C00A9AB827C66D48961351B981BD700DF8EDFF51AA08ADE4F536EE3BDA6AE",
-      INIT_0A => X"E46ECA9245E1F7111BFAE8E4CC9C90E0004A89D7B27349C5E03E0C0CE458F051",
-      INIT_0B => X"F7806D78CEC1A58CDFF5310EF30D3F5B07CB3B0DFF01B8F90E977958E56C79AA",
-      INIT_0C => X"17C0B386EA078208F3B93B20FFA078ADDAC66A24B324B855B9CB432AC79F1D86",
-      INIT_0D => X"E02C20F5F193608F2E4A64501DE756ACBAE86AD4D34CEE4DF547CD5EEC8A3CA2",
-      INIT_0E => X"DED2C97E3F18743513EB8614C82980B312D0595238A4032807A94B250145369E",
-      INIT_0F => X"F6876396D97ADE1B14DA992B2A0B9D7B22CCD395D7F589F502C09ACE00304297",
-      INIT_10 => X"1899136F39A0A6D3FA97DB531073CD1E4383BF03F077526A15D931FEED07C65E",
-      INIT_11 => X"E54C712EF0B721AE34865246F45875D120ACE92CED692FFA9190AF84FA527DF5",
-      INIT_12 => X"D94BBABE043F017D06EFA0DAC445D0C5335F051AA89F12BF079B1544EFB52F71",
-      INIT_13 => X"1EB0B08AE457469DD57063F5DFE49F85230F4870F41F108901D045C5C1945BF1",
-      INIT_14 => X"0D2BB33CD51E7FA9EDE52AC6FD8466B1DA0D0850A86F75F8B532835EFDE17D20",
-      INIT_15 => X"F75A743C119D33514056B6AD02B326FED115BEDE0F3FF493CA28A97D043F7369",
-      INIT_16 => X"006DB5C0E5F4639510819403FC48074EBEBE56C81E411DE705C1FAFB25741783",
-      INIT_17 => X"342AA92CDADD126EEAC0A9C22B7F7FE5FD45C68E091CF52FD238844F32619BE9",
-      INIT_18 => X"E012CF6F006BEE2D0D7B213B069EAF9A096C35D10FD41A4006C39B07EC43B89D",
-      INIT_19 => X"F6932D98F5551ED2EEE5774BE5F2C3A915A89A5A103814E50B2EEB55EDE88423",
-      INIT_1A => X"F200896C141762EDF504FB91D1FB2080E2CC89CDCDDDE3FB03C89F8F1F7F268F",
-      INIT_1B => X"EDB53BD2C88C200DFE6B853BECBD8228CFE7958B0BE74F873554BE37E05D0E1A",
-      INIT_1C => X"4CDC583FCF0881D4C1E74D370DD01B52C7248205BD334A38FCCEA728FD9DFB70",
-      INIT_1D => X"F0451EF90D914BBCD7FA0D8AFAC919059DEB4B8BD2FAF2C7E75D237AEC084B2C",
-      INIT_1E => X"E3D6B398E412006017EBC4C2DC983CAAEE17B7B026C7C06D13AB41A2E1C45021",
-      INIT_1F => X"DDCFFFFEE9028C910BA62E0500A6B8C0B91BF787B0ECEAB0CFA23CDFFE8C00EA",
-      INIT_20 => X"D96431CD17CDAB974E9A2D830B100007F6A3CD21168C76C6F58FA31905DDC9AF",
-      INIT_21 => X"1E5C47FAC1131E591370FBEE1A34A291052061DEDF3D0D58E6523FD8369454F2",
-      INIT_22 => X"EC0463E306B55FA6FF085F18C24563963337107AEE459FCF04C093D5F6D4EB80",
-      INIT_23 => X"D7D1D18820C9E37411A1DC200B8A66B8FA66EAABE62E23D225D5CD8CD4E58336",
-      INIT_24 => X"0D3BC02EEF91657F0857C3AE1D9A8B82D2A4F157DB1C079ADDDCC140ECF9983A",
-      INIT_25 => X"F385DB6FE110D825E1448E23DEA1BA32AC1A9667D7CF70DBF2401042DB5DDE14",
-      INIT_26 => X"F105C5631D80E24E064424CBFEA95BDCF6803B97EE8D95FF0B9076E2D3C2C1C9",
-      INIT_27 => X"DF84C58101023F49E91DBD850872DA33EE9AA98BDDC198B60CB42F2BC5D3F25E",
-      INIT_28 => X"02D59E4911D850CF2CC0B3831F4A589C2B775D16F2A2E3C2C8DF5E6428A62549",
-      INIT_29 => X"20644356D919E11FCD798D4AF57C85170D9A9E5638318BFBED3325F21AC900F5",
-      INIT_2A => X"9A6B5EBE0ECF04B2EDBA0090CE8D27E02AB8AE0FDBBD471CE4D67209E3B4D03A",
-      INIT_2B => X"0C811D84E22752551E98A9F026561735BE6906C1D956A95A30AA21C6BFD12507",
-      INIT_2C => X"13F11C22DAF6F2DB19671D131ABF2CADA3FC9D09E1AAF9DBF080D754CE01DA88",
-      INIT_2D => X"003D3A3DF43D4986089C2AFDDCF037A5CCA833EAFEF09B8D1EE46CCAE2F62604",
-      INIT_2E => X"EAA2CE3A12DCAF20ECA98D38FBCC61B6FAD64E362C0A9CEF19DB17A6486D9D6F",
-      INIT_2F => X"2592F7845B4557CC01EFF065D83F971BF6FDD60FE638628EBBF809B60CC16892",
-      INIT_30 => X"10EAC89316C4BA8A55F8B55EE74DD89B25918F0E476576E622321F030E2804DD",
-      INIT_31 => X"052C5537ADDC0D5214870373E21539A8247A38E634EEE2621B9A1B37AC1D5EF5",
-      INIT_32 => X"B5894817C4D9F7FC05C2AE28FA0FDB7D0C049D440059CBBBDBE0589813DBC21C",
-      INIT_33 => X"1318A52D1E128100262DA2B8EE79D7DFA851D01F270B8FE03B06A309F4AFE168",
-      INIT_34 => X"FA22D28CD97689ADF109F66C0270EC0AFCFF0735CCDF9F5AC54475C7FC95E81E",
-      INIT_35 => X"FA7BBD2BD36482A306A18AAC27AB6A63F836CECEBB2F6158F28BB8CDC84984CD",
-      INIT_36 => X"1D4D9C61DBFDC41AF8321B280965F0AC311281D6FFECA5B910841CE63EDAD694",
-      INIT_37 => X"E3357B7FE9AF5DE704714E630E348FD61AAD440E137EB93A52FBE0BAED438120",
+      INIT_00 => X"080000000307040905030D0200070B020800040D090302050E0E02090E090909",
+      INIT_01 => X"0F01060B0A0C0A07000205050A090B01000C05040C0B08050F0B0B0E0707090C",
+      INIT_02 => X"0803000C010A0A08000D0E09080C02060B0A0C0A080000000109020C06030303",
+      INIT_03 => X"030108030F0C000504060708070F0F0F0C060408010D0D0A0509070D08000000",
+      INIT_04 => X"0F0A0B030D0D00040006040C050F0C0F080000000108050E080000000203040A",
+      INIT_05 => X"01010D0C0A0D0A030C000308020B020C0F0B0800080000000104020A07020909",
+      INIT_06 => X"0F040E020E02020902070F0E0F06010D0209090F00070A0D020F0E0B0E050509",
+      INIT_07 => X"05020301000D07070006040F0E090D02060A030F0F0701050002050C020A0807",
+      INIT_08 => X"00080C0604010B0C0003010B0905050E0F080708020708060E0F03070F080508",
+      INIT_09 => X"0D040309080000000A0901030307030000010B0F0E0A03060B0C090F0C07070C",
+      INIT_0A => X"0C080D0E070F0F0F03070F050909030A00000905080000000C00070D0C080B02",
+      INIT_0B => X"0E0F0001090D08040B0F0E0B0E06010B000F09060F0E0004010D020E0C0A0D09",
+      INIT_0C => X"020F08010D0401000E0707030F0F04010B05080D0800000008000000080F030F",
+      INIT_0D => X"0C0005090E030207050C0904030B0C0E080000000A06090A0E0A09000D090105",
+      INIT_0E => X"0B0D0A06070E030002070D070900050402050A0007010408000F05020002080A",
+      INIT_0F => X"0E0D000F0B020F0602090B0505040107040509090A0F0E0C0005080100000600",
+      INIT_10 => X"03010302070304010F05030002000E07070F0F0F0E000E0F020B0B020D0A0100",
+      INIT_11 => X"0C0A09090E01060F0609000C0E080B01040105090D0A0D03080000000F040A05",
+      INIT_12 => X"0B0209080008070E000D0D0F0808080C06060B0E08000000000F03060D0F060B",
+      INIT_13 => X"030D06010C080A0F0A0A0E010B0F0C0A0406010E0E08030F00030A0008030209",
+      INIT_14 => X"010A05070A0A030D0D0B0C0B0F0B00090B04010B08000000080000000F0B0C03",
+      INIT_15 => X"0E0E0B050203030A070F0F0F000506060A02020C010E070F090405020008070E",
+      INIT_16 => X"00000D0B0C0B0E09020100030F08090108000000030C0802000B0803040A0E08",
+      INIT_17 => X"060805050B050B0B0D05080205060F0E0F0A080C010203090A04070206040C03",
+      INIT_18 => X"0C00020600000D07010A0F06000D030D01020D08010F0A08000D08070D080808",
+      INIT_19 => X"0E0D02070E0A0A0B0D0D0C0B0C0B0E06020B0501020007000106050D0D0B0D02",
+      INIT_1A => X"0E0400020208020E0E0A000A0A030F070C05090A090B0B0C00070901030E0F0E",
+      INIT_1B => X"0D0B060B090101090F0C0D080D09070C090F0D0001070C0E060A0A090C000B0B",
+      INIT_1C => X"070F0F0F090E010208030C0F010B0A00080E040A080000000F09090E0F0B030C",
+      INIT_1D => X"0E00080B010B02020A0F0F050F050903080000000A050F060C0E0B0B0D080101",
+      INIT_1E => X"0C070A0E0C080205020F0D070B0903010D0C0300040D080F020705060C030809",
+      INIT_1F => X"0B0B0A000D0200060107040C0001040D0800000008000000090F04050F0D0109",
+      INIT_20 => X"0B020C09020F090B070F0F0F010602000E0D0408020D01080E0B0200000B0B0B",
+      INIT_21 => X"030C0B080802020702060E0103040609000A04000B0E070B0C0C0A05060D0208",
+      INIT_22 => X"0D080009000D060A0F0E01010804080B0606060E0D0C080C000908010E0D0A0A",
+      INIT_23 => X"0A0F0A040401090302030403010701040F040C0E0C0C050D040B0A0B0A090C0C",
+      INIT_24 => X"010A07070D0F020301000A0F030B03050A05040A0B0603090B0B0B0A0D090F04",
+      INIT_25 => X"0E07000C0C0202020C02080A0B0D0404080000000A0F090F0E0408010B060B0C",
+      INIT_26 => X"0E02000C030B0001000C08080F0D05030E0D00010D0D010C010702000A070806",
+      INIT_27 => X"0B0F000A000200040D02030C01000E050D0D03060B0B080401090608080B0A08",
+      INIT_28 => X"00050A0B02030B0005090801030E090405060E0E0E05040609010B0F0501040C",
+      INIT_29 => X"04000C080B020304090A0F040E0A0F0A010B0305070006030D0A060703050902",
+      INIT_2A => X"08000000010D090E0D0B0705090D010B050507010B07070B0C090A0D0C07060A",
+      INIT_2B => X"010900020C04040F030D0301040C0A0C080000000B020A0E0601050408000000",
+      INIT_2C => X"02070E020B050E0E03020C0E0305070E080000000C0305060E010002090C0004",
+      INIT_2D => X"0000070A0E08070B010103080B090E01090905010F0D0E02030D0C080C050E0D",
+      INIT_2E => X"0D05040602050B090D0905040F0709090F050A0D0508010503030B06070F0F0F",
+      INIT_2F => X"040B0205070F0F0F00030D0F0B0008000E0D0F0C0C0C07010800000001090802",
+      INIT_30 => X"02010D05020D0809070F0F0F0C0E090C040B0203070F0F0F04040604010C0500",
+      INIT_31 => X"000A0508080000000209000E0C04020B04080F0406090D0D0307030408000000",
+      INIT_32 => X"0800000008090B04000B08050F0402000108000900000B030B070C0102070B07",
+      INIT_33 => X"02060301030C0205040C050B0D0C0F0408000000040E01070706000D0E090600",
+      INIT_34 => X"0F0404060B020E0E0E02010400040E010F090F0F09090C00080A08090F09020C",
+      INIT_35 => X"0F040F080A060C0A000D0403040F05060F00060E080000000E05010809000904",
+      INIT_36 => X"030A090B0B070F0C0F00060501020C0B060202050F0F0D0A02010008070D0B05",
+      INIT_37 => X"0C06060B0D03050F00080E02010C06090305050A02060F0D070F0F0F0D0A0808",
       INIT_38 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_39 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_3A => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -143,16 +161,34 @@ begin
       DIBDI(15 downto 0) => B"0000000000000000",
       DIPADIP(1 downto 0) => B"00",
       DIPBDIP(1 downto 0) => B"00",
-      DOADO(15 downto 0) => douta(15 downto 0),
-      DOBDO(15 downto 0) => douta(31 downto 16),
+      DOADO(15) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_0\,
+      DOADO(14) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_1\,
+      DOADO(13) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_2\,
+      DOADO(12) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_3\,
+      DOADO(11 downto 8) => douta(7 downto 4),
+      DOADO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_8\,
+      DOADO(6) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_9\,
+      DOADO(5) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_10\,
+      DOADO(4) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_11\,
+      DOADO(3 downto 0) => douta(3 downto 0),
+      DOBDO(15) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_16\,
+      DOBDO(14) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_17\,
+      DOBDO(13) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_18\,
+      DOBDO(12) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_19\,
+      DOBDO(11 downto 8) => douta(15 downto 12),
+      DOBDO(7) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_24\,
+      DOBDO(6) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_25\,
+      DOBDO(5) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_26\,
+      DOBDO(4) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_27\,
+      DOBDO(3 downto 0) => douta(11 downto 8),
       DOPADOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_32\,
       DOPADOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_33\,
       DOPBDOP(1) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_34\,
       DOPBDOP(0) => \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35\,
       ENARDEN => '1',
       ENBWREN => '1',
-      REGCEAREGCE => '1',
-      REGCEB => '1',
+      REGCEAREGCE => '0',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -167,10 +203,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity DenseW3_blk_mem_gen_prim_width is
   port (
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of DenseW3_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end DenseW3_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of DenseW3_blk_mem_gen_prim_width is
@@ -179,7 +217,7 @@ begin
      port map (
       addra(8 downto 0) => addra(8 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(15 downto 0) => douta(15 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -188,10 +226,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity DenseW3_blk_mem_gen_generic_cstr is
   port (
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of DenseW3_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end DenseW3_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of DenseW3_blk_mem_gen_generic_cstr is
@@ -200,7 +240,7 @@ begin
      port map (
       addra(8 downto 0) => addra(8 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(15 downto 0) => douta(15 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -209,10 +249,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity DenseW3_blk_mem_gen_top is
   port (
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of DenseW3_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end DenseW3_blk_mem_gen_top;
 
 architecture STRUCTURE of DenseW3_blk_mem_gen_top is
@@ -221,7 +263,7 @@ begin
      port map (
       addra(8 downto 0) => addra(8 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(15 downto 0) => douta(15 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -230,10 +272,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity DenseW3_blk_mem_gen_v8_4_1_synth is
   port (
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of DenseW3_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end DenseW3_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of DenseW3_blk_mem_gen_v8_4_1_synth is
@@ -242,7 +286,7 @@ begin
      port map (
       addra(8 downto 0) => addra(8 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(15 downto 0) => douta(15 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -257,16 +301,16 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
     regcea : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 );
     clkb : in STD_LOGIC;
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC;
     regceb : in STD_LOGIC;
     web : in STD_LOGIC_VECTOR ( 0 to 0 );
     addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    dinb : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    doutb : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    dinb : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 );
     injectsbiterr : in STD_LOGIC;
     injectdbiterr : in STD_LOGIC;
     eccpipece : in STD_LOGIC;
@@ -287,7 +331,7 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wlast : in STD_LOGIC;
     s_axi_wvalid : in STD_LOGIC;
@@ -304,7 +348,7 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
     s_axi_rid : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 15 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rlast : out STD_LOGIC;
     s_axi_rvalid : out STD_LOGIC;
@@ -362,7 +406,7 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of DenseW3_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of DenseW3_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     3.375199 mW";
+  attribute C_EST_POWER_SUMMARY of DenseW3_blk_mem_gen_v8_4_1 : entity is "Estimated Power for IP     :     2.7096 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of DenseW3_blk_mem_gen_v8_4_1 : entity is "virtex7";
   attribute C_HAS_AXI_ID : integer;
@@ -374,7 +418,7 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of DenseW3_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of DenseW3_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
@@ -416,9 +460,9 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
   attribute C_READ_DEPTH_B : integer;
   attribute C_READ_DEPTH_B of DenseW3_blk_mem_gen_v8_4_1 : entity is 448;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_READ_WIDTH_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 16;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of DenseW3_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_READ_WIDTH_B of DenseW3_blk_mem_gen_v8_4_1 : entity is 16;
   attribute C_RSTRAM_A : integer;
   attribute C_RSTRAM_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_RSTRAM_B : integer;
@@ -456,11 +500,13 @@ entity DenseW3_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of DenseW3_blk_mem_gen_v8_4_1 : entity is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_WRITE_WIDTH_A of DenseW3_blk_mem_gen_v8_4_1 : entity is 16;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of DenseW3_blk_mem_gen_v8_4_1 : entity is 32;
+  attribute C_WRITE_WIDTH_B of DenseW3_blk_mem_gen_v8_4_1 : entity is 16;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of DenseW3_blk_mem_gen_v8_4_1 : entity is "virtex7";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of DenseW3_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of DenseW3_blk_mem_gen_v8_4_1 : entity is "yes";
 end DenseW3_blk_mem_gen_v8_4_1;
@@ -469,22 +515,6 @@ architecture STRUCTURE of DenseW3_blk_mem_gen_v8_4_1 is
   signal \<const0>\ : STD_LOGIC;
 begin
   dbiterr <= \<const0>\;
-  doutb(31) <= \<const0>\;
-  doutb(30) <= \<const0>\;
-  doutb(29) <= \<const0>\;
-  doutb(28) <= \<const0>\;
-  doutb(27) <= \<const0>\;
-  doutb(26) <= \<const0>\;
-  doutb(25) <= \<const0>\;
-  doutb(24) <= \<const0>\;
-  doutb(23) <= \<const0>\;
-  doutb(22) <= \<const0>\;
-  doutb(21) <= \<const0>\;
-  doutb(20) <= \<const0>\;
-  doutb(19) <= \<const0>\;
-  doutb(18) <= \<const0>\;
-  doutb(17) <= \<const0>\;
-  doutb(16) <= \<const0>\;
   doutb(15) <= \<const0>\;
   doutb(14) <= \<const0>\;
   doutb(13) <= \<const0>\;
@@ -531,22 +561,6 @@ begin
   s_axi_rdaddrecc(2) <= \<const0>\;
   s_axi_rdaddrecc(1) <= \<const0>\;
   s_axi_rdaddrecc(0) <= \<const0>\;
-  s_axi_rdata(31) <= \<const0>\;
-  s_axi_rdata(30) <= \<const0>\;
-  s_axi_rdata(29) <= \<const0>\;
-  s_axi_rdata(28) <= \<const0>\;
-  s_axi_rdata(27) <= \<const0>\;
-  s_axi_rdata(26) <= \<const0>\;
-  s_axi_rdata(25) <= \<const0>\;
-  s_axi_rdata(24) <= \<const0>\;
-  s_axi_rdata(23) <= \<const0>\;
-  s_axi_rdata(22) <= \<const0>\;
-  s_axi_rdata(21) <= \<const0>\;
-  s_axi_rdata(20) <= \<const0>\;
-  s_axi_rdata(19) <= \<const0>\;
-  s_axi_rdata(18) <= \<const0>\;
-  s_axi_rdata(17) <= \<const0>\;
-  s_axi_rdata(16) <= \<const0>\;
   s_axi_rdata(15) <= \<const0>\;
   s_axi_rdata(14) <= \<const0>\;
   s_axi_rdata(13) <= \<const0>\;
@@ -582,7 +596,7 @@ inst_blk_mem_gen: entity work.DenseW3_blk_mem_gen_v8_4_1_synth
      port map (
       addra(8 downto 0) => addra(8 downto 0),
       clka => clka,
-      douta(31 downto 0) => douta(31 downto 0)
+      douta(15 downto 0) => douta(15 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -593,7 +607,7 @@ entity DenseW3 is
   port (
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 );
-    douta : out STD_LOGIC_VECTOR ( 31 downto 0 )
+    douta : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of DenseW3 : entity is true;
@@ -618,12 +632,12 @@ architecture STRUCTURE of DenseW3 is
   signal NLW_U0_s_axi_sbiterr_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_s_axi_wready_UNCONNECTED : STD_LOGIC;
   signal NLW_U0_sbiterr_UNCONNECTED : STD_LOGIC;
-  signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_U0_doutb_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_s_axi_rdaddrecc_UNCONNECTED : STD_LOGIC_VECTOR ( 8 downto 0 );
-  signal NLW_U0_s_axi_rdata_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_U0_s_axi_rdata_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_U0_s_axi_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_U0_s_axi_rresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute C_ADDRA_WIDTH : integer;
@@ -673,7 +687,7 @@ architecture STRUCTURE of DenseW3 is
   attribute C_EN_SLEEP_PIN : integer;
   attribute C_EN_SLEEP_PIN of U0 : label is 0;
   attribute C_EST_POWER_SUMMARY : string;
-  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     3.375199 mW";
+  attribute C_EST_POWER_SUMMARY of U0 : label is "Estimated Power for IP     :     2.7096 mW";
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "virtex7";
   attribute C_HAS_AXI_ID : integer;
@@ -685,7 +699,7 @@ architecture STRUCTURE of DenseW3 is
   attribute C_HAS_INJECTERR : integer;
   attribute C_HAS_INJECTERR of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
@@ -727,9 +741,9 @@ architecture STRUCTURE of DenseW3 is
   attribute C_READ_DEPTH_B : integer;
   attribute C_READ_DEPTH_B of U0 : label is 448;
   attribute C_READ_WIDTH_A : integer;
-  attribute C_READ_WIDTH_A of U0 : label is 32;
+  attribute C_READ_WIDTH_A of U0 : label is 16;
   attribute C_READ_WIDTH_B : integer;
-  attribute C_READ_WIDTH_B of U0 : label is 32;
+  attribute C_READ_WIDTH_B of U0 : label is 16;
   attribute C_RSTRAM_A : integer;
   attribute C_RSTRAM_A of U0 : label is 0;
   attribute C_RSTRAM_B : integer;
@@ -767,9 +781,9 @@ architecture STRUCTURE of DenseW3 is
   attribute C_WRITE_MODE_B : string;
   attribute C_WRITE_MODE_B of U0 : label is "WRITE_FIRST";
   attribute C_WRITE_WIDTH_A : integer;
-  attribute C_WRITE_WIDTH_A of U0 : label is 32;
+  attribute C_WRITE_WIDTH_A of U0 : label is 16;
   attribute C_WRITE_WIDTH_B : integer;
-  attribute C_WRITE_WIDTH_B of U0 : label is 32;
+  attribute C_WRITE_WIDTH_B of U0 : label is 16;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of U0 : label is "virtex7";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
@@ -788,10 +802,10 @@ U0: entity work.DenseW3_blk_mem_gen_v8_4_1
       clkb => '0',
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
       deepsleep => '0',
-      dina(31 downto 0) => B"00000000000000000000000000000000",
-      dinb(31 downto 0) => B"00000000000000000000000000000000",
-      douta(31 downto 0) => douta(31 downto 0),
-      doutb(31 downto 0) => NLW_U0_doutb_UNCONNECTED(31 downto 0),
+      dina(15 downto 0) => B"0000000000000000",
+      dinb(15 downto 0) => B"0000000000000000",
+      douta(15 downto 0) => douta(15 downto 0),
+      doutb(15 downto 0) => NLW_U0_doutb_UNCONNECTED(15 downto 0),
       eccpipece => '0',
       ena => '0',
       enb => '0',
@@ -828,14 +842,14 @@ U0: entity work.DenseW3_blk_mem_gen_v8_4_1
       s_axi_injectdbiterr => '0',
       s_axi_injectsbiterr => '0',
       s_axi_rdaddrecc(8 downto 0) => NLW_U0_s_axi_rdaddrecc_UNCONNECTED(8 downto 0),
-      s_axi_rdata(31 downto 0) => NLW_U0_s_axi_rdata_UNCONNECTED(31 downto 0),
+      s_axi_rdata(15 downto 0) => NLW_U0_s_axi_rdata_UNCONNECTED(15 downto 0),
       s_axi_rid(3 downto 0) => NLW_U0_s_axi_rid_UNCONNECTED(3 downto 0),
       s_axi_rlast => NLW_U0_s_axi_rlast_UNCONNECTED,
       s_axi_rready => '0',
       s_axi_rresp(1 downto 0) => NLW_U0_s_axi_rresp_UNCONNECTED(1 downto 0),
       s_axi_rvalid => NLW_U0_s_axi_rvalid_UNCONNECTED,
       s_axi_sbiterr => NLW_U0_s_axi_sbiterr_UNCONNECTED,
-      s_axi_wdata(31 downto 0) => B"00000000000000000000000000000000",
+      s_axi_wdata(15 downto 0) => B"0000000000000000",
       s_axi_wlast => '0',
       s_axi_wready => NLW_U0_s_axi_wready_UNCONNECTED,
       s_axi_wstrb(0) => '0',

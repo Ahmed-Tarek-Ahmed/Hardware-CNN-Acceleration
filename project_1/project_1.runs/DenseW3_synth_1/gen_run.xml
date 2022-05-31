@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="DenseW3_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1652544773">
+<GenRun Id="DenseW3_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1654004010">
   <File Type="PA-TCL" Name="DenseW3.tcl"/>
   <File Type="REPORTS-TCL" Name="DenseW3_reports.tcl"/>
   <File Type="RDS-RDS" Name="DenseW3.vds"/>
+  <File Type="RDS-UTIL" Name="DenseW3_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="DenseW3_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="DenseW3.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DenseW3">
     <File Path="$PSRCDIR/sources_1/ip/DenseW3/DenseW3.xci">

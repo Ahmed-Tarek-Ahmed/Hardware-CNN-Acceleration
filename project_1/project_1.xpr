@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.xpr">
+<Project Version="7" Minor="38" Path="E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9c695bf64364463da57055b55c983732"/>
@@ -31,20 +31,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="1017"/>
+    <Option Name="WTXSimLaunchSim" Val="1067"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="51"/>
-    <Option Name="WTModelSimExportSim" Val="51"/>
-    <Option Name="WTQuestaExportSim" Val="51"/>
-    <Option Name="WTIesExportSim" Val="51"/>
-    <Option Name="WTVcsExportSim" Val="51"/>
-    <Option Name="WTRivieraExportSim" Val="51"/>
-    <Option Name="WTActivehdlExportSim" Val="51"/>
+    <Option Name="WTXSimExportSim" Val="89"/>
+    <Option Name="WTModelSimExportSim" Val="89"/>
+    <Option Name="WTQuestaExportSim" Val="89"/>
+    <Option Name="WTIesExportSim" Val="89"/>
+    <Option Name="WTVcsExportSim" Val="89"/>
+    <Option Name="WTRivieraExportSim" Val="89"/>
+    <Option Name="WTActivehdlExportSim" Val="89"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
