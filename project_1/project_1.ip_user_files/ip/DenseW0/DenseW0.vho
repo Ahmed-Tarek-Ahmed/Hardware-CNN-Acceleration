@@ -55,8 +55,9 @@
 COMPONENT DenseW0
   PORT (
     clka : IN STD_LOGIC;
+    ena : IN STD_LOGIC;
     addra : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
-    douta : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    douta : OUT STD_LOGIC_VECTOR(17 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -68,6 +69,7 @@ END COMPONENT;
 your_instance_name : DenseW0
   PORT MAP (
     clka => clka,
+    ena => ena,
     addra => addra,
     douta => douta
   );

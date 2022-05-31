@@ -30,6 +30,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GITverilog/Hardwar
 INFO: [VRFC 10-311] analyzing module Dense_Seq
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module EMB_Layer
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxComp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MaxComp
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolLayer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MaxPoolLayer
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolUnit.v" into library xil_defaultlib

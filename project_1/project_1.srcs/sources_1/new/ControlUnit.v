@@ -18,7 +18,7 @@ module ControlUnit #(
         )
         (
         input clk,reset,
-        output reg ExtMode,DenEnO,EnR2,
+        output reg ExtMode,EnR2,denseEnable,
         output reg[MC1Depth - 1:0] MC1_Address,
         output reg[MC2Depth - 1:0] MC2_Address,
         output reg [2:0] EnableBus, 
@@ -47,7 +47,7 @@ module ControlUnit #(
         reg [r_MemBlkDepth - 1:0]r_MemBlk1_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk2_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk3_Depth = 'b111;
-        reg Conv_mode,denseEnable;
+        reg Conv_mode;
         
         assign Counter1Debug = Counter1;
         assign WC2EN = Counter1 >= Conv1_Cycles-1 ? 'b1:'b0;
@@ -95,10 +95,11 @@ always@(posedge clk)begin
                     Wr_MemBlk3_Address = Wr_MemBlk3_Address + 'b1;
                     EnableBus = 'b001;
                 end
-                if(Counter2 ==1)
-                    EnR2='b1;
-                if(Counter2 == 2)
+         
+                if(Counter2 == 2)begin
                     EnableBus = 'b000;
+                    EnR2='b1;
+                    end
                 if(Counter2 >= 2)begin
                     denseEnable = 1;
                     r_Dese_Adress = r_Dese_Adress + 'b1;
@@ -128,10 +129,12 @@ always@(posedge clk)begin
                 MC1_Address = MC1_Address + 'b1;
                 if(MC1_Address == MC1_Depth)
                     MC1_Address = 0;
-                if(Counter1==2)begin
-                    denseEnable='b0;
+                if(Counter1==2)
                     EnR2='b0;
-                    end
+                
+                if(Counter1==3)
+                        denseEnable='b0;
+                
                 if(Counter1 >= 2)begin // Assuming the right Cycle
                     BlkCounter <= BlkCounter + 1;
                     if(EnableBus == 'b100 || EnableBus == 'b101)
@@ -188,6 +191,5 @@ always@(posedge clk)begin
 end
 always@(negedge clk)begin
     ExtMode <= Conv_mode;
-    DenEnO  <= denseEnable;
 end
 endmodule

@@ -2,10 +2,11 @@
 
 module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=1,RC1=3,RC2=3,MaxPool_layerSize = 16,
                                        MC1Depth = 3,MC2Depth = 6,Wr_MemBlkDepth = 6, r_MemBlkDepth = 3,DeseMemDepth = 9,
-                                       memblkReadWidth = 2048
+                                       memblkReadWidth = 2048,size1=18
                             )
     (
-        input clk,reset
+        input clk,reset,
+        output [2:0 ]class
     );
     reg [9:0] counter=0;
     wire [8:0] counterD;
@@ -36,24 +37,20 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     wire [memblkReadWidth-1 :0]Memblk1; // out of memblk-1
     wire [memblkReadWidth-1 :0]Memblk2; // out of memblk-2
     wire [memblkReadWidth-1 :0]Memblk3; // out of memblk-3
-    wire [n_unitsC*size*16-1:0]DebData,Debweights;
     wire [31:0] countD;
     wire WC2EN,EnR2;
-    wire  [size*5-1:0]Output;
-    wire signed [size-1:0] t1;
-    wire  signed [size*2-1:0] temp1;
-    
+    wire  [size1*5-1:0]OutputD;
+
     assign DataC2 = {Memblk3,Memblk2,Memblk1};
     EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
+    
     Conv_Layer_Seq C(
         .WC1(WC1),
         .WC2(WC2),
         .DataC1(DataC1),
         .DataC2(DataC2),
         .Out(OutC),
-        .mode(mode),
-        .data(DebData),
-        .weights(Debweights)
+        .mode(mode)
     );
     RegisterFile#(.ele_num(MaxPool_layerSize*2),.in_size(size)) R1(
         .enable(~clk),
@@ -95,7 +92,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .r_MemBlk2_Address(r_MemBlk2_Address),
         .r_MemBlk3_Address(r_MemBlk3_Address),
         //.r_Dese_Adress(0), // to be reviewed
-        .DenEnO(denseEnable),
+        .denseEnable(denseEnable),
         .reset(reset),
         .Counter1Debug(countD),
         .WC2EN(WC2EN),
@@ -120,8 +117,13 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .addra(MC2),.ena(WC2EN),.douta(WC2),.clka(~clk)
         );
     Dense_Seq Dense(
-    .In(OutR2),.enable(denseEnable),.clk(~clk),.Out(Output),.t3(t1),.temp3(temp1),.counter(counterD)
+    .In(OutR2),.enable(denseEnable),.clk(~clk),.Out(OutputD)
     );    
+        
+     MaxComp# (.insize(size1)) C1ass
+           (   .INPUT(OutputD),
+               .Out(class)
+           );        
         
      always@(negedge clk)begin
         if(reset)
@@ -131,49 +133,48 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
      end
         integer i;
         integer j;
-        initial 
-            begin
-            //samples=9'b001001001;
-            SamplesAll = 'b001001001100100001011011100011100011100001011011011100100010011100100100001100100001100001010011001100001010010100100100010010001001100;
-            samples = SamplesAll[15*9 -1 -:9];
-            force reset = 1;
-            force clk = 0;
-            #1
-            force clk = 1;
-            #1
-            force reset = 0;
-            #1
-            for(j =0;j<=14;j=j+1)begin
-                samples = SamplesAll[15*9 - j*9 -1 -:9];                                
-                for( i =0; i <= 7; i = i+1)begin  
-                    force clk = 0;
-                    #1;
-                    //$display("MPL_OUT_:%b",MP_layerOut);
-                    //$display("MEmblk1:%b",Memblk1);
-                    //$display("WC1:%b",WC1);
-                    //$display("\n");
-                    force clk = 1;
-                    #1;
-                end
-            end
-            force clk = 0;
-            #1
-            force clk = 1;
-            #1
-            $display("OutM:%b",MP_layerOut);
-            for(i=0;i<451;i=i+1)begin
+//        initial 
+//            begin
+//            //samples=9'b001001001;
+//            SamplesAll = 'b001001001100100001011011100011100011100001011011011100100010011100100100001100100001100001010011001100001010010100100100010010001001100;
+//            samples = SamplesAll[15*9 -1 -:9];
+//            force reset = 1;
+//            force clk = 0;
+//            #1
+//            force clk = 1;
+//            #1
+//            force reset = 0;
+//            #1
+//            for(j =0;j<=14;j=j+1)begin
+//                samples = SamplesAll[15*9 - j*9 -1 -:9];                                
+//                for( i =0; i <= 7; i = i+1)begin  
+//                    force clk = 0;
+//                    #1;
+//                    //$display("MPL_OUT_:%b",MP_layerOut);
+//                    //$display("MEmblk1:%b",Memblk1);
+//                    //$display("WC1:%b",WC1);
+//                    //$display("\n");
+//                    force clk = 1;
+//                    #1;
+//                end
+//            end
+//            force clk = 0;
+//            #1
+//            force clk = 1;
+//            #1
+//            $display("OutM:%b",MP_layerOut);
+//            for(i=0;i<451;i=i+1)begin
+//             force clk = 0;
+//            #1;
+//            force clk = 1;
+//            #1; 
+//                $display("OUTMPU:%b",Out_MPU);  
+//                $display("output:%b",OutputD); 
+//                $display("dE:%b",denseEnable);
+//                $display("cycle%d\n",counter);   
 
-                $display("OUTR2:%b",OutR2);
-                $display("t1:%b",t1);    
-                $display("output:%b",Output); 
-                $display("dE:%b",denseEnable);
-                $display("cycle%d\n",counter);   
-                force clk = 0;
-                #1;
-                force clk = 1;
-                #1; 
-            end
-
-            $finish;
-            end
+//            end
+//            $display("CLASS%d",class);
+//            $finish;
+//            end
 endmodule

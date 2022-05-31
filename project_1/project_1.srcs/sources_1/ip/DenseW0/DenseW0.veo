@@ -56,8 +56,9 @@
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
 DenseW0 your_instance_name (
   .clka(clka),    // input wire clka
+  .ena(ena),      // input wire ena
   .addra(addra),  // input wire [8 : 0] addra
-  .douta(douta)  // output wire [15 : 0] douta
+  .douta(douta)  // output wire [17 : 0] douta
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

@@ -16,6 +16,7 @@ verilog xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/Convulution.v" \
 "../../../../project_1.srcs/sources_1/new/Dense_Seq.v" \
 "../../../../project_1.srcs/sources_1/new/EMB_Layer.v" \
+"../../../../project_1.srcs/sources_1/new/MaxComp.v" \
 "../../../../project_1.srcs/sources_1/new/MaxPoolLayer.v" \
 "../../../../project_1.srcs/sources_1/new/MaxPoolUnit.v" \
 "../../../../project_1.srcs/sources_1/new/Register.v" \
