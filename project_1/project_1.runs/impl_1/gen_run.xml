@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653642234">
-  <File Type="PA-TCL" Name="ControlUnit.tcl"/>
   <File Type="BITSTR-BMM" Name="ControlUnit_bd.bmm"/>
-  <File Type="REPORTS-TCL" Name="ControlUnit_reports.tcl"/>
+  <File Type="PA-TCL" Name="ControlUnit.tcl"/>
   <File Type="OPT-DCP" Name="ControlUnit_opt.dcp"/>
+  <File Type="REPORTS-TCL" Name="ControlUnit_reports.tcl"/>
   <File Type="OPT-HWDEF" Name="ControlUnit.hwdef"/>
-  <File Type="PWROPT-DCP" Name="ControlUnit_pwropt.dcp"/>
   <File Type="BG-BGN" Name="ControlUnit.bgn"/>
+  <File Type="PWROPT-DCP" Name="ControlUnit_pwropt.dcp"/>
   <File Type="PLACE-DCP" Name="ControlUnit_placed.dcp"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="ControlUnit_incremental_reuse_pre_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="ControlUnit_postplace_pwropt.dcp"/>

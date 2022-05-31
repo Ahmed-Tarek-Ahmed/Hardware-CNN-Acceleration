@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="DenseW4_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1654022603">
   <File Type="PA-TCL" Name="DenseW4.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="DenseW4_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="DenseW4_reports.tcl"/>
   <File Type="RDS-RDS" Name="DenseW4.vds"/>
   <File Type="RDS-UTIL" Name="DenseW4_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="DenseW4_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="DenseW4.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="DenseW4_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="DenseW4_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/DenseW4">
     <File Path="$PSRCDIR/sources_1/ip/DenseW4/DenseW4.xci">
       <FileInfo>

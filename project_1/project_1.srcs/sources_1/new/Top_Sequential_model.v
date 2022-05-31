@@ -6,6 +6,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
                             )
     (
         input clk,reset,
+        input [92:0] in,
         output [2:0 ]class
     );
     reg [9:0] counter=0;
@@ -140,7 +141,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         if(!reset)begin
         if (j<=14) begin
               if(i < 7)  begin
-              samples = SamplesAll [j*6+:9];
+              samples = in [j*6+:9];
               i = i+1;
               end
               else begin
@@ -155,39 +156,5 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         end   
         end 
         
-        initial 
-            begin
-            SamplesAll = 'b100010001011011011001010011001010011011001100001001011011011100011100011100001011010011100001;
-            force reset = 1;
-            force clk = 0;
-            #1
-            force clk = 1;
-            #1
-            force reset = 0;
-            #1
-            for (j1=0;j1<3;j1=j1+1)begin
-                for(i1=1;i1<=571;i1=i1+1)begin
-                force clk = 0;
-                #1;
-                force clk = 1;
-                #1; 
-    
-                end
-                 $display("cycle%d",counter);   
-                $display("CLASS%d",class);
-                
-                force reset = 1;
-                force clk = 0;
-                #1
-                force clk = 1;
-                #1
-                force clk = 0;
-                #1
-                force clk = 1;
-                #1
-                force reset = 0;
-                #1;
-            end
-            $finish;
-            end
+        
 endmodule
