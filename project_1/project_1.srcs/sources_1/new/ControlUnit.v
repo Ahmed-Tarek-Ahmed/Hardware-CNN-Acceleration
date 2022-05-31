@@ -29,7 +29,6 @@ module ControlUnit #(
         output reg [r_MemBlkDepth - 1:0] r_MemBlk2_Address,
         output reg [r_MemBlkDepth - 1:0] r_MemBlk3_Address,
         output reg [DeseMemDepth - 1:0] r_Dese_Adress,
-        output [31:0]  Counter1Debug,
         output WC2EN
         );  
         
@@ -49,7 +48,7 @@ module ControlUnit #(
         reg [r_MemBlkDepth - 1:0]r_MemBlk3_Depth = 'b111;
         reg Conv_mode;
         
-        assign Counter1Debug = Counter1;
+
         assign WC2EN = Counter1 >= Conv1_Cycles-1 ? 'b1:'b0;
         
         initial begin
@@ -86,6 +85,7 @@ always@(posedge clk)begin
             Counter2 = 0;
             BlkCounter = 0;
             c = 0;
+            
             end
             else begin
             if(Counter1 >= Conv1_Cycles)begin

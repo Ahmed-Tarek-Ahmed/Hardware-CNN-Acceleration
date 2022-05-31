@@ -4,7 +4,7 @@
 module Dense_Seq#(parameter size = 18,DP=6,sizei=16)(
 input signed [sizei-1:0] In,
 input enable,
-input clk,
+input clk,reset,
 output [size*5-1:0] Out);
 
 wire signed [size-1:0]In1;
@@ -46,8 +46,16 @@ Sum4 = 0;
 Sum5 = 0;
 end
 
-always@(posedge clk)
+always@(posedge clk , posedge reset)
 begin
+if(reset)begin
+Sum1 <= 0;
+Sum2 <= 0;
+Sum3 <= 0;
+Sum4 <= 0;
+Sum5 <= 0;
+end
+else begin
 if (enable == 1)begin
 
 if(counter>=1)begin
@@ -65,7 +73,7 @@ end
 counter = counter+1;
 if (counter==449)
 counter=0;
-
+end
 end
 end
 

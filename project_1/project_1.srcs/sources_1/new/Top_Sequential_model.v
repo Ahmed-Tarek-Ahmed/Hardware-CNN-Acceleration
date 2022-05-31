@@ -9,7 +9,6 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         output [2:0 ]class
     );
     reg [9:0] counter=0;
-    wire [8:0] counterD;
     reg [3*3-1:0] samples;
     reg [15*9-1:0] SamplesAll;
     wire [MC1Depth-1:0] MC1; // Address MC1 out of Control Unit
@@ -37,7 +36,6 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     wire [memblkReadWidth-1 :0]Memblk1; // out of memblk-1
     wire [memblkReadWidth-1 :0]Memblk2; // out of memblk-2
     wire [memblkReadWidth-1 :0]Memblk3; // out of memblk-3
-    wire [31:0] countD;
     wire WC2EN,EnR2;
     wire  [size1*5-1:0]OutputD;
 
@@ -94,7 +92,6 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         //.r_Dese_Adress(0), // to be reviewed
         .denseEnable(denseEnable),
         .reset(reset),
-        .Counter1Debug(countD),
         .WC2EN(WC2EN),
         .EnR2(EnR2)
     );
@@ -117,7 +114,7 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .addra(MC2),.ena(WC2EN),.douta(WC2),.clka(~clk)
         );
     Dense_Seq Dense(
-    .In(OutR2),.enable(denseEnable),.clk(~clk),.Out(OutputD)
+    .In(OutR2),.enable(denseEnable),.clk(~clk),.Out(OutputD),.reset(reset)
     );    
         
      MaxComp# (.insize(size1)) C1ass
@@ -131,50 +128,66 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         else
            counter=counter+'b1;
      end
-        integer i;
-        integer j;
-//        initial 
-//            begin
-//            //samples=9'b001001001;
-//            SamplesAll = 'b001001001100100001011011100011100011100001011011011100100010011100100100001100100001100001010011001100001010010100100100010010001001100;
-//            samples = SamplesAll[15*9 -1 -:9];
-//            force reset = 1;
-//            force clk = 0;
-//            #1
-//            force clk = 1;
-//            #1
-//            force reset = 0;
-//            #1
-//            for(j =0;j<=14;j=j+1)begin
-//                samples = SamplesAll[15*9 - j*9 -1 -:9];                                
-//                for( i =0; i <= 7; i = i+1)begin  
-//                    force clk = 0;
-//                    #1;
-//                    //$display("MPL_OUT_:%b",MP_layerOut);
-//                    //$display("MEmblk1:%b",Memblk1);
-//                    //$display("WC1:%b",WC1);
-//                    //$display("\n");
-//                    force clk = 1;
-//                    #1;
-//                end
-//            end
-//            force clk = 0;
-//            #1
-//            force clk = 1;
-//            #1
-//            $display("OutM:%b",MP_layerOut);
-//            for(i=0;i<451;i=i+1)begin
-//             force clk = 0;
-//            #1;
-//            force clk = 1;
-//            #1; 
-//                $display("OUTMPU:%b",Out_MPU);  
-//                $display("output:%b",OutputD); 
-//                $display("dE:%b",denseEnable);
-//                $display("cycle%d\n",counter);   
+     
 
-//            end
-//            $display("CLASS%d",class);
-//            $finish;
-//            end
+        
+        
+        integer i=0;
+        integer j=0;
+        integer i1,j1;
+       always@(negedge clk)
+        begin
+        if(!reset)begin
+        if (j<=14) begin
+              if(i < 7)  begin
+              samples = SamplesAll [j*6+:9];
+              i = i+1;
+              end
+              else begin
+              i=0;
+              j=j+1;   
+              end
+        end 
+        end  
+        else begin
+        i=0;
+        j=0;
+        end   
+        end 
+        
+        initial 
+            begin
+            SamplesAll = 'b100010001011011011001010011001010011011001100001001011011011100011100011100001011010011100001;
+            force reset = 1;
+            force clk = 0;
+            #1
+            force clk = 1;
+            #1
+            force reset = 0;
+            #1
+            for (j1=0;j1<3;j1=j1+1)begin
+                for(i1=1;i1<=571;i1=i1+1)begin
+                force clk = 0;
+                #1;
+                force clk = 1;
+                #1; 
+    
+                end
+                 $display("cycle%d",counter);   
+                $display("CLASS%d",class);
+                
+                force reset = 1;
+                force clk = 0;
+                #1
+                force clk = 1;
+                #1
+                force clk = 0;
+                #1
+                force clk = 1;
+                #1
+                force reset = 0;
+                #1;
+            end
+            $finish;
+            end
 endmodule
