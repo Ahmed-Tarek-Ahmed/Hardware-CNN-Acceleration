@@ -30,14 +30,16 @@ module ControlUnit #(
         output reg [r_MemBlkDepth - 1:0] r_MemBlk3_Address,
         output reg [DeseMemDepth - 1:0] r_Dese_Adress,
         output reg denseEnable,
-        output [31:0]  Counter1Debug
+        output [31:0]  Counter1Debug,
+        output WC2EN
         );  
         
         reg [31:0] Counter1 = 0;
-        assign Counter1Debug = Counter1;
+        
         integer Counter2 = 0;
         integer BlkCounter = 0;
         integer c = 0;
+        
         reg [MC1Depth - 1:0]MC1_Depth = 'b1000;//--------//
         reg [MC2Depth - 1:0]MC2_Depth = 'b1000000;
         reg [Wr_MemBlkDepth - 1:0]MemBlk1_Depth = 'b111111;
@@ -47,33 +49,38 @@ module ControlUnit #(
         reg [r_MemBlkDepth - 1:0]r_MemBlk2_Depth = 'b111;
         reg [r_MemBlkDepth - 1:0]r_MemBlk3_Depth = 'b111;
         reg Conv_mode;
+        
+        assign Counter1Debug = Counter1;
+        assign WC2EN = Counter1 >= Conv1_Cycles-1 ? 'b1:'b0;
+        
         initial begin
         Conv_mode = 0;
         MC1_Address = 0;
-        MC2_Address = 0;
+        MC2_Address = {MC2Depth{1'b1}};
         EnableBus = 'b100;
-        Wr_MemBlk1_Address = 0;
+        Wr_MemBlk1_Address = {Wr_MemBlkDepth{1'b1}};  //{Wr_MemBlkDepth{1'b1}}
         Wr_MemBlk2_Address = 0;
         Wr_MemBlk3_Address = 0;
-        r_MemBlk1_Address = 0;
-        r_MemBlk2_Address = 0;
-        r_MemBlk3_Address = 0;
+        r_MemBlk1_Address = {r_MemBlkDepth{1'b1}};
+        r_MemBlk2_Address = {r_MemBlkDepth{1'b1}};
+        r_MemBlk3_Address = {r_MemBlkDepth{1'b1}};
         r_Dese_Adress = 0;
         denseEnable = 0;
+        
         //#1;
         end
 always@(posedge clk)begin
             if(reset == 1)begin
             Conv_mode = 0;
             MC1_Address = 0;
-            MC2_Address = 0;
+            MC2_Address = {MC2Depth{1'b1}};
             EnableBus = 'b000; ////////
-            Wr_MemBlk1_Address = 0;
+            Wr_MemBlk1_Address = {Wr_MemBlkDepth{1'b1}};
             Wr_MemBlk2_Address = 0;
             Wr_MemBlk3_Address = 0;
-            r_MemBlk1_Address = 0;
-            r_MemBlk2_Address = 0;
-            r_MemBlk3_Address = 0;
+            r_MemBlk1_Address = {r_MemBlkDepth{1'b1}};
+            r_MemBlk2_Address = {r_MemBlkDepth{1'b1}};
+            r_MemBlk3_Address = {r_MemBlkDepth{1'b1}};
             r_Dese_Adress = 0;
             denseEnable = 0;
             Counter1 = 0;
@@ -85,11 +92,11 @@ always@(posedge clk)begin
             if(Counter1 >= Conv1_Cycles)begin
                 Conv_mode = 1;
                 Counter2 <= Counter2 + 1;
-                if(Counter2 == 0)begin
+                if(Counter2 == 0 || Counter2 == 1)begin
                     Wr_MemBlk3_Address = Wr_MemBlk3_Address + 'b1;
                     EnableBus = 'b001;
                 end
-                if(Counter2 == 1)
+                if(Counter2 == 2)
                     EnableBus = 'b000;
                 if(Counter2 >= 2)begin
                     denseEnable = 1;
@@ -109,9 +116,9 @@ always@(posedge clk)begin
             else begin
             Counter1 = Counter1 + 1;
             Conv_mode = 0;
-            r_MemBlk1_Address = 0;
-            r_MemBlk2_Address = 0;
-            r_MemBlk3_Address = 0;
+            r_MemBlk1_Address = {r_MemBlkDepth{1'b1}};
+            r_MemBlk2_Address = {r_MemBlkDepth{1'b1}};
+            r_MemBlk3_Address = {r_MemBlkDepth{1'b1}};
             end 
              if(Conv_mode == 0)begin // Convolution-1 Mode ----------->
                 //#0.1; //Possible Delay ??
@@ -121,7 +128,7 @@ always@(posedge clk)begin
                 if(MC1_Address == MC1_Depth)
                     MC1_Address = 0;
                 if(Counter1 >= 2)begin // Assuming the right Cycle
-                    BlkCounter = BlkCounter + 1;
+                    BlkCounter <= BlkCounter + 1;
                     if(EnableBus == 'b100 || EnableBus == 'b101)
                         Wr_MemBlk1_Address = Wr_MemBlk1_Address + 'b1;
                     if(EnableBus == 'b010)
@@ -155,20 +162,21 @@ always@(posedge clk)begin
              else begin   // Convolution-2 Mode
              
              MC2_Address = MC2_Address + 'b1;
-             if(MC2_Address == MC2_Depth)
+             if(MC2_Address == MC2_Depth)begin
                  MC2_Address = 0; 
              //#1 //Possible Delay
-                c = c + 1;
-                if(c == 2**MC2Depth)begin
-                c = 0;
+//                c = c + 1;
+//                if(c == 2**MC2Depth)begin
+//                c = 0;
                 r_MemBlk1_Address = r_MemBlk1_Address + 'b1;
                 r_MemBlk2_Address = r_MemBlk2_Address + 'b1;
                 r_MemBlk3_Address = r_MemBlk3_Address + 'b1;
-                if(r_MemBlk1_Depth == r_MemBlk1_Address)begin
-                    r_MemBlk1_Address = 0;
-                    r_MemBlk2_Address = 0;
-                    r_MemBlk3_Address = 0;
-                end
+//                if(r_MemBlk1_Depth == r_MemBlk1_Address)begin
+//                    r_MemBlk1_Address = 0;
+//                    r_MemBlk2_Address = 0;
+//                    r_MemBlk3_Address = 0;
+//                end
+//                end
                 end
              end
       end

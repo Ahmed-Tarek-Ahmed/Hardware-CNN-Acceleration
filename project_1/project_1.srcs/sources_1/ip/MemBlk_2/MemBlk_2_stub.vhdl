@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon May 30 16:51:37 2022
+-- Date        : Mon May 30 16:51:30 2022
 -- Host        : DESKTOP-PCIMVFJ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/MemBlk_2/MemBlk_2_stub.vhdl
--- Design      : MemBlk_2
+-- Command     : write_vhdl -force -mode synth_stub -rename_top MemBlk_2 -prefix
+--               MemBlk_2_ MemBlk_1_stub.vhdl
+-- Design      : MemBlk_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7vx485tffg1157-1
 -- --------------------------------------------------------------------------------

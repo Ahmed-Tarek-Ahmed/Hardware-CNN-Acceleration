@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="Conv2_Weights_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1653943726">
   <File Type="PA-TCL" Name="Conv2_Weights.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Conv2_Weights_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Conv2_Weights_reports.tcl"/>
   <File Type="RDS-RDS" Name="Conv2_Weights.vds"/>
   <File Type="RDS-UTIL" Name="Conv2_Weights_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Conv2_Weights_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Conv2_Weights.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Conv2_Weights_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Conv2_Weights_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Conv2_Weights">
     <File Path="$PSRCDIR/sources_1/ip/Conv2_Weights/Conv2_Weights.xci">
       <FileInfo>

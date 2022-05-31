@@ -19,7 +19,9 @@ begin
 temp = $signed(in[(i+1)*size+:size]) + $signed(in[i*size+:size]);
 sum = sum + temp;
 end
-
+if(sum < 0)
+out = 0;
+else
 out = sum;
 end    
  

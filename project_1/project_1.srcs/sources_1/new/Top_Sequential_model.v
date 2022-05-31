@@ -36,8 +36,9 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     wire [memblkReadWidth-1 :0]Memblk3; // out of memblk-3
     wire [n_unitsC*size*16-1:0]DebData,Debweights;
     wire [31:0] countD;
+    wire WC2EN;
     
-    assign DataC2 = {Memblk1,Memblk2,Memblk3};
+    assign DataC2 = {Memblk3,Memblk2,Memblk1};
     EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
     Conv_Layer_Seq C(
         .WC1(WC1),
@@ -61,11 +62,11 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     );
     AdderTree#(.n(MaxPool_layerSize),.size(size)) AT1( // may add enable to stop in conv-1 mode
         .in(OutR[size*n_unitsC-1:size*n_unitsC/2]),
-        .out(Out_AT1)
+        .out(Out_AT2)
      );
     AdderTree#(.n(MaxPool_layerSize),.size(size)) AT2(  // may add enable to stop in conv-1 mode
          .in(OutR[(size*n_unitsC/2) -1:0]),
-         .out(Out_AT2)
+         .out(Out_AT1)
     );
     MaxPoolUnit#(.In_size(size)) MPU(
         .in({Out_AT1,Out_AT2}),
@@ -91,25 +92,26 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         //.r_Dese_Adress(0), // to be reviewed
         .denseEnable(denseEnable),
         .reset(reset),
-        .Counter1Debug(countD)
+        .Counter1Debug(countD),
+        .WC2EN(WC2EN)
     );
     MemBlk_1 M1(
       .addra(Wr_MemBlk1_Address),.ena(Enable[2]),.dina(MP_layerOut),.clka(~clk),
-      .addrb(r_MemBlk1_Address),.clkb(~clk),.enb(mode),.doutb(Memblk1) 
+      .addrb(r_MemBlk1_Address),.clkb(~clk),.enb(WC2EN),.doutb(Memblk1),.wea('b1) 
     );
     MemBlk_2 M2(
         .addra(Wr_MemBlk2_Address),.ena(Enable[1]),.dina(MP_layerOut),.clka(~clk),
-          .addrb(r_MemBlk2_Address),.clkb(~clk),.enb(mode),.doutb(Memblk2)
+          .addrb(r_MemBlk2_Address),.clkb(~clk),.enb(WC2EN),.doutb(Memblk2),.wea('b1)
         );
     MemBlk_3 M3(
         .addra(Wr_MemBlk3_Address),.ena(Enable[0]),.dina(MP_layerOut),.clka(~clk),
-        .addrb(r_MemBlk3_Address),.clkb(~clk),.enb(mode),.doutb(Memblk3)            
+        .addrb(r_MemBlk3_Address),.clkb(~clk),.enb(WC2EN),.doutb(Memblk3),.wea('b1)
         );
     Conv1_Weights Conv1(
         .addra(MC1),.ena(~mode),.douta(WC1),.clka(~clk)
     );
     Conv2_Weights Conv2(
-        .addra(MC2),.ena(mode),.douta(WC2),.clka(~clk)
+        .addra(MC2),.ena(WC2EN),.douta(WC2),.clka(~clk)
         );
         integer i;
         integer j;
@@ -130,8 +132,10 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
                 for( i =0; i <= 7; i = i+1)begin  
                     force clk = 0;
                     #1;
-                    $display("MPL_OUT_:%b",MP_layerOut);
-                    $display("\n");
+                    //$display("MPL_OUT_:%b",MP_layerOut);
+                    //$display("MEmblk1:%b",Memblk1);
+                    //$display("WC1:%b",WC1);
+                    //$display("\n");
                     force clk = 1;
                     #1;
                 end
@@ -140,13 +144,20 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
             #1
             force clk = 1;
             #1
+            $display("Data:%b",DebData[16*16*16-1 -:16*16]);
+            $display("weights:%b",Debweights[16*16*16-1-:16*16]);
             $display("OutM:%b",MP_layerOut);
-            force clk = 0;
-            #1
-            force clk = 1;
-            #1            
-            //$display("WC1:%b",WC1);
-            //$display("Data:%b",DataC1);
+            for(i=0;i<446;i=i+1)begin
+                force clk = 0;
+                #1;
+                force clk = 1;
+                #1; 
+                $display("at1:%b",Out_AT1);
+                $display("at2:%b\n",Out_AT2);
+            end
+            $display("OUTR:%b",OutR);
+            $display("at1:%b",Out_AT1);
+            $display("at2:%b",Out_AT2);
             $finish;
             end
 endmodule

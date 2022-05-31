@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon May 30 16:51:38 2022
+-- Date        : Mon May 30 16:51:30 2022
 -- Host        : DESKTOP-PCIMVFJ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/MemBlk_2/MemBlk_2_sim_netlist.vhdl
--- Design      : MemBlk_2
+-- Command     : write_vhdl -force -mode funcsim -rename_top MemBlk_2 -prefix
+--               MemBlk_2_ MemBlk_1_sim_netlist.vhdl
+-- Design      : MemBlk_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7vx485tffg1157-1
@@ -26,8 +26,6 @@ entity MemBlk_2_blk_mem_gen_prim_wrapper is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MemBlk_2_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end MemBlk_2_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of MemBlk_2_blk_mem_gen_prim_wrapper is
@@ -7695,8 +7693,6 @@ entity MemBlk_2_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 3 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MemBlk_2_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end MemBlk_2_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of MemBlk_2_blk_mem_gen_prim_width is
@@ -8710,8 +8706,6 @@ entity MemBlk_2_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 255 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MemBlk_2_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end MemBlk_2_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of MemBlk_2_blk_mem_gen_generic_cstr is
@@ -9284,8 +9278,6 @@ entity MemBlk_2_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 255 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MemBlk_2_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end MemBlk_2_blk_mem_gen_top;
 
 architecture STRUCTURE of MemBlk_2_blk_mem_gen_top is
@@ -9319,8 +9311,6 @@ entity MemBlk_2_blk_mem_gen_v8_4_1_synth is
     dina : in STD_LOGIC_VECTOR ( 255 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MemBlk_2_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end MemBlk_2_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of MemBlk_2_blk_mem_gen_v8_4_1_synth is
@@ -9491,7 +9481,7 @@ entity MemBlk_2_blk_mem_gen_v8_4_1 is
   attribute C_INITB_VAL : string;
   attribute C_INITB_VAL of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "0";
   attribute C_INIT_FILE : string;
-  attribute C_INIT_FILE of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "MemBlk_2.mem";
+  attribute C_INIT_FILE of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "MemBlk_1.mem";
   attribute C_INIT_FILE_NAME : string;
   attribute C_INIT_FILE_NAME of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "no_coe_file_loaded";
   attribute C_INTERFACE_TYPE : integer;
@@ -9554,8 +9544,6 @@ entity MemBlk_2_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of MemBlk_2_blk_mem_gen_v8_4_1 : entity is 2048;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "virtex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of MemBlk_2_blk_mem_gen_v8_4_1 : entity is "yes";
 end MemBlk_2_blk_mem_gen_v8_4_1;
@@ -11933,7 +11921,7 @@ entity MemBlk_2 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of MemBlk_2 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of MemBlk_2 : entity is "MemBlk_2,blk_mem_gen_v8_4_1,{}";
+  attribute CHECK_LICENSE_TYPE of MemBlk_2 : entity is "MemBlk_1,blk_mem_gen_v8_4_1,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of MemBlk_2 : entity is "yes";
   attribute x_core_info : string;
@@ -12044,7 +12032,7 @@ architecture STRUCTURE of MemBlk_2 is
   attribute C_INITB_VAL : string;
   attribute C_INITB_VAL of U0 : label is "0";
   attribute C_INIT_FILE : string;
-  attribute C_INIT_FILE of U0 : label is "MemBlk_2.mem";
+  attribute C_INIT_FILE of U0 : label is "MemBlk_1.mem";
   attribute C_INIT_FILE_NAME : string;
   attribute C_INIT_FILE_NAME of U0 : label is "no_coe_file_loaded";
   attribute C_INTERFACE_TYPE : integer;

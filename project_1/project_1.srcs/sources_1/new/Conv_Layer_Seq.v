@@ -27,14 +27,15 @@ module Conv_Layer_Seq#(parameter n_inputs = 16,size = 16,DP=4,FC1=16,FC2=1,RC1=3
         end
         else begin
                 weights={WC2,WC2};
-                data={DataC2[size*128*RC2-1:size*128*2],DataC2[size*128*2-1:0]};
+                data={DataC2[size*128*RC2-1:size*128],DataC2[size*128*2-1:0]};
         end
         end     
         for(i=0; i<n_units; i = i+1)begin : Conv_Units
             Convolution#(.size(size),.n_inputs(n_inputs),.DP(DP)) C(
             .weights(weights[size*n_inputs*i+:size*n_inputs]),
             .data (data[size*n_inputs*i+:size*n_inputs] ),
-            .Out    (Out[i*size+:size])
+            .Out    (Out[i*size+:size]),
+            .Relu(~mode)
             );
         end
 endmodule
