@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Tue May 31 20:45:04 2022
+// Date        : Tue May 31 20:45:03 2022
 // Host        : Ahmed running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/DenseW3/DenseW3_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top DenseW3 -prefix
+//               DenseW3_ DenseW3_stub.v
 // Design      : DenseW3
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7vx485tffg1157-1

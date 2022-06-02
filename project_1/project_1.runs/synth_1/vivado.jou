@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue May 24 18:39:02 2022
-# Process ID: 5232
-# Current directory: E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1
-# Command line: vivado.exe -log Class.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Class.tcl
-# Log file: E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/Class.vds
-# Journal file: E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1\vivado.jou
+# Start of session at: Thu Jun  2 16:32:47 2022
+# Process ID: 9736
+# Current directory: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log Top_Sequential_model.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top_Sequential_model.tcl
+# Log file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/Top_Sequential_model.vds
+# Journal file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source Class.tcl -notrace
+source Top_Sequential_model.tcl -notrace

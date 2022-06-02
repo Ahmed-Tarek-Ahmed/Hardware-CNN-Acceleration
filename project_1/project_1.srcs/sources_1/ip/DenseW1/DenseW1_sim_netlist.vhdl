@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Tue May 31 20:43:24 2022
+-- Date        : Tue May 31 20:43:23 2022
 -- Host        : Ahmed running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/DenseW1/DenseW1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top DenseW1 -prefix
+--               DenseW1_ DenseW1_sim_netlist.vhdl
 -- Design      : DenseW1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity DenseW1_blk_mem_gen_prim_wrapper_init is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DenseW1_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end DenseW1_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of DenseW1_blk_mem_gen_prim_wrapper_init is
@@ -205,8 +203,6 @@ entity DenseW1_blk_mem_gen_prim_width is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DenseW1_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end DenseW1_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of DenseW1_blk_mem_gen_prim_width is
@@ -230,8 +226,6 @@ entity DenseW1_blk_mem_gen_generic_cstr is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DenseW1_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end DenseW1_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of DenseW1_blk_mem_gen_generic_cstr is
@@ -255,8 +249,6 @@ entity DenseW1_blk_mem_gen_top is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DenseW1_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end DenseW1_blk_mem_gen_top;
 
 architecture STRUCTURE of DenseW1_blk_mem_gen_top is
@@ -280,8 +272,6 @@ entity DenseW1_blk_mem_gen_v8_4_1_synth is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 8 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DenseW1_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end DenseW1_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of DenseW1_blk_mem_gen_v8_4_1_synth is
@@ -510,8 +500,6 @@ entity DenseW1_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of DenseW1_blk_mem_gen_v8_4_1 : entity is 18;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of DenseW1_blk_mem_gen_v8_4_1 : entity is "virtex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of DenseW1_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of DenseW1_blk_mem_gen_v8_4_1 : entity is "yes";
 end DenseW1_blk_mem_gen_v8_4_1;

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Mon May 30 22:52:57 2022
+-- Date        : Mon May 30 22:52:52 2022
 -- Host        : DESKTOP-PCIMVFJ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/University/Graduation_Project/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv2_Weights/Conv2_Weights_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Conv2_Weights -prefix
+--               Conv2_Weights_ Conv2_Weights_sim_netlist.vhdl
 -- Design      : Conv2_Weights
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity Conv2_Weights_blk_mem_gen_prim_wrapper_init is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Conv2_Weights_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end Conv2_Weights_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of Conv2_Weights_blk_mem_gen_prim_wrapper_init is
@@ -14501,8 +14499,6 @@ entity Conv2_Weights_blk_mem_gen_prim_width is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Conv2_Weights_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end Conv2_Weights_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of Conv2_Weights_blk_mem_gen_prim_width is
@@ -15926,8 +15922,6 @@ entity Conv2_Weights_blk_mem_gen_generic_cstr is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Conv2_Weights_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end Conv2_Weights_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of Conv2_Weights_blk_mem_gen_generic_cstr is
@@ -16343,8 +16337,6 @@ entity Conv2_Weights_blk_mem_gen_top is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Conv2_Weights_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end Conv2_Weights_blk_mem_gen_top;
 
 architecture STRUCTURE of Conv2_Weights_blk_mem_gen_top is
@@ -16368,8 +16360,6 @@ entity Conv2_Weights_blk_mem_gen_v8_4_1_synth is
     ena : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Conv2_Weights_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end Conv2_Weights_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of Conv2_Weights_blk_mem_gen_v8_4_1_synth is
@@ -16598,8 +16588,6 @@ entity Conv2_Weights_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is 4096;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is "virtex7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Conv2_Weights_blk_mem_gen_v8_4_1 : entity is "yes";
 end Conv2_Weights_blk_mem_gen_v8_4_1;

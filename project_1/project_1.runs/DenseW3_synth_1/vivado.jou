@@ -2,11 +2,11 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue May 31 20:43:04 2022
-# Process ID: 10080
-# Current directory: E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW3_synth_1
+# Start of session at: Wed Jun  1 20:46:06 2022
+# Process ID: 1492
+# Current directory: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW3_synth_1
 # Command line: vivado.exe -log DenseW3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DenseW3.tcl
-# Log file: E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW3_synth_1/DenseW3.vds
-# Journal file: E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW3_synth_1\vivado.jou
+# Log file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW3_synth_1/DenseW3.vds
+# Journal file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW3_synth_1\vivado.jou
 #-----------------------------------------------------------
 source DenseW3.tcl -notrace

@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 -- Date        : Tue May 31 20:42:54 2022
 -- Host        : Ahmed running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/DenseW0/DenseW0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top DenseW0 -prefix
+--               DenseW0_ DenseW0_stub.vhdl
 -- Design      : DenseW0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7vx485tffg1157-1

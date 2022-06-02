@@ -5,10 +5,27 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
                                        memblkReadWidth = 2048,size1=18
                             )
     (
-        input clk,reset,
+        input INPUTCLK,reset,
         input [92:0] in,
         output [2:0 ]class
     );
+    
+    wire clk;
+    wire clk_out1;
+    wire locked;
+     clk_wiz_0 instance_name
+      (
+       // Clock out ports
+       .clk_out1(clk),     // output clk_out1
+       // Status and control signals
+     //  .reset(resetclk), // input reset
+       .locked(locked),       // output locked
+      // Clock in ports
+       .clk_in1(INPUTCLK));
+       
+       
+   
+    
     reg [9:0] counter=0;
     reg [3*3-1:0] samples;
     reg [15*9-1:0] SamplesAll;
@@ -43,13 +60,19 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     assign DataC2 = {Memblk3,Memblk2,Memblk1};
     EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
     
+    wire modebuffer;
+     Buffer(
+        .inBuffer(mode),
+        .outBuffer(modebuffer)
+        );
+    
     Conv_Layer_Seq C(
         .WC1(WC1),
         .WC2(WC2),
         .DataC1(DataC1),
         .DataC2(DataC2),
         .Out(OutC),
-        .mode(mode)
+        .mode(modebuffer)
     );
     RegisterFile#(.ele_num(MaxPool_layerSize*2),.in_size(size)) R1(
         .enable(~clk),

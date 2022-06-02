@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
 // Date        : Tue May 31 20:42:54 2022
 // Host        : Ahmed running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               E:/University/gp/GITverilog/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/DenseW0/DenseW0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top DenseW0 -prefix
+//               DenseW0_ DenseW0_sim_netlist.v
 // Design      : DenseW0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -189,7 +189,6 @@ module DenseW0
         .web(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module DenseW0_blk_mem_gen_generic_cstr
    (douta,
     clka,
@@ -212,7 +211,6 @@ module DenseW0_blk_mem_gen_generic_cstr
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module DenseW0_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -235,7 +233,6 @@ module DenseW0_blk_mem_gen_prim_width
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module DenseW0_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
@@ -395,7 +392,6 @@ module DenseW0_blk_mem_gen_prim_wrapper_init
         .WEBWE({1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module DenseW0_blk_mem_gen_top
    (douta,
     clka,
@@ -442,7 +438,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "448" *) (* C_WRITE_DEPTH_B = "448" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "18" *) (* C_WRITE_WIDTH_B = "18" *) 
-(* C_XDEVICEFAMILY = "virtex7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "virtex7" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module DenseW0_blk_mem_gen_v8_4_1
    (clka,
     rsta,
@@ -664,7 +660,6 @@ module DenseW0_blk_mem_gen_v8_4_1
         .ena(ena));
 endmodule
 
-(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module DenseW0_blk_mem_gen_v8_4_1_synth
    (douta,
     clka,

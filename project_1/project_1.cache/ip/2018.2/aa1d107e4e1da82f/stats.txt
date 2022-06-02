@@ -1,4 +1,4 @@
-NumberHits:0
-Timestamp: Mon May 30 20:52:54 UTC 2022
+NumberHits:2
+Timestamp: Wed Jun 01 18:46:48 UTC 2022
 VLNV: xilinx.com:ip:blk_mem_gen:8.4
 SynthRuntime: 242
