@@ -17,11 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/.Xil/Vivado-1620-MrwanElsharkawy/incrSyn}
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/.Xil/Vivado-17020-MrwanElsharkawy/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
-create_project -in_memory -part xc7vx485tffg1157-1
+create_project -in_memory -part xc7vx485tffg1761-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -32,6 +31,7 @@ set_property parent.project_path {D:/work/college/5-Senior 2/Semester 2/Graduati
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property board_part xilinx.com:vc707:part0:1.3 [current_project]
 set_property ip_output_repo {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.sim/sim_1/behav/xsim/DW0.coe}}
@@ -43,7 +43,6 @@ add_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/
 add_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.sim/sim_1/behav/xsim/C2.coe}}
 read_verilog -library xil_defaultlib {
   {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/AdderTree.v}
-  {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Buffer.v}
   {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v}
   {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer_Seq.v}
   {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v}
@@ -105,7 +104,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
 
-synth_design -top Top_Sequential_model -part xc7vx485tffg1157-1
+synth_design -top Top_Sequential_model -part xc7vx485tffg1761-2
 
 
 # disable binary constraint mode for synth run checkpoints

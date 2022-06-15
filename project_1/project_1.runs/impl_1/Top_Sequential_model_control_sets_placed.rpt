@@ -1,0 +1,81 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Jun 11 12:13:29 2022
+| Host         : MrwanElsharkawy running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_Sequential_model_control_sets_placed.rpt
+| Design       : Top_Sequential_model
+| Device       : xc7vx485t
+-------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    14 |
+| Unused register locations in slices containing registers |    28 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|     12 |            1 |
+|     14 |            1 |
+|    16+ |           11 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              48 |           20 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1134 |          166 |
+| Yes          | No                    | No                     |             374 |          119 |
+| Yes          | No                    | Yes                    |             180 |           25 |
+| Yes          | Yes                   | No                     |             332 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------+---------------------------+------------------+------------------+----------------+
+|         Clock Signal         |       Enable Signal       | Set/Reset Signal | Slice Load Count | Bel Load Count |
++------------------------------+---------------------------+------------------+------------------+----------------+
+|  n_0_14323_BUFG              |                           |                  |                2 |              4 |
+|  instance_name/inst/clk_out1 | CU/MC2_Address[5]_i_1_n_1 | reset_IBUF       |                2 |             12 |
+|  instance_name/inst/clk_out1 |                           |                  |                6 |             14 |
+|  n_0_14323_BUFG              | CU/E[0]                   |                  |                4 |             18 |
+| ~instance_name/inst/clk_out1 |                           |                  |               12 |             30 |
+|  instance_name/inst/clk_out1 | CU/BlkCounter[31]_i_1_n_1 | reset_IBUF       |                9 |             64 |
+|  instance_name/inst/clk_out1 | CU/Counter2[31]_i_1_n_1   | reset_IBUF       |                9 |             64 |
+|  instance_name/inst/clk_out1 | CU/c                      | reset_IBUF       |                8 |             64 |
+|  n_0_14323_BUFG              | i                         | reset_IBUF       |                8 |             64 |
+|  n_0_14323_BUFG              | i_reg[0]_i_2_n_1          | i[0]_i_1_n_1     |                8 |             64 |
+|  instance_name/inst/clk_out1 |                           | reset_IBUF       |               21 |            110 |
+|  n_0_14323_BUFG              | Dense/Sum1                | reset_IBUF       |               25 |            180 |
+| ~instance_name/inst/clk_out1 | samples                   |                  |              115 |            356 |
+|  n_0_14323_BUFG              |                           | reset_IBUF       |              145 |           1024 |
++------------------------------+---------------------------+------------------+------------------+----------------+
+
+

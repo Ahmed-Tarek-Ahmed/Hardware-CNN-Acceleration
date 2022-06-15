@@ -189,7 +189,13 @@ always@(posedge clk)begin
              end
       end
 end
+//wire Conv_mode_buffer;
+// Buffer Buff1(
+//          .inBuffer(Conv_mode),
+//          .outBuffer(Conv_mode_buffer)
+//          );
 always@(negedge clk)begin
     ExtMode <= Conv_mode;
+    
 end
 endmodule

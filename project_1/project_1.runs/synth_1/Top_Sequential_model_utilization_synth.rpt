@@ -1,11 +1,11 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Thu Jun  2 16:36:04 2022
+| Date         : Sat Jun 11 11:58:45 2022
 | Host         : MrwanElsharkawy running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_Sequential_model_utilization_synth.rpt -pb Top_Sequential_model_utilization_synth.pb
 | Design       : Top_Sequential_model
-| Device       : 7vx485tffg1157-1
+| Device       : 7vx485tffg1761-2
 | Design State : Synthesized
 -----------------------------------------------------------------------------------------------------------------------------------
 
@@ -91,24 +91,24 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   97 |     0 |       600 | 16.17 |
-| Bonded IPADs                |    0 |     0 |        62 |  0.00 |
-| Bonded OPADs                |    0 |     0 |        40 |  0.00 |
+| Bonded IOB                  |   97 |     0 |       700 | 13.86 |
+| Bonded IPADs                |    0 |     0 |        86 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        56 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |        14 |  0.00 |
 | PHASER_REF                  |    0 |     0 |        14 |  0.00 |
 | OUT_FIFO                    |    0 |     0 |        56 |  0.00 |
 | IN_FIFO                     |    0 |     0 |        56 |  0.00 |
 | IDELAYCTRL                  |    0 |     0 |        14 |  0.00 |
-| IBUFDS                      |    0 |     0 |       576 |  0.00 |
-| GTXE2_COMMON                |    0 |     0 |         5 |  0.00 |
-| GTXE2_CHANNEL               |    0 |     0 |        20 |  0.00 |
+| IBUFDS                      |    0 |     0 |       672 |  0.00 |
+| GTXE2_COMMON                |    0 |     0 |         7 |  0.00 |
+| GTXE2_CHANNEL               |    0 |     0 |        28 |  0.00 |
 | PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        56 |  0.00 |
 | PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        56 |  0.00 |
 | IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       700 |  0.00 |
 | ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |       700 |  0.00 |
-| IBUFDS_GTE2                 |    0 |     0 |        10 |  0.00 |
-| ILOGIC                      |    0 |     0 |       600 |  0.00 |
-| OLOGIC                      |    0 |     0 |       600 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |        14 |  0.00 |
+| ILOGIC                      |    0 |     0 |       700 |  0.00 |
+| OLOGIC                      |    0 |     0 |       700 |  0.00 |
 +-----------------------------+------+-------+-----------+-------+
 
 

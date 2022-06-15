@@ -21,9 +21,10 @@
 
 
 module Buffer(
-    input inBuffer,
+    input  inBuffer,
     output outBuffer
     );
+    
     
     wire temp;
     

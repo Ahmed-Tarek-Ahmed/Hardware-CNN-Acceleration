@@ -60,11 +60,9 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     assign DataC2 = {Memblk3,Memblk2,Memblk1};
     EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
     
-    wire modebuffer;
-     Buffer(
-        .inBuffer(mode),
-        .outBuffer(modebuffer)
-        );
+    
+     
+        
     
     Conv_Layer_Seq C(
         .WC1(WC1),
@@ -72,8 +70,52 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .DataC1(DataC1),
         .DataC2(DataC2),
         .Out(OutC),
-        .mode(modebuffer)
+        .mode(mode)
     );
+    
+//    wire OutCbuffer1;
+//    wire OutCbuffer2;
+//    wire OutCbuffer3;
+//    wire OutCbuffer4;
+//    wire OutCbuffer5;
+//    wire OutCbuffer6;
+//    wire OutCbuffer7;
+//    wire OutCbuffer8;
+    
+//         Buffer Buff1(
+//          .inBuffer(OutC),
+//          .outBuffer(OutCbuffer1)
+//          );
+//               Buffer Buff2(
+//          .inBuffer(OutCbuffer1),
+//          .outBuffer(OutCbuffer2)
+//          );
+//               Buffer Buff3(
+//          .inBuffer(OutCbuffer2),
+//          .outBuffer(OutCbuffer3)
+//          );
+//               Buffer Buff4(
+//          .inBuffer(OutCbuffer3),
+//          .outBuffer(OutCbuffer4)
+//          );
+//               Buffer Buff5(
+//          .inBuffer(OutCbuffer4),
+//          .outBuffer(OutCbuffer5)
+//          );
+//               Buffer Buff6(
+//          .inBuffer(OutCbuffer5),
+//          .outBuffer(OutCbuffer6)
+//          );
+//               Buffer Buff7(
+//          .inBuffer(OutCbuffer6),
+//          .outBuffer(OutCbuffer7)
+//          );
+//               Buffer Buff8(
+//          .inBuffer(OutCbuffer7),
+//          .outBuffer(OutCbuffer8)
+//          );
+
+                                                                                                  
     RegisterFile#(.ele_num(MaxPool_layerSize*2),.in_size(size)) R1(
         .enable(~clk),
         .inbus(OutC),
