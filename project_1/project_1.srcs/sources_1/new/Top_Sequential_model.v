@@ -6,17 +6,15 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
                             )
     (
         input INPUTCLK,reset,
-        input [92:0] in,
         output [2:0 ]class
     );
-    
-    wire clk;
-    wire clk_out1;
+    wire   [92:0] in;
+    wire clk1,clk;
     wire locked;
      clk_wiz_0 instance_name
       (
        // Clock out ports
-       .clk_out1(clk),     // output clk_out1
+       .clk_out1(clk1),     // output clk_out1
        // Status and control signals
      //  .reset(resetclk), // input reset
        .locked(locked),       // output locked
@@ -27,8 +25,8 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
    
     
     reg [9:0] counter=0;
+    reg [2:0] sampleC='b111;
     reg [3*3-1:0] samples;
-    reg [15*9-1:0] SamplesAll;
     wire [MC1Depth-1:0] MC1; // Address MC1 out of Control Unit
     wire [MC2Depth-1:0] MC2; // Address MC2 out of Control Unit
     wire [Wr_MemBlkDepth-1:0] Wr_MemBlk1_Address; //Memory Block-1 Write address Address out of Control
@@ -56,7 +54,10 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
     wire [memblkReadWidth-1 :0]Memblk3; // out of memblk-3
     wire WC2EN,EnR2;
     wire  [size1*5-1:0]OutputD;
-
+    
+    Samples sample(sampleC,in);
+    
+    
     assign DataC2 = {Memblk3,Memblk2,Memblk1};
     EMB_Layer #(.samples(3),.size(size))EMB (samples,DataC1);
     
@@ -73,47 +74,6 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .mode(mode)
     );
     
-//    wire OutCbuffer1;
-//    wire OutCbuffer2;
-//    wire OutCbuffer3;
-//    wire OutCbuffer4;
-//    wire OutCbuffer5;
-//    wire OutCbuffer6;
-//    wire OutCbuffer7;
-//    wire OutCbuffer8;
-    
-//         Buffer Buff1(
-//          .inBuffer(OutC),
-//          .outBuffer(OutCbuffer1)
-//          );
-//               Buffer Buff2(
-//          .inBuffer(OutCbuffer1),
-//          .outBuffer(OutCbuffer2)
-//          );
-//               Buffer Buff3(
-//          .inBuffer(OutCbuffer2),
-//          .outBuffer(OutCbuffer3)
-//          );
-//               Buffer Buff4(
-//          .inBuffer(OutCbuffer3),
-//          .outBuffer(OutCbuffer4)
-//          );
-//               Buffer Buff5(
-//          .inBuffer(OutCbuffer4),
-//          .outBuffer(OutCbuffer5)
-//          );
-//               Buffer Buff6(
-//          .inBuffer(OutCbuffer5),
-//          .outBuffer(OutCbuffer6)
-//          );
-//               Buffer Buff7(
-//          .inBuffer(OutCbuffer6),
-//          .outBuffer(OutCbuffer7)
-//          );
-//               Buffer Buff8(
-//          .inBuffer(OutCbuffer7),
-//          .outBuffer(OutCbuffer8)
-//          );
 
                                                                                                   
     RegisterFile#(.ele_num(MaxPool_layerSize*2),.in_size(size)) R1(
@@ -126,11 +86,11 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .OUTBUS(MP_layerOut),
         .INBUS(OutR)
     );
-    AdderTree#(.n(MaxPool_layerSize),.size(size)) AT1( // may add enable to stop in conv-1 mode
+    AdderTree#(.n(MaxPool_layerSize),.size(size)) AT1( 
         .in(OutR[size*n_unitsC-1:size*n_unitsC/2]),
         .out(Out_AT2)
      );
-    AdderTree#(.n(MaxPool_layerSize),.size(size)) AT2(  // may add enable to stop in conv-1 mode
+    AdderTree#(.n(MaxPool_layerSize),.size(size)) AT2(  
          .in(OutR[(size*n_unitsC/2) -1:0]),
          .out(Out_AT1)
     );
@@ -155,7 +115,6 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         .r_MemBlk1_Address(r_MemBlk1_Address),
         .r_MemBlk2_Address(r_MemBlk2_Address),
         .r_MemBlk3_Address(r_MemBlk3_Address),
-        //.r_Dese_Adress(0), // to be reviewed
         .denseEnable(denseEnable),
         .reset(reset),
         .WC2EN(WC2EN),
@@ -187,20 +146,24 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
            (   .INPUT(OutputD),
                .Out(class)
            );        
-        
-     always@(negedge clk)begin
+
+     
+     always@(posedge reset)begin
+           sampleC=sampleC+'b1;
+     end
+     
+     always@(negedge clk,posedge reset)begin
         if(reset)
         counter=0;
         else
            counter=counter+'b1;
      end
      
-
-        
+     assign clk=counter>=572?0:clk1;
+            
         
         integer i=0;
         integer j=0;
-        integer i1,j1;
        always@(negedge clk)
         begin
         if(!reset)begin
@@ -221,5 +184,6 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
         end   
         end 
         
+    
         
 endmodule
