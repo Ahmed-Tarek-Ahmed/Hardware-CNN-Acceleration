@@ -14,8 +14,6 @@ module DenseTB#(parameter n_outputs = 64, n_inputs = 128, Input_size = 32,DP=4);
 );
     initial begin
     #10;
-    //in ='hfe17e572fc11ccd4fe0a5abeffcca61dfd4201740141331a0062f934ff6adccefeecb54eff4a63a7fe5b935a007a674601da3f52fd7eb460fe3f951c00d33ded;
-    //weights ='h0192b3befe42e934fffeb548008882c2ff3a98f3ff36e72901d6f04cfef0490401ed2cd401051b460144611802030d64ffc2fcb2ffeef7eafee3bb1cffbd39d10192b3befe42e934fffeb548008882c2ff3a98f3ff36e72901d6f04cfef0490401ed2cd401051b460144611802030d64ffc2fcb2ffeef7eafee3bb1cffbd39d1;
     $display("%b\n",Out);
     #10;
     $finish;
