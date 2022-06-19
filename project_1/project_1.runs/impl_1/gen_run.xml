@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1654941894">
-  <File Type="OPT-HWDEF" Name="Top_Sequential_model.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Top_Sequential_model_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="Top_Sequential_model.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7vx690tffg1761-2" LaunchTime="1655637903">
   <File Type="BITSTR-BMM" Name="Top_Sequential_model_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_Sequential_model_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_Sequential_model_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="Top_Sequential_model_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Top_Sequential_model_reports.tcl"/>
   <File Type="OPT-DRC" Name="Top_Sequential_model_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Top_Sequential_model.hwdef"/>
   <File Type="PWROPT-DCP" Name="Top_Sequential_model_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="Top_Sequential_model_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="Top_Sequential_model_timing_summary_pwropted.rpt"/>
@@ -24,6 +22,7 @@
   <File Type="PLACE-CTRL" Name="Top_Sequential_model_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="Top_Sequential_model_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Top_Sequential_model_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Top_Sequential_model.bgn"/>
   <File Type="PLACE-TIMING" Name="Top_Sequential_model_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="Top_Sequential_model_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="Top_Sequential_model.bin"/>
@@ -53,6 +52,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="Top_Sequential_model_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="Top_Sequential_model_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Top_Sequential_model_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Top_Sequential_model_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Top_Sequential_model_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Top_Sequential_model_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Top_Sequential_model_postroute_physopt.dcp"/>
@@ -66,7 +66,6 @@
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Top_Sequential_model_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="Top_Sequential_model.rbt"/>
   <File Type="BITSTR-NKY" Name="Top_Sequential_model.nky"/>
-  <File Type="BG-BGN" Name="Top_Sequential_model.bgn"/>
   <File Type="BG-DRC" Name="Top_Sequential_model.drc"/>
   <File Type="RDI-RDI" Name="Top_Sequential_model.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
@@ -170,7 +169,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/SystemClk.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/emb_mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/samples.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -179,6 +192,14 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Top_Sequential_model.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clktest.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -378,7 +399,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/ClkReset.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ClkReset.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

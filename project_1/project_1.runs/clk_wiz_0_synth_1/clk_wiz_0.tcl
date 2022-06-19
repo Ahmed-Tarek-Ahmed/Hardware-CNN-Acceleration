@@ -17,12 +17,14 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/.Xil/Vivado-17020-MrwanElsharkawy/incrSyn}
+set_param synth.incrementalSynthesisCache {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/.Xil/Vivado-16268-MrwanElsharkawy/incrSyn}
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
-create_project -in_memory -part xc7vx485tffg1761-2
+create_project -in_memory -part xc7vx690tffg1761-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
@@ -30,13 +32,13 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/wt} [current_project]
 set_property parent.project_path {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.xpr} [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part xilinx.com:vc707:part0:1.3 [current_project]
+set_property board_part xilinx.com:vc709:part0:1.8 [current_project]
 set_property ip_output_repo {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+read_ip -quiet {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
 set_property used_in_implementation false [get_files -all {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc}}]
 set_property used_in_implementation false [get_files -all {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc}}]
@@ -58,7 +60,7 @@ set cached_ip [config_ip_cache -export -no_bom -use_project_ipc -dir {D:/work/co
 if { $cached_ip eq {} } {
 close [open __synthesis_is_running__ w]
 
-synth_design -top clk_wiz_0 -part xc7vx485tffg1761-2 -mode out_of_context
+synth_design -top clk_wiz_0 -part xc7vx690tffg1761-2 -mode out_of_context
 
 #---------------------------------------------------------
 # Generate Checkpoint/Stub/Simulation Files For IP Cache
@@ -94,32 +96,32 @@ write_checkpoint -force -noxdef clk_wiz_0.dcp
 create_report "clk_wiz_0_synth_1_synth_report_utilization_0" "report_utilization -file clk_wiz_0_utilization_synth.rpt -pb clk_wiz_0_utilization_synth.pb"
 
 if { [catch {
-  file copy -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}
+  file copy -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp} {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v}
+  write_verilog -force -mode synth_stub {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl}
+  write_vhdl -force -mode synth_stub {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v}
+  write_verilog -force -mode funcsim {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl}
+  write_vhdl -force -mode funcsim {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -129,32 +131,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}
+  file copy -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0.dcp} {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_stub.v} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v}
+  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_stub.v} {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_stub.vhdl} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl}
+  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_stub.vhdl} {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_sim_netlist.v} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v}
+  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_sim_netlist.v} {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_sim_netlist.vhdl} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl}
+  file rename -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/clk_wiz_0_synth_1/clk_wiz_0_sim_netlist.vhdl} {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -163,13 +165,13 @@ if { [catch {
 
 if {[file isdir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ip/clk_wiz_0}]} {
   catch { 
-    file copy -force {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v}} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ip/clk_wiz_0}
+    file copy -force {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v}} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ip/clk_wiz_0}
   }
 }
 
 if {[file isdir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ip/clk_wiz_0}]} {
   catch { 
-    file copy -force {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl}} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ip/clk_wiz_0}
+    file copy -force {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.vhdl}} {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ip/clk_wiz_0}
   }
 }
 file delete __synthesis_is_running__

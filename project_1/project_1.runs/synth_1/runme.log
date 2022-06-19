@@ -9,7 +9,7 @@
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source Top_Sequential_model.tcl -notrace
-Command: synth_design -top Top_Sequential_model -part xc7vx485tffg1761-2
+Command: synth_design -top Top_Sequential_model -part xc7vx690tffg1761-2
 Starting synth_design
 WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
 D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/MemBlk_3/MemBlk_3.xci
@@ -22,51 +22,43 @@ D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN
 D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/DenseW4/DenseW4.xci
 D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv1_Weights/Conv1_Weights.xci
 D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv2_Weights/Conv2_Weights.xci
-D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-
-WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
-D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 
 INFO: [IP_Flow 19-2162] IP 'MemBlk_3' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'MemBlk_3' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'MemBlk_3' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'MemBlk_2' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'MemBlk_2' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'MemBlk_2' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'MemBlk_1' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'MemBlk_1' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'MemBlk_1' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'DenseW0' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW0' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW0' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'DenseW1' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW1' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW1' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'DenseW2' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW2' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW2' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'DenseW3' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW3' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW3' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'DenseW4' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW4' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'DenseW4' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'Conv1_Weights' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'Conv1_Weights' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'Conv1_Weights' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
 INFO: [IP_Flow 19-2162] IP 'Conv2_Weights' is locked:
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'Conv2_Weights' do not match.
+* Current project part 'xc7vx690tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'Conv2_Weights' do not match.
 Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-INFO: [IP_Flow 19-2162] IP 'clk_wiz_0' is locked:
-* This IP has board specific outputs. Current project board 'xilinx.com:vc707:part0:1.3' and the board 'unset' used to customize the IP 'clk_wiz_0' do not match.
-* Current project part 'xc7vx485tffg1761-2' and the part 'xc7vx485tffg1157-1' used to customize the IP 'clk_wiz_0' do not match.
-Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
-Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
-INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12500 
+INFO: Helper process launched with PID 524 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 451.285 ; gain = 103.750
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 451.691 ; gain = 104.355
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top_Sequential_model' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:3]
 	Parameter n_unitsC bound to: 32 - type: integer 
@@ -84,16 +76,28 @@ INFO: [Synth 8-6157] synthesizing module 'Top_Sequential_model' [D:/work/college
 	Parameter DeseMemDepth bound to: 9 - type: integer 
 	Parameter memblkReadWidth bound to: 2048 - type: integer 
 	Parameter size1 bound to: 18 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/clk_wiz_0_stub.v:5]
-WARNING: [Synth 8-350] instance 'instance_name' of module 'clk_wiz_0' requires 4 connections, but only 3 given [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:16]
+INFO: [Synth 8-6157] synthesizing module 'SystemClk' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/SystemClk.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [D:/programs/Vivado/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [D:/programs/Vivado/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+INFO: [Synth 8-6155] done synthesizing module 'SystemClk' (2#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/SystemClk.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (3#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Samples' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/samples.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Samples' (4#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/samples.v:2]
 INFO: [Synth 8-6157] synthesizing module 'EMB_Layer' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v:3]
 	Parameter samples bound to: 3 - type: integer 
 	Parameter size bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'mux_emb' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/emb_mux.v:2]
 	Parameter size bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux_emb' (2#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/emb_mux.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'EMB_Layer' (3#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mux_emb' (5#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/emb_mux.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'EMB_Layer' (6#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/EMB_Layer.v:3]
 INFO: [Synth 8-6157] synthesizing module 'Conv_Layer_Seq' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer_Seq.v:3]
 	Parameter n_inputs bound to: 16 - type: integer 
 	Parameter size bound to: 16 - type: integer 
@@ -109,15 +113,15 @@ INFO: [Synth 8-6157] synthesizing module 'Convolution' [D:/work/college/5-Senior
 	Parameter DP bound to: 4 - type: integer 
 	Parameter SL bound to: 0 - type: integer 
 WARNING: [Synth 8-567] referenced signal 'Relu' should be on the sensitivity list [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution' (4#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Conv_Layer_Seq' (5#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer_Seq.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution' (7#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Convulution.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'Conv_Layer_Seq' (8#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Conv_Layer_Seq.v:3]
 INFO: [Synth 8-6157] synthesizing module 'RegisterFile' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RegisterFile.v:4]
 	Parameter ele_num bound to: 32 - type: integer 
 	Parameter in_size bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'Register' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Register.v:5]
 	Parameter in_size bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Register' (6#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Register.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (7#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RegisterFile.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Register' (9#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Register.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile' (10#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RegisterFile.v:4]
 INFO: [Synth 8-6157] synthesizing module 'MaxPoolLayer' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolLayer.v:4]
 	Parameter n_outputs bound to: 16 - type: integer 
 	Parameter Input_size bound to: 16 - type: integer 
@@ -125,17 +129,17 @@ INFO: [Synth 8-6157] synthesizing module 'MaxPoolLayer' [D:/work/college/5-Senio
 INFO: [Synth 8-6157] synthesizing module 'MaxPoolUnit' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolUnit.v:5]
 	Parameter In_size bound to: 16 - type: integer 
 	Parameter n_inputs bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'MaxPoolUnit' (8#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolUnit.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'MaxPoolLayer' (9#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolLayer.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'MaxPoolUnit' (11#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolUnit.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'MaxPoolLayer' (12#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxPoolLayer.v:4]
 INFO: [Synth 8-6157] synthesizing module 'AdderTree' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/AdderTree.v:4]
 	Parameter n bound to: 16 - type: integer 
 	Parameter size bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'AdderTree' (10#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/AdderTree.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'AdderTree' (13#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/AdderTree.v:4]
 INFO: [Synth 8-6157] synthesizing module 'RegisterFile__parameterized0' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RegisterFile.v:4]
 	Parameter ele_num bound to: 1 - type: integer 
 	Parameter in_size bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'RegisterFile__parameterized0' (10#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RegisterFile.v:4]
-WARNING: [Synth 8-350] instance 'R2' of module 'RegisterFile' requires 4 connections, but only 3 given [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:141]
+INFO: [Synth 8-6155] done synthesizing module 'RegisterFile__parameterized0' (13#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/RegisterFile.v:4]
+WARNING: [Synth 8-350] instance 'R2' of module 'RegisterFile' requires 4 connections, but only 3 given [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:112]
 INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v:3]
 	Parameter size bound to: 16 - type: integer 
 	Parameter FilterConv1No bound to: 16 - type: integer 
@@ -154,47 +158,47 @@ WARNING: [Synth 8-6090] variable 'Counter2' is written by both blocking and non-
 WARNING: [Synth 8-6090] variable 'BlkCounter' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v:151]
 WARNING: [Synth 8-6090] variable 'BlkCounter' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v:156]
 WARNING: [Synth 8-6090] variable 'BlkCounter' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v:164]
-INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (11#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v:3]
-WARNING: [Synth 8-350] instance 'CU' of module 'ControlUnit' requires 16 connections, but only 15 given [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:146]
-INFO: [Synth 8-6157] synthesizing module 'MemBlk_1' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/MemBlk_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MemBlk_1' (12#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/MemBlk_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'MemBlk_2' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/MemBlk_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MemBlk_2' (13#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/MemBlk_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'MemBlk_3' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/MemBlk_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'MemBlk_3' (14#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/MemBlk_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Conv1_Weights' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/Conv1_Weights_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Conv1_Weights' (15#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/Conv1_Weights_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Conv2_Weights' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/Conv2_Weights_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Conv2_Weights' (16#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/Conv2_Weights_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (14#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/ControlUnit.v:3]
+WARNING: [Synth 8-350] instance 'CU' of module 'ControlUnit' requires 16 connections, but only 15 given [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:117]
+INFO: [Synth 8-6157] synthesizing module 'MemBlk_1' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/MemBlk_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemBlk_1' (15#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/MemBlk_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MemBlk_2' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/MemBlk_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemBlk_2' (16#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/MemBlk_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'MemBlk_3' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/MemBlk_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemBlk_3' (17#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/MemBlk_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Conv1_Weights' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/Conv1_Weights_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Conv1_Weights' (18#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/Conv1_Weights_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Conv2_Weights' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/Conv2_Weights_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Conv2_Weights' (19#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/Conv2_Weights_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'Dense_Seq' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:4]
 	Parameter size bound to: 18 - type: integer 
 	Parameter DP bound to: 6 - type: integer 
 	Parameter sizei bound to: 16 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'DenseW0' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DenseW0' (17#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DenseW1' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DenseW1' (18#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DenseW2' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DenseW2' (19#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DenseW3' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DenseW3' (20#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'DenseW4' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'DenseW4' (21#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-13760-MrwanElsharkawy/realtime/DenseW4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DenseW0' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DenseW0' (20#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DenseW1' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DenseW1' (21#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DenseW2' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DenseW2' (22#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DenseW3' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DenseW3' (23#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'DenseW4' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'DenseW4' (24#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/.Xil/Vivado-7500-MrwanElsharkawy/realtime/DenseW4_stub.v:6]
 WARNING: [Synth 8-6014] Unused sequential element temp1_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:62]
 WARNING: [Synth 8-6014] Unused sequential element temp2_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:63]
 WARNING: [Synth 8-6014] Unused sequential element temp3_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:64]
 WARNING: [Synth 8-6014] Unused sequential element temp4_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:65]
 WARNING: [Synth 8-6014] Unused sequential element temp5_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:66]
 WARNING: [Synth 8-5788] Register counter_reg in module Dense_Seq is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:35]
-INFO: [Synth 8-6155] done synthesizing module 'Dense_Seq' (22#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Dense_Seq' (25#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Dense_Seq.v:4]
 INFO: [Synth 8-6157] synthesizing module 'MaxComp' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxComp.v:4]
 	Parameter insize bound to: 18 - type: integer 
 	Parameter outsize bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'MaxComp' (23#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxComp.v:4]
-WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:193]
-INFO: [Synth 8-6155] done synthesizing module 'Top_Sequential_model' (24#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'MaxComp' (26#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/MaxComp.v:4]
+WARNING: [Synth 8-3848] Net res in module/entity Top_Sequential_model does not have driver. [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Sequential_model' (27#1) [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 519.086 ; gain = 171.551
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 519.336 ; gain = 172.000
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -203,17 +207,19 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin R2:reset to constant 0 [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:141]
+WARNING: [Synth 8-3295] tying undriven pin R2:reset to constant 0 [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:112]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 519.086 ; gain = 171.551
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 519.336 ; gain = 172.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 519.086 ; gain = 171.551
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 519.336 ; gain = 172.000
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -240,6 +246,12 @@ Parsing XDC File [d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP 
 Finished Parsing XDC File [d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/Conv2_Weights/Conv2_Weights/Conv2_Weights_in_context.xdc] for cell 'Conv2'
 Parsing XDC File [d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
 Finished Parsing XDC File [d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'instance_name'
+Parsing XDC File [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/constrs_1/new/ClkReset.xdc]
+WARNING: [Vivado 12-507] No nets matched 'reset_IBUF'. [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/constrs_1/new/ClkReset.xdc:8]
+Finished Parsing XDC File [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/constrs_1/new/ClkReset.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/constrs_1/new/ClkReset.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Top_Sequential_model_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/constrs_1/new/ClkReset.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_Sequential_model_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Top_Sequential_model_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
@@ -247,22 +259,20 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1127.336 ; gain = 16.266
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1172.926 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1127.336 ; gain = 779.801
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1172.926 ; gain = 825.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
-Loading part: xc7vx485tffg1761-2
+Loading part: xc7vx690tffg1761-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1127.336 ; gain = 779.801
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1172.926 ; gain = 825.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for INPUTCLK. (constraint file  {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for INPUTCLK. (constraint file  {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc}, line 4).
 Applied set_property DONT_TOUCH = true for M3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for M2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for M1. (constraint file  auto generated constraint, line ).
@@ -275,7 +285,7 @@ Applied set_property DONT_TOUCH = true for Conv1. (constraint file  auto generat
 Applied set_property DONT_TOUCH = true for Conv2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for instance_name. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1127.336 ; gain = 779.801
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1172.926 ; gain = 825.590
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "EnableBus" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "EnableBus" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -285,7 +295,7 @@ INFO: [Synth 8-5545] ROM "EnR2" won't be mapped to RAM because address size (32)
 INFO: [Synth 8-5545] ROM "EnR2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "p_4_in" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:51 . Memory (MB): peak = 1127.336 ; gain = 779.801
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1172.926 ; gain = 825.590
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,19 +311,22 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 6     
 	   2 Input     18 Bit       Adders := 5     
 	  16 Input     16 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 3     
 	   2 Input      6 Bit       Adders := 5     
-	   2 Input      3 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 5     
 +---Registers : 
 	               32 Bit    Registers := 3     
 	               18 Bit    Registers := 5     
 	               16 Bit    Registers := 33    
+	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
 	                6 Bit    Registers := 4     
-	                3 Bit    Registers := 5     
-	                1 Bit    Registers := 4     
+	                3 Bit    Registers := 6     
+	                1 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input   8192 Bit        Muxes := 2     
+	   8 Input     93 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 14    
 	   2 Input     16 Bit        Muxes := 51    
 	   2 Input      9 Bit        Muxes := 1     
@@ -336,11 +349,23 @@ Module Top_Sequential_model
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 1     
+Module SystemClk 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Samples 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input     93 Bit        Muxes := 1     
 Module Convolution 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -407,8 +432,8 @@ Finished RTL Hierarchical Component Statistics
 Start Part Resource Summary
 ---------------------------------------------------------------------------------
 Part Resources:
-DSPs: 2800 (col length:140)
-BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
@@ -1934,10 +1959,10 @@ DSP Report: Generating DSP Sum41, operation Mode is: A*B.
 DSP Report: operator Sum41 is absorbed into DSP Sum41.
 DSP Report: Generating DSP Sum51, operation Mode is: A*B.
 DSP Report: operator Sum51 is absorbed into DSP Sum51.
-INFO: [Synth 8-4471] merging register 'j_reg[31:0]' into 'j_reg[31:0]' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:207]
-WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:207]
+INFO: [Synth 8-4471] merging register 'j_reg[31:0]' into 'j_reg[31:0]' [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:181]
+WARNING: [Synth 8-6014] Unused sequential element j_reg was removed.  [D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/Top_Sequential_model.v:181]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 1127.336 ; gain = 779.801
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1172.926 ; gain = 825.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2479,16 +2504,21 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/clk_in1' to pin 'SysClk/dout_reg/Q'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/clk_out1' to pin 'instance_name/bbstub_clk_out1/O'
-INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'instance_name/clk_in1' to 'SysClk/dout0_inferred/i_0/I'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:47 ; elapsed = 00:01:54 . Memory (MB): peak = 1127.336 ; gain = 779.801
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:06 . Memory (MB): peak = 1172.926 ; gain = 825.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0_inferred /i_0' with timing assertions on input pin 'I'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0_inferred /i_0' with timing assertions on input pin 'I'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0_inferred /i_0' with timing assertions on input pin 'I'
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:29 ; elapsed = 00:02:36 . Memory (MB): peak = 1260.266 ; gain = 912.730
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:28 . Memory (MB): peak = 1298.711 ; gain = 951.375
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2499,10 +2529,15 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0 ' with timing assertions on input pin 'I'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0 ' with timing assertions on input pin 'I'
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0 ' with timing assertions on input pin 'I'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\R2/genblk1[1].R/out_reg[15] )
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0 ' with timing assertions on input pin 'I'
 WARNING: [Synth 8-3332] Sequential element (R2/genblk1[1].R/out_reg[15]) is unused and will be removed from module Top_Sequential_model.
+INFO: [Synth 8-620] skipping inversion-propagation across instance '\SysClk/dout0 ' with timing assertions on input pin 'I'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:40 ; elapsed = 00:03:47 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Technology Mapping : Time (s): cpu = 00:02:10 ; elapsed = 00:02:14 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2527,7 +2562,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-4442] BlackBox module instance_name has unconnected pin reset
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:47 ; elapsed = 00:03:54 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2540,7 +2575,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:47 ; elapsed = 00:03:54 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:02:17 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2552,25 +2587,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:22 ; elapsed = 00:04:29 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:30 ; elapsed = 00:02:34 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:25 ; elapsed = 00:04:32 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:32 ; elapsed = 00:02:35 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:25 ; elapsed = 00:04:32 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:32 ; elapsed = 00:02:36 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:26 ; elapsed = 00:04:33 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:32 ; elapsed = 00:02:36 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -2608,30 +2643,32 @@ Report Cell Usage:
 |9     |MemBlk_2      |     1|
 |10    |MemBlk_3      |     1|
 |11    |clk_wiz_0     |     1|
-|12    |BUFG          |     1|
+|12    |BUFG          |     3|
 |13    |CARRY4        |   222|
 |14    |DSP48E1       |   480|
 |15    |DSP48E1_1     |    32|
 |16    |DSP48E1_2     |     5|
-|17    |LUT1          |     8|
-|18    |LUT2          |   314|
+|17    |LUT1          |    11|
+|18    |LUT2          |   316|
 |19    |LUT3          |  9334|
-|20    |LUT4          |  2061|
-|21    |LUT5          |  4669|
-|22    |LUT6          |   231|
-|23    |MUXF7         |    36|
-|24    |FDCE          |    90|
-|25    |FDRE          |   927|
-|26    |FDSE          |    15|
-|27    |IBUF          |    94|
-|28    |OBUF          |     3|
+|20    |LUT4          |  2063|
+|21    |LUT5          |  4821|
+|22    |LUT6          |   180|
+|23    |MUXF7         |    26|
+|24    |MUXF8         |     1|
+|25    |FDCE          |   100|
+|26    |FDRE          |   931|
+|27    |FDSE          |    15|
+|28    |IBUF          |     1|
+|29    |IBUFDS        |     1|
+|30    |OBUF          |     3|
 +------+--------------+------+
 
 Report Instance Areas: 
 +------+-------------------------+---------------+------+
 |      |Instance                 |Module         |Cells |
 +------+-------------------------+---------------+------+
-|1     |top                      |               | 32950|
+|1     |top                      |               | 32973|
 |2     |  C                      |Conv_Layer_Seq |   992|
 |3     |    \Conv_Units[0].C     |Convolution    |    31|
 |4     |    \Conv_Units[10].C    |Convolution_46 |    31|
@@ -2683,7 +2720,7 @@ Report Instance Areas:
 |50    |    \MaxPoolUnit[8].ui   |MaxPoolUnit_44 |     2|
 |51    |    \MaxPoolUnit[9].ui   |MaxPoolUnit_45 |     2|
 |52    |  CU                     |ControlUnit    | 14965|
-|53    |  Dense                  |Dense_Seq      |   504|
+|53    |  Dense                  |Dense_Seq      |   505|
 |54    |  R1                     |RegisterFile   |  1514|
 |55    |    \genblk1[10].R       |Register       |    23|
 |56    |    \genblk1[11].R       |Register_0     |    60|
@@ -2717,28 +2754,30 @@ Report Instance Areas:
 |84    |    \genblk1[7].R        |Register_28    |    49|
 |85    |    \genblk1[8].R        |Register_29    |    27|
 |86    |    \genblk1[9].R        |Register_30    |    72|
+|87    |  SysClk                 |SystemClk      |     3|
+|88    |  sample                 |Samples        |     1|
 +------+-------------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:26 ; elapsed = 00:04:33 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:32 ; elapsed = 00:02:36 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 1 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:47 ; elapsed = 00:03:56 . Memory (MB): peak = 1356.633 ; gain = 400.848
-Synthesis Optimization Complete : Time (s): cpu = 00:04:26 ; elapsed = 00:04:34 . Memory (MB): peak = 1356.633 ; gain = 1009.098
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:08 ; elapsed = 00:02:14 . Memory (MB): peak = 1390.637 ; gain = 389.711
+Synthesis Optimization Complete : Time (s): cpu = 00:02:32 ; elapsed = 00:02:36 . Memory (MB): peak = 1390.637 ; gain = 1043.301
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 869 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 768 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-87 Infos, 20 Warnings, 1 Critical Warnings and 0 Errors encountered.
+105 Infos, 20 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:42 ; elapsed = 00:04:51 . Memory (MB): peak = 1367.707 ; gain = 1031.977
+synth_design: Time (s): cpu = 00:02:41 ; elapsed = 00:02:46 . Memory (MB): peak = 1390.637 ; gain = 1055.375
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/synth_1/Top_Sequential_model.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1367.707 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1390.637 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Top_Sequential_model_utilization_synth.rpt -pb Top_Sequential_model_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1367.707 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 11 11:58:45 2022...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.615 . Memory (MB): peak = 1390.637 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 19 13:28:04 2022...

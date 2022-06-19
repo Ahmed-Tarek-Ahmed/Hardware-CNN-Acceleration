@@ -1,0 +1,304 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Jun 19 09:21:43 2022
+# Process ID: 12120
+# Current directory: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15572 D:\work\college\5-Senior 2\Semester 2\Graduation Project 2\GP Codes\Hardware-CNN-Acceleration-\project_1\project_1.xpr
+# Log file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/vivado.log
+# Journal file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+reset_run DenseW0_synth_1
+reset_run DenseW1_synth_1
+reset_run DenseW2_synth_1
+reset_run DenseW3_synth_1
+reset_run DenseW4_synth_1
+reset_run Conv1_Weights_synth_1
+reset_run Conv2_Weights_synth_1
+reset_run synth_1
+reset_run clk_wiz_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+close [ open {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/SystemClk.v} w ]
+add_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/SystemClk.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+refresh_design
+set_property package_pin "" [get_ports [list  INPUTCLK_P]]
+set_property package_pin "" [get_ports [list  INPUTCLK_P]]
+place_ports INPUTCLK_P E19
+save_constraints
+refresh_design
+set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports [list INPUTCLK_P]]
+save_constraints
+refresh_design
+set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports [list INPUTCLK_P]]
+save_constraints
+set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports [list INPUTCLK_P]]
+save_constraints
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+export_ip_user_files -of_objects  [get_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset clk_wiz_0 {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+file delete -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0}
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip}
+set_property -dict [list CONFIG.PRIM_IN_FREQ {200.000} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.000} CONFIG.CLKIN1_JITTER_PS {50.0} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {9.125} CONFIG.MMCM_CLKIN1_PERIOD {5.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} CONFIG.CLKOUT1_JITTER {178.502} CONFIG.CLKOUT1_PHASE_ERROR {104.359}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+launch_runs -jobs 12 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -directory {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_design
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD DIFF_SSTL15 [get_ports [list sysclk_p]]
+save_constraints
+set_property IOSTANDARD DIFF_HSTL_II_18 [get_ports [list sysclk_p]]
+save_constraints
+refresh_design
+refresh_design
+reset_run DenseW0_synth_1
+reset_run DenseW1_synth_1
+reset_run DenseW2_synth_1
+reset_run DenseW3_synth_1
+reset_run DenseW4_synth_1
+reset_run Conv1_Weights_synth_1
+reset_run Conv2_Weights_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_property -dict [list CONFIG.OVERRIDE_MMCM {true} CONFIG.MMCM_COMPENSATION {EXTERNAL}] [get_ips clk_wiz_0]
+set_property -dict [list CONFIG.OVERRIDE_MMCM {true} CONFIG.MMCM_COMPENSATION {INTERNAL}] [get_ips clk_wiz_0]
+set_property -dict [list CONFIG.MMCM_COMPENSATION {ZHOLD}] [get_ips clk_wiz_0]
+generate_target all [get_files  {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 12 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -directory {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run DenseW0_synth_1
+reset_run DenseW1_synth_1
+reset_run DenseW2_synth_1
+reset_run DenseW3_synth_1
+reset_run DenseW4_synth_1
+reset_run Conv1_Weights_synth_1
+reset_run Conv2_Weights_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+set_property -dict [list CONFIG.MMCM_COMPENSATION {INTERNAL}] [get_ips clk_wiz_0]
+generate_target all [get_files  {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 12 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -directory {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+wait_on_run clk_wiz_0_synth_1
+refresh_design
+reset_run DenseW0_synth_1
+reset_run DenseW1_synth_1
+reset_run DenseW2_synth_1
+reset_run DenseW3_synth_1
+reset_run DenseW4_synth_1
+reset_run Conv1_Weights_synth_1
+reset_run Conv2_Weights_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7vx690t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/Top_Sequential_model.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property board_part xilinx.com:vc709:part0:1.8 [current_project]
+synth_design -rtl -name rtl_1
+reset_run DenseW0_synth_1
+reset_run DenseW1_synth_1
+reset_run DenseW2_synth_1
+reset_run DenseW3_synth_1
+reset_run DenseW4_synth_1
+reset_run Conv1_Weights_synth_1
+reset_run Conv2_Weights_synth_1
+reset_run clk_wiz_0_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+current_design impl_1
+close_design; open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/Top_Sequential_model.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+current_design rtl_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/Top_Sequential_model.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/clktest.v} w ]
+add_files -fileset sim_1 {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/clktest.v}}
+update_compile_order -fileset sim_1
+report_ip_status
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clktest [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/clktest.v}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/clktest.v}}
+file delete -force {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sim_1/new/clktest.v}
+update_compile_order -fileset sim_1
+close [ open {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/clktest.v} w ]
+add_files {{D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/new/clktest.v}}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clktest [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_design
+set_property IOSTANDARD LVCMOS18 [get_ports [list {test[2]} {test[1]} {test[0]}]]
+place_ports {test[2]} AM39
+place_ports {test[1]} AN39
+place_ports {test[0]} AR37
+save_constraints
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/clktest.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+export_ip_user_files -of_objects  [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset clk_wiz_0 {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+file delete -force {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0}
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir {d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip}
+set_property -dict [list CONFIG.PRIM_IN_FREQ {200.000} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.000} CONFIG.OVERRIDE_MMCM {true} CONFIG.MMCM_COMPENSATION {INTERNAL} CONFIG.CLKIN1_JITTER_PS {50.0} CONFIG.MMCM_DIVCLK_DIVIDE {2} CONFIG.MMCM_CLKFBOUT_MULT_F {9.125} CONFIG.MMCM_CLKIN1_PERIOD {5.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} CONFIG.CLKOUT1_JITTER {178.502} CONFIG.CLKOUT1_PHASE_ERROR {104.359}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+generate_target all [get_files  {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}]
+launch_runs -jobs 12 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files {{d:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -directory {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/sim_scripts} -ip_user_files_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files} -ipstatic_source_dir {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/modelsim} {questa=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/questa} {riviera=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/riviera} {activehdl=D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/clktest.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/clktest.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/clktest.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/clktest.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+close_hw
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Top_Sequential_model [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Top_Sequential_model [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/Top_Sequential_model.bit} [get_hw_devices xc7vx690t_0]
+current_hw_device [get_hw_devices xc7vx690t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/Top_Sequential_model.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0]
+set_property PROGRAM.FILE {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/impl_1/Top_Sequential_model.bit} [get_hw_devices xc7vx690t_0]
+program_hw_devices [get_hw_devices xc7vx690t_0]
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0] 0]

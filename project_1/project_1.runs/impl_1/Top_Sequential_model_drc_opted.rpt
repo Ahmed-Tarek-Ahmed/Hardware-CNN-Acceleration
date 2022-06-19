@@ -1,11 +1,11 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Jun 11 12:08:50 2022
+| Date         : Sun Jun 19 13:30:31 2022
 | Host         : MrwanElsharkawy running 64-bit major release  (build 9200)
 | Command      : report_drc -file Top_Sequential_model_drc_opted.rpt -pb Top_Sequential_model_drc_opted.pb -rpx Top_Sequential_model_drc_opted.rpx
 | Design       : Top_Sequential_model
-| Device       : xc7vx485tffg1761-2
+| Device       : xc7vx690tffg1761-2
 | Speed File   : -2
 | Design State : Synthesized
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -20,37 +20,26 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_Top_Sequential_model
+          Floorplan: design_1
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 1290
-+-------------+------------------+-------------------------------------------------------------+------------+
-| Rule        | Severity         | Description                                                 | Violations |
-+-------------+------------------+-------------------------------------------------------------+------------+
-| NSTD-1      | Critical Warning | Unspecified I/O Standard                                    | 1          |
-| UCIO-1      | Critical Warning | Unconstrained Logical Port                                  | 1          |
-| CFGBVS-1    | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| DPIP-1      | Warning          | Input pipelining                                            | 1061       |
-| DPOP-1      | Warning          | PREG Output pipelining                                      | 69         |
-| DPOP-2      | Warning          | MREG Output pipelining                                      | 69         |
-| PLHOLDVIO-2 | Warning          | Non-Optimal connections which could lead to hold violations | 1          |
-| REQP-165    | Advisory         | writefirst                                                  | 3          |
-| REQP-181    | Advisory         | writefirst                                                  | 84         |
-+-------------+------------------+-------------------------------------------------------------+------------+
+             Violations found: 1289
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
+| DPIP-1      | Warning  | Input pipelining                                            | 1061       |
+| DPOP-1      | Warning  | PREG Output pipelining                                      | 69         |
+| DPOP-2      | Warning  | MREG Output pipelining                                      | 69         |
+| PLCK-12     | Warning  | Clock Placer Checks                                         | 1          |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
+| REQP-165    | Advisory | writefirst                                                  | 3          |
+| REQP-181    | Advisory | writefirst                                                  | 84         |
++-------------+----------+-------------------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-NSTD-1#1 Critical Warning
-Unspecified I/O Standard  
-98 out of 98 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: class[2:0], in[92:0], INPUTCLK, reset.
-Related violations: <none>
-
-UCIO-1#1 Critical Warning
-Unconstrained Logical Port  
-98 out of 98 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: class[2:0], in[92:0], INPUTCLK, reset.
-Related violations: <none>
-
 CFGBVS-1#1 Warning
 Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
 Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
@@ -6057,6 +6046,17 @@ Related violations: <none>
 DPOP-2#69 Warning
 MREG Output pipelining  
 DSP Dense/Sum51 multiplier stage Dense/Sum51/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+PLCK-12#1 Warning
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	reset_IBUF_inst (IBUF.O) is locked to AR40
+	reset_IBUF_BUFG_inst (BUFG.I) cannot be placed
+
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning

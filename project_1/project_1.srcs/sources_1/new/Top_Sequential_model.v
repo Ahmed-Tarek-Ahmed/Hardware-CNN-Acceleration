@@ -5,18 +5,29 @@ module Top_Sequential_model#(parameter n_unitsC = 32, size = 16,DP=4,FC1=16,FC2=
                                        memblkReadWidth = 2048,size1=18
                             )
     (
-        input INPUTCLK,reset,
+        input sysclk_p,sysclk_n,reset,
         output [2:0 ]class
     );
     wire   [92:0] in;
     wire clk1,clk;
     wire locked;
+    wire INPUTCLK;
+    wire res;
+    
+    SystemClk SysClk
+    (
+    .sysclk_p(sysclk_p),
+    .sysclk_n(sysclk_n),
+    .dout(INPUTCLK)
+    );
+    
      clk_wiz_0 instance_name
       (
        // Clock out ports
        .clk_out1(clk1),     // output clk_out1
        // Status and control signals
      //  .reset(resetclk), // input reset
+       .reset(res),
        .locked(locked),       // output locked
       // Clock in ports
        .clk_in1(INPUTCLK));

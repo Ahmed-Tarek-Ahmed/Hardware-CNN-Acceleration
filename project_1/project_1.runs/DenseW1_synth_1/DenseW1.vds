@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Jun 11 11:53:13 2022
-# Process ID: 3868
+# Start of session at: Sun Jun 19 11:26:30 2022
+# Process ID: 10416
 # Current directory: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW1_synth_1
 # Command line: vivado.exe -log DenseW1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DenseW1.tcl
 # Log file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.runs/DenseW1_synth_1/DenseW1.vds
@@ -11,4 +11,4 @@
 #-----------------------------------------------------------
 source DenseW1.tcl -notrace
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP DenseW1, cache-ID = 3a87d72a5103bb3f.
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 11 11:53:28 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 19 11:26:40 2022...

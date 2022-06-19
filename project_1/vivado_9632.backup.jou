@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Jun 18 16:41:17 2022
+# Process ID: 9632
+# Current directory: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7436 D:\work\college\5-Senior 2\Semester 2\Graduation Project 2\GP Codes\Hardware-CNN-Acceleration-\project_1\project_1.xpr
+# Log file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/vivado.log
+# Journal file: D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/work/college/5-Senior 2/Semester 2/Graduation Project 2/GP Codes/Hardware-CNN-Acceleration-/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+place_ports {class[2]} AM39
+place_ports {class[1]} AN39
+place_ports {class[0]} AR37
+save_constraints
+reset_run DenseW0_synth_1
+reset_run DenseW1_synth_1
+reset_run DenseW2_synth_1
+reset_run DenseW3_synth_1
+reset_run DenseW4_synth_1
+reset_run Conv1_Weights_synth_1
+reset_run Conv2_Weights_synth_1
+reset_run clk_wiz_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+synth_design -rtl -name rtl_1
+place_ports INPUTCLK AL34
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+close_design
+synth_design -rtl -name rtl_1
